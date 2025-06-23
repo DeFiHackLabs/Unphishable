@@ -1,0 +1,136 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "title": {
+        "en": "Basic Blockchain Security",
+        "zh-hant": "基礎區塊鏈安全",
+        "zh-hans": "基础区块链安全"
+      },
+      "description": {
+        "en": "Understanding basic concepts of blockchain security",
+        "zh-hant": "了解區塊鏈安全的基本概念",
+        "zh-hans": "了解区块链安全的基本概念"
+      },
+      "content": {
+        "en": "While blockchain technology has decentralized and immutable characteristics, it still faces various security threats. Please choose the correct security practice:",
+        "zh-hant": "區塊鏈技術雖然具有去中心化和不可篡改的特性，但仍然面臨著各種安全威脅。請選擇正確的安全實踐：",
+        "zh-hans": "区块链技术虽然具有去中心化和不可篡改的特性，但仍然面临着各种安全威胁。请选择正确的安全实践："
+      },
+      "options": {
+        "en": [
+          "Store private keys in cloud services",
+          "Share wallet seed phrases on social media",
+          "Regularly update wallet software and security patches",
+          "Use simple and easy-to-remember passwords"
+        ],
+        "zh-hant": [
+          "將私鑰儲存在雲端服務中",
+          "在社交媒體上分享錢包助記詞",
+          "定期更新錢包軟體和安全補丁",
+          "使用簡單容易記住的密碼"
+        ],
+        "zh-hans": [
+          "将私钥存储在云端服务中",
+          "在社交媒体上分享钱包助记词",
+          "定期更新钱包软件和安全补丁",
+          "使用简单容易记住的密码"
+        ]
+      },
+      "correctAnswer": 2,
+      "explanation": {
+        "en": "Regularly updating wallet software and security patches is an important measure to protect your crypto assets. Never share private keys or seed phrases, and don't use simple passwords.",
+        "zh-hant": "定期更新錢包軟體和安全補丁是保護您的加密資產的重要措施。切勿分享私鑰或助記詞，也不要使用簡單的密碼。",
+        "zh-hans": "定期更新钱包软件和安全补丁是保护您的加密资产的重要措施。切勿分享私钥或助记词，也不要使用简单的密码。"
+      }
+    },
+    {
+      "id": 2,
+      "title": {
+        "en": "Smart Contract Security",
+        "zh-hant": "智能合約安全",
+        "zh-hans": "智能合约安全"
+      },
+      "description": {
+        "en": "Identify common vulnerabilities in smart contracts",
+        "zh-hant": "識別智能合約中的常見漏洞",
+        "zh-hans": "识别智能合约中的常见漏洞"
+      },
+      "content": {
+        "en": "Which of the following is NOT a common security vulnerability in smart contracts?",
+        "zh-hant": "以下哪個不是智能合約的常見安全漏洞？",
+        "zh-hans": "以下哪个不是智能合约的常见安全漏洞？"
+      },
+      "options": {
+        "en": [
+          "Reentrancy attack",
+          "Integer overflow",
+          "Blockchain fork",
+          "Access control issues"
+        ],
+        "zh-hant": [
+          "重入攻擊",
+          "整數溢出",
+          "區塊鏈分叉",
+          "訪問控制問題"
+        ],
+        "zh-hans": [
+          "重入攻击",
+          "整数溢出",
+          "区块链分叉",
+          "访问控制问题"
+        ]
+      },
+      "correctAnswer": 2,
+      "explanation": {
+        "en": "A blockchain fork is a network-level concept, not a smart contract security vulnerability. The other options are common security vulnerabilities in smart contracts.",
+        "zh-hant": "區塊鏈分叉是一個網路層面的概念，而不是智能合約的安全漏洞。其他選項都是智能合約中常見的安全漏洞。",
+        "zh-hans": "区块链分叉是一个网络层面的概念，而不是智能合约的安全漏洞。其他选项都是智能合约中常见的安全漏洞。"
+      }
+    },
+    {
+      "id": 3,
+      "title": {
+        "en": "Wallet Security",
+        "zh-hant": "錢包安全",
+        "zh-hans": "钱包安全"
+      },
+      "description": {
+        "en": "Learn how to securely manage cryptocurrency wallets",
+        "zh-hant": "學習如何安全管理加密貨幣錢包",
+        "zh-hans": "学习如何安全管理加密货币钱包"
+      },
+      "content": {
+        "en": "Which statement about hardware wallets is correct?",
+        "zh-hant": "關於硬體錢包的說法，哪個是正確的？",
+        "zh-hans": "关于硬件钱包的说法，哪个是正确的？"
+      },
+      "options": {
+        "en": [
+          "Hardware wallets don't need backups",
+          "Hardware wallets can prevent all types of attacks",
+          "Hardware wallets should be regularly connected to the internet for updates",
+          "Private keys never leave the hardware wallet device"
+        ],
+        "zh-hant": [
+          "硬體錢包不需要備份",
+          "硬體錢包可以防止所有類型的攻擊",
+          "硬體錢包應該定期連接網際網路更新",
+          "硬體錢包的私鑰永遠不會離開設備"
+        ],
+        "zh-hans": [
+          "硬件钱包不需要备份",
+          "硬件钱包可以防止所有类型的攻击",
+          "硬件钱包应该定期连接互联网更新",
+          "硬件钱包的私钥永远不会离开设备"
+        ]
+      },
+      "correctAnswer": 3,
+      "explanation": {
+        "en": "One of the main security features of a hardware wallet is that private keys never leave the device. Even when signing transactions, the private keys remain inside the hardware wallet.",
+        "zh-hant": "硬體錢包的主要安全特性之一是私鑰永遠不會離開設備。即使在簽署交易時，私鑰也始終保存在硬體錢包內部。",
+        "zh-hans": "硬件钱包的主要安全特性之一是私钥永远不会离开设备。即使在签署交易时，私钥也始终保存在硬件钱包内部。"
+      }
+    }
+  ]
+}
