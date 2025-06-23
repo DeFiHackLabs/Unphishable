@@ -161,11 +161,11 @@ export default function YourChallenge() {
 
 ## Funding Team
 
-DeFiHackLabs logo, SlowMist logo, ScamSniffer logo
+DeFiHackLabs , SlowMist , ScamSniffer
 
 ## Supporters
 
-ESP logo, etc
+Ethereum ESP, Geodework, Goplus
 
 ---
 
