@@ -108,7 +108,7 @@ export default {
   </a>
   &nbsp;
   <a href="https://slowmist.com">
-    <img src="https://github.com/user-attachments/assets/bf86a8cd-2d01-4175-8246-1ed15d09372d" height="60" alt="SlowMist"/>
+    <img src="https://github.com/user-attachments/assets/13e862ad-e65d-4e11-b678-4e07693fb50c" height="50" alt="SlowMist"/>
   </a>
 </p>
 
