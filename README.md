@@ -94,78 +94,40 @@ export default {
 }
 ```
 
-## 🧩 Contributing Challenges
-
-We welcome contributions of new phishing challenges! Follow these steps to add a new challenge:
-
-### Step 1: Add Challenge Data
-
-Open the file `app/data/challenges.ts` and add a new challenge entry to the array:
-
-```ts
-{
-  name: "your-challenge-name",
-  difficulty: "Beginner", // or "Intermediate", "Advanced"
-  title: {
-    en: "Your Challenge Title",
-    "zh-hant": "繁體中文標題",
-    "zh-hans": "简体中文标题",
-  },
-  description: {
-    en: "Brief description of your challenge in English.",
-    "zh-hant": "繁體中文描述",
-    "zh-hans": "简体中文描述",
-  },
-  link: "/challenges/your-challenge-name",
-},
-```
-
-### Step 2: Create Challenge Directory
-
-Create a new directory under `app/challenges/` with the same name as your challenge:
-
-```
-app/challenges/your-challenge-name/
-```
-
-### Step 3: Add Page Components
-
-In your challenge directory, create two files:
-
-1. `page.tsx`
-
-```tsx
-'use client';
-
-import YourChallenge from './YourChallenge';
-
-export default function Page() {
-  return <YourChallenge />;
-}
-```
-
-2. `YourChallenge.tsx`
-
-This is the main component for your challenge. Design it to simulate the phishing scenario you want to teach:
-
-```tsx
-export default function YourChallenge() {
-  // Implement your challenge UI and logic here
-  return (
-    <div>
-      {/* Your challenge content */}
-    </div>
-  );
-}
-```
+## 🧩 [Contributing Challenges](./Contribution.md) 
 
 ## Funding Team
 
-DeFiHackLabs , SlowMist , ScamSniffer
+<p align="center">
+  <a href="https://defihacklabs.io">
+    <img src="https://github.com/user-attachments/assets/010f6e9c-7ab6-4e7a-a8e3-4e95494564b5" height="60" alt="DeFiHackLabs"/>
+  </a>
+  &nbsp;&nbsp;&nbsp;
+  <a href="https://scamsniffer.io">
+    <img src="https://github.com/user-attachments/assets/8cd9b75c-c9f6-4005-9d6a-a1490dcef832" height="60" alt="ScamSniffer"/>
+  </a>
+  &nbsp;&nbsp;&nbsp;
+  <a href="https://slowmist.com">
+    <img src="https://github.com/user-attachments/assets/bf86a8cd-2d01-4175-8246-1ed15d09372d" height="70" alt="SlowMist"/>
+  </a>
+</p>
 
 ## Supporters
+<p align="center">
+  <a href="https://esp.ethereum.foundation">
+    <img src="https://github.com/user-attachments/assets/27d003a4-05e7-49f4-a4b7-d3f1428f6984" height="60" alt="EF ESP Logo"/>
+  </a>
+  &nbsp;&nbsp;&nbsp;
+  <a href="https://geodework.com/">
+    <img src="https://github.com/user-attachments/assets/7979d0d3-7977-4474-acd1-717f55729fbf" height="60" alt="Unphishable Logo"/>
+  </a>
+  &nbsp;&nbsp;&nbsp;
+  <a href="https://gopluslabs.io/">
+    <img src="https://github.com/user-attachments/assets/d86be163-2d31-4ead-bb68-5d1bd56d87ab" height="50" alt="Goplus Horizontal Logo"/>
+  </a>
+</p>
 
-Ethereum ESP, Geodework, Goplus
+
 
 ---
 
