@@ -116,11 +116,11 @@ export default {
 ## Supporters
 <p align="center">
   <a href="https://esp.ethereum.foundation">
-    <img src="https://github.com/user-attachments/assets/27d003a4-05e7-49f4-a4b7-d3f1428f6984" height="60" alt="EF ESP Logo"/>
+    <img src="https://github.com/user-attachments/assets/27d003a4-05e7-49f4-a4b7-d3f1428f6984" height="50" alt="EF ESP Logo"/>
   </a>
   &nbsp;&nbsp;&nbsp;
   <a href="https://geodework.com/">
-    <img src="https://github.com/user-attachments/assets/7979d0d3-7977-4474-acd1-717f55729fbf" height="60" alt="Unphishable Logo"/>
+    <img src="https://github.com/user-attachments/assets/7979d0d3-7977-4474-acd1-717f55729fbf" height="50" alt="Unphishable Logo"/>
   </a>
   &nbsp;&nbsp;&nbsp;
   <a href="https://gopluslabs.io/">
