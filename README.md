@@ -100,15 +100,15 @@ export default {
 
 <p align="center">
   <a href="https://defihacklabs.io">
-    <img src="https://github.com/user-attachments/assets/010f6e9c-7ab6-4e7a-a8e3-4e95494564b5" height="60" alt="DeFiHackLabs"/>
+    <img src="https://github.com/user-attachments/assets/010f6e9c-7ab6-4e7a-a8e3-4e95494564b5" height="50" alt="DeFiHackLabs"/>
   </a>
-  &nbsp;&nbsp;&nbsp;
+  &nbsp;
   <a href="https://scamsniffer.io">
-    <img src="https://github.com/user-attachments/assets/8cd9b75c-c9f6-4005-9d6a-a1490dcef832" height="60" alt="ScamSniffer"/>
+    <img src="https://github.com/user-attachments/assets/8cd9b75c-c9f6-4005-9d6a-a1490dcef832" height="50" alt="ScamSniffer"/>
   </a>
-  &nbsp;&nbsp;&nbsp;
+  &nbsp;
   <a href="https://slowmist.com">
-    <img src="https://github.com/user-attachments/assets/bf86a8cd-2d01-4175-8246-1ed15d09372d" height="70" alt="SlowMist"/>
+    <img src="https://github.com/user-attachments/assets/bf86a8cd-2d01-4175-8246-1ed15d09372d" height="60" alt="SlowMist"/>
   </a>
 </p>
 
