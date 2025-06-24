@@ -1,0 +1,43 @@
+.foundersSection {
+  padding: 4rem 0;
+}
+
+/* 白天模式 */
+[data-theme="light"] .foundersSection {
+  background-color: #ffffff;
+  color: #111827;
+}
+
+/* 暗黑模式 */
+[data-theme="dark"] .foundersSection {
+  background-color: #0B0B0C;
+  color: #ffffff;
+}
+
+.founderCard {
+  /* padding: 2rem; */
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+}
+[data-theme="light"] .founderCard {
+  background-color: #F5F5F5;
+  /* box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); */
+}
+[data-theme="dark"] .founderCard {
+  background-color: #1f2937;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+.founderImage {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* 暗黑模式下的文字顏色 */
+[data-theme="dark"] .title {
+  color: #ffffff;
+}
+
+[data-theme="dark"] .description {
+  color: #9ca3af;
+}

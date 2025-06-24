@@ -1,0 +1,153 @@
+.clickjackingContainer {
+  position: relative;
+  width: 100%;
+}
+
+.visibleContent {
+  z-index: 1;
+  position: relative;
+}
+
+.hiddenButton {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.browserSimulation {
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.browserHeader {
+  background-color: #f1f1f1;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+}
+
+.browserControls {
+  display: flex;
+  margin-right: 15px;
+}
+
+.browserButton {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+.red {
+  background-color: #ff5f56;
+}
+
+.yellow {
+  background-color: #ffbd2e;
+}
+
+.green {
+  background-color: #27c93f;
+}
+
+.browserAddressBar {
+  flex-grow: 1;
+  background-color: #fff;
+  border-radius: 4px;
+  padding: 5px 10px;
+  font-size: 14px;
+  color: #333;
+  display: flex;
+  align-items: center;
+}
+
+.secureIcon {
+  margin-right: 5px;
+  color: #27c93f;
+}
+
+.url {
+  color: #555;
+  font-family: monospace;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.stepIndicator {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 120px;
+}
+
+.stepCircle {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  margin-bottom: 5px;
+  position: relative;
+}
+
+.stepCircle.active {
+  background-color: #3498db;
+  color: white;
+}
+
+.stepCircle.completed {
+  background-color: #27ae60;
+  color: white;
+}
+
+.stepCircle.completed:after {
+  content: "✓";
+}
+
+.stepLine {
+  width: 80px;
+  height: 3px;
+  margin: 0 -10px;
+  margin-top: 15px;
+}
+
+.stepLine.active {
+  background-color: #3498db;
+}
+
+.stepLine.completed {
+  background-color: #27ae60;
+}
+
+.securityAlert {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  border: 2px solid #007bff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  max-width: 400px;
+  text-align: center;
+}

@@ -1,0 +1,71 @@
+[data-theme="dark"] .infoBackground {
+  background-color: #1a1a1a;
+}
+[data-theme="light"] .infoBackground {
+  background-color: #ffffff;
+}
+
+.infoBox {
+  border-right: 5px solid #DAFF6A;
+  height: 17px; /* 與文字等高 */
+  margin-right: 20px; /* 線與文字的間距 */
+  border-radius: 4px;
+}
+
+.infoTitle {
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: left;
+  line-height: 1.2rem; /* 垂直置中效果更佳 */
+}
+
+[data-theme="dark"] .infoTitle {
+  color: #DAFF6A;
+}
+
+[data-theme="light"] .infoTitle {
+  color: #333333;
+}
+
+.infoContent {
+  color:#000000;
+}
+[data-theme="dark"] .infoContent {
+  color:#CCCCCC
+}
+.progress-container {
+  width: 100%;
+  background-color: #e0e0e0;
+  border-radius: 10px;
+  height: 10px;
+  margin-top: 10px;
+}
+
+[data-theme="dark"] .progress-container {
+  background-color: #333;
+}
+.progress-bar {
+  height: 100%;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #DAFF6A 0%, #A3FF47 100%);
+}
+
+.progress-stats {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 8px;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+[data-theme="dark"] .progress-stats {
+  color: #aaa;
+}
+
+.progress-text {
+  color: #171717;
+}
+
+[data-theme="dark"] .progress-text {
+  color: #e0e0e0;
+}

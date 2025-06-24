@@ -1,0 +1,62 @@
+[data-theme="dark"] .privacyBackground {
+  background-color: #1a1a1a;
+}
+[data-theme="light"] .privacyBackground {
+  background-color: #ffffff;
+}
+
+
+.privacyBox {
+  border-right: 5px solid #DAFF6A;
+  height: 17px; /* 與文字等高 */
+  margin-right: 20px; /* 線與文字的間距 */
+  border-radius: 4px;
+}
+
+.privacyTitle {
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: left;
+  line-height: 1.2rem; /* 垂直置中效果更佳 */
+}
+
+[data-theme="dark"] .privacyTitle {
+  color: #DAFF6A;
+}
+
+[data-theme="light"] .privacyTitle {
+  color: #333333;
+}
+
+.privacyContent {
+  color: #666666;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 30px;
+  /* text-align: justify; */
+}
+
+[data-theme="dark"] .privacyContent {
+  color:#CCCCCC
+}
+.progress-container {
+  width: 100%;
+  background-color: #e0e0e0;
+  border-radius: 10px;
+  height: 10px;
+  margin-top: 10px;
+}
+
+[data-theme="dark"] .progress-container {
+  background-color: #333;
+}
+
+.sectionTitle {
+  color: #000000;
+}
+
+[data-theme="dark"] .sectionTitle {
+  color: #DAFF6A;
+}
+

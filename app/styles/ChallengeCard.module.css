@@ -1,0 +1,183 @@
+[data-theme="dark"] .challengeCardsSection {
+  background-color: #0B0B0C;
+  color:rgba(204, 204, 204, 1)
+}
+[data-theme="light"] .challengeCardsSection {
+  background-color: #ffffff;
+}
+.challengeCard {
+  position: relative;
+  width: 100%;
+  padding: 0 20px 20px 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0,0,0,.45);
+  z-index: 0; /* 添加基礎層級 */
+}
+
+.title {
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  position: relative;
+  display: inline-block;
+  left: 50%;
+  transform: translateX(-50%);
+}
+[data-theme="dark"] .title {
+  color: #DAFF6A;
+}
+[data-theme="light"] .title::after {
+  content: '';
+  position: absolute;
+  bottom: 0.3rem;
+  left: 0;
+  width: 100%;
+  height: 8px;
+  background-color: #DAFF6A;
+  z-index: -1;
+}
+
+
+[data-theme="dark"] .challengeCard {
+  background: var(--bg-dark);
+  color: #CCCCCC;
+}
+
+[data-theme="light"] .challengeCard {
+  color: #333;
+  background:
+    repeating-linear-gradient(
+      135deg,
+      var(--stripe-light-1) 0 80px,
+      transparent           80px 160px
+    ),
+    #F5F5F5;              /* 實心底色擺最後 */
+}
+
+.challengeCard::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+[data-theme="dark"] .challengeCard::before {
+  background: repeating-linear-gradient(
+    135deg,
+    var(--stripe-dark-1) 0 80px,
+    transparent 80px 160px
+  );
+}
+
+
+.challengeCard::after {
+  content: "";
+  position: absolute;
+  inset: -45% 0;
+  transform: skewX(-35deg);
+  pointer-events: none;
+  mix-blend-mode: normal;   /* ★ 改：關掉 screen，避免漂白文字 */
+  background: var(--stripe-light-2);
+  z-index: -1;              /* ★ 改：放到背景層 */
+}
+
+.challengeCard > * {
+  position: relative;
+  z-index: 1;               /* ★ 新增 */
+}
+
+.challengeCard .tag {
+  background: var(--tag-bg);
+  color: var(--tag-fg);
+  padding: 12px 10px;
+  font-size: .8rem;
+  letter-spacing: .5px;
+  clip-path: polygon(0 0, 100% 0, 90% 100%, 10% 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  font-weight: 700;
+}
+
+[data-theme="light"] .challengeCard .tag {
+  background: var(--primary-neon);
+  color: #000;
+}
+
+[data-theme="dark"] .btnBase {
+  position: relative;
+}
+[data-theme="dark"] .btnBase::before  {
+  content: "";
+  position: absolute;
+  width: .5rem;
+  height: .6rem;
+  border: calc(1rem * .1) solid var(--primary-neon);
+  border-right: none;
+  border-bottom: none;
+}
+
+[data-theme="dark"] .btnBase::after {
+  content: "";
+  position: absolute;
+  width: .5rem;
+  height: .6rem;
+  border: calc(1rem * .1) solid var(--primary-neon);
+  border-left: none;
+  border-top: none;
+  bottom: -.01rem;  /* 移到右下角 */
+  right: -.01rem;   /* 移到右下角 */
+}
+
+.btnChallenge {
+  position: relative;
+  padding: calc(.5rem) calc(2rem);
+  background: var(--primary-neon);
+  color: #000;
+  border: none;
+  cursor: pointer;
+  
+  transition: filter .18s ease, transform .18s ease;
+}
+
+[data-theme="dark"] .btnChallenge {
+  clip-path: polygon(1rem 0, 100% 0, 100% calc(100% - 1rem), calc(100% - 1rem) 100%, 0 100%, 0 1rem);
+}
+
+[data-theme="dark"] .btnChallenge:after {
+  content: "";
+  position: absolute;
+  top: .2rem;
+  right: .2rem;
+  width: 0;
+  height: 0;
+  border-right: .7rem solid #0000;
+  border-bottom: .7rem solid #000;
+  transform: rotate(177deg);
+}
+
+.btnChallenge:hover {
+  filter: brightness(1.07);
+  transform: translateY(-2px);
+}
+
+.challengeCard .share {
+  width: 42px;
+  height: 42px;
+  background: #2f2f34;
+  border: 0;
+  border-radius: 6px;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+}
+
+.challengeCard .share svg {
+  width: 20px;
+  height: 20px;
+  fill: #ffffff;
+}
+
+

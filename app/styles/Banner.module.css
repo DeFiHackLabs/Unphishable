@@ -1,0 +1,113 @@
+.gradientBg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(120deg, 
+    rgba(255, 0, 128, 0.7), /* 霓虹粉紅 */
+    rgba(0, 255, 255, 0.7), /* 霓虹青色 */
+    rgba(0, 255, 0, 0.7), /* 霓虹綠 */
+    rgba(255, 0, 255, 0.7), /* 電子紫紅 */
+    rgba(0, 191, 255, 0.7), /* 電子藍 */
+    rgba(255, 0, 128, 0.7)  /* 霓虹粉紅 */
+  );
+  background-size: 400% 400%;
+  animation: fluidGradient 18s linear infinite;
+  /* filter: blur(40px); */
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.circleGradient {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  filter: blur(60px);
+  opacity: 0.85;
+  animation: moveAround 25s infinite alternate, pulseOpacity 10s infinite;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.purpleBlue {
+  background: radial-gradient(circle, 
+    rgba(255, 0, 255, 0.9) 0%, 
+    rgba(0, 255, 255, 0.7) 50%, 
+    rgba(0, 150, 255, 0) 100%
+  );
+}
+
+.yellowBlue {
+  background: radial-gradient(circle, 
+    rgba(255, 255, 0, 0.9) 0%, 
+    rgba(0, 255, 255, 0.7) 50%, 
+    rgba(0, 120, 255, 0) 100%
+  );
+}
+
+.blueGradient {
+  background: radial-gradient(circle, 
+    rgba(0, 255, 255, 0.9) 0%, 
+    rgba(0, 100, 255, 0.7) 40%, 
+    rgba(0, 30, 200, 0) 100%
+  );
+}
+
+.purpleGradient {
+  background: radial-gradient(circle, 
+    rgba(255, 0, 255, 0.9) 0%, 
+    rgba(180, 0, 255, 0.7) 50%, 
+    rgba(100, 0, 200, 0) 100%
+  );
+}
+
+@keyframes fluidGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes moveAround {
+  0% {
+    transform: translate(-80px, -40px) scale(1);
+  }
+  25% {
+    transform: translate(40px, 60px) scale(1.1);
+  }
+  50% {
+    transform: translate(100px, -50px) scale(0.95);
+  }
+  75% {
+    transform: translate(-50px, 80px) scale(1.05);
+  }
+  100% {
+    transform: translate(-80px, -40px) scale(1);
+  }
+}
+
+@keyframes pulseOpacity {
+  0% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 0.4;
+  }
+}
+
+/* .contentWrapper {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+} */

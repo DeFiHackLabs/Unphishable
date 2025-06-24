@@ -1,0 +1,75 @@
+.hero-section {
+  background-image: url('/images/banner.svg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  height: 100vh; /* 設置高度為視窗高度 */
+  width: 100%; /* 確保寬度為100% */
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  padding: 0; /* 移除內邊距，確保完全填充視窗 */
+  margin: 0; /* 移除外邊距 */
+  overflow: hidden; /* 防止內容溢出 */
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 1200px;
+    padding: 2rem;
+    margin-top: 25vh
+  }
+}
+
+.challenge-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #DAFF6A;
+  width: clamp(200px, 15vw, 200px);
+  color: #000 !important;
+  font-weight: 600;
+  padding: 10px 30px;
+  text-decoration: none;
+  position: relative;
+  clip-path: polygon(15px 0, calc(100% - 15px) 0, 100% 50%, calc(100% - 15px) 100%, 15px 100%, 0 50%);
+  transition: all 0.3s ease;
+}
+
+.challenge-link::before,
+.challenge-link::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+.challenge-link::before {
+  left: 10px;
+  border-width: 6px 6px 6px 0;
+  border-color: transparent #000 transparent transparent;
+  transform: translateY(-50%);
+}
+
+.challenge-link::after {
+  right: 10px;
+  border-width: 6px 0 6px 6px;
+  border-color: transparent transparent transparent #000;
+  transform: translateY(-50%);
+}
+
+.challenge-link:hover {
+  background-color: #c8ff3a;
+  transform: scale(1.05);
+}

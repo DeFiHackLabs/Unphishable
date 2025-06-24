@@ -1,0 +1,484 @@
+/* 主題變量 */
+/* 深色主題（夜光模式）*/
+[data-theme="dark"] .leaderboardContainer {
+  --background-color: #0B0B0C;;
+  --leaderboard-bg: #1a1a1a;
+  --leaderboard-text: #ffffff;
+  --leaderboard-header-bg: #0d0d0d;
+  --leaderboard-header-text: #d9ff6a;
+  --leaderboard-row-bg: #1E1E1E;
+  --leaderboard-row-hover: #2a2a2a;
+  --leaderboard-border: #333;
+  --avatar-border: #4a4a4a;
+  --avatar-bg: #2a2a2a;
+  --avatar-corner: #d9ff6a;
+  --rank-normal: #4a4a4a;
+  --title-text: #cccccc;
+}
+
+/* 淺色主題（白天模式）*/
+[data-theme="light"] .leaderboardContainer {
+  --background-color: #ffffff;
+  --leaderboard-bg: #f5f5f5;
+  --leaderboard-text: #333333;
+  --leaderboard-header-bg: #daff6a;
+  --leaderboard-header-text: #1f2937;
+  --leaderboard-row-bg: #ffffff;
+  --leaderboard-row-hover: #f0f0f0;
+  --leaderboard-border: #dddddd;
+  --avatar-border: #bbbbbb;
+  --avatar-bg: #ffffff;
+  --avatar-corner: #d9ff6a;
+  --rank-normal: #bbbbbb;
+  --title-text: #666666;
+}
+/* 主題樣式已通過 data-theme 屬性應用，不再需要 lightTheme 類 */
+
+/* 通用樣式 */
+.leaderboardContainer {
+  width: 100%;
+  overflow-x: auto;
+  background-color: var(--background-color);
+}
+
+.leaderboardTable {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: var(--leaderboard-bg);
+  color: var(--leaderboard-text);
+  /* box-shadow: 0 8px 24px rgba(0,0,0,.45); */
+  /* border-radius: 8px; */
+  overflow: hidden;
+  table-layout: fixed;
+}
+
+.title {
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  position: relative;
+  display: inline-block;
+  left: 50%;
+  transform: translateX(-50%);
+}
+[data-theme="dark"] .title {
+  color: #DAFF6A;
+}
+[data-theme="light"] .title::after {
+  content: '';
+  position: absolute;
+  bottom: 0.3rem;
+  left: 0;
+  width: 100%;
+  height: 8px;
+  background-color: #DAFF6A;
+  z-index: -1;
+}
+
+.leaderboardTable thead th {
+  padding: 18px 20px;
+  text-align: left;
+  /* font-weight: 600; */
+  background-color: var(--leaderboard-header-bg);
+  color: var(--leaderboard-header-text);
+  border-bottom: 5px solid var(--background-color);
+  font-size: 1.1rem;
+}
+
+.leaderboardRow {
+  border-bottom: 5px solid var(--background-color);
+  transition: background-color 0.2s;
+  background-color: var(--leaderboard-row-bg);
+  height: 70px;
+}
+
+.leaderboardRow:hover {
+  background-color: var(--leaderboard-row-hover);
+}
+
+.rankCell, .challengerCell, .titleCell, .levelCell, .scoreCell {
+  padding: 15px 20px;
+  vertical-align: middle;
+}
+
+.rankCell {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100px;
+}
+
+.rankBadge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 39px;
+  /* clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%); */
+  font-weight: bold;
+  color: #ffffff;
+  position: relative;
+  font-size: 16px;
+  border-radius: 8px;
+  background-size: cover;
+  background-position: center;
+}
+[data-theme="light"] .rankBadge {
+  color: #1f2937;
+}
+.goldRank {
+  background: linear-gradient(135deg, #f7d358, #d4af37, #b8860b);
+  /* box-shadow: 0 0 10px rgba(212, 175, 55, 0.5); */
+}
+
+.silverRank {
+  background: linear-gradient(135deg, #e8e8e8, #c0c0c0, #a9a9a9);
+  /* box-shadow: 0 0 10px rgba(192, 192, 192, 0.5); */
+}
+
+.bronzeRank {
+  background: linear-gradient(135deg, #e5aa70, #cd7f32, #a0522d);
+  /* box-shadow: 0 0 10px rgba(205, 127, 50, 0.5); */
+}
+
+.normalRank {
+  background: none;
+}
+
+.trendUp {
+  color: #4caf50;
+  font-size: 18px;
+  font-weight: bold;
+  margin-left: 5px;
+}
+
+.trendDown {
+  color: #f44336;
+  font-size: 18px;
+  font-weight: bold;
+  margin-left: 5px;
+}
+
+.trendStable {
+  color: #9e9e9e;
+  font-size: 18px;
+  font-weight: bold;
+  margin-left: 5px;
+}
+
+/* .challengerCell {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+} */
+
+.avatarContainer {
+  position: relative;
+  /* width: 48px;
+  height: 48px; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.avatarWrapper {
+  width: 40px;
+  height: 40px;
+  /* border: 2px solid var(--avatar-border); */
+  border-radius: 6px;
+  overflow: hidden;
+  position: relative;
+  background-color: var(--avatar-bg);
+  z-index: 0;
+}
+
+.avatarContainer .topLeft,
+.avatarContainer .topRight,
+.avatarContainer .bottomLeft,
+.avatarContainer .bottomRight {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.avatarContainer .topLeft {
+  top: -2px;
+  left: -2px;
+  border-width: 10px 10px 0 0;
+  border-color: var(--avatar-corner) transparent transparent transparent;
+}
+
+.avatarContainer .topRight {
+  top: -2px;
+  right: -2px;
+  border-left: none;
+  border-bottom: none;
+}
+
+.avatarContainer .bottomLeft {
+  bottom: -2px;
+  left: -2px;
+  border-right: none;
+  border-top: none;
+}
+
+.avatarContainer .bottomRight {
+  bottom: -2px;
+  right: -2px;
+  border-width: 0 0 10px 10px;
+  border-color: transparent transparent var(--avatar-corner) transparent;
+}
+
+.avatar {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.3s ease;
+}
+
+.avatarWrapper:hover .avatar {
+  transform: scale(1.1);
+}
+
+.challengerName {
+  font-weight: 600;
+  color: var(--leaderboard-text);
+  font-size: 1.05rem;
+  letter-spacing: 0.5px;
+}
+
+.titleCell {
+  color: var(--title-text);
+  font-weight: 400;
+}
+
+.levelCell {
+  color: var(--title-text);
+  font-weight: 400;
+}
+
+.scoreCell {
+  font-weight: bold;
+  font-size: 18px;
+  color: var(--leaderboard-text);
+  text-align: center;
+  letter-spacing: 0.5px;
+}
+
+.rankHeader {
+  width: 10%;
+}
+
+.challengerHeader {
+  width: 30%;
+}
+
+.titleHeader {
+  width: 30%;
+}
+
+.levelHeader {
+  width: 10%;
+}
+
+.scoreHeader {
+  width: 20%;
+  text-align: center !important;
+}
+
+/* 響應式設計 */
+@media (max-width: 1024px) {
+  .leaderboardTable thead th {
+    padding: 15px 10px;
+    font-size: 1rem;
+  }
+  
+  .rankCell, .challengerCell, .titleCell, .levelCell, .scoreCell {
+    padding: 12px 10px;
+  }
+  
+  .challengerName {
+    font-size: 0.95rem;
+  }
+  
+  .scoreCell {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .leaderboardTable {
+    table-layout: auto;
+  }
+  
+  .leaderboardTable thead th {
+    padding: 12px 8px;
+    font-size: 0.9rem;
+  }
+  
+  .rankCell, .challengerCell, .titleCell, .levelCell, .scoreCell {
+    padding: 10px 8px;
+  }
+  
+  .rankCell {
+    width: auto;
+    gap: 5px;
+  }
+  
+  /* .rankBadge {
+    width: 30px;
+    height: 30px;
+    font-size: 14px;
+  } */
+  
+  .avatarWrapper {
+    width: 35px;
+    height: 35px;
+  }
+  
+  .challengerName {
+    font-size: 0.85rem;
+  }
+  
+  .titleCell, .levelCell {
+    font-size: 0.85rem;
+  }
+  
+  .scoreCell {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 640px) {
+  .leaderboardRow {
+    height: auto;
+  }
+  
+  .leaderboardTable thead th {
+    padding: 10px 5px;
+    font-size: 0.8rem;
+  }
+  
+  .rankCell, .challengerCell, .titleCell, .levelCell, .scoreCell {
+    padding: 8px 5px;
+  }
+  
+  /* .rankBadge {
+    width: 25px;
+    height: 25px;
+    font-size: 12px;
+  } */
+  
+  .trendUp, .trendDown, .trendStable {
+    font-size: 14px;
+    margin-left: 2px;
+  }
+  
+  .avatarWrapper {
+    width: 30px;
+    height: 30px;
+  }
+  
+  .challengerName {
+    font-size: 0.8rem;
+  }
+  
+  .titleCell, .levelCell {
+    font-size: 0.75rem;
+  }
+  
+  .scoreCell {
+    font-size: 12px;
+  }
+  
+  /* 調整表格列寬度 */
+  .rankHeader {
+    width: 15%;
+  }
+  
+  .challengerHeader {
+    width: 35%;
+  }
+  
+  .titleHeader {
+    width: 25%;
+  }
+  
+  .levelHeader {
+    width: 10%;
+  }
+  
+  .scoreHeader {
+    width: 15%;
+  }
+}
+
+/* 超小屏幕設備 */
+@media (max-width: 480px) {
+  .leaderboardContainer {
+    overflow-x: auto;
+  }
+  
+  .leaderboardTable {
+    min-width: 480px; /* 確保表格不會過小而變形 */
+  }
+  
+  .titleCell {
+    max-width: 100px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  /* .avatarContainer .topLeft,
+  .avatarContainer .bottomRight {
+    border-width: 8px 8px 0 0;
+  } */
+}
+
+/* 移動版卡片主題樣式 */
+.mobileCard {
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+/* 暗色主題下的移動版卡片 */
+[data-theme="dark"] .mobileCard {
+  background-color: var(--leaderboard-row-bg);
+  color: var(--leaderboard-text);
+  border: 1px solid var(--leaderboard-border);
+}
+
+/* 亮色主題下的移動版卡片 */
+[data-theme="light"] .mobileCard {
+  background-color: var(--leaderboard-row-bg);
+  color: var(--leaderboard-text);
+  border: 1px solid var(--leaderboard-border);
+}
+
+.aboutBox {
+  border-right: 5px solid #DAFF6A;
+  height: 17px; /* 與文字等高 */
+  margin-right: 20px; /* 線與文字的間距 */
+  border-radius: 4px;
+}
+
+.aboutTitle {
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: left;
+  line-height: 1.65rem; /* 垂直置中效果更佳 */
+}
+
+[data-theme="dark"] .aboutTitle {
+  color: #DAFF6A;
+}
+
+[data-theme="light"] .aboutTitle {
+  color: #333333;
+}

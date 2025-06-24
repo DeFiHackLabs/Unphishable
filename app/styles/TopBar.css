@@ -1,0 +1,114 @@
+/* TopBar 樣式 */
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.25rem;
+  background-color: #00000000;
+  backdrop-filter: blur(10px);
+  color: white;
+  height: 70px;
+  transition: all 0.3s ease;
+}
+
+@media (min-width: 768px) {
+  .topbar {
+    padding: 3rem 1.25rem 3rem 1.25rem;
+  }
+}
+
+/* 非首頁的樣式 */
+.topbar.non-homepage {
+  background-color: #0B0B0C;
+  padding: 1rem 1.25rem;
+}
+
+/* 移動端菜單樣式 */
+@media (max-width: 767px) {
+  .nav-link::after,
+  .nav-link:hover::after {
+    bottom: -2px;
+  }
+  
+  .nav-link.active,
+  .nav-link:hover {
+    color: #DAFF6A;
+  }
+}
+
+/* 滾動超出 hero-section 後的樣式 */
+.topbar.scrolled-past-hero {
+  background-color: #0B0B0C;
+  padding: 1rem 1.25rem;
+  transition: padding 0.3s ease, background-color 0.3s ease;
+}
+
+/* 導航鏈接樣式 */
+.nav-link {
+  position: relative;
+  padding: 0.5rem 0.25rem;
+  /* font-weight: 500; */
+  color: white;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #DAFF6A;
+}
+
+.nav-link.active {
+  color: #DAFF6A;
+}
+
+.nav-link.active::after,
+.nav-link:hover::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #DAFF6A;
+  transition: transform 0.3s ease;
+}
+
+/* 語言切換下拉菜單 */
+.language-switch button {
+  display: flex;
+  align-items: center;
+}
+
+.language-switch button:hover {
+  color: #DAFF6A;
+}
+
+/* 主題切換按鈕 */
+.theme-toggle {
+  color: white;
+}
+
+.theme-toggle:hover {
+  color: #DAFF6A;
+}
+
+/* 深色模式 */
+.dark-mode {
+  --bg-color: #121212;
+  --text-color: #ffffff;
+}
+
+/* 連接錢包按鈕 */
+.connect-button button {
+  background-color: white;
+  color: black;
+  border-radius: 9999px;
+  padding: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.connect-button button:hover {
+  background-color: #f0f0f0;
+}

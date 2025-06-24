@@ -1,0 +1,89 @@
+/* 調整星星間距 */
+.flex span + span {
+  margin-left: -2px;
+}
+
+.bg-black {
+  background-color: #121212;
+}
+
+/* 折疊/展開箭頭樣式 */
+.level-header {
+  cursor: pointer;
+  position: relative;
+}
+
+.level-header::after {
+  content: '';
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #ffffff;
+  transition: transform 0.3s ease;
+}
+
+[data-theme="light"] .level-header::after {
+  border-top: 5px solid #BBBBBB;
+}
+
+.level-header.open::after {
+  transform: translateY(-50%) rotate(180deg);
+}
+
+.aboutBox {
+  height: 17px; /* 與文字等高 */
+  margin-right: 10px; /* 線與文字的間距 */
+  border-radius: 4px;
+}
+
+.aboutTitle {
+  /* font-size: 1.65rem; */
+  font-weight: bold;
+  text-align: left;
+  line-height: 1.65rem; /* 垂直置中效果更佳 */
+}
+
+[data-theme="dark"] .aboutBox {
+  border-right: 5px solid #DAFF6A;
+}
+
+[data-theme="light"] .aboutBox {
+  border-right: 5px solid #333333;
+}
+
+[data-theme="dark"] .aboutTitle {
+  color: #DAFF6A;
+}
+
+[data-theme="light"] .aboutTitle {
+  color: #333333;
+}
+
+[data-theme="dark"] .leftMenu {
+  background-color: #161619;
+  color: #ffffff;
+}
+[data-theme="light"] .leftMenu {
+  background-color: #F5F5F5;
+  color: #000000;
+}
+
+/* 連接錢包按鈕 */
+.connect-button button {
+  background-color: white;
+  color: black;
+  border-radius: 9999px;
+  padding: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.connect-button button:hover {
+  background-color: #f0f0f0;
+}

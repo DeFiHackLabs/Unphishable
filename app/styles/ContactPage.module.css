@@ -1,0 +1,33 @@
+
+[data-theme="light"] .contactSection {
+  background-color: #ffffff;
+  color: #111827;
+}
+
+[data-theme="dark"] .contactSection {
+  background-color: #0B0B0C;
+  color: #ffffff;
+}
+
+.contactBox {
+  border-right: 5px solid #DAFF6A;
+  height: 17px; /* 與文字等高 */
+  margin-right: 20px; /* 線與文字的間距 */
+  border-radius: 4px;
+}
+
+.contactTitle {
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: left;
+  line-height: 1.65rem; /* 垂直置中效果更佳 */
+}
+
+[data-theme="dark"] .contactTitle {
+  color: #DAFF6A;
+}
+
+[data-theme="light"] .contactTitle {
+  color: #333333;
+}
+
