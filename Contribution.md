@@ -1,9 +1,46 @@
 # 🧩 Contributing Challenges
 We welcome contributions of new phishing challenges! Follow these steps to add a new challenge:
 
-### Languages: [English](step-1-add-challenge-data) [中文简体](如何新增挑战challenge--中文简体) [中文繁體](如何新增挑戰challenge--中文繁體)
+### Languages: [English](#-getting-started) [中文简体](#如何新增挑战challenge--中文简体) [中文繁體](#如何新增挑戰challenge--中文繁體)
 
 ---
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js (v18 or later)
+- npm or yarn
+
+### Clone and Setup
+
+```bash
+# Clone the repository
+git clone https://github.com/DeFiHackLabs/Unphishable.git
+cd Unphishable/
+
+# Install dependencies
+npm install
+# or
+yarn install
+
+# Start the development server
+npm run dev
+# or
+yarn dev
+```
+
+The application will be available at `http://localhost:3000`.
+
+### Build for Production
+
+```bash
+npm run build
+npm start
+# or
+yarn build
+yarn start
+```
 
 ### Step 1: Add Challenge Data
 
@@ -65,14 +102,44 @@ export default function YourChallenge() {
   );
 }
 ```
+## 🌐 Internationalization (i18n)
 
-## Funding Team
+Unphishable supports multiple languages to make the platform accessible to a wider audience. Currently, the following languages are supported:
 
-DeFiHackLabs , SlowMist , ScamSniffer
+- English (en)
+- Traditional Chinese (zh-hant)
+- Simplified Chinese (zh-hans)
 
-## Supporters
+### Adding Translations
 
-Ethereum ESP, Geodework, Goplus
+Translations are managed in the `app/i18n/locales/` directory with separate files for each supported language:
+
+- `en.ts` - English translations
+- `zh-hant.ts` - Traditional Chinese translations
+- `zh-hans.ts` - Simplified Chinese translations
+
+When adding new content or challenges, make sure to update all language files to maintain full multilingual support.
+
+### Translation Structure
+
+Each challenge should include translations for at least:
+- Title
+- Description
+- UI elements and instructions
+
+Example translation entry:
+
+```ts
+export default {
+  challengeName: {
+    title: "Challenge Title",
+    subtitle: "Challenge Subtitle",
+    description: "Detailed description of the challenge",
+    // Other UI elements...
+  },
+  // Other challenges...
+}
+```
 
 ---
 
