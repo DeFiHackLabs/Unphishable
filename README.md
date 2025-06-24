@@ -19,80 +19,8 @@ The platform features:
 By completing these challenges, users develop practical skills to protect their digital assets in the Web3 ecosystem.
 
 ## 🚀 Getting Started
+👉 Visit [https://unphishable.io](https://unphishable.io) — start your anti-phishing journey today!
 
-### Prerequisites
-
-- Node.js (v18 or later)
-- npm or yarn
-
-### Clone and Setup
-
-```bash
-# Clone the repository
-git clone https://github.com/DeFiHackLabs/Unphishable.git
-cd Unphishable/
-
-# Install dependencies
-npm install
-# or
-yarn install
-
-# Start the development server
-npm run dev
-# or
-yarn dev
-```
-
-The application will be available at `http://localhost:3000`.
-
-### Build for Production
-
-```bash
-npm run build
-npm start
-# or
-yarn build
-yarn start
-```
-
-## 🌐 Internationalization (i18n)
-
-Unphishable supports multiple languages to make the platform accessible to a wider audience. Currently, the following languages are supported:
-
-- English (en)
-- Traditional Chinese (zh-hant)
-- Simplified Chinese (zh-hans)
-
-### Adding Translations
-
-Translations are managed in the `app/i18n/locales/` directory with separate files for each supported language:
-
-- `en.ts` - English translations
-- `zh-hant.ts` - Traditional Chinese translations
-- `zh-hans.ts` - Simplified Chinese translations
-
-When adding new content or challenges, make sure to update all language files to maintain full multilingual support.
-
-### Translation Structure
-
-Each challenge should include translations for at least:
-- Title
-- Description
-- UI elements and instructions
-
-Example translation entry:
-
-```ts
-export default {
-  challengeName: {
-    title: "Challenge Title",
-    subtitle: "Challenge Subtitle",
-    description: "Detailed description of the challenge",
-    // Other UI elements...
-  },
-  // Other challenges...
-}
-```
 
 ## 🧩 [Contributing Challenges](./Contribution.md) 
 
