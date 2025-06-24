@@ -3,20 +3,21 @@
 
 ## 🌐 Project Introduction
 
-Unphishable is an interactive educational platform designed to train users on identifying and avoiding Web3 phishing attacks. Through hands-on challenges that simulate real-world phishing scenarios, users can safely experience and learn to recognize various phishing techniques used by attackers in the Web3 space.
+Unphishable is a hands-on, interactive platform designed to help users recognize and defend against phishing attacks in the Web3 space.
+Through realistic, gamified challenges, participants develop practical awareness and strengthen their phishing detection skills.
 
 The platform features:
 - 30+ interactive phishing challenges across different difficulty levels (Beginner, Intermediate, Advanced)
 - Multilingual support (English, Traditional Chinese, Simplified Chinese)
-- Simulations of common Web3 phishing attacks including:
+- Gamified Anti-Phishing Training
+  -  Learn by doing
+- Real-World Phishing Simulations - Train to recognize and defend against common Web3 attack vectors, including:
   - Seed phrase scams
   - Token approval phishing
   - Airdrop scams
   - Clipboard hijacking
   - Punycode domain attacks
   - And many more advanced attack vectors
-
-By completing these challenges, users develop practical skills to protect their digital assets in the Web3 ecosystem.
 
 ## 🚀 Getting Started
 👉 Visit [https://unphishable.io](https://unphishable.io) — start your anti-phishing journey today!
