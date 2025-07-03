@@ -14,6 +14,13 @@
   --avatar-corner: #d9ff6a;
   --rank-normal: #4a4a4a;
   --title-text: #cccccc;
+  --text-color: #ffffff;
+  --button-background-color: #333333;
+  --button-text-color: #ffffff;
+  --button-border-color: #555555;
+  --disabled-background-color: #444444;
+  --disabled-text-color: #777777;
+  --disabled-border-color: #555555;
 }
 
 /* 淺色主題（白天模式）*/
@@ -31,6 +38,13 @@
   --avatar-corner: #d9ff6a;
   --rank-normal: #bbbbbb;
   --title-text: #666666;
+  --text-color: #000000;
+  --button-background-color: #f0f0f0;
+  --button-text-color: #000000;
+  --button-border-color: #cccccc;
+  --disabled-background-color: #e0e0e0;
+  --disabled-text-color: #999999;
+  --disabled-border-color: #cccccc;
 }
 /* 主題樣式已通過 data-theme 屬性應用，不再需要 lightTheme 類 */
 
@@ -53,7 +67,6 @@
 }
 
 .title {
-  font-size: 1rem;
   font-weight: bold;
   text-align: center;
   margin-bottom: 1.5rem;
@@ -481,4 +494,33 @@
 
 [data-theme="light"] .aboutTitle {
   color: #333333;
+}
+
+/* 分頁容器樣式 */
+.paginationContainer {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* 按鈕基礎樣式 */
+.paginationButton {
+  background-color: var(--button-background-color);
+  color: var(--button-text-color);
+  border: 1px solid var(--button-border-color);
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+/* 禁用按鈕樣式 */
+.disabledButton {
+  background-color: var(--disabled-background-color);
+  color: var(--disabled-text-color);
+  border-color: var(--disabled-border-color);
+  cursor: not-allowed;
+}
+
+/* 分頁文字樣式 */
+.paginationText {
+  font-weight: bold;
+  color: var(--text-color);
 }

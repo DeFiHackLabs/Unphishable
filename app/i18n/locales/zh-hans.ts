@@ -1539,6 +1539,11 @@ export default {
     viewMore: "查看更多",
     challengeMore: "更多挑战",
     contributions: "我要贡献关卡",
+    countdownTitle: "{date} {time}",
+    countdownSuffix: "全球同步开启",
+    hours: "小时",
+    minutes: "分钟",
+    seconds: "秒",
     footer: {
       description: "通过互动式安全教育和钓鱼防范训练赋能Web3用户",
       links: "快速链接",
@@ -2830,5 +2835,10 @@ export default {
     // 手機版卡片需要使用的文字
     titleLabel: "称号:",
     levelLabel: "等级:",
+    first: "First",
+    last: "Last",
+    previous: "Previous",
+    next: "Next",
+    page: "Page",
   },
 };

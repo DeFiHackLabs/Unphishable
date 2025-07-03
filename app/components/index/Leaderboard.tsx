@@ -1,11 +1,11 @@
 'use client';
 
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import styles from '@/app/styles/Leaderboard.module.css';
 import { useLanguage } from '@/app/contexts/LanguageContext';
-import { CgProfile } from "react-icons/cg";
 import { useLeaderboardStore } from '@/app/stores/leaderboardStore';
-// const language: "en" | "zh-hant" | "zh-hans"
+import { CgProfile } from "react-icons/cg";
+
 // 等級資訊介面
 export interface LevelInfo {
   level: number;
@@ -93,17 +93,71 @@ export default function Leaderboard({
   title
 }: { title?: string }) {
   const { t, language } = useLanguage();
-  const { leaderboard, isLoading, error, fetchLeaderboard } = useLeaderboardStore();
+  const { leaderboard, totalCount, currentPage, isLoading, error, fetchLeaderboard } = useLeaderboardStore();
+
+  const [page, setPage] = useState(currentPage || 1); // 使用 store 中的 currentPage，默認為 1
+  const [totalPages, setTotalPages] = useState(1);
 
   useEffect(() => {
-    fetchLeaderboard();
-  }, [fetchLeaderboard]);
+    const fetchData = async () => {
+      await fetchLeaderboard(page); // 使用本地狀態的 page
+      setTotalPages(Math.ceil((totalCount || 0) / 20)); // 假設每頁顯示 20 條
+    };
+    fetchData();
+  }, [page, fetchLeaderboard, totalCount]); // 監控本地 page 狀態
 
-  useEffect(() => {
-    if (leaderboard) {
-      console.log('aaa Leaderboard data:', leaderboard);
+  const handlePreviousPage = () => {
+    if (page > 1) {
+      setPage(page - 1); // 更新本地 page 狀態
     }
-  }, [leaderboard]);
+  };
+
+  const handleNextPage = () => {
+    if (page < totalPages) {
+      setPage(page + 1); // 更新本地 page 狀態
+    }
+  };
+
+  const renderPagination = () => (
+    <div className={`flex justify-center items-center mt-4 ${styles.paginationContainer}`}>
+      <button
+        onClick={() => setPage(1)} // 回到最前頁
+        disabled={page === 1}
+        className={`px-4 py-2 rounded disabled:opacity-50 ${styles.paginationButton} ${page === 1 ? styles.disabledButton : ""
+          }`}
+      >
+        {t.leaderboard.first}
+      </button>
+      <button
+        onClick={handlePreviousPage}
+        disabled={page === 1}
+        className={`px-4 py-2 rounded disabled:opacity-50 mx-2 ${styles.paginationButton} ${page === 1 ? styles.disabledButton : ""
+          }`}
+      >
+        {t.leaderboard.previous}
+      </button>
+      <span className={`mx-4 ${styles.paginationText}`}>
+        {t.leaderboard.page} {page} / {totalPages}
+      </span>
+      <button
+        onClick={handleNextPage}
+        disabled={page === totalPages}
+        className={`px-4 py-2 rounded disabled:opacity-50 mx-2 ${styles.paginationButton} ${page === totalPages ? styles.disabledButton : ""
+          }`}
+      >
+        {t.leaderboard.next}
+      </button>
+      <button
+        onClick={() => setPage(totalPages)} // 跳到最後頁
+        disabled={page === totalPages}
+        className={`px-4 py-2 rounded disabled:opacity-50 ${styles.paginationButton} ${page === totalPages ? styles.disabledButton : ""
+          }`}
+      >
+        {t.leaderboard.last}
+      </button>
+    </div>
+  );
+
   // 格式化分數顯示
   const formatScore = (score: number): string => {
     return score.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
@@ -140,6 +194,13 @@ export default function Leaderboard({
     );
   }
 
+  if (!leaderboard || leaderboard.length === 0) {
+    return (
+      <div className="flex justify-center items-center min-h-[400px]">
+        <div className="text-gray-500">No leaderboard data available</div>
+      </div>
+    );
+  }
   if (error) {
     return (
       <div className="flex justify-center items-center min-h-[400px]">
@@ -166,13 +227,16 @@ export default function Leaderboard({
           return (
             <tr key={index} className={styles.leaderboardRow}>
               <td className={styles.rankCell}>
-                <div className={`${styles.rankBadge} ${getRankBadgeClass(index + 1)}`} style={{ backgroundImage: `url(${getRankBadgeBackground(index + 1)})` }}>
-                  {index + 1}
+                <div
+                  className={`${styles.rankBadge} ${getRankBadgeClass(user.user_rank)}`}
+                  style={{ backgroundImage: `url(${getRankBadgeBackground(user.user_rank)})` }}
+                >
+                  {user.user_rank}
                 </div>
                 {getTrendIcon('stable')}
               </td>
               <td className={`${styles.challengerCell}`}>
-                <div className='flex items-center gap-4'>
+                <div className="flex items-center gap-4">
                   <div className={styles.avatarContainer}>
                     <div className={styles.topLeft}></div>
                     <div className={styles.bottomRight}></div>
@@ -192,24 +256,12 @@ export default function Leaderboard({
                 </div>
               </td>
               <td className={styles.titleCell}>{userLevel.title[language] || userLevel.title['zh-hant']}</td>
-              {language === 'zh-hant' && (
-                <td className={styles.levelCell}>
-                  <span className={styles.levelIcon} />
-                  等級 {userLevel.level}
-                </td>
-              )}
-              {language === 'en' && (
-                <td className={styles.levelCell}>
-                  <span className={styles.levelIcon} />
-                  Level {userLevel.level}
-                </td>
-              )}
-              {language === 'zh-hans' && (
-                <td className={styles.levelCell}>
-                  <span className={styles.levelIcon} />
-                  等级 {userLevel.level}
-                </td>
-              )}
+              <td className={styles.levelCell}>
+                <span className={styles.levelIcon} />
+                {language === 'zh-hant' && `等級 ${userLevel.level}`}
+                {language === 'en' && `Level ${userLevel.level}`}
+                {language === 'zh-hans' && `等级 ${userLevel.level}`}
+              </td>
               <td className={styles.scoreCell}>{formatScore(user.total_score)}</td>
             </tr>
           );
@@ -226,8 +278,11 @@ export default function Leaderboard({
           <div key={index} className={`${styles.mobileCard} mb-4 p-4 bg-white rounded-lg shadow`}>
             <div className="flex items-center justify-between mb-3">
               <div className="flex items-center">
-                <div className={`${styles.rankBadge} ${getRankBadgeClass(index + 1)}`} style={{ backgroundImage: `url(${getRankBadgeBackground(index + 1)})`, marginRight: '0.5rem' }}>
-                  {index + 1}
+                <div
+                  className={`${styles.rankBadge} ${getRankBadgeClass(user.user_rank)}`}
+                  style={{ backgroundImage: `url(${getRankBadgeBackground(user.user_rank)})`, marginRight: '0.5rem' }}
+                >
+                  {user.user_rank}
                 </div>
                 {getTrendIcon('stable')}
               </div>
@@ -277,15 +332,16 @@ export default function Leaderboard({
   return (
     <div className={styles.leaderboardContainer}>
       <div className="max-w-7xl lg:max-w-6xl mx-auto lg:px-14 px-5 py-12">
-        {title === 'index' && <h1 className={styles.title}>{t.home.leaderboard}</h1>}
+        {title === 'index' && <h1 className={`${styles.title} text-xl`}>{t.home.leaderboard}</h1>}
         {title === 'page' && (
-          <div className='flex items-center mb-5'>
+          <div className="flex items-center mb-5">
             <span className={styles.aboutBox} />
             <h1 className={styles.aboutTitle}>{t.home.leaderboard}</h1>
           </div>
         )}
         {renderDesktopTable()}
         {renderMobileCards()}
+        {renderPagination()}
       </div>
     </div>
   );

@@ -12,7 +12,7 @@ export default function AboutUs({
     <div className={styles.aboutUsSection}>
       <div className="max-w-7xl lg:max-w-6xl mx-auto lg:px-14 px-5">
         {title === 'index' &&
-          <h2 className={styles.title}>{t.home.aboutUs}</h2>
+          <h2 className={`${styles.title} text-xl`}>{t.home.aboutUs}</h2>
         }
         {title === 'page' &&
           <div className='flex items-center mb-5'>

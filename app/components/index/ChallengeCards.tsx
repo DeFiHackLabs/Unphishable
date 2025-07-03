@@ -22,7 +22,7 @@ export default function ChallengeCards() {
   return (
     <div className={styles.challengeCardsSection}>
       <div className="max-w-7xl lg:max-w-6xl mx-auto lg:px-14 px-5 py-12">
-        <h2 className={styles.title}>{t.home.securityChallenges}</h2>
+        <h2 className={`${styles.title} text-xl`}>{t.home.securityChallenges}</h2>
 
         <p className="text-center mb-8">{t.home.challengeDescription}</p>
 

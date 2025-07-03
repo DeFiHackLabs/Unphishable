@@ -1734,6 +1734,11 @@ export default {
     viewMore: "View More",
     challengeMore: "Challenge More",
     contributions: "Contribute",
+    countdownTitle: "{date} {time}",
+    countdownSuffix: "Global Launch",
+    hours: "Hours",
+    minutes: "Minutes",
+    seconds: "Seconds",
     footer: {
       description:
         "Empowering Web3 users with interactive security education and phishing prevention training.",
@@ -3093,5 +3098,10 @@ export default {
     // 手機版卡片需要使用的文字
     titleLabel: "Title:",
     levelLabel: "Level:",
+    first: "First",
+    last: "Last",
+    previous: "Previous",
+    next: "Next",
+    page: "Page",
   },
 };

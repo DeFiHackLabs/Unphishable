@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import { useAccount } from 'wagmi';
 import { useLanguage } from '@/app/contexts/LanguageContext';
 import { useUserStore } from '@/app/stores/userStore';
+import WalletConnect from '@/app/components/index/WalletConnect';
 import TopBar from '@/app/components/index/TopBar';
 import Footer from '@/app/components/index/Footer';
 import Banner from '@/app/components/index/Banner';
@@ -62,7 +63,7 @@ export default function ProfilePage() {
       'zh-hans': '安全积分'
     },
     completedChallenges: {
-      en: 'Web3 Fishing Security Challenge',
+      en: 'Web3 Phishing Security Challenge',
       'zh-hant': 'Web3 钓鱼安全挑戰',
       'zh-hans': 'Web3  钓鱼安全挑战'
     },
@@ -76,8 +77,11 @@ export default function ProfilePage() {
   if (!address) {
     return (
       <div className="container mx-auto px-4 py-8">
-        <div className="text-center text-gray-600">
+        <div className="flex-col justify-center align-middle text-center text-gray-600">
           {translations.notConnected[language as keyof typeof translations.notConnected]}
+          <div className="connect-button flex items-center justify-center">
+            <WalletConnect language={language} />
+          </div>
         </div>
       </div>
     );
@@ -87,7 +91,7 @@ export default function ProfilePage() {
     <div className="min-h-screen infoBackground">
       <TopBar />
       <Banner />
-      <div className="max-w-7xl lg:max-w-6xl mx-auto lg:px-14 p-5">
+      <div className="max-w-7xl lg:max-w-6xl mx-auto lg:px-14 lg:py-10">
         {/* <h1 className="text-3xl font-bold mb-8">
           {translations.title[language as keyof typeof translations.title]}
         </h1> */}
