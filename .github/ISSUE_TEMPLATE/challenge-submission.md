@@ -36,7 +36,7 @@ Describe the technical tricks used in this phishing scenario. Examples include:
 
 Upload 1–2 images or attach a short screen recording to help us preview the interaction.
 
-## 🪙 Reward Wallet Address (USDT - TRC20/ERC20)
+## 🪙 Reward Wallet Address (USDT - ERC20 Polygon/Arbitrum)
 
 (Required if accepted for the 30 USDT reward)
 
