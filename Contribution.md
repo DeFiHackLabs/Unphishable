@@ -42,6 +42,8 @@ yarn build
 yarn start
 ```
 
+### Step 0: Fork the Project and Create a Branch (e.g., `your-challenge-name`)
+
 ### Step 1: Add Challenge Data
 
 Open the file `app/data/challenges.ts` and add a new challenge entry to the array:
@@ -152,6 +154,8 @@ For questions or support, please open an issue or join our [Telegram community](
 本文将教你如何在专案中新增一个挑战（challenge）。我们将以 `airdrop-scam` 作为范例进行说明。
 
 ---
+
+## 📌 步骤 0：fork 专案并开新分支 (ex: `airdrop-scam`)
 
 ## 📌 步骤 1：新增挑战资料
 
@@ -266,6 +270,8 @@ return <div>AirdropScam</div>;
 本文將教你如何在專案中新增一個挑戰（challenge）。我們將以 `airdrop-scam` 作為範例進行說明。
 
 ---
+
+## 📌 步骤 0：fork 專案並且開新的分支 (ex: `airdrop-scam`)
 
 ## 📌 步驟 1：新增挑戰資料
 
