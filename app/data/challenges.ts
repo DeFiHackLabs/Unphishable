@@ -605,4 +605,20 @@ export const challenges = [
     },
     link: "/challenges/zoom-phishing",
   },
+  {
+    no: "0x0036",
+    name: "fake-zoom-meeting-phishing",
+    difficulty: "Advanced",
+    title: {
+      en: "Fake Zoom Meeting Phishing",
+      "zh-hant": "假 Zoom 線上會議釣魚",
+      "zh-hans": "假 Zoom 在线会议钓鱼",
+    },
+    description: {
+      en: "Learn how attackers use fake Zoom meetings to launch phishing attacks.",
+      "zh-hant": "了解攻擊者如何利用假 Zoom 線上會議釣魚。",
+      "zh-hans": "了解攻击者如何利用假 Zoom 在线会议钓鱼。",
+    },
+    link: "/challenges/fake-zoom-meeting-phishing",
+  }
 ];
