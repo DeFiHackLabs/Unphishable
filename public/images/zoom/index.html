@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>假 Zoom 在线会议钓鱼</title>
+</head>
+<style>
+body { background: #f5f5f5;}
+.tg-box { position: relative;}
+.tg-box h1 { text-align: center; font-size: 24px; margin: 30px 0;}
+.tg-box h2.tit { font-size: 15px; margin-bottom: 10px;}
+.tg-con { position: relative; padding: 50px 30px 50px 80px; background: url(tg-bg.jpg) no-repeat 0 0; background-size: cover;}
+.tg-message { position: relative; background-color: #fff; max-width: 400px; padding: 15px; border-radius: 20px 20px 20px 0; line-height: 1.2; word-break: break-all;}
+.tg-message .info { margin-bottom: 5px;}
+.tg-message .link { margin-bottom: 15px; display: inline-block; color: #3f95c1;}
+.tg-message::after { content: ""; position: absolute; left: -10px; bottom: 0; width: 0; height: 0; border-width: 0 0 20px 16px; border-style: solid; border-color: transparent transparent #fff transparent;}
+.zoom-box { background-color: #edf5f8; border-radius: 6px; border-left: 4px solid #539bb8; padding: 10px;}
+.zoom-box img { width: 100%; padding-top: 8px;}
+.zoom-box .from { font-size: 15px; color: #529cb7; margin-bottom: 3px; font-weight: bold;}
+.zoom-box .title { font-weight: bold; margin-bottom: 3px;}
+.avatar { position: absolute; left: 20px; bottom: 40px;}
+.avatar img { width: 50px; height: 50px; border-radius: 100%;}
+.t-box { display: none;}
+.t-bg { z-index: 99; position: fixed; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5);}
+.t-con { z-index: 999; left: 5%; top: 90px; position: absolute;  width: 90%; background-color: #fff; border-radius: 8px;}
+.t-con .top { background-color: #dbe2f7; padding: 6px 10px; border-radius: 7px 7px 0 0;}
+.t-con .top i { display: inline-block; width: 12px; height: 12px; border-radius: 12px; margin: 0 4px; background-color: #ec6a5e;}
+.t-con .top i.btn-2 { background-color: #f4bf4f;}
+.t-con .top i.btn-3 { background-color: #61c554;}
+.t-con .top a.btn-close { float: right; width: 24px; height: 24px; background: url(icon-x.png) no-repeat center center; background-size: 90% auto; transition: all .3s ease;}
+.t-con .top a.btn-close:hover  {
+    transition: all .3s ease;
+    transform:rotate(180deg);
+    -ms-transform:rotate(180deg); 	/* IE 9 */
+    -moz-transform:rotate(180deg); 	/* Firefox */
+    -webkit-transform:rotate(180deg); /* Safari 和 Chrome */
+    -o-transform:rotate(180deg);}
+.t-con .url { background-color: #f9f9fe; padding: 6px 10px;}
+.t-con .url span { display: block; font-size: 13px; background-color: #e7e9f2; padding: 5px 20px; border-radius: 20px; overflow: hidden;}
+.t-con .vedio { position: relative;}
+.t-con .vedio .tips { margin: 0 auto; position: absolute; top: 30%; color: #fff; background-color: rgba(0, 0, 0, 0.8); padding: 8px 0; width: 100%; border-radius: 3px; text-align: center; font-size: 12px;}
+.t-con .vedio .tips i { display: inline-block; width: 14px; height: 14px; background: url(icon-alert.png) no-repeat 0 0; background-size: 100% auto; position: relative; top: 2px; margin-right: 5px;}
+.t-con .vedio .tips a { color: #1a53e0; text-decoration: none;}
+.t-con .vedio .tips a:hover { text-decoration: underline;}
+.t-con .vedio img { width: 100%; display: block;}
+.t-con .support { padding: 20px 30px; font-size: 12px;}
+.t-con .support h3 { font-size: 16px;}
+.t-con .support em.fw { font-weight: bold; font-style: normal;}
+.run-box { background-color: #f8f9fb; border: 1px solid #eee; border-radius: 4px;}
+.run-box .top-tit { padding: 10px; font-weight: bold; font-size: 14px;}
+.run-box .top-tit a.btn-copy { float: right; color: #065afb; text-decoration: none;}
+.run-box .top-tit a.btn-copy i { display: inline-block; width: 14px; height: 14px; background: url(icon-copy.png) no-repeat 0 0; background-size: 100% auto; position: relative; top: 1px; margin-right: 5px;}
+.run-box .top-tit a.btn-copy:hover { text-decoration: underline;}
+.run-con { padding: 0 10px;}
+.run-con dl { margin-top: 0; background-color: #fff; border-radius: 6px; padding: 10px 5px;}
+.run-con dd { margin-left: 10px;}
+.t-con .support .title { font-size: 22px; font-weight: bold;}
+.t-con .support .title img { height: 26px; vertical-align: middle; margin-right: 5px;}
+</style>
+<body>
+    <div class="tg-box">
+        <h1>假 Zoom 在线会议钓鱼模拟</h1>
+        <h2 class="tit">TG 里收到 Zoom 在线会议邀请</h2>
+        <div class="tg-con">
+            <div class="tg-message">
+                <div class="info">hey Kevin. pls join us in company team meeting.</div>
+                <a href="javascript:;" class="link">https://us05web.zoom.com/i/3588102658%3Fpwd=gEbldyyl2wSn9pHfcajQKa0LBOXoYZ.1</a>
+                <div class="zoom-box">
+                        <div class="from">Zoom</div>
+                        <div class="title">Join our Cloud HD Video Meeting</div>
+                        <div>Zoom is the leader in modern enterprise cloudcommunications.</div>
+                        <img src="zoom.png">
+                </div>
+            </div>
+            <div class="avatar"><img src="avatar.png"></div>
+        </div>
+
+        <div class="t-box">
+            <div class="t-bg"></div>
+            <div class="t-con">
+                <div class="top">
+                    <a href="javascript:;" class="btn-close"></a><i class="btn-1"></i><i class="btn-2"></i><i class="btn-3"></i>
+                </div>
+                <div class="url"><span>https://dragonfly.us05web-zoom.biz/j/3588102658%3Fpwd=gEbIdyyl2wSn9pHfcqjQKaOLB0XoYZ.1</span></div>
+                
+                <!-- <div class="vedio">
+                    <div class="tips"><i></i>Zoom Meeting is not working properly because your Zoom SDK is deprecated. Please update your Zoom SDK.
+                        <a href="#">Update Now</a>
+                    </div>
+                    <img src="vedio.jpg">
+                </div> -->
+
+                <div class="support">
+                    <div class="title"><img src="zoom-logo.png"> Support</div>
+                    <h3>Troubleshooting SDK issues</h3>
+                    <p><em class="fw">Note:</em> This meeting is an organizational meeting, developed using the <em class="fw">Zoom Meeting SDK</em>, to ensure complance with securty requirements.</p>
+                    <p>We have identified some issues due to compatilbility constraints with the <em class="fw">Zoom Meeting SDK</em>. To resolve this issue:</p>
+                    <ul>
+                        <li>Please update the SDK as follow.</li>
+                        <li>Rejoin the meeting after troubleshooting the issue.</li>
+                    </ul>
+                    <p>You can automatically resolve this issue by following the solution below.</p>
+                    <h3>Solution:</h3>
+                    <p>1. Update Zoom SDK.</p>
+                    <div class="run-box">
+                        <div class="top-tit"><a href="javascript:;" class="btn-copy"><i></i>Copy</a>Run this command on Terminal.</div>
+                        <div class="run-con">
+                            <dl>
+                                <dd>set ZOOM_API_KEY="BOtIweWKewotkWOKEWODNXCSK"</dd>
+                                <dd>set ZOOM_API_SECRET="QYFYiRfRTYTPL7RVZ09yRtHs2MXZSQV7"</dd>
+                                <dd>set ZOOM_MEETING_ID="8792352352"</dd>
+                                <dd>set ZOOM_SDK_UTILITY="normal"</dd>
+                                <dd>set ZOOM_SDK_LEVEL="High"</dd>
+                                <dd>set ZOOM_LANGUAGE="en-US"</dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <p>2. Rejoin the meeting.</p>
+                    <ul>
+                        <li>Zoom desktop client</li>
+                        <li>Zoom mobile app</li>
+                    </ul>
+                    <h3>Why this happens:</h3>
+                    <p>The SDK is not working properly due to compatibility issues, which might be caused by:</p>
+                    <ul>
+                        <li>1. <em class="fw">Outdated SDK Version:</em> An older version of the SDK may not fully support your device.</li>
+                        <li>2. <em class="fw">Unknown Environment Settings:</em> Older or unsupported environement can lead to incompatibility with the SDK.</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>
