@@ -3108,7 +3108,7 @@ export default {
   fakeZoomMeetingPhishing: {
     title: "Fake Zoom Meeting Phishing",
     intro: "You received a Zoom meeting invitation on Telegram",
-    tips: "The materials are based on real cases. If there are any copyright issues, please contact us for replacement.",
+    tips: "The materials are based on real cases. If there are any copyright issues, please contact us for replacement. Special Note: The video clips shown are from real cases. The photos and videos involved feature actual victims—some were secretly recorded by scammers under the pretense of a meeting, while others were later manipulated using deepfake technology. Some images also come from publicly available photos on the internet.",
     falseMessageTitle: "Challenge Failed! You are about to execute malicious code.",
     falseMessage: "Please carefully identify phishing links and be aware of the risks.",
     questions:{
