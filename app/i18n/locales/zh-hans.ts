@@ -2847,7 +2847,7 @@ export default {
   fakeZoomMeetingPhishing: {
     title: "假 Zoom 在线会议钓鱼模拟",
     intro: "Telegram 里收到 Zoom 在线会议邀请",
-    tips: "素材来源真实案例，如有版权问题，请联系我们更换。",
+    tips: "素材来源真实案例，如有版权问题，请联系我们更换。特别说明：视频片段里演示的是来自真实案例，这里面的照片及视频涉及到的人本身是受害者，有的是被骗子以开会名义偷偷录屏或后期做了 Deepfake 伪造，有的来自网络上的公开照片。",
     falseMessageTitle: "挑战失败！您准备执行恶意代码。",
     falseMessage: "请认真识别钓鱼的链接，注意风险。",
     questions:{
