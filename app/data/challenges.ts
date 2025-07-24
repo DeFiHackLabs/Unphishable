@@ -605,4 +605,20 @@ export const challenges = [
     },
     link: "/challenges/zoom-phishing",
   },
+  {
+    no: "0x0036",
+    name: "fake-extension-phishing",
+    difficulty: "Beginner",
+    title: {
+      en: "Fake Extension Phishing",
+      "zh-hant": "假冒擴充功能釣魚",
+      "zh-hans": "假冒扩展钓鱼",
+    },
+    description: {
+      en: "Learn how to spot fake browser extensions and always install from the official source.",
+      "zh-hant": "學習如何辨識假冒的瀏覽器擴充功能，並始終從官方來源安裝。",
+      "zh-hans": "学习如何识别假冒的浏览器扩展，并始终从官方来源安装。",
+    },
+    link: "/challenges/fake-extension-phishing",
+  },
 ];
