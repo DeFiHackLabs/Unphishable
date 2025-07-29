@@ -3104,4 +3104,121 @@ export default {
     next: "Next",
     page: "Page",
   },
+  //假 Zoom 在线会议钓鱼模拟
+  fakeZoomMeetingPhishing: {
+    title: "Fake Zoom Meeting Phishing",
+    intro: "You received a Zoom meeting invitation on Telegram",
+    tips: "The materials are based on real cases. If there are any copyright issues, please contact us for replacement. Special Note: The video clips shown are from real cases. The photos and videos involved feature actual victims—some were secretly recorded by scammers under the pretense of a meeting, while others were later manipulated using deepfake technology. Some images also come from publicly available photos on the internet.",
+    falseMessageTitle:
+      "Challenge Failed! You are about to execute malicious code.",
+    falseMessage:
+      "Please carefully identify phishing links and be aware of the risks.",
+    questions: {
+      title: "Please complete the following questions:",
+      question1: {
+        text: "Is the link in the Telegram chat a legitimate Zoom link?",
+        options: ["Yes", "No"],
+        tips: "Hint: The attacker used Telegram's hyperlink feature to disguise the phishing link as an official Zoom domain. It appears to be a Zoom link in the chat, but it actually leads to a phishing site.",
+      },
+      question2: {
+        text: "After joining a Zoom meeting where all participants appear to be your friends, you cannot hear any of them. A prompt appears asking you to fix a Zoom bug. What should you do?",
+        options: [
+          "Follow the prompt to fix it",
+          "Ignore it, this is a phishing site",
+        ],
+        tips: "Hint: The attacker tricks you into running malicious code on your computer by presenting a fake bug fix prompt on a phishing page, aiming to take control of your device and steal information.",
+      },
+      question3: {
+        text: "Which of the following domains is the official Zoom link?",
+        options: ["us05web.zoom.com", "dragonfly.us05web-zoom.biz"],
+        tips: "First one is correct, second one is incorrect",
+      },
+      question4: {
+        text: "The video in this case’s meeting is:",
+        options: ["A real meeting video", "A video synthesized using deepfake"],
+        tips: "First one is incorrect, second one is correct",
+      },
+      question5: {
+        text: "Why are you asked to copy and run a command in the terminal?",
+        options: [
+          "The command contains a backdoor, and the attacker uses it to take control of the target user's computer",
+          "The command contains a fix for a Zoom bug, and running it will repair the meeting audio issue",
+        ],
+        tips: "First one is correct, second one is incorrect",
+      },
+      Submit: "Submit",
+      completeTips: "Please complete the questions above.",
+    },
+    successMessage: {
+      title: "Attack Scenario Explanation:",
+      content: [
+        "Attackers often contact target users via Telegram private messages, pretending to be investors, and invite them to a Zoom meeting for business discussions.",
+        "They use Telegram’s hyperlink feature to hide a phishing link behind text that appears to be the official Zoom domain. Although the text looks legitimate, it actually leads to a phishing site.",
+        "After clicking the link and entering the fake Zoom meeting, the victim sees familiar people such as friends or investors in the call. However, these people are created using deepfake technology and are highly deceptive.",
+        'After the victim joins the fake Zoom meeting, the attacker will prompt them to "fix Zoom" in order to hear the meeting audio. Since the participants appear to be investors created using deepfake technology, it is difficult for the victim to detect the deception. In such an urgent situation, the victim is likely to follow the instructions and run the fake commands provided by the fraudulent Zoom meeting in the terminal.',
+        "After executing these commands, the attacker gains control of the victim’s computer and can then proceed to steal cryptocurrency or other assets.",
+      ],
+      title2: "How to Defend Yourself:",
+      content2: [
+        "Be cautious of all links sent via private messages.",
+        "After opening a link, carefully check the browser's address bar to ensure the domain is correct.",
+        "If you recognize people in a meeting, use another communication channel to confirm their identity.",
+        "Never run untrusted scripts or commands in the terminal.",
+        "Raise your security awareness, learn about different phishing techniques, and develop the ability to identify phishing attacks.",
+      ],
+    },
+  },
+  fakeExtensionPhishing: {
+    title: "🔍 Fake Extension Phishing 🔍",
+    subtitle: "Can you spot the fake extension?",
+    warning: "⚠️ Warning: This is a simulation for educational purposes ⚠️",
+    scenarioDescription:
+      'Below are the search results (as of July 2025) for "metamask" on the Firefox extension store. Can you spot which extension is fake and which is real?',
+    hintLabel: "Hint:",
+    officialSiteButton: "Go to the official MetaMask site",
+    questionTitle: "Which extension should you choose?",
+    questionDescription:
+      "Based on what you can see in the extension store, which one is the legitimate MetaMask extension?",
+    optionA: "a) Metamask",
+    optionB: "b) Metamask - Crypto Wallet",
+    submitButton: "Submit Answer",
+    warningModalTitle: "Warning: Fake Extension!",
+    warningModalContent:
+      "This extension is not the official MetaMask. Fake extensions often have very few users and suspicious publishers. Always verify before installing.",
+    closeButton: "Close",
+    firefoxAddonButton: "View Firefox Add-ons",
+    successContent: {
+      correctMessage:
+        "✅ Correct! You successfully identified the fake extension or chose the official site.",
+      howToAvoidTitle: "How to Avoid Fake Extensions",
+      description:
+        "Fake browser extensions are a common phishing technique used by attackers to steal your data, passwords, and cryptocurrency. Here's how to protect yourself:",
+      warningSignsTitle: "Key Warning Signs:",
+      warningSigns: [
+        "Low user count: Official extensions have thousands or millions of users",
+        "Suspicious publisher: Check if the publisher name matches the official company",
+        "Recent creation date: Fake extensions are often newly created",
+        "Reviews: Look for fake or suspicious reviews",
+        "Requesting excessive permissions: Be wary of extensions asking for more access than needed",
+      ],
+      bestPracticesTitle: "Best Practices for Extension Safety",
+      bestPractices: [
+        "Always download from official websites: Go directly to the official website (e.g., metamask.io) rather than searching in extension stores. Fake or malicious extensions can appear in search results or even in official extension stores, sometimes mimicking the name, icon, or branding of the real extension. By visiting the official website, you ensure you are getting the authentic, safe version and avoid falling for lookalike or scam listings that could compromise your security and assets.",
+        "Check user count and reviews: Official extensions have high user counts and generally positive reviews",
+        "Read permissions carefully: Only grant necessary permissions",
+        "Keep extensions updated: Regular updates often include security patches",
+        "Remove unused extensions: Reduce attack surface by removing extensions you no longer use",
+      ],
+      compromisedTitle: "What to Do If You've Installed a Fake Extension",
+      compromisedSteps: [
+        "Make a fresh wallet (preferably on a fresh browser) and transfer ALL funds out of the compromised wallet",
+        "Uninstall the extension",
+        "Change all passwords that may have been compromised",
+        "Check for unauthorized transactions in your cryptocurrency wallets",
+        "Scan your device for malware using reputable antivirus software",
+        "Monitor your accounts for suspicious activity",
+        "Consider using a hardware wallet for additional security",
+      ],
+    },
+  },
 };
