@@ -2851,38 +2851,26 @@ export default {
     tips: "素材來源為真實案例，如有版權問題，請與我們聯繫以更換。特別說明：影片片段中所呈現的為真實案例，其中的照片與影片涉及的是真實受害者。有些是被詐騙者以開會為名偷偷錄影，有些則是在事後經過 Deepfake 技術偽造，也有部分素材來自網路上公開的照片。",
     falseMessageTitle: "挑戰失敗！你準備執行惡意程式碼。",
     falseMessage: "請認真辨識釣魚連結，注意風險。",
-    questions:{
+    questions: {
       title: "請完成以下題目：",
       question1: {
         text: "Telegram 聊天記錄中的連結是否為 Zoom 官方連結？",
-        options: [
-          "是",
-          "否",
-        ],
+        options: ["是", "否"],
         tips: "提示：攻擊者利用 Telegram 的超連結功能，將釣魚網站偽裝成 Zoom 官方網址。在 Telegram 中看起來像是 Zoom 的域名，實際上是釣魚連結。",
       },
       question2: {
         text: "你進入 Zoom 會議後發現參與者都是你認識的朋友，但聽不到他們的聲音，這時畫面出現提示要修復 Zoom 的錯誤。你會怎麼做？",
-        options: [
-          "根據提示進行修復",
-          "不予理會，這是釣魚網站",
-        ],
+        options: ["根據提示進行修復", "不予理會，這是釣魚網站"],
         tips: "提示：攻擊者透過釣魚頁面上的錯誤修復提示，引導使用者在電腦上執行惡意程式碼，藉此控制受害者的電腦並竊取資訊。",
       },
       question3: {
         text: "以下哪個是 Zoom 的官方連結？",
-        options: [
-          "us05web.zoom.com",
-          "dragonfly.us05web-zoom.biz",
-        ],
+        options: ["us05web.zoom.com", "dragonfly.us05web-zoom.biz"],
         tips: "第一題正確，第二題錯誤。",
       },
       question4: {
         text: "本案例中會議的影片為：",
-        options: [
-          "真實的會議影片",
-          "使用 deepfake 合成的影片",
-        ],
+        options: ["真實的會議影片", "使用 deepfake 合成的影片"],
         tips: "第一題錯誤，第二題正確。",
       },
       question5: {
@@ -2896,22 +2884,74 @@ export default {
       Submit: "提交",
       completeTips: "請完成上面的題目。",
     },
-    successMessage:{
-      title:"攻擊場景解讀：",
-      content:[
+    successMessage: {
+      title: "攻擊場景解讀：",
+      content: [
         "攻擊者通常會透過 Telegram 私訊聯繫目標用戶，冒充投資方邀請用戶進入 Zoom 會議洽談合作。",
         "他們會利用 Telegram 的超連結功能，將假的 Zoom 會議連結隱藏在超連結文字中。雖然顯示的是 Zoom 官方網域，其實指向的是釣魚網站。",
         "當受害者點擊連結並進入假的 Zoom 會議後，會發現會議中出現的是自己認識的朋友或投資人，但這些人是透過 deepfake 技術偽造的，具有高度欺騙性。",
         "受害者參與虛假的 Zoom 會議後，攻擊者會引導受害者「修復 Zoom」以聽到會議聲音。由於會議中的參與者是使用 deepfake 技術偽造的投資人，受害者難以辨識。在這種緊迫的情境下，受害者很容易依照引導，在終端機中執行虛假 Zoom 會議所提供的內容。",
         "執行這些命令後，攻擊者即可遠端控制受害者的電腦，進一步竊取加密貨幣等數位資產。",
       ],
-      title2:"如何防禦：",
-      content2:[
+      title2: "如何防禦：",
+      content2: [
         "警惕所有私訊傳送的連結",
         "開啟連結後，請仔細檢查瀏覽器網址欄是否正確",
         "若在會議中發現認識的人，請透過其他通訊管道進行確認",
         "請勿在終端機中執行不可信的指令或腳本",
         "提高資安意識，瞭解更多釣魚攻擊手法，培養辨識釣魚攻擊的能力",
+      ],
+    },
+  },
+  fakeExtensionPhishing: {
+    title: "🔍 虛假擴充功能釣魚 🔍",
+    subtitle: "你能識別出虛假擴充功能嗎？",
+    warning: "⚠️ 警告：這是一個教育目的的模擬 ⚠️",
+    scenarioDescription:
+      '以下是在Firefox擴充功能商店中搜尋"metamask"的結果（截至2025年7月）。你能識別出哪個擴充功能是虛假的，哪個是真實的嗎？',
+    hintLabel: "提示：",
+    officialSiteButton: "前往MetaMask官方網站",
+    questionTitle: "你應該選擇哪個擴充功能？",
+    questionDescription:
+      "根據你在擴充功能商店中看到的資訊，哪個是合法的MetaMask擴充功能？",
+    optionA: "a) Metamask",
+    optionB: "b) Metamask - Crypto Wallet",
+    submitButton: "提交答案",
+    warningModalTitle: "警告：虛假擴充功能！",
+    warningModalContent:
+      "這個擴充功能不是官方的MetaMask。虛假擴充功能通常使用者很少，發佈者可疑。安裝前請務必驗證。",
+    closeButton: "關閉",
+    firefoxAddonButton: "點擊查看 Firefox 附加元件",
+    successContent: {
+      correctMessage: "✅ 正確！您成功識別了虛假擴充功能或選擇了官方網站。",
+      howToAvoidTitle: "如何避免虛假擴充功能",
+      description:
+        "虛假瀏覽器擴充功能是攻擊者用來竊取您的資料、密碼和加密貨幣的常見釣魚技術。以下是保護自己的方法：",
+      warningSignsTitle: "關鍵警告信號：",
+      warningSigns: [
+        "用戶數量少：官方擴充功能擁有數千或數百萬用戶",
+        "可疑發布者：檢查發布者名稱是否與官方公司匹配",
+        "最近創建日期：虛假擴充功能通常是新創建的",
+        "評論：尋找虛假或可疑評論",
+        "請求過多權限：警惕要求超出必要存取權限的擴充功能",
+      ],
+      bestPracticesTitle: "擴充功能安全最佳實務",
+      bestPractices: [
+        "始終從官方網站下載：直接造訪官方網站（例如 metamask.io），而不是在擴充功能商店中搜尋。虛假或惡意擴充功能可能出現在搜尋結果中，甚至出現在官方擴充功能商店中，有時會模仿真實擴充功能的名稱、圖示或品牌。透過造訪官方網站，您可以確保獲得正宗、安全的版本，避免落入可能危及您安全和資產的仿冒或詐騙列表的陷阱。",
+        "檢查用戶數量和評論：官方擴充功能擁有大量用戶和普遍積極的評論",
+        "仔細閱讀權限：只授予必要的權限",
+        "保持擴充功能更新：定期更新通常包含安全修補程式",
+        "刪除未使用的擴充功能：透過刪除不再使用的擴充功能來減少攻擊面",
+      ],
+      compromisedTitle: "如果您安裝了虛假擴充功能該怎麼辦",
+      compromisedSteps: [
+        "建立一個新錢包（最好在新瀏覽器上）並將所有資金從受損錢包中轉出",
+        "解除安裝擴充功能",
+        "更改所有可能已被洩露的密碼",
+        "檢查您的加密貨幣錢包中是否有未經授權的交易",
+        "使用信譽良好的防毒軟體掃描您的裝置以查找惡意軟體",
+        "監控您的帳戶是否有可疑活動",
+        "考慮使用硬體錢包以獲得額外安全性",
       ],
     },
   },

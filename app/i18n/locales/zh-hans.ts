@@ -2850,38 +2850,26 @@ export default {
     tips: "素材来源真实案例，如有版权问题，请联系我们更换。特别说明：视频片段里演示的是来自真实案例，这里面的照片及视频涉及到的人本身是受害者，有的是被骗子以开会名义偷偷录屏或后期做了 Deepfake 伪造，有的来自网络上的公开照片。",
     falseMessageTitle: "挑战失败！您准备执行恶意代码。",
     falseMessage: "请认真识别钓鱼的链接，注意风险。",
-    questions:{
+    questions: {
       title: "请完成下面的题目：",
       question1: {
         text: "Telegram 聊天记录中的链接是否是 Zoom 官方的链接？",
-        options: [
-          "是",
-          "否",
-        ],
+        options: ["是", "否"],
         tips: "提示：攻击者使用了 Telegram 的超链接的功能，将钓鱼链接隐藏在文字中，在 Telegram 中看起来是 Zoom 官方的域名，实际上是钓鱼链接。",
       },
       question2: {
         text: "进入 Zoom 会议中，你发现参与会议的都是你认识的好友，但是你听不到他们的声音，需要根据提示修复 Zoom 的 Bug，你会怎么做？",
-        options: [
-          "根据提示进行修复",
-          "不予理会，这是钓鱼网站",
-        ],
+        options: ["根据提示进行修复", "不予理会，这是钓鱼网站"],
         tips: "提示：攻击者在钓鱼页面通过修复 Bug 的提示，引导用户在电脑上运行恶意代码，从而控制目标用户的电脑，实施盗窃。",
       },
       question3: {
         text: "以下哪个域名是 ZOOM 的官方链接？",
-        options: [
-          "us05web.zoom.com",
-          "dragonfly.us05web-zoom.biz",
-        ],
+        options: ["us05web.zoom.com", "dragonfly.us05web-zoom.biz"],
         tips: "选择第一个正确，选择第二个错误。",
       },
       question4: {
         text: "该案例会议中的视频是：",
-        options: [
-          "是真实的会议视频",
-          "是用 deepfake 合成的",
-        ],
+        options: ["是真实的会议视频", "是用 deepfake 合成的"],
         tips: "选择第一个错误，选择第二个正确",
       },
       question5: {
@@ -2895,22 +2883,74 @@ export default {
       Submit: "提交",
       completeTips: "请完成上面的题目。",
     },
-    successMessage:{
-      title:"攻击场景解读：",
-      content:[
+    successMessage: {
+      title: "攻击场景解读：",
+      content: [
         "攻击者通常使用 TG 私信的方式联系目标用户，以投资方的名义邀请目标用户进入 ZOOM 会议洽谈合作。",
         "然后利用 TG 的超链接功能，将虚假的 ZOOM 会议链接隐藏到超链接的文本中，文本展示的是 ZOOM 的官方域名，实则是钓鱼网站的域名链接。",
         "受害者点击链接进入虚假的 ZOOM 会议后发现参与会议的是认识的朋友或者投资方，但是这些人是经过 deepfake 伪造的极具欺骗性。",
         "受害者参与虚假的 ZOOM 会议后，攻击者会引导受害者修复 ZOOM 才能听到会议声音，由于参会的是 deepfake 伪造的投资人，受害者难以识别，在这种急迫的场景下，受害者很容易接受引导在终端中运行虚假 ZOOM 会议提供的内容。",
         "受害者运行这些命令后电脑会被攻击者控制，攻击者控制受害者电脑后实施加密货币资产的盗窃。",
       ],
-      title2:"如何防御：",
-      content2:[
+      title2: "如何防御：",
+      content2: [
         "警惕所有私信发送的链接",
         "在打开链接后，仔细识别浏览器地址栏是否正确",
         "发现会议中有相识的人后使用另外的通信渠道与相关角色进行确认",
         "不要在终端中运行不可信的脚本或命令",
         "提高安全意识，了解更多的钓鱼攻击手法，培养识别钓鱼攻击的能力",
+      ],
+    },
+  },
+  fakeExtensionPhishing: {
+    title: "🔍 虚假扩展程序钓鱼 🔍",
+    subtitle: "你能识别出虚假扩展程序吗？",
+    warning: "⚠️ 警告：这是一个教育目的的模拟 ⚠️",
+    scenarioDescription:
+      '以下是在Firefox扩展商店中搜索"metamask"的结果（截至2025年7月）。你能识别出哪个扩展程序是虚假的，哪个是真实的吗？',
+    hintLabel: "提示：",
+    officialSiteButton: "访问MetaMask官方网站",
+    questionTitle: "你应该选择哪个扩展程序？",
+    questionDescription:
+      "根据你在扩展商店中看到的信息，哪个是合法的MetaMask扩展程序？",
+    optionA: "a) Metamask",
+    optionB: "b) Metamask - Crypto Wallet",
+    submitButton: "提交答案",
+    warningModalTitle: "警告：虚假扩展程序！",
+    warningModalContent:
+      "这个扩展程序不是官方的MetaMask。虚假扩展程序通常用户很少，发布者可疑。安装前请务必验证。",
+    closeButton: "关闭",
+    firefoxAddonButton: "查看 Firefox 附加组件",
+    successContent: {
+      correctMessage: "✅ 正确！您成功识别了虚假扩展程序或选择了官方网站。",
+      howToAvoidTitle: "如何避免虚假扩展程序",
+      description:
+        "虚假浏览器扩展程序是攻击者用来窃取您的数据、密码和加密货币的常见钓鱼技术。以下是保护自己的方法：",
+      warningSignsTitle: "关键警告信号：",
+      warningSigns: [
+        "用户数量少：官方扩展程序拥有数千或数百万用户",
+        "可疑发布者：检查发布者名称是否与官方公司匹配",
+        "最近创建日期：虚假扩展程序通常是新创建的",
+        "评论：寻找虚假或可疑评论",
+        "请求过多权限：警惕要求超出必要访问权限的扩展程序",
+      ],
+      bestPracticesTitle: "扩展程序安全最佳实践",
+      bestPractices: [
+        "始终从官方网站下载：直接访问官方网站（例如 metamask.io），而不是在扩展商店中搜索。虚假或恶意扩展程序可能出现在搜索结果中，甚至出现在官方扩展商店中，有时会模仿真实扩展程序的名称、图标或品牌。通过访问官方网站，您可以确保获得正宗、安全的版本，避免落入可能危及您安全和资产的仿冒或诈骗列表的陷阱。",
+        "检查用户数量和评论：官方扩展程序拥有大量用户和普遍积极的评论",
+        "仔细阅读权限：只授予必要的权限",
+        "保持扩展程序更新：定期更新通常包含安全补丁",
+        "删除未使用的扩展程序：通过删除不再使用的扩展程序来减少攻击面",
+      ],
+      compromisedTitle: "如果您安装了虚假扩展程序该怎么办",
+      compromisedSteps: [
+        "创建一个新钱包（最好在新浏览器上）并将所有资金从受损钱包中转出",
+        "卸载扩展程序",
+        "更改所有可能已被泄露的密码",
+        "检查您的加密货币钱包中是否有未经授权的交易",
+        "使用信誉良好的防病毒软件扫描您的设备以查找恶意软件",
+        "监控您的账户是否有可疑活动",
+        "考虑使用硬件钱包以获得额外安全性",
       ],
     },
   },
