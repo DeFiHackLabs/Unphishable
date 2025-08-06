@@ -159,7 +159,7 @@ export const challenges = [
     link: "/challenges/punycode-phishing",
   },
   {
-    no: "0x0010",
+    no: "0x000A",
     name: "clipboard-phishing", // Add the name field for the challenge dat
     difficulty: "Beginner",
     title: {
@@ -176,7 +176,7 @@ export const challenges = [
     link: "/challenges/clipboard-phishing",
   },
   {
-    no: "0x0011",
+    no: "0x000B",
     name: "google-search-ad-phishing", // Add the name field for the challenge dat
     difficulty: "Beginner",
     title: {
@@ -192,7 +192,7 @@ export const challenges = [
     link: "/challenges/google-search-ad-phishing",
   },
   {
-    no: "0x0012",
+    no: "0x000C",
     name: "teams-malware-phishing", // Add the name field for the challenge dat
     difficulty: "Beginner",
     title: {
@@ -210,7 +210,7 @@ export const challenges = [
     link: "/challenges/teams-malware-phishing",
   },
   {
-    no: "0x0013",
+    no: "0x000D",
     name: "zero-transfer-scam", // Add the name field for the challenge dat
     difficulty: "Intermediate",
     title: {
@@ -226,7 +226,7 @@ export const challenges = [
     link: "/challenges/zero-transfer-scam",
   },
   {
-    no: "0x0014",
+    no: "0x000E",
     name: "seaport-zero-order-phishing", // Add the name field for the challenge dat
     difficulty: "Intermediate",
     title: {
@@ -244,7 +244,7 @@ export const challenges = [
     link: "/challenges/seaport-zero-order-phishing",
   },
   {
-    no: "0x0015",
+    no: "0x000F",
     name: "blind-signature-phishing", // Add the name field for the challenge dat
     difficulty: "Intermediate",
     title: {
@@ -262,7 +262,7 @@ export const challenges = [
     link: "/challenges/blind-signature-phishing",
   },
   {
-    no: "0x0016",
+    no: "0x0010",
     name: "address-suffix-phishing", // Add the name field for the challenge dat
     difficulty: "Intermediate",
     title: {
@@ -280,7 +280,7 @@ export const challenges = [
     link: "/challenges/address-suffix-phishing",
   },
   {
-    no: "0x0017",
+    no: "0x0011",
     name: "permit2-phishing", // Add the name field for the challenge dat
     difficulty: "Intermediate",
     title: {
@@ -298,7 +298,7 @@ export const challenges = [
     link: "/challenges/permit2-phishing",
   },
   {
-    no: "0x0018",
+    no: "0x0012",
     name: "discord-bookmark-attack",
     difficulty: "Intermediate",
     title: {
@@ -316,7 +316,7 @@ export const challenges = [
     link: "/challenges/discord-bookmark-attack",
   },
   {
-    no: "0x0019",
+    no: "0x0013",
     name: "defi-proxy-phishing",
     difficulty: "Intermediate",
     title: {
@@ -332,7 +332,7 @@ export const challenges = [
     link: "/challenges/defi-proxy-phishing",
   },
   {
-    no: "0x0020",
+    no: "0x0014",
     name: "malicious-rpc-provider",
     difficulty: "Intermediate",
     title: {
@@ -348,7 +348,7 @@ export const challenges = [
     link: "/challenges/malicious-rpc-provider",
   },
   {
-    no: "0x0021",
+    no: "0x0015",
     name: "telegram-fake-safeguard",
     difficulty: "Intermediate",
     title: {
@@ -366,7 +366,7 @@ export const challenges = [
     link: "/challenges/telegram-fake-safeguard",
   },
   {
-    no: "0x0022",
+    no: "0x0016",
     name: "governance-proposal-phishing",
     difficulty: "Intermediate",
     title: {
@@ -382,7 +382,7 @@ export const challenges = [
     link: "/challenges/governance-proposal-phishing",
   },
   {
-    no: "0x0023",
+    no: "0x0017",
     name: "advanced-governance-phishing",
     difficulty: "Intermediate",
     title: {
@@ -398,7 +398,7 @@ export const challenges = [
     link: "/challenges/advanced-governance-phishing",
   },
   {
-    no: "0x0024",
+    no: "0x0018",
     name: "twitter-phishing",
     difficulty: "Intermediate",
     title: {
@@ -414,7 +414,7 @@ export const challenges = [
     link: "/challenges/twitter-phishing",
   },
   {
-    no: "0x0025",
+    no: "0x0019",
     name: "tornado-cash-phishing",
     difficulty: "Intermediate",
     title: {
@@ -432,7 +432,7 @@ export const challenges = [
     link: "/challenges/tornado-cash-phishing",
   },
   {
-    no: "0x0026",
+    no: "0x001A",
     name: "token-precision-phishing",
     difficulty: "Intermediate",
     title: {
@@ -450,7 +450,7 @@ export const challenges = [
     link: "/challenges/token-precision-phishing",
   },
   {
-    no: "0x0027",
+    no: "0x001B",
     name: "nft-approval-phishing",
     difficulty: "Advanced",
     title: {
@@ -468,7 +468,7 @@ export const challenges = [
     link: "/challenges/nft-approval-phishing",
   },
   {
-    no: "0x0028",
+    no: "0x001C",
     name: "uniswap-multicall-phishing",
     difficulty: "Advanced",
     title: {
@@ -486,7 +486,7 @@ export const challenges = [
     link: "/challenges/uniswap-multicall-phishing",
   },
   {
-    no: "0x0029",
+    no: "0x001D",
     name: "function-selector-phishing",
     difficulty: "Advanced",
     title: {
@@ -504,7 +504,7 @@ export const challenges = [
     link: "/challenges/function-selector-phishing",
   },
   {
-    no: "0x0030",
+    no: "0x001E",
     name: "safe-proxy-attack",
     difficulty: "Advanced",
     title: {
@@ -520,7 +520,7 @@ export const challenges = [
     link: "/challenges/safe-proxy-attack",
   },
   {
-    no: "0x0031",
+    no: "0x001F",
     name: "transaction-simulation-spoofing",
     difficulty: "Advanced",
     title: {
@@ -538,7 +538,7 @@ export const challenges = [
     link: "/challenges/transaction-simulation-spoofing",
   },
   {
-    no: "0x0032",
+    no: "0x0020",
     name: "x-authorize-doubleclickjacking",
     difficulty: "Advanced",
     title: {
@@ -556,7 +556,7 @@ export const challenges = [
     link: "/challenges/x-authorize-doubleclickjacking",
   },
   {
-    no: "0x0033",
+    no: "0x0021",
     name: "fake-captcha",
     difficulty: "Advanced",
     title: {
@@ -572,7 +572,7 @@ export const challenges = [
     link: "/challenges/fake-captcha",
   },
   {
-    no: "0x0034",
+    no: "0x0022",
     name: "google-spoofed-phishing",
     difficulty: "Advanced",
     title: {
@@ -590,7 +590,7 @@ export const challenges = [
     link: "/challenges/google-spoofed-phishing",
   },
   {
-    no: "0x0035",
+    no: "0x0023",
     name: "zoom-phishing",
     difficulty: "Advanced",
     title: {
@@ -606,7 +606,7 @@ export const challenges = [
     link: "/challenges/zoom-phishing",
   },
   {
-    no: "0x0036",
+    no: "0x0024",
     name: "fake-zoom-meeting-phishing",
     difficulty: "Advanced",
     title: {
@@ -622,7 +622,7 @@ export const challenges = [
     link: "/challenges/fake-zoom-meeting-phishing",
   },
   {
-    no: "0x0037",
+    no: "0x0025",
     name: "fake-extension-phishing",
     difficulty: "Beginner",
     title: {
