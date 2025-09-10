@@ -19,6 +19,16 @@
   border-radius: 0.5rem;
   transition: all 0.3s ease;
 }
+
+.coinspectCard {
+  padding: 2rem;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 120px;
+}
 [data-theme="light"] .founderCard {
   background-color: #F5F5F5;
   /* box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); */
@@ -27,10 +37,26 @@
   background-color: #1f2937;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
+
+[data-theme="light"] .coinspectCard {
+  background-color: #F5F5F5;
+  /* box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); */
+}
+[data-theme="dark"] .coinspectCard {
+  background-color: #1f2937;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
 .founderImage {
   width: 100%;
   height: auto;
   object-fit: contain;
+}
+
+.coinspectImage {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  filter: brightness(0) saturate(100%);
 }
 
 /* 暗黑模式下的文字顏色 */

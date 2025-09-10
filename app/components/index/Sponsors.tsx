@@ -47,6 +47,11 @@ export default function Sponsors({
       name: 'GOPLUS',
       lightImage: '/images/Sponsors/GOPLUS-logo-white.svg',
       darkImage: '/images/Sponsors/GOPLUS-logo-dark.svg',
+    },
+    {
+      name: 'Coinspect',
+      lightImage: '/images/Sponsors/Coinspect-logo-dark.svg',
+      darkImage: '/images/Sponsors/Coinspect-logo-dark.svg',
     }
   ];
   return (
@@ -61,11 +66,11 @@ export default function Sponsors({
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {sponsors.map((sponsor, index) => (
-            <div key={index} className={styles.founderCard}>
+            <div key={index} className={sponsor.name === 'Coinspect' ? styles.coinspectCard : styles.founderCard}>
               <img
                 src={theme === 'dark' ? sponsor.darkImage : sponsor.lightImage}
                 alt={sponsor.name}
-                className={styles.founderImage}
+                className={sponsor.name === 'Coinspect' && theme === 'light' ? styles.coinspectImage : styles.founderImage}
               />
             </div>
           ))}
