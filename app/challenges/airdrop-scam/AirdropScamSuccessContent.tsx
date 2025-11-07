@@ -1,6 +1,7 @@
 import { useLanguage } from '@/app/contexts/LanguageContext';
-
+import { useTheme } from 'next-themes';
 const AirdropScamSuccessContent = () => {
+  const { theme } = useTheme();
   const { t } = useLanguage();
   const MALICIOUS_CONTRACT_ADDRESS =
     "0xbe535a82f2c3895bdaceb3ffe6b9b80ac2f832a0";
@@ -8,29 +9,29 @@ const AirdropScamSuccessContent = () => {
 
   return (
     <>
-      <p>
+      <p className={`${theme === 'dark' ? 'text-[#CCCCCC]' : 'text-[#999999]'}`}>
         <strong>
           {t.airdropScam.phishingWarningTitle}
         </strong>
       </p>
-      <p>
+      <p className={`${theme === 'dark' ? 'text-[#CCCCCC]' : 'text-[#999999]'}`}>
         {t.airdropScam.phishingWarningContent.replace(
           "{contractAddress}",
           `${MALICIOUS_CONTRACT_ADDRESS}`
         )}
       </p>
-      <p>
+      <p className={`${theme === 'dark' ? 'text-[#CCCCCC]' : 'text-[#999999]'}`}>
         {t.airdropScam.phishingWarningFunction.replace(
           "{selector}",
           `${SECURITY_UPDATE_SELECTOR}`
         )}
       </p>
-      <p>
+      <p className={`${theme === 'dark' ? 'text-[#CCCCCC]' : 'text-[#999999]'}`}>
         <strong>
           {t.airdropScam.phishingWarningAdvice}
         </strong>
       </p>
-      <p>{t.airdropScam.phishingWarningMetamask}</p>
+      <p className={`${theme === 'dark' ? 'text-[#CCCCCC]' : 'text-[#999999]'}`}>{t.airdropScam.phishingWarningMetamask}</p>
       <div className="bg-gray-50 rounded-lg p-6 border border-gray-200">
         <h4 className="text-lg font-semibold mb-2">
           {t.airdropScam.metamaskExample}
@@ -48,7 +49,7 @@ const AirdropScamSuccessContent = () => {
               <div className="ml-3">
                 <div>Account 1</div>
                 <div className="text-sm text-gray-500">
-                  Holesky Testnet
+                  Sepolia Testnet
                 </div>
               </div>
             </div>

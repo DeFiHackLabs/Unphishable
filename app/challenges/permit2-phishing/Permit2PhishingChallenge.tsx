@@ -129,7 +129,7 @@ export default function Permit2PhishingChallenge() {
                 <p className="mb-2">
                   {t.permitPhishing2.networkStatus}
                   <span className="font-medium ml-2">
-                    {isConnected ? 'Holesky Testnet' : t.common.notConnected}
+                    {isConnected ? 'Sepolia Testnet' : t.common.notConnected}
                   </span>
                 </p>
                 <p>

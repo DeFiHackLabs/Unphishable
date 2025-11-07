@@ -2,7 +2,7 @@
 
 import { ThemeProvider } from 'next-themes';
 import { WagmiProvider, createConfig, http } from 'wagmi';
-import { holesky } from 'wagmi/chains';
+import { sepolia } from 'wagmi/chains';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { injected } from 'wagmi/connectors';
 import { LanguageProvider } from './contexts/LanguageContext';
@@ -10,12 +10,12 @@ import { LanguageProvider } from './contexts/LanguageContext';
 import "./globals.css";
 
 const config = createConfig({
-  chains: [holesky],
+  chains: [sepolia],
   connectors: [
     injected(),
   ],
   transports: {
-    [holesky.id]: http(),
+    [sepolia.id]: http(),
   },
 });
 

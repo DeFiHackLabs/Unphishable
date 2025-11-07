@@ -37,7 +37,7 @@ const UsdtApprovalPhishingSuccessContent = () => {
                       MetaMask
                     </div>
                     <div className="text-sm text-gray-500">
-                      Holesky Testnet
+                      Sepolia Testnet
                     </div>
                   </div>
                 </div>

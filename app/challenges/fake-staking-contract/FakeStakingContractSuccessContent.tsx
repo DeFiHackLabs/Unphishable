@@ -23,7 +23,7 @@ const FakeStakingContractSuccessContent = () => {
                 </div>
                 <div>
                   <div>Account 1</div>
-                  <div className="text-sm text-gray-600">Holesky Testnet</div>
+                  <div className="text-sm text-gray-600">Sepolia Testnet</div>
                 </div>
               </div>
               <div className="flex space-x-2">

@@ -1,5 +1,3 @@
-import { title } from "process";
-
 export default {
   privacy: {
     title: "隐私政策",
@@ -1487,7 +1485,7 @@ export default {
       warning:
         "警告：在真实情况下，这个签名将允许恶意网站无限制地使用你的 USDT！",
       title: "签名详情：",
-      permissionNote: `授权交易已发送！查看交易: <a href="https://holesky.etherscan.io/tx/{txHash}" target="_blank">{txHash}</a>`,
+      permissionNote: `授权交易已发送！查看交易: <a href="https://sepolia.etherscan.io/tx/{txHash}" target="_blank">{txHash}</a>`,
       success: "签名成功！这个签名可以用于批准代币支出，无需交易！",
     },
     challengeSuccess: {
@@ -1611,8 +1609,11 @@ export default {
     startChallenge: "开始挑战",
   },
   walletSetupGuide: {
+    networkSwitched: "成功切换到 Sepolia 网络",
+    userRejected: "用户拒绝了请求",
+    networkExists: "Sepolia 网络已存在。请检查您的网络设置。",
     walletReadyMessage:
-      "您的钱包现在已经准备好使用！您可以将其连接到 dApps 并开始与 Holesky 测试网互动。",
+      "您的钱包现在已经准备好使用！您可以将其连接到 dApps 并开始与 Sepolia 测试网互动。",
     congratulations: "恭喜！您已成功完成 Web3 钱包设置！",
     setupCompleteMessage: "您现在已经准备好开始您的 Web3 之旅。",
     title: "Web3 钱包设置指南",
@@ -1620,8 +1621,8 @@ export default {
       "欢迎来到 Web3 世界！本指南将引导您设置首个加密货币钱包 MetaMask，安全存储助记词，并从水龙头获取测试 ETH。",
     downloadMetaMask: "下载 MetaMask",
     installMetaMask: "请先安装 MetaMask！",
-    networkAdded: "Holesky 测试网已成功添加！",
-    networkError: "添加 Holesky 测试网失败：",
+    networkAdded: "Sepolia 测试网已成功添加！",
+    networkError: "添加 Sepolia 测试网失败：",
     securityTip: "安全提示",
     downloadWarning:
       "务必从官方网站或可信任的应用商店下载 MetaMask。切勿从电子邮件或消息中提供的链接安装。",
@@ -1633,7 +1634,7 @@ export default {
       "许多网络钓鱼诈骗针对您的助记词。任何合法服务都不会要求您提供完整的助记词。",
     note: "注意",
     testEthNote: "测试 ETH 没有实际价值，仅用于测试网络上的测试。",
-    addNetwork: "添加 Holesky 网络",
+    addNetwork: "添加 Sepolia 网络",
     connectWallet: "连接钱包",
     confirmCompletion: "确认完成",
     walletConnected: "钱包已连接",
@@ -1642,7 +1643,7 @@ export default {
     connectingWallet: "连接钱包中...",
     pendingRequest: "等待中...",
     connectionError: "连接钱包失败：",
-    wrongNetwork: "当前网络不是 Holesky 测试网",
+    wrongNetwork: "当前网络不是 Sepolia 测试网",
     setupComplete: "设置完成",
     unknownError: "未知错误",
     authenticationFailed: "身份验证失败",
@@ -1672,9 +1673,9 @@ export default {
           "您的助记词通常由 12 个按特定顺序排列的单词组成。以下是安全存储它的方法：",
       },
       4: {
-        title: "添加 Holesky 测试网到 MetaMask",
+        title: "添加 Sepolia 测试网到 MetaMask",
         content:
-          "安装 MetaMask 后，您需要手动添加 Holesky 测试网。以下是网络详细信息：",
+          "安装 MetaMask 后，您需要手动添加 Sepolia 测试网。以下是网络详细信息：",
       },
       5: {
         title: "从水龙头获取测试 ETH",
@@ -1695,9 +1696,9 @@ export default {
     ],
     faucetSteps: [
       '在 MetaMask 中，点击顶部的网络下拉菜单（可能显示"以太坊主网"）',
-      '选择"Holesky 测试网络"（您可能需要从设置 > 网络中添加它）',
+      '选择"Sepolia 测试网络"（您可能需要从设置 > 网络中添加它）',
       "复制您的钱包地址",
-      "访问 Google Cloud Holesky 水龙头",
+      "访问 Google Cloud Sepolia 水龙头",
       "粘贴您的钱包地址并请求测试 ETH",
       "等待片刻，然后检查您的 MetaMask 钱包中的测试 ETH",
     ],
@@ -1743,8 +1744,8 @@ export default {
       "在真实情况下，永远不要在不了解交易内容的情况下签署交易！",
     phishingWarningMetamask:
       "在新版 MetaMask 中，点击右上角可以查看 Method，默认情况下可能看不到。",
-    networkSwitchRequired: "需要切换到 Holesky 测试网",
-    incorrectNetwork: "当前网络不是 Holesky 测试网",
+    networkSwitchRequired: "需要切换到 Sepolia 测试网",
+    incorrectNetwork: "当前网络不是 Sepolia 测试网",
   },
   permitPhishing: {
     title: "USDC Permit 钓鱼模拟",
@@ -2180,9 +2181,9 @@ export default {
     metaMaskNotInstalled: "MetaMask 未安装！请安装 MetaMask 后使用本应用程序。",
     connecting: "正在连接到 MetaMask...",
     noAccountsFound: "未找到账户或用户拒绝访问。",
-    pleaseSwitch: "请切换到 Holesky 测试网络 (Chain ID: 0x4268)",
+    pleaseSwitch: "请切换到 Sepolia 测试网络 (Chain ID: 0xaa36a7)",
     networkSwitchRequired: "需要切换网络",
-    failedToAdd: "添加 Holesky 网络失败: ",
+    failedToAdd: "添加 Sepolia 网络失败: ",
     switchFailed: "切换网络失败: ",
     walletConnected: "钱包连接成功!",
     error: "错误: ",
@@ -2953,5 +2954,32 @@ export default {
         "考虑使用硬件钱包以获得额外安全性",
       ],
     },
+  },
+  celsiusEmail: {
+    title: "Celsius 恢复邮件钓鱼",
+    educational: "仅供教育目的 - 钓鱼模拟",
+    step1: "第一步：检查您的邮件",
+    step2: "第二步：门户登录",
+    instruction: "收到这封邮件时，您会怎么做？",
+    clickLink: "点击链接进入门户",
+    suspicious: "这看起来很可疑",
+    reportPhishing: "举报为钓鱼邮件",
+    accessPortal: "进入门户",
+    waitSomethingWrong: "等等，好像有什么不对...",
+    result: "挑战结果",
+    challengeSuccess: "✅ 挑战成功！您识别出这是钓鱼尝试并保护了自己。",
+    challengeFailed: "❌ 挑战失败！您上了钓鱼攻击的当。",
+    phishingWarningTitle: "警告：这是一封钓鱼邮件！",
+  },
+  eip7702: {
+    title: "EIP-7702 批量交易钓鱼",
+    educational: "仅供教育目的 - 高级钓鱼模拟",
+    step1: "第一步：了解 EIP-7702",
+    step2: "第二步：恶意批量交易",
+    connectWallet: "连接钱包以继续",
+    result: "挑战结果",
+    challengeSuccess: "✅ 挑战成功！您识别出恶意批量交易并保护了自己。",
+    challengeFailed: "❌ 挑战失败！您签署了恶意批量交易。",
+    phishingWarningTitle: "警告：这是一个恶意的 EIP-7702 批量交易！",
   },
 };

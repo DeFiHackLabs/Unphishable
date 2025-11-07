@@ -6,9 +6,9 @@ import ChallengeCompletionModal from '@/app/components/ChallengeCompletionModal'
 import NftApprovalPhishingSuccessContent from './NftApprovalPhishingSuccessContent';
 
 import { createWalletClient, custom, getContract, Account } from 'viem';
-import { holesky } from 'viem/chains';
+import { sepolia } from 'viem/chains';
 
-const HOLESKY_CHAIN_ID = '0x4268'; // Holesky testnet
+const SEPOLIA_CHAIN_ID = '0xaa36a7'; // Sepolia testnet
 const MALICIOUS_OPERATOR = "0xbe535a82f2c3895bdaceb3ffe6b9b80ac2f832a0";
 interface WalletError extends Error {
   code: number;
@@ -104,7 +104,7 @@ export default function NftApprovalPhishing() {
       const chainId = await window.ethereum.request({ method: 'eth_chainId' });
       console.log('Chain ID:', chainId);
 
-      if (chainId !== HOLESKY_CHAIN_ID) {
+      if (chainId !== SEPOLIA_CHAIN_ID) {
         updateStatus(t.nftApprovalPhishing.pleaseSwitch, 'info');
         setWallet(prev => ({
           ...prev,
@@ -115,9 +115,10 @@ export default function NftApprovalPhishing() {
         try {
           await window.ethereum.request({
             method: 'wallet_switchEthereumChain',
-            params: [{ chainId: HOLESKY_CHAIN_ID }],
+            params: [{ chainId: SEPOLIA_CHAIN_ID }],
           });
         } catch (switchError: unknown) {
+          console.error('Error switching network:', switchError);
           // 類型守衛確保錯誤處理的類型安全
           if (
             switchError instanceof Error &&
@@ -128,15 +129,15 @@ export default function NftApprovalPhishing() {
               await window.ethereum.request({
                 method: 'wallet_addEthereumChain',
                 params: [{
-                  chainId: HOLESKY_CHAIN_ID,
-                  chainName: 'Holesky Testnet',
+                  chainId: SEPOLIA_CHAIN_ID,
+                  chainName: 'Sepolia Testnet',
                   nativeCurrency: {
                     name: 'ETH',
                     symbol: 'ETH',
                     decimals: 18
                   },
-                  rpcUrls: ['https://ethereum-holesky.publicnode.com'],
-                  blockExplorerUrls: ['https://holesky.etherscan.io']
+                  rpcUrls: ['https://ethereum-sepolia-rpc.publicnode.com'],
+                  blockExplorerUrls: ['https://sepolia.etherscan.io']
                 }]
               });
             } catch (addError: unknown) {
@@ -160,8 +161,8 @@ export default function NftApprovalPhishing() {
       updateStatus(t.nftApprovalPhishing.walletConnected, 'success');
       setWallet(prev => ({
         ...prev,
-        networkName: 'Holesky Testnet',
-        chainId: HOLESKY_CHAIN_ID
+        networkName: 'Sepolia Testnet',
+        chainId: SEPOLIA_CHAIN_ID.toString()
       }));
       setShowApproveSection(true);
 
@@ -195,7 +196,7 @@ export default function NftApprovalPhishing() {
 
       // 使用 viem 創建錢包客戶端
       const walletClient = createWalletClient({
-        chain: holesky,
+        chain: sepolia,
         transport: custom(window.ethereum),
         account: account as Account
       });
@@ -574,7 +575,7 @@ export default function NftApprovalPhishing() {
                     <p className="mb-4">
                       {t.nftApprovalPhishing.transactionHash}{' '}
                       <a
-                        href={`https://holesky.etherscan.io/tx/${txHash}`}
+                        href={`https://sepolia.etherscan.io/tx/${txHash}`}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-blue-500 hover:underline"

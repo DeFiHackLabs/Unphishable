@@ -12,7 +12,7 @@ export default function MaliciousRPCProvider() {
   const { address, isConnected } = useAccount();
   const { connectAsync } = useConnect();
 
-  const [currentRPC, setCurrentRPC] = useState("Default Holesky RPC");
+  const [currentRPC, setCurrentRPC] = useState("Default Sepolia RPC");
   const [isMaliciousRPC, setIsMaliciousRPC] = useState(false);
   const [, setShowWalletSection] = useState(false);
   const [challengeCompleted, setChallengeCompleted] = useState(false);
@@ -24,8 +24,8 @@ export default function MaliciousRPCProvider() {
 
   const [rpcList, setRpcList] = useState([
     {
-      name: 'Default Holesky RPC',
-      url: 'https://rpc.holesky.ethpandaops.io',
+      name: 'Default Sepolia RPC',
+      url: 'https://ethereum-sepolia-rpc.publicnode.com',
       isTrusted: true,
       isActive: true
     }

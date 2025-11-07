@@ -35,8 +35,8 @@ export default function WalletConnect({ language = 'en' }: WalletConnectProps) {
   const dropdownRef = useRef<HTMLDivElement>(null);
 
 
-  // 定義 Holesky 測試網相關常數
-  const HOLESKY_CHAIN_ID = '0x4268'; // 16進制的 Holesky chainId
+  // 定義 Sepolia 測試網相關常數
+  const SEPOLIA_CHAIN_ID = '0xaa36a7'; // 16進制的 Sepolia chainId
 
 
   useEffect(() => {
@@ -182,44 +182,44 @@ export default function WalletConnect({ language = 'en' }: WalletConnectProps) {
     }
   };
 
-  // 添加切換到 Holesky 測試網的函數
-  const switchToHoleskyNetwork = async () => {
+  // 添加切換到 Sepolia 測試網的函數
+  const switchToSepoliaNetwork = async () => {
     if (typeof window.ethereum === 'undefined') {
       return false;
     }
 
     try {
-      // 嘗試切換到 Holesky 網絡
+      // 嘗試切換到 Sepolia 網絡
       await window.ethereum.request({
         method: 'wallet_switchEthereumChain',
-        params: [{ chainId: HOLESKY_CHAIN_ID }],
+        params: [{ chainId: SEPOLIA_CHAIN_ID }],
       });
       return true;
     } catch (switchError: any) {
-      // 如果錢包中沒有 Holesky 網絡，添加它
+      // 如果錢包中沒有 Sepolia 網絡，添加它
       if (switchError.code === 4902) {
         try {
           await window.ethereum.request({
             method: 'wallet_addEthereumChain',
             params: [{
-              chainId: HOLESKY_CHAIN_ID,
-              chainName: 'Holesky Testnet',
+              chainId: SEPOLIA_CHAIN_ID,
+              chainName: 'Sepolia Testnet',
               nativeCurrency: {
                 name: 'ETH',
                 symbol: 'ETH',
                 decimals: 18
               },
-              rpcUrls: ['https://ethereum-holesky.publicnode.com'],
-              blockExplorerUrls: ['https://holesky.etherscan.io']
+              rpcUrls: ['https://ethereum-sepolia-rpc.publicnode.com'],
+              blockExplorerUrls: ['https://sepolia.etherscan.io']
             }]
           });
           return true;
         } catch (addError) {
-          console.error('Failed to add Holesky network:', addError);
+          console.error('Failed to add Sepolia network:', addError);
           return false;
         }
       } else {
-        console.error('Failed to switch to Holesky network:', switchError);
+        console.error('Failed to switch to Sepolia network:', switchError);
         return false;
       }
     }
@@ -244,11 +244,11 @@ export default function WalletConnect({ language = 'en' }: WalletConnectProps) {
       console.log('Connected:', result);
 
       if (result?.accounts[0]) {
-        // 檢查當前是否已在 Holesky 網絡
+        // 檢查當前是否已在 Sepolia 網絡
         const currentChainId = await window.ethereum.request({ method: 'eth_chainId' });
 
-        if (currentChainId !== HOLESKY_CHAIN_ID) {
-          const switched = await switchToHoleskyNetwork();
+        if (currentChainId !== SEPOLIA_CHAIN_ID) {
+          const switched = await switchToSepoliaNetwork();
           if (!switched) {
             disconnect();
             setIsConnecting(false);

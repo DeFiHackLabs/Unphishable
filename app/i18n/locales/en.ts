@@ -1691,7 +1691,7 @@ export default {
       warning:
         "Warning: In a real situation, this signature would allow malicious websites unlimited access to your USDT!",
       title: "Signature Details:",
-      permissionNote: `Approval transaction sent! View transaction: <a href="https://holesky.etherscan.io/tx/{txHash}" target="_blank">{txHash}</a>`,
+      permissionNote: `Approval transaction sent! View transaction: <a href="https://sepolia.etherscan.io/tx/{txHash}" target="_blank">{txHash}</a>`,
       success:
         "Signature successful! This signature can be used to approve token spending without a transaction!",
     },
@@ -1808,8 +1808,12 @@ export default {
     startChallenge: "Start Challenge",
   },
   walletSetupGuide: {
+    networkSwitched: "Successfully switched to Sepolia network",
+    userRejected: "User rejected the request",
+    networkExists:
+      "Sepolia network already exists. Please check your network settings.",
     walletReadyMessage:
-      "Your wallet is now ready to use! You can connect it to dApps and start interacting with Holesky testnet.",
+      "Your wallet is now ready to use! You can connect it to dApps and start interacting with Sepolia testnet.",
     congratulations:
       "Congratulations! You've successfully completed the Web3 wallet setup!",
     setupCompleteMessage: "You're now ready to start your Web3 journey.",
@@ -1818,8 +1822,8 @@ export default {
       "Welcome to the world of Web3! This guide will walk you through setting up your first cryptocurrency wallet with MetaMask, securely storing your seed phrase, and obtaining test ETH from a faucet.",
     downloadMetaMask: "Download MetaMask",
     installMetaMask: "Please install MetaMask first!",
-    networkAdded: "Holesky testnet added successfully!",
-    networkError: "Failed to add Holesky testnet: ",
+    networkAdded: "Sepolia testnet added successfully!",
+    networkError: "Failed to add Sepolia testnet: ",
     securityTip: "Security Tip",
     downloadWarning:
       "Always download MetaMask from the official website or trusted app stores. Never install from links provided in emails or messages.",
@@ -1832,7 +1836,7 @@ export default {
     note: "Note",
     testEthNote:
       "Test ETH has no real-world value and is only used for testing on test networks.",
-    addNetwork: "Add Holesky Network",
+    addNetwork: "Add Sepolia Network",
     connectWallet: "Connect Wallet",
     walletConnected: "Wallet Connected",
     confirmCompletion: "Confirm Completion",
@@ -1875,9 +1879,9 @@ export default {
           "Your seed phrase typically consists of 12 words in a specific order. Here's how to store it securely:",
       },
       4: {
-        title: "Adding Holesky Testnet to MetaMask",
+        title: "Adding Sepolia Testnet to MetaMask",
         content:
-          "After installing MetaMask, you'll need to add the Holesky testnet manually. Here are the network details:",
+          "After installing MetaMask, you'll need to add the Sepolia testnet manually. Here are the network details:",
       },
       5: {
         title: "Getting Test ETH from a Faucet",
@@ -1899,9 +1903,9 @@ export default {
     ],
     faucetSteps: [
       'In MetaMask, click on the network dropdown at the top (likely says "Ethereum Mainnet")',
-      'Select "Holesky Test Network" (you may need to add it from Settings > Networks)',
+      'Select "Sepolia Test Network" (you may need to add it from Settings > Networks)',
       "Copy your wallet address",
-      "Visit the Google Cloud Holesky Faucet",
+      "Visit the Google Cloud Sepolia Faucet",
       "Paste your wallet address and request test ETH",
       "Wait a few moments and check your MetaMask wallet for the test ETH",
     ],
@@ -2416,9 +2420,9 @@ export default {
       "MetaMask is not installed! Please install MetaMask to use this application.",
     connecting: "Connecting to MetaMask...",
     noAccountsFound: "No accounts found or user denied access.",
-    pleaseSwitch: "Please switch to Holesky testnet (Chain ID: 0x4268)",
+    pleaseSwitch: "Please switch to Sepolia testnet (Chain ID: 0xaa36a7)",
     networkSwitchRequired: "Network Switch Required",
-    failedToAdd: "Failed to add Holesky network: ",
+    failedToAdd: "Failed to add Sepolia network: ",
     switchFailed: "Failed to switch network: ",
     walletConnected: "Wallet connected successfully!",
     error: "Error: ",
@@ -3220,5 +3224,36 @@ export default {
         "Consider using a hardware wallet for additional security",
       ],
     },
+  },
+  celsiusEmail: {
+    title: "Celsius Recovery Email Phishing",
+    educational: "Educational Purpose Only - Phishing Simulation",
+    step1: "Step 1: Check Your Email",
+    step2: "Step 2: Portal Login",
+    instruction: "What would you do when receiving this email?",
+    clickLink: "Click the link to access portal",
+    suspicious: "This looks suspicious",
+    reportPhishing: "Report as phishing",
+    accessPortal: "Access Portal",
+    waitSomethingWrong: "Wait, something seems wrong...",
+    result: "Challenge Result",
+    challengeSuccess:
+      "✅ CHALLENGE SUCCESSFUL! You identified this as a phishing attempt and protected yourself.",
+    challengeFailed: "❌ CHALLENGE FAILED! You fell for the phishing attempt.",
+    phishingWarningTitle: "Warning: This is a phishing email!",
+  },
+  eip7702: {
+    title: "EIP-7702 Batch Transaction Phishing",
+    educational: "Educational Purpose Only - Advanced Phishing Simulation",
+    step1: "Step 1: Understanding EIP-7702",
+    step2: "Step 2: Malicious Batch Transaction",
+    connectWallet: "Connect Wallet to Continue",
+    result: "Challenge Result",
+    challengeSuccess:
+      "✅ CHALLENGE SUCCESSFUL! You identified the malicious batch transaction and protected yourself.",
+    challengeFailed:
+      "❌ CHALLENGE FAILED! You signed the malicious batch transaction.",
+    phishingWarningTitle:
+      "Warning: This was a malicious EIP-7702 batch transaction!",
   },
 };

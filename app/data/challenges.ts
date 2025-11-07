@@ -637,4 +637,38 @@ export const challenges = [
     },
     link: "/challenges/fake-extension-phishing",
   },
+  {
+    no: "0x0038",
+    name: "celsius-email-phishing",
+    difficulty: "Beginner",
+    title: {
+      en: "Celsius Recovery Email Phishing",
+      "zh-hant": "Celsius 恢復郵件釣魚",
+      "zh-hans": "Celsius 恢复邮件钓鱼",
+    },
+    description: {
+      en: "Learn to identify phishing emails that impersonate cryptocurrency recovery services and try to steal your credentials.",
+      "zh-hant":
+        "學習識別冒充加密貨幣恢復服務的釣魚郵件，這些郵件試圖盜取您的憑證。",
+      "zh-hans":
+        "学习识别冒充加密货币恢复服务的钓鱼邮件，这些邮件试图窃取您的凭证。",
+    },
+    link: "/challenges/celsius-email-phishng",
+  },
+  {
+    no: "0x0039",
+    name: "eip-7702-phishing",
+    difficulty: "Advanced",
+    title: {
+      en: "EIP-7702 Batch Transaction Phishing",
+      "zh-hant": "EIP-7702 批次交易釣魚",
+      "zh-hans": "EIP-7702 批量交易钓鱼",
+    },
+    description: {
+      en: "Learn to identify malicious batch transactions using EIP-7702 that attempt to steal your tokens through hidden approvals and transfers.",
+      "zh-hant": "學習識別使用 EIP-7702 的惡意批次交易，這些交易試圖通過隱藏的授權和轉移來盜取您的代幣。",
+      "zh-hans": "学习识别使用 EIP-7702 的恶意批量交易，这些交易试图通过隐藏的授权和转移来窃取您的代币。",
+    },
+    link: "/challenges/eip-7702-phishing",
+  },
 ];

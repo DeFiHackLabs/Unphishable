@@ -4,7 +4,7 @@ import { useState, useEffect, useRef } from 'react';
 import { useLanguage } from '@/app/contexts/LanguageContext';
 import { useAccount, useConnect, useDisconnect, useWriteContract } from 'wagmi';
 import { injected } from 'wagmi/connectors';
-import { holesky } from 'viem/chains';
+import { sepolia } from 'viem/chains';
 import Image from 'next/image';
 import ChallengeCompletionModal from '@/app/components/ChallengeCompletionModal';
 
@@ -27,8 +27,8 @@ export default function SafeProxyAttack() {
   const chatEndRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    if (isConnected && chainId !== holesky.id) {
-      switchToHolesky();
+    if (isConnected && chainId !== sepolia.id) {
+      switchToSepolia();
     }
   }, [isConnected, chainId]);
 
@@ -40,12 +40,12 @@ export default function SafeProxyAttack() {
     }
   };
 
-  const switchToHolesky = async () => {
+  const switchToSepolia = async () => {
     try {
       if (typeof window.ethereum !== 'undefined') {
         await window.ethereum.request({
           method: 'wallet_switchEthereumChain',
-          params: [{ chainId: '0x4268' }], // Holesky chainId
+          params: [{ chainId: '0xaa36a7' }], // Sepolia chainId
         });
       }
     } catch (switchError: unknown) {
@@ -59,19 +59,19 @@ export default function SafeProxyAttack() {
           await window.ethereum.request({
             method: 'wallet_addEthereumChain',
             params: [{
-              chainId: '0x4268',
-              chainName: 'Holesky Testnet',
+              chainId: '0xaa36a7',
+              chainName: 'Sepolia Testnet',
               nativeCurrency: {
                 name: 'ETH',
                 symbol: 'ETH',
                 decimals: 18
               },
-              rpcUrls: ['https://ethereum-holesky.publicnode.com'],
-              blockExplorerUrls: ['https://holesky.etherscan.io']
+              rpcUrls: ['https://ethereum-sepolia-rpc.publicnode.com'],
+              blockExplorerUrls: ['https://sepolia.etherscan.io']
             }]
           });
         } catch (addError) {
-          console.error('Failed to add Holesky network:', addError);
+          console.error('Failed to add Sepolia network:', addError);
         }
       }
 
@@ -121,7 +121,7 @@ export default function SafeProxyAttack() {
           '0x0000000000000000000000000000000000000000' as `0x${string}`,
           signatures as `0x${string}`
         ],
-        chainId: holesky.id
+        chainId: sepolia.id
       });
 
 
@@ -191,7 +191,7 @@ export default function SafeProxyAttack() {
             <p className="mb-2">
               {t.safeProxyAttack.step1.networkStatus}{' '}
               <span className="font-medium">
-                {isConnected ? (chainId === holesky.id ? 'Holesky Testnet' : t.safeProxyAttack.step1.wrongNetwork) : t.safeProxyAttack.step1.notConnected}
+                {isConnected ? (chainId === sepolia.id ? 'Sepolia Testnet' : t.safeProxyAttack.step1.wrongNetwork) : t.safeProxyAttack.step1.notConnected}
               </span>
             </p>
             <p className="mb-4">

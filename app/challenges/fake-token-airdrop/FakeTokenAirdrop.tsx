@@ -67,7 +67,7 @@ export default function FakeTokenAirdrop() {
               <div className="flex justify-start mb-2 text-gray-600">
                 <div>{t.fakeTokenAirdrop.transaction.hashLabel}</div>
                 <div className="text-blue-500 cursor-pointer">
-                  <a href="https://holesky.etherscan.io/tx/0x1b23f927c47a6cb68fb7207a42c600a34726c583082301d2b7626d5447a5e363" target="_blank" rel="noopener noreferrer">
+                  <a href="https://sepolia.etherscan.io/tx/0x1b23f927c47a6cb68fb7207a42c600a34726c583082301d2b7626d5447a5e363" target="_blank" rel="noopener noreferrer">
                     0x1b23f927c47a6cb68fb7207a42c600a34726c583082301d2b7626d5447a5e363
                   </a>
                 </div>

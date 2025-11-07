@@ -3,7 +3,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { useAccount, useConnect, useChainId, useSwitchChain } from 'wagmi';
 import { injected } from 'wagmi/connectors';
-import { holesky } from 'viem/chains';
+import { sepolia } from 'viem/chains';
 import { useLanguage } from '@/app/contexts/LanguageContext';
 import ChallengeCompletionModal from '@/app/components/ChallengeCompletionModal';
 import AddressSuffixPhishingSuccessContent from './AddressSuffixPhishingSuccessContent'
@@ -35,9 +35,9 @@ export default function AddressSuffixPhishing() {
   const handleConnectWallet = async () => {
     try {
       await connect({ connector: injected() });
-      if (chainId !== holesky.id) {
+      if (chainId !== sepolia.id) {
         try {
-          await switchChain({ chainId: holesky.id });
+          await switchChain({ chainId: sepolia.id });
         } catch (error) {
           console.error('Failed to switch network:', error);
         }
@@ -111,7 +111,7 @@ export default function AddressSuffixPhishing() {
           <div className="mb-8 text-center challenge-title">
             <p className="mb-2">
               {t.addressSuffixPhishing.networkStatus}{' '}
-              <span>{chainId === holesky.id ? 'Holesky Testnet' : t.common.notConnected}</span>
+              <span>{chainId === sepolia.id ? 'Sepolia Testnet' : t.common.notConnected}</span>
             </p>
             <p>
               {t.addressSuffixPhishing.walletStatus}{' '}

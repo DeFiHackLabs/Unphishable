@@ -9,13 +9,13 @@ import {
     useWriteContract,
 } from "wagmi";
 import { injected } from "wagmi/connectors";
-import { holesky } from "wagmi/chains";
+import { sepolia } from "wagmi/chains";
 import { useLanguage } from "@/app/contexts/LanguageContext";
 import ChallengeCompletionModal from '@/app/components/ChallengeCompletionModal';
 import UsdtApprovalPhishingSuccessContent from "./UsdtApprovalPhishingSuccessContent";
 import NetworkCheck from '@/app/components/NetworkCheck';
 
-const USDT_CONTRACT_ADDRESS = "0x87350147a24099Bf1e7E677576f01C1415857C75";
+const USDT_CONTRACT_ADDRESS = "0xaA8E23Fb1079EA71e0a56F48a2aA51851D8433D0";
 const PHISHING_SPENDER_ADDRESS = "0x0000000066663456789012345678901234560000";
 const MAX_UINT256 = BigInt(Math.pow(2, 256)) - 1n;
 
@@ -38,16 +38,16 @@ export default function UsdtApprovalPhishing() {
     const [networkCheckTriggered, setNetworkCheckTriggered] = useState(false);
     const [isExecute, setIsExecute] = useState(false);
     const [isExecuteRevoke, setIsExecuteRevoke] = useState(false);
-    const REQUIRED_CHAIN_ID = 17000; // Holesky Testnet
+    const REQUIRED_CHAIN_ID = 11155111; // Sepolia Testnet
 
     useEffect(() => { }, []);
 
     const handleConnectWallet = async () => {
         try {
             await connect({ connector: injected() });
-            if (chainId !== holesky.id) {
+            if (chainId !== sepolia.id) {
                 try {
-                    await switchChain({ chainId: holesky.id });
+                    await switchChain({ chainId: sepolia.id });
                 } catch (error) {
                     console.error("Failed to switch network:", error);
                 }
@@ -84,7 +84,7 @@ export default function UsdtApprovalPhishing() {
                 ],
                 functionName: "approve",
                 args: [PHISHING_SPENDER_ADDRESS, MAX_UINT256],
-                chainId: holesky.id,
+                chainId: sepolia.id,
             });
             console.log("Approval tx:", tx, isIdle);
             setTxHash(tx);
@@ -141,7 +141,7 @@ export default function UsdtApprovalPhishing() {
                 ],
                 functionName: "approve",
                 args: [PHISHING_SPENDER_ADDRESS, 0n], // 設置為 0 來撤銷授權
-                chainId: holesky.id,
+                chainId: sepolia.id,
             });
 
             console.log("Revoke tx:", tx);
@@ -221,8 +221,8 @@ export default function UsdtApprovalPhishing() {
                         <p className="mb-2">
                             {t.usdtApprovalPhishing.networkStatus}{" "}
                             <span>
-                                {chainId === holesky.id
-                                    ? "Holesky Testnet"
+                                {chainId === sepolia.id
+                                    ? "Sepolia Testnet"
                                     : t.usdtApprovalPhishing.notConnected}
                             </span>
                         </p>
@@ -325,7 +325,7 @@ export default function UsdtApprovalPhishing() {
                                                     .revokeTransactionView
                                             }{" "}
                                             <a
-                                                href={`https://holesky.etherscan.io/tx/${revokeTxHash}`}
+                                                href={`https://sepolia.etherscan.io/tx/${revokeTxHash}`}
                                                 target="_blank"
                                                 rel="noopener noreferrer"
                                                 className="text-blue-600 underline"

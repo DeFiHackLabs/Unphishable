@@ -3,13 +3,13 @@
 import React, { useState, useRef } from 'react';
 //import { useRouter } from 'next/navigation';
 import { useLanguage } from '@/app/contexts/LanguageContext';
-import { useAccount, useConnect, useWriteContract } from 'wagmi';
-import { injected } from 'wagmi/connectors';
+import { useAccount, useWriteContract } from 'wagmi';
+
 import ChallengeCompletionModal from '@/app/components/ChallengeCompletionModal';
 import NetworkCheck, { getNetworkName } from '@/app/components/NetworkCheck';
 
 import FakeStakingContractSuccessContent from './FakeStakingContractSuccessContent';
-const HOLESKY_CHAIN_ID = 17000; // Decimal form of 0x4268
+const SEPOLIA_CHAIN_ID = 11155111; // Decimal form of 0xaa36a7
 const USDC_CONTRACT_ADDRESS = '0x87350147a24099Bf1e7E677576f01C1415857C75';
 const FAKE_STAKING_CONTRACT = '0x0000000066663456789012345678901234560000';
 const MAX_UINT256 = '0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff';
@@ -18,7 +18,7 @@ const FakeStakingContract = () => {
   const { t } = useLanguage();
   //const router = useRouter();
   const { address, isConnected, chainId: accountChainId } = useAccount();
-  const { connect } = useConnect();
+  // const { connect } = useConnect();
 
   const [stakeAmount, setStakeAmount] = useState('');
   const [showStakeResult, setShowStakeResult] = useState(false);
@@ -27,17 +27,17 @@ const FakeStakingContract = () => {
   const [networkCheckTriggered, setNetworkCheckTriggered] = useState(false);
   const chatEndRef = useRef<HTMLDivElement>(null);
 
-  const connectWallet = async () => {
-    try {
-      if (accountChainId !== HOLESKY_CHAIN_ID) {
-        setNetworkCheckTriggered(true);
-        return; // 如果網路不正確，先不繼續執行
-      }
-      await connect({ connector: injected() });
-    } catch (error) {
-      console.error('Error connecting wallet:', error);
-    }
-  };
+  // const connectWallet = async () => {
+  //   try {
+  //     if (accountChainId !== SEPOLIA_CHAIN_ID) {
+  //       setNetworkCheckTriggered(true);
+  //       return; // 如果網路不正確，先不繼續執行
+  //     }
+  //     await connect({ connector: injected() });
+  //   } catch (error) {
+  //     console.error('Error connecting wallet:', error);
+  //   }
+  // };
 
   const { writeContractAsync, isPending } = useWriteContract();
 
@@ -48,7 +48,7 @@ const FakeStakingContract = () => {
         return;
       }
 
-      if (accountChainId !== HOLESKY_CHAIN_ID) {
+      if (accountChainId !== SEPOLIA_CHAIN_ID) {
         setNetworkCheckTriggered(true);
         return; // 如果網路不正確，先不繼續執行
       }
@@ -106,13 +106,13 @@ const FakeStakingContract = () => {
             <p className="mb-2 challenge-title">
               {t.fakeStakingContract.networkStatus}
               {isConnected ? (
-                <span className={`font-medium ${accountChainId === HOLESKY_CHAIN_ID ? 'text-green-600' : 'text-red-600'}`}>
-                  {accountChainId === HOLESKY_CHAIN_ID
-                    ? 'Holesky Testnet'
+                <span className={`font-medium ${accountChainId === SEPOLIA_CHAIN_ID ? 'text-green-600' : 'text-red-600'}`}>
+                  {accountChainId === SEPOLIA_CHAIN_ID
+                    ? 'Sepolia Testnet'
                     : accountChainId
                       ? `${getNetworkName(accountChainId)} (ChainID: ${accountChainId})`
                       : "未知網路"}
-                  {accountChainId !== HOLESKY_CHAIN_ID && (
+                  {accountChainId !== SEPOLIA_CHAIN_ID && (
                     <span className="text-red-600 text-sm ml-1">
                       ⚠️
                     </span>
@@ -214,7 +214,7 @@ const FakeStakingContract = () => {
                       <p>
                         {t.fakeStakingContract.transactionSent}{' '}
                         <a
-                          href={`https://holesky.etherscan.io/tx/${txHash}`}
+                          href={`https://sepolia.etherscan.io/tx/${txHash}`}
                           target="_blank"
                           rel="noopener noreferrer"
                           className="text-blue-500 hover:underline break-all"
@@ -249,7 +249,7 @@ const FakeStakingContract = () => {
       />
       {/* 使用 NetworkCheck 組件，不需要條件渲染，當按下按鈕時就會觸發 */}
       <NetworkCheck
-        requiredChainId={HOLESKY_CHAIN_ID}
+        requiredChainId={SEPOLIA_CHAIN_ID}
         onCorrectNetwork={() => {
           setNetworkCheckTriggered(false);  // 當網路正確時，重置狀態
           // 如果切換到正確網路後，自動再次嘗試簽名

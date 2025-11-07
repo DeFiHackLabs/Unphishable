@@ -1,14 +1,13 @@
 'use client';
 
 import { useState, useEffect, useRef } from 'react';
-import { useAccount, useConnect, useDisconnect, useWalletClient, useChainId } from 'wagmi';
-import { injected } from 'wagmi/connectors';
+import { useAccount, useWalletClient, useChainId } from 'wagmi';
 import { useLanguage } from '@/app/contexts/LanguageContext';
 import ChallengeCompletionModal from '@/app/components/ChallengeCompletionModal';
 import DefiProxyPhishingSuccessContent from './DefiProxyPhishingSuccessContent'
 import NetworkCheck from '@/app/components/NetworkCheck';
 // Constants
-const HOLESKY_CHAIN_ID = 17000;
+const SEPOLIA_CHAIN_ID = 11155111;
 const HARDHAT_CHAIN_ID = 31337;
 const MALICIOUS_CONTRACT_ADDRESS = '0xbe535f5bb2bd9d132c9ed6e6bf6ef1f89832a0f1';
 const SET_OWNER_SELECTOR = '0x13af40350000000000000000000000000000000000000000000000000000000000031337';
@@ -21,8 +20,6 @@ interface MetaMaskError extends Error {
 export default function DefiProxyPhishing() {
   const { t } = useLanguage();
   const { address, isConnected, chainId: accountChainId } = useAccount();
-  const { connectAsync } = useConnect();
-  const { disconnect } = useDisconnect();
   const { data: walletClient } = useWalletClient();
   const chainId = useChainId();
 
@@ -63,17 +60,6 @@ export default function DefiProxyPhishing() {
     }
   }, [isConnected, persistentState]);
 
-  const connectWallet = async () => {
-    try {
-      await connectAsync({ connector: injected() });
-      setShowUpdateSection(true);
-      updateStatus(t.defiProxyPhishing.walletConnected, 'success');
-    } catch (error) {
-      console.error('Failed to connect wallet:', error);
-      updateStatus(t.defiProxyPhishing.connectionError + (error as Error).message, 'error');
-    }
-  };
-
   const updateStatus = (message: string, type: 'error' | 'info' | 'success' | 'warning') => {
     setStatus({ message, type, show: true });
 
@@ -101,7 +87,7 @@ export default function DefiProxyPhishing() {
         updateStatus(t.defiProxyPhishing.connectWalletFirst, 'error');
         return;
       }
-      if (accountChainId !== HOLESKY_CHAIN_ID) {
+      if (accountChainId !== SEPOLIA_CHAIN_ID) {
         setNetworkCheckTriggered(true);
         return; // 如果網路不正確，先不繼續執行
       }
@@ -194,13 +180,9 @@ export default function DefiProxyPhishing() {
     const idToCheck = chainIdentifier ?? chainId;
 
     if (!isConnected && !chainIdentifier) return t.common.notConnected;
-    if (idToCheck === HOLESKY_CHAIN_ID) return 'Holesky Testnet';
+    if (idToCheck === SEPOLIA_CHAIN_ID) return 'Sepolia Testnet';
     if (idToCheck === HARDHAT_CHAIN_ID) return 'Hardhat Local Network';
     return t.defiProxyPhishing.unsupportedNetwork;
-  };
-
-  const handleDisconnect = () => {
-    disconnect();
   };
 
   return (
@@ -216,11 +198,11 @@ export default function DefiProxyPhishing() {
               <p className="mb-2">
                 {t.defiProxyPhishing.networkStatus}
                 {isConnected ? (
-                  <span className={`font-medium ${accountChainId === HOLESKY_CHAIN_ID ? 'text-green-600' : 'text-red-600'}`}>
-                    {accountChainId === HOLESKY_CHAIN_ID
-                      ? 'Holesky Testnet'
+                  <span className={`font-medium ${accountChainId === SEPOLIA_CHAIN_ID ? 'text-green-600' : 'text-red-600'}`}>
+                    {accountChainId === SEPOLIA_CHAIN_ID
+                      ? 'Sepolia Testnet'
                       : `${getNetworkName(accountChainId)} (ChainID: ${accountChainId})`}
-                    {accountChainId !== HOLESKY_CHAIN_ID && (
+                    {accountChainId !== SEPOLIA_CHAIN_ID && (
                       <span className="text-red-600 text-sm ml-1">
                         ⚠️
                       </span>
@@ -308,7 +290,7 @@ export default function DefiProxyPhishing() {
       />
       {/* 使用 NetworkCheck 組件，不需要條件渲染，當按下按鈕時就會觸發 */}
       <NetworkCheck
-        requiredChainId={HOLESKY_CHAIN_ID}
+        requiredChainId={SEPOLIA_CHAIN_ID}
         onCorrectNetwork={() => {
           setNetworkCheckTriggered(false);  // 當網路正確時，重置狀態
         }}

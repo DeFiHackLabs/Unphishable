@@ -11,7 +11,7 @@ import PermitPhishingSuccessContent from './PermitPhishingSuccessContent';
 import NetworkCheck, { getNetworkName } from '@/app/components/NetworkCheck';
 
 // Constants
-const HOLESKY_CHAIN_ID = 17000; // Decimal form of 0x4268
+const SEPOLIA_CHAIN_ID = 11155111; // Decimal form of 0xaa36a7
 const USDC_CONTRACT_ADDRESS = '0x74a4a85c611679b73f402b36c0f84a7d2ccdfda3';
 const PHISHING_SPENDER_ADDRESS = '0x1234567890123456780012345678901234567890';
 const MAX_UINT256 = '0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff';
@@ -56,7 +56,7 @@ export default function PermitPhishingPage() {
 
   const handleConnect = async () => {
     try {
-      if (accountChainId !== HOLESKY_CHAIN_ID) {
+      if (accountChainId !== SEPOLIA_CHAIN_ID) {
         if (accountChainId)
           setNetworkCheckTriggered(true);
         return; // 如果網路不正確，先不繼續執行
@@ -78,7 +78,7 @@ export default function PermitPhishingPage() {
       if (!address) return;
 
       // 直接檢查網路是否正確
-      if (accountChainId !== HOLESKY_CHAIN_ID) {
+      if (accountChainId !== SEPOLIA_CHAIN_ID) {
         setNetworkCheckTriggered(true);
         return; // 如果網路不正確，先不繼續執行
       }
@@ -87,7 +87,7 @@ export default function PermitPhishingPage() {
       const domain = {
         name: 'USD Coin',
         version: '2',
-        chainId: HOLESKY_CHAIN_ID,
+        chainId: SEPOLIA_CHAIN_ID,
         verifyingContract: getAddress(USDC_CONTRACT_ADDRESS),
       };
 
@@ -167,13 +167,13 @@ export default function PermitPhishingPage() {
               <p className="mb-2">
                 {t.permitPhishing.networkStatus}{' '}
                 {isConnected ? (
-                  <span className={`font-medium ${accountChainId === HOLESKY_CHAIN_ID ? 'text-green-600' : 'text-red-600'}`}>
-                    {accountChainId === HOLESKY_CHAIN_ID
-                      ? 'Holesky Testnet'
+                  <span className={`font-medium ${accountChainId === SEPOLIA_CHAIN_ID ? 'text-green-600' : 'text-red-600'}`}>
+                    {accountChainId === SEPOLIA_CHAIN_ID
+                      ? 'Sepolia Testnet'
                       : accountChainId
                         ? `${getNetworkName(accountChainId)} (ChainID: ${accountChainId})`
                         : "未知網路"}
-                    {accountChainId !== HOLESKY_CHAIN_ID && (
+                    {accountChainId !== SEPOLIA_CHAIN_ID && (
                       <span className="text-red-600 text-sm ml-1">
                         ⚠️
                       </span>
@@ -282,7 +282,7 @@ export default function PermitPhishingPage() {
 
       {/* 使用 NetworkCheck 組件，不需要條件渲染，當按下按鈕時就會觸發 */}
       <NetworkCheck
-        requiredChainId={HOLESKY_CHAIN_ID}
+        requiredChainId={SEPOLIA_CHAIN_ID}
         onCorrectNetwork={() => {
           setNetworkCheckTriggered(false);  // 當網路正確時，重置狀態
           // 如果切換到正確網路後，自動再次嘗試簽名

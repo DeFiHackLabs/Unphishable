@@ -6,7 +6,7 @@ import { useAccount, useConnect, useDisconnect } from 'wagmi';
 import { injected } from 'wagmi/connectors';
 import ChallengeCompletionModal from '@/app/components/ChallengeCompletionModal';
 import NetworkCheck, { getNetworkName } from '@/app/components/NetworkCheck';
-const HOLESKY_CHAIN_ID = 17000; // Decimal form of 0x4268
+const SEPOLIA_CHAIN_ID = 11155111; // Decimal form of 0xaa36a7
 
 export default function BlindSignaturePhishingPage() {
   const { t } = useLanguage();
@@ -53,7 +53,7 @@ export default function BlindSignaturePhishingPage() {
   };
 
   const showEthSignResult = () => {
-    if (accountChainId !== HOLESKY_CHAIN_ID) {
+    if (accountChainId !== SEPOLIA_CHAIN_ID) {
       setNetworkCheckTriggered(true);
       return; // 如果網路不正確，先不繼續執行
     }
@@ -70,7 +70,7 @@ export default function BlindSignaturePhishingPage() {
 
   const usePersonalSign = async () => {
     try {
-      if (accountChainId !== HOLESKY_CHAIN_ID) {
+      if (accountChainId !== SEPOLIA_CHAIN_ID) {
         setNetworkCheckTriggered(true);
         return; // 如果網路不正確，先不繼續執行
       }
@@ -90,7 +90,7 @@ export default function BlindSignaturePhishingPage() {
 
   const usePersonalSignHash = async () => {
     try {
-      if (accountChainId !== HOLESKY_CHAIN_ID) {
+      if (accountChainId !== SEPOLIA_CHAIN_ID) {
         setNetworkCheckTriggered(true);
         return; // 如果網路不正確，先不繼續執行
       }
@@ -110,14 +110,14 @@ export default function BlindSignaturePhishingPage() {
 
   const useSignTypedData = async () => {
     try {
-      if (accountChainId !== HOLESKY_CHAIN_ID) {
+      if (accountChainId !== SEPOLIA_CHAIN_ID) {
         setNetworkCheckTriggered(true);
         return; // 如果網路不正確，先不繼續執行
       }
       const domain = {
         name: t.blindSignaturePhishing.method3.domain.name,
         version: '1',
-        chainId: 17000,
+        chainId: 11155111,
         verifyingContract: '0x1234567890123456789012345678901234567890'
       };
 
@@ -172,17 +172,17 @@ export default function BlindSignaturePhishingPage() {
             <p className="mb-2">
               {t.blindSignaturePhishing.networkStatus}
               {/* <span className="font-medium">
-                {isConnected ? 'Holesky Testnet' : t.common.notConnected}
+                {isConnected ? 'Sepia Testnet' : t.common.notConnected}
               </span> */}
               {isConnected ? (
-                <span className={`font-medium ${accountChainId === HOLESKY_CHAIN_ID ? 'text-green-600' : 'text-red-600'}`}>
-                  {accountChainId === HOLESKY_CHAIN_ID
-                    ? 'Holesky Testnet'
+                <span className={`font-medium ${accountChainId === SEPOLIA_CHAIN_ID ? 'text-green-600' : 'text-red-600'}`}>
+                  {accountChainId === SEPOLIA_CHAIN_ID
+                    ? 'Sepia Testnet'
                     : accountChainId
                       ? `${getNetworkName(accountChainId)} (ChainID: ${accountChainId})`
                       : "未知網路"
                   }
-                  {accountChainId !== HOLESKY_CHAIN_ID && (
+                  {accountChainId !== SEPOLIA_CHAIN_ID && (
                     <span className="text-red-600 text-sm ml-1">
                       ⚠️
                     </span>
@@ -376,7 +376,7 @@ export default function BlindSignaturePhishingPage() {
       />
       {/* 使用 NetworkCheck 組件，不需要條件渲染，當按下按鈕時就會觸發 */}
       <NetworkCheck
-        requiredChainId={HOLESKY_CHAIN_ID}
+        requiredChainId={SEPOLIA_CHAIN_ID}
         onCorrectNetwork={() => {
           setNetworkCheckTriggered(false);  // 當網路正確時，重置狀態
         }}

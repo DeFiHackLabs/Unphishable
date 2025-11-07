@@ -8,7 +8,7 @@ import { translations } from '@/app/i18n';
 import type { Language } from '@/app/i18n';
 import GovernanceProposalPhishingSuccessContent from './GovernanceProposalPhishingSuccessContent';
 import NetworkCheck, { getNetworkName } from '@/app/components/NetworkCheck';
-const HOLESKY_CHAIN_ID = 17000; // Decimal form of 0x4268
+const SEPOLIA_CHAIN_ID = 11155111; // Decimal form of 0xaa36a7
 
 const GovernanceProposalPhishing = () => {
   const { language, } = useLanguage();
@@ -47,7 +47,7 @@ const GovernanceProposalPhishing = () => {
   const connectWallet = async () => {
     if (typeof window.ethereum !== 'undefined') {
       try {
-        if (accountChainId !== HOLESKY_CHAIN_ID) {
+        if (accountChainId !== SEPOLIA_CHAIN_ID) {
           setNetworkCheckTriggered(true);
           return; // 如果網路不正確，先不繼續執行
         }
@@ -72,7 +72,7 @@ const GovernanceProposalPhishing = () => {
     }
 
     try {
-      if (accountChainId !== HOLESKY_CHAIN_ID) {
+      if (accountChainId !== SEPOLIA_CHAIN_ID) {
         setNetworkCheckTriggered(true);
         return; // 如果網路不正確，先不繼續執行
       }
@@ -272,7 +272,7 @@ const GovernanceProposalPhishing = () => {
       />
       {/* 使用 NetworkCheck 組件，不需要條件渲染，當按下按鈕時就會觸發 */}
       <NetworkCheck
-        requiredChainId={HOLESKY_CHAIN_ID}
+        requiredChainId={SEPOLIA_CHAIN_ID}
         onCorrectNetwork={() => {
           setNetworkCheckTriggered(false);  // 當網路正確時，重置狀態
         }}

@@ -8,15 +8,15 @@ import { useLanguage } from '@/app/contexts/LanguageContext';
 import { useTheme } from 'next-themes';
 import "@/app/styles/ErrorModal.css";
 import { createPublicClient, http } from 'viem';
-import { holesky } from 'viem/chains';
+import { sepolia } from 'viem/chains';
 import { userService } from '@/app/services/userService';
 import { useUserStore } from '@/app/stores/userStore';
 import ChallengeCompletionModal from '@/app/components/ChallengeCompletionModal';
 
 // 建立 public client
 const publicClient = createPublicClient({
-  chain: holesky,
-  transport: http()
+  chain: sepolia,
+  transport: http('https://ethereum-sepolia-rpc.publicnode.com')
 });
 
 export default function WalletSetupGuide() {
@@ -89,7 +89,7 @@ export default function WalletSetupGuide() {
         throw new Error(t.walletSetupGuide.installMetaMask);
       }
 
-      if (chainId !== holesky.id) {
+      if (chainId !== sepolia.id) {
         showError(t.walletSetupGuide.wrongNetwork, 'network');
         throw new Error(t.walletSetupGuide.wrongNetwork);
       }
@@ -188,7 +188,7 @@ export default function WalletSetupGuide() {
     }
   };
 
-  const handleAddHoleskyNetwork = async () => {
+  const handleAddSepoliaNetwork = async () => {
     if (typeof window.ethereum === 'undefined') {
       showError(t.walletSetupGuide.installMetaMask, 'install');
       window.open('https://metamask.io/download/', '_blank');
@@ -196,28 +196,55 @@ export default function WalletSetupGuide() {
     }
 
     try {
+      // 首先嘗試切換到 Sepolia 網路
       await window.ethereum.request({
-        method: 'wallet_addEthereumChain',
-        params: [{
-          chainId: '0x4268',
-          chainName: 'Holesky',
-          nativeCurrency: {
-            name: 'ETH',
-            symbol: 'ETH',
-            decimals: 18
-          },
-          rpcUrls: ['https://1rpc.io/holesky'],
-          blockExplorerUrls: ['https://holesky.etherscan.io/']
-        }]
+        method: 'wallet_switchEthereumChain',
+        params: [{ chainId: '0xaa36a7' }],
       });
-      alert(t.walletSetupGuide.networkAdded);
-    } catch (error) {
-      console.error(error);
-      const errorCode = (error as { code: number })?.code;
-      if (errorCode === -32603 || errorCode === 4001) {
-        alert(t.walletSetupGuide.networkAdded);
+      alert(t.walletSetupGuide.networkSwitched || 'Switched to Sepolia network');
+    } catch (switchError) {
+      console.log('Switch error:', switchError);
+      const switchErrorCode = (switchError as { code: number })?.code;
+
+      // 如果網路不存在 (4902)，則添加網路
+      if (switchErrorCode === 4902) {
+        try {
+          await window.ethereum.request({
+            method: 'wallet_addEthereumChain',
+            params: [{
+              chainId: '0xaa36a7',
+              chainName: 'Sepolia Test Network',
+              nativeCurrency: {
+                name: 'Sepolia ETH',
+                symbol: 'ETH',
+                decimals: 18
+              },
+              rpcUrls: ['https://ethereum-sepolia-rpc.publicnode.com'],
+              blockExplorerUrls: ['https://sepolia.etherscan.io/']
+            }]
+          });
+          alert(t.walletSetupGuide.networkAdded || 'Sepolia network added successfully');
+        } catch (addError) {
+          console.error('Add network error:', addError);
+          const addErrorCode = (addError as { code: number })?.code;
+
+          if (addErrorCode === 4001) {
+            // 用戶拒絕
+            alert(t.walletSetupGuide.userRejected || 'User rejected the request');
+          } else {
+            alert(t.walletSetupGuide.networkError || 'Failed to add network');
+          }
+        }
+      } else if (switchErrorCode === 4001) {
+        // 用戶拒絕切換
+        alert(t.walletSetupGuide.userRejected || 'User rejected the request');
+      } else if (switchErrorCode === -32602) {
+        // 網路已存在但參數不匹配，直接提示用戶檢查設定
+        alert(t.walletSetupGuide.networkExists || 'Sepolia network already exists. Please check your network settings.');
       } else {
-        alert(t.walletSetupGuide.networkError);
+        // 其他錯誤
+        console.error('Unexpected switch error:', switchError);
+        alert(t.walletSetupGuide.networkError || 'Failed to switch network');
       }
     }
   };
@@ -287,12 +314,12 @@ export default function WalletSetupGuide() {
       action: (
         <div>
           <ul className="mt-4 mb-4 list-decimal pl-5 space-y-2 text-gray-600">
-            <li>Network Name: Holesky</li>
-            <li>ChainID: 17000 (0x4268)</li>
-            <li>RPC URL: https://1rpc.io/holesky</li>
-            <li>Block Explorer: https://holesky.etherscan.io/</li>
+            <li>Network Name: Sepolia</li>
+            <li>ChainID: 11155111 (0xaa36a7)</li>
+            <li>RPC URL: https://ethereum-sepolia-rpc.publicnode.com</li>
+            <li>Block Explorer: https://sepolia.etherscan.io/</li>
           </ul>
-          <button onClick={handleAddHoleskyNetwork} className="px-6 py-3 rounded-lg font-medium transition-all bg-gradient-to-r from-blue-500 to-blue-600 text-white hover:from-indigo-600 hover:to-purple-600">
+          <button onClick={handleAddSepoliaNetwork} className="px-6 py-3 rounded-lg font-medium transition-all bg-gradient-to-r from-blue-500 to-blue-600 text-white hover:from-indigo-600 hover:to-purple-600">
             {t.walletSetupGuide.addNetwork}
           </button>
         </div>
@@ -308,14 +335,14 @@ export default function WalletSetupGuide() {
               if (index === 3) {
                 return (
                   <li key={index}>
-                    {step.split('Google Cloud Holesky')[0]}
+                    {step.split('Google Cloud Sepolia')[0]}
                     <a
-                      href="https://cloud.google.com/application/web3/faucet/ethereum/holesky"
+                      href="https://cloud.google.com/application/web3/faucet/ethereum/sepolia"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-indigo-500 hover:text-purple-500 transition-all"
                     >
-                      Google Cloud Holesky {step.includes('水龍頭') ? '水龍頭' : step.includes('水龙头') ? '水龙头' : 'Faucet'}
+                      Google Cloud Sepolia {step.includes('水龍頭') ? '水龍頭' : step.includes('水龙头') ? '水龙头' : 'Faucet'}
                     </a>
                   </li>
                 );
@@ -472,7 +499,7 @@ export default function WalletSetupGuide() {
                       <button
                         onClick={() => {
                           closeErrorModal();
-                          handleAddHoleskyNetwork();
+                          handleAddSepoliaNetwork();
                         }}
                         className="primary-button px-6 py-3 rounded-sm transition-all font-medium flex-1 text-center"
                       >

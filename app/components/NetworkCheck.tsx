@@ -56,7 +56,7 @@ interface NetworkCheckProps {
 const NetworkCheck: React.FC<NetworkCheckProps> = ({
   children,
   requiredChainId,
-  requiredNetworkName = "Holesky Testnet",
+  requiredNetworkName = "Sepolia Testnet",
   onCorrectNetwork,
   onCancelNetworkSwitch
 }) => {
