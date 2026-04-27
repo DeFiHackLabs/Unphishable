@@ -29,7 +29,11 @@ The platform features:
 
 [DeFiHackLabs](https://defihacklabs.io) | [ScamSniffer](https://scamsniffer.io) | [SlowMist](https://slowmist.com)
 
+## Donate us
 
+If you appreciate our work, please consider donating. Even a small amount helps us continue developing and improving our projects, and promoting web3 security.
+
+- [Giveth](https://giveth.io/project/unphishable-web3-phishing-safe-challenges)
 
 ## Supporters
 
