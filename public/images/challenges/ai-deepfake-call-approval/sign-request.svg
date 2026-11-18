@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">
+  <defs>
+    <clipPath id="win"><rect x="10" y="10" width="780" height="476" rx="10"/></clipPath>
+  </defs>
+
+  <rect width="800" height="500" fill="#eef0f4"/>
+  <rect x="14" y="18" width="776" height="474" rx="12" fill="#0f172a" opacity="0.10"/>
+  <rect x="12" y="14" width="778" height="474" rx="11" fill="#0f172a" opacity="0.08"/>
+
+  <g clip-path="url(#win)">
+    <rect x="10" y="10" width="780" height="476" fill="#ffffff"/>
+
+    <!-- title bar -->
+    <rect x="10" y="10" width="780" height="34" fill="#f1f3f6"/>
+    <line x1="10" y1="44" x2="790" y2="44" stroke="#e2e5ea" stroke-width="1"/>
+    <circle cx="30" cy="27" r="5.5" fill="#ff5f57"/>
+    <circle cx="48" cy="27" r="5.5" fill="#febc2e"/>
+    <circle cx="66" cy="27" r="5.5" fill="#28c840"/>
+    <text x="400" y="31.5" font-size="12.5" font-weight="600" text-anchor="middle" fill="#374151">Pebblefern Treasury · Multisig</text>
+
+    <!-- sidebar -->
+    <rect x="10" y="44" width="180" height="442" fill="#f8f9fb"/>
+    <line x1="190" y1="44" x2="190" y2="486" stroke="#e2e5ea" stroke-width="1"/>
+    <circle cx="40" cy="78" r="14" fill="#34d399"/>
+    <path d="M33 78 l5 -8 l9 5 l-4 9 Z" fill="#065f46" opacity="0.55"/>
+    <text x="62" y="75" font-size="13" font-weight="700" fill="#111827">Treasury</text>
+    <text x="62" y="91" font-size="11" fill="#6b7280">2 of 3 owners</text>
+    <text x="26" y="124" font-size="11" fill="#6b7280">Balance</text>
+    <text x="26" y="144" font-size="16" font-weight="700" fill="#111827">1,846.20 ETH</text>
+    <line x1="26" y1="160" x2="174" y2="160" stroke="#e2e5ea" stroke-width="1"/>
+    <text x="30" y="188" font-size="13" fill="#374151">Assets</text>
+    <rect x="18" y="201" width="164" height="30" rx="6" fill="#e3f6ee"/>
+    <text x="30" y="221" font-size="13" font-weight="700" fill="#065f46">Transactions</text>
+    <circle cx="164" cy="216" r="9" fill="#f59e0b"/>
+    <text x="164" y="220" font-size="11" font-weight="700" text-anchor="middle" fill="#ffffff">1</text>
+    <text x="30" y="254" font-size="13" fill="#374151">Address book</text>
+    <text x="30" y="287" font-size="13" fill="#374151">Owners</text>
+    <text x="30" y="320" font-size="13" fill="#374151">Settings</text>
+
+    <!-- heading -->
+    <text x="214" y="80" font-size="18" font-weight="700" fill="#111827">Pending transaction</text>
+    <rect x="506" y="62" width="76" height="24" rx="12" fill="#eef0f4"/>
+    <text x="544" y="78.5" font-size="11.5" text-anchor="middle" fill="#374151">Nonce 212</text>
+    <rect x="590" y="62" width="176" height="24" rx="12" fill="#fef3c7"/>
+    <text x="678" y="78.5" font-size="11.5" font-weight="600" text-anchor="middle" fill="#92400e">Needs 1 more confirmation</text>
+
+    <!-- transfer card -->
+    <rect x="214" y="100" width="552" height="160" rx="10" fill="#ffffff" stroke="#e2e5ea" stroke-width="1"/>
+    <text x="234" y="126" font-size="12" fill="#6b7280">Send</text>
+    <circle cx="246" cy="150" r="12" fill="#627eea"/>
+    <polygon points="246,141 252,150 246,153.5 240,150" fill="#ffffff"/>
+    <polygon points="246,155.5 252,152 246,160 240,152" fill="#ffffff" opacity="0.8"/>
+    <text x="268" y="158.5" font-size="24" font-weight="700" fill="#111827">1,840 ETH</text>
+    <text x="746" y="156" font-size="12" text-anchor="end" fill="#6b7280">99.7% of balance</text>
+    <line x1="234" y1="176" x2="746" y2="176" stroke="#eef0f4" stroke-width="1"/>
+    <text x="234" y="198" font-size="12" fill="#6b7280">To</text>
+    <circle cx="246" cy="220" r="10" fill="#9ca3af"/>
+    <rect x="241" y="215" width="5" height="5" fill="#e5e7eb"/>
+    <rect x="246" y="220" width="5" height="5" fill="#4b5563"/>
+    <text x="264" y="225" font-size="14" fill="#111827" font-family="ui-monospace, 'SF Mono', Menlo, monospace">0x7c1E…9aB4</text>
+    <rect x="378" y="209" width="136" height="22" rx="11" fill="#f3f4f6"/>
+    <text x="446" y="224.5" font-size="11.5" text-anchor="middle" fill="#4b5563">Not in address book</text>
+    <text x="746" y="225" font-size="12" text-anchor="end" fill="#6b7280">First activity 41 min ago</text>
+    <text x="234" y="248" font-size="12" fill="#6b7280">Proposed by Juno Park · today 02:03</text>
+
+    <!-- confirmations card -->
+    <rect x="214" y="272" width="552" height="132" rx="10" fill="#ffffff" stroke="#e2e5ea" stroke-width="1"/>
+    <text x="234" y="296" font-size="13" font-weight="700" fill="#111827">Confirmations</text>
+    <text x="746" y="296" font-size="12" text-anchor="end" fill="#6b7280">1 of 2 required · 3 owners</text>
+    <rect x="234" y="306" width="512" height="6" rx="3" fill="#e5e7eb"/>
+    <rect x="234" y="306" width="256" height="6" rx="3" fill="#10b981"/>
+
+    <circle cx="246" cy="332" r="10" fill="#db2777"/>
+    <text x="246" y="335.5" font-size="10" font-weight="700" text-anchor="middle" fill="#ffffff">JP</text>
+    <text x="264" y="336.5" font-size="13" fill="#111827">Juno Park</text>
+    <path d="M627 332 l4 4 l7 -8" fill="none" stroke="#047857" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="746" y="336.5" font-size="12" font-weight="600" text-anchor="end" fill="#047857">Confirmed 02:05</text>
+
+    <circle cx="246" cy="358" r="10" fill="#0ea5e9"/>
+    <circle cx="246" cy="355.5" r="3.2" fill="#ffffff"/>
+    <path d="M240 364.5 c1 -5 11 -5 12 0 Z" fill="#ffffff"/>
+    <text x="264" y="362.5" font-size="13" font-weight="700" fill="#111827">You</text>
+    <circle cx="597" cy="358" r="4" fill="#f59e0b"/>
+    <text x="746" y="362.5" font-size="12" font-weight="600" text-anchor="end" fill="#b45309">Awaiting your signature</text>
+
+    <circle cx="246" cy="384" r="10" fill="#6366f1"/>
+    <text x="246" y="387.5" font-size="10" font-weight="700" text-anchor="middle" fill="#ffffff">TL</text>
+    <text x="264" y="388.5" font-size="13" fill="#111827">Theo Lind</text>
+    <text x="746" y="388.5" font-size="12" text-anchor="end" fill="#6b7280">Not signed</text>
+
+    <!-- notice + buttons -->
+    <circle cx="222" cy="424" r="7" fill="none" stroke="#6b7280" stroke-width="1.4"/>
+    <line x1="222" y1="423" x2="222" y2="428" stroke="#6b7280" stroke-width="1.6"/>
+    <circle cx="222" cy="420.3" r="0.9" fill="#6b7280"/>
+    <text x="236" y="428.5" font-size="12" fill="#374151">Your confirmation meets the threshold. This transaction will execute immediately.</text>
+    <rect x="524" y="444" width="96" height="34" rx="8" fill="#ffffff" stroke="#d1d5db" stroke-width="1"/>
+    <text x="572" y="466" font-size="13" font-weight="600" text-anchor="middle" fill="#374151">Reject</text>
+    <rect x="630" y="444" width="136" height="34" rx="8" fill="#111827"/>
+    <text x="698" y="466" font-size="13" font-weight="600" text-anchor="middle" fill="#ffffff">Sign and execute</text>
+  </g>
+  <rect x="10" y="10" width="780" height="476" rx="10" fill="none" stroke="#d5d9e0" stroke-width="1"/>
+</svg>

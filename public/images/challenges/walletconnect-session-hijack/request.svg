@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 820" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">
+  <rect width="400" height="820" fill="#FFFFFF"/>
+  <rect x="11" y="11" width="384" height="806" rx="48" fill="#0F172A" opacity="0.10"/>
+  <rect x="8" y="6" width="384" height="806" rx="48" fill="#0F172A"/>
+  <rect x="18" y="16" width="364" height="786" rx="38" fill="#F1F5F9"/>
+  <text x="40" y="86" font-size="16" font-weight="700" fill="#0F172A">Limpet Wallet</text>
+  <text x="40" y="108" font-size="12" fill="#64748B">Total balance</text>
+  <text x="40" y="128" font-size="17" font-weight="700" fill="#0F172A">$6,930.42</text>
+  <text x="40" y="150" font-size="12" font-family="ui-monospace, 'SF Mono', Menlo, monospace" fill="#475569">4,812.60 USDC · 0.61 ETH</text>
+  <circle cx="348" cy="92" r="16" fill="#334155"/>
+  <text x="348" y="96.5" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">LW</text>
+  <rect x="18" y="16" width="364" height="786" rx="38" fill="#0F172A" opacity="0.55"/>
+  <path d="M18 192 a24 24 0 0 1 24 -24 h316 a24 24 0 0 1 24 24 v572 a38 38 0 0 1 -38 38 h-288 a38 38 0 0 1 -38 -38 z" fill="#FFFFFF"/>
+  <g transform="translate(0 36)">
+  <rect x="180" y="141" width="40" height="4" rx="2" fill="#CBD5E1"/>
+  <text x="200" y="168" font-size="11" font-weight="600" fill="#64748B" text-anchor="middle" letter-spacing="1.2">SIGNATURE REQUEST</text>
+  <rect x="178" y="180" width="44" height="44" rx="11.0" fill="#0EA5E9"/><g fill="none" stroke="#FFFFFF" stroke-width="3.0" stroke-linecap="round"><path d="M187.0 198.0 q3.25 -6.0 6.5 0 t6.5 0 t6.5 0 t6.5 0"/><path d="M187.0 209.0 q3.25 -6.0 6.5 0 t6.5 0 t6.5 0 t6.5 0"/></g>
+  <text x="200" y="250" font-size="18" font-weight="700" fill="#0F172A" text-anchor="middle">Saltmarsh Swap</text>
+  <text x="200" y="269" font-size="12" fill="#64748B" text-anchor="middle">wants you to sign a message</text>
+  <rect x="36" y="284" width="328" height="36" rx="10" fill="#F8FAFC" stroke="#E2E8F0"/>
+  <text x="50" y="307" font-size="12" fill="#64748B">Origin</text>
+  <text x="352" y="307" font-size="12" font-family="ui-monospace, 'SF Mono', Menlo, monospace" fill="#0F172A" text-anchor="end">app.saltmarsh[.]exchange</text>
+  <rect x="36" y="326" width="328" height="36" rx="10" fill="#F8FAFC" stroke="#E2E8F0"/>
+  <text x="50" y="349" font-size="12" fill="#64748B">Method</text>
+  <text x="352" y="349" font-size="12" font-family="ui-monospace, 'SF Mono', Menlo, monospace" fill="#0F172A" text-anchor="end">eth_signTypedData_v4</text>
+  <rect x="36" y="368" width="328" height="36" rx="10" fill="#F8FAFC" stroke="#E2E8F0"/>
+  <text x="50" y="391" font-size="12" fill="#64748B">App says</text>
+  <text x="352" y="391" font-size="12" font-style="italic" fill="#0F172A" text-anchor="end">“Refresh your session — no gas fee”</text>
+  <rect x="36" y="416" width="328" height="190" rx="12" fill="#F8FAFC" stroke="#E2E8F0"/>
+  <text x="50" y="440" font-size="11" font-weight="600" fill="#64748B" letter-spacing="1">DECODED MESSAGE</text>
+  <rect x="294" y="426" width="58" height="20" rx="10" fill="#E0F2FE"/>
+  <text x="323" y="440" font-size="11" font-family="ui-monospace, 'SF Mono', Menlo, monospace" fill="#0369A1" text-anchor="middle">Permit</text>
+  <path d="M36 453 h328" stroke="#E2E8F0"/>
+  <text x="50" y="476" font-size="12" fill="#64748B">Token</text>
+  <text x="352" y="476" font-size="12" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-weight="400" fill="#0F172A" text-anchor="end">USDC · 0xa0b8…eb48</text>
+  <text x="50" y="501" font-size="12" fill="#64748B">Spender</text>
+  <text x="352" y="501" font-size="12" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-weight="400" fill="#0F172A" text-anchor="end">0x9ce1…41b7</text>
+  <text x="50" y="526" font-size="12" fill="#64748B">Amount</text>
+  <text x="352" y="526" font-size="13" font-weight="700" fill="#0F172A" text-anchor="end">Unlimited</text>
+  <text x="352" y="542" font-size="10" font-family="ui-monospace, 'SF Mono', Menlo, monospace" fill="#64748B" text-anchor="end">1157920892373161954235709850086879078532…</text>
+  <text x="50" y="568" font-size="12" fill="#64748B">Expires</text>
+  <text x="352" y="568" font-size="12" font-weight="400" fill="#0F172A" text-anchor="end">18 Jul 2036</text>
+  <text x="50" y="593" font-size="12" fill="#64748B">Network</text>
+  <text x="352" y="593" font-size="12" font-weight="400" fill="#0F172A" text-anchor="end">Ethereum</text>
+  <text x="200" y="630" font-size="11" fill="#64748B" text-anchor="middle">No network fee · off-chain signature</text>
+  <rect x="36" y="648" width="158" height="50" rx="14" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5"/>
+  <text x="115" y="678" font-size="15" font-weight="600" fill="#0F172A" text-anchor="middle">Reject</text>
+  <rect x="206" y="648" width="158" height="50" rx="14" fill="#2563EB"/>
+  <text x="285" y="678" font-size="15" font-weight="600" fill="#FFFFFF" text-anchor="middle">Sign</text>
+  <text x="200" y="725" font-size="11" fill="#64748B" text-anchor="middle">Session connected today 19:02 · Last used 19:14</text>
+  </g>
+  <rect x="155" y="26" width="90" height="24" rx="12" fill="#0F172A"/>
+  <text x="50" y="44" font-size="14" font-weight="600" fill="#FFFFFF">23:47</text>
+  <g fill="#FFFFFF">
+    <rect x="296" y="40" width="3" height="5" rx="1"/>
+    <rect x="301" y="37" width="3" height="8" rx="1"/>
+    <rect x="306" y="34" width="3" height="11" rx="1"/>
+    <rect x="311" y="31" width="3" height="14" rx="1"/>
+    <rect x="324" y="33" width="24" height="12" rx="3.5" fill="none" stroke="#FFFFFF" stroke-width="1.2"/>
+    <rect x="326" y="35" width="15" height="8" rx="2"/>
+    <rect x="349.5" y="37" width="2" height="4" rx="1"/>
+  </g>
+  <rect x="140" y="786" width="120" height="5" rx="2.5" fill="#0F172A" opacity="0.85"/>
+</svg>

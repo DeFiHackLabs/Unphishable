@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 280" width="480" height="280" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">
+  <rect width="480" height="280" rx="10" fill="#f5f7fa"/>
+
+  <!-- official desktop app window -->
+  <rect x="17" y="26" width="230" height="232" rx="9" fill="#0b1220" opacity="0.070"/>
+  <rect x="16" y="24" width="230" height="232" rx="9" fill="#ffffff" stroke="#cfd6df"/>
+  <path d="M16 33a9 9 0 0 1 9-9h212a9 9 0 0 1 9 9v19H16z" fill="#e9edf2"/>
+  <circle cx="31" cy="38" r="4.500" fill="#ff5f57"/>
+  <circle cx="45" cy="38" r="4.500" fill="#febc2e"/>
+  <circle cx="59" cy="38" r="4.500" fill="#28c840"/>
+  <text x="131" y="42" font-size="12" text-anchor="middle" fill="#5b6470">Halvard Desk</text>
+
+  <circle cx="131" cy="92" r="22" fill="#0f1b33"/>
+  <path d="M131 79l11.300 6.500v13L131 105l-11.300-6.500v-13z" fill="none" stroke="#f5a623" stroke-width="1.800" stroke-linejoin="round"/>
+  <path d="M126.500 86.500v11M135.500 86.500v11M126.500 92h9" stroke="#ffffff" stroke-width="2.200" stroke-linecap="round"/>
+  <text x="131" y="138" font-size="16" font-weight="700" text-anchor="middle" fill="#111827">Firmware 2.4.1</text>
+  <text x="131" y="160" font-size="13" text-anchor="middle" fill="#374151">Confirm on your device</text>
+  <circle cx="117" cy="180" r="4" fill="#1d6ef0"/>
+  <circle cx="131" cy="180" r="4" fill="#8fb5f7"/>
+  <circle cx="145" cy="180" r="4" fill="#d6e4fd"/>
+  <line x1="36" y1="200" x2="226" y2="200" stroke="#e5e9ee"/>
+  <text x="131" y="221" font-size="12" text-anchor="middle" fill="#6b7280">This app never asks for</text>
+  <text x="131" y="238" font-size="12" text-anchor="middle" fill="#6b7280">your recovery phrase.</text>
+
+  <!-- USB cable -->
+  <path d="M246 150c20 0 22 0 40 0" fill="none" stroke="#9aa3af" stroke-width="5" stroke-linecap="round"/>
+  <rect x="284" y="142" width="14" height="16" rx="2" fill="#6b7280"/>
+
+  <!-- hardware wallet -->
+  <rect x="299" y="68" width="166" height="150" rx="18" fill="#0b1220" opacity="0.120"/>
+  <rect x="296" y="64" width="166" height="150" rx="18" fill="#1b2536" stroke="#0f1726" stroke-width="1.500"/>
+  <rect x="310" y="80" width="138" height="78" rx="6" fill="#070c16" stroke="#31405a"/>
+  <text x="379" y="103" font-size="12.500" font-weight="700" text-anchor="middle" fill="#e6edf7">Update firmware?</text>
+  <text x="379" y="121" font-size="12" text-anchor="middle" fill="#9fb0c9">Version 2.4.1</text>
+  <line x1="318" y1="131" x2="440" y2="131" stroke="#24314a"/>
+  <text x="320" y="149" font-size="12" fill="#f0a3a3">Reject</text>
+  <text x="438" y="149" font-size="12" font-weight="700" text-anchor="end" fill="#7ee2a8">Confirm</text>
+
+  <circle cx="328" cy="186" r="13" fill="#2a3850" stroke="#3b4c6b"/>
+  <path d="M323.500 181.500l9 9M332.500 181.500l-9 9" stroke="#f0a3a3" stroke-width="2" stroke-linecap="round"/>
+  <circle cx="430" cy="186" r="13" fill="#2a3850" stroke="#7ee2a8" stroke-width="1.500"/>
+  <path d="M424.500 186.500l4 4 7-8" fill="none" stroke="#7ee2a8" stroke-width="2.200" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="379" y="190" font-size="10" font-weight="700" letter-spacing="1.500" text-anchor="middle" fill="#7386a8">HALVARD</text>
+</svg>

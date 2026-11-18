@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 683" width="380" height="683" role="img" aria-label="Wallet popup with the advanced instruction list expanded">
+  <defs>
+    <linearGradient id="glyph" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#a78bfa"/>
+      <stop offset="1" stop-color="#6366f1"/>
+    </linearGradient>
+  </defs>
+
+  <!-- backdrop and popup shadow -->
+  <rect width="380" height="683" fill="#eef0f4"/>
+  <rect x="12" y="14" width="360" height="663" rx="14" fill="#0f172a" opacity="0.18"/>
+
+  <g transform="translate(10 10)">
+    <rect width="360" height="663" rx="14" fill="#1b1b21"/>
+
+    <!-- header -->
+    <rect x="16" y="14" width="28" height="28" rx="8" fill="url(#glyph)"/>
+    <circle cx="30" cy="28" r="7" fill="none" stroke="#ffffff" stroke-width="2.4"/>
+    <circle cx="36.5" cy="21.5" r="2.4" fill="#ffffff"/>
+    <text x="54" y="26" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="600" fill="#ffffff">Main Wallet</text>
+    <text x="54" y="42" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="11" fill="#9a9aa8">7xKpQ2nV…Tq3Vd8w</text>
+    <rect x="268" y="17" width="76" height="22" rx="11" fill="#26262e"/>
+    <circle cx="281" cy="28" r="3.5" fill="#34d399"/>
+    <text x="290" y="32" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#c9c9d4">Mainnet</text>
+    <line x1="0" y1="56" x2="360" y2="56" stroke="#2b2b34"/>
+
+    <!-- compact summary -->
+    <rect x="16" y="66" width="328" height="40" rx="10" fill="#25252d"/>
+    <circle cx="38" cy="86" r="10" fill="#14b8a6"/>
+    <path d="M32 90 l6 -9 l6 9 l-6 -2.9 z" fill="#ffffff"/>
+    <text x="58" y="83" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="600" fill="#ffffff">Receive 5,000 KSTR</text>
+    <text x="58" y="98" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="11" fill="#9a9aa8">kestrel-claim[.]app</text>
+
+    <!-- advanced (expanded) -->
+    <rect x="16" y="116" width="328" height="36" rx="10" fill="#25252d"/>
+    <text x="30" y="138.5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="600" fill="#ffffff">Advanced</text>
+    <text x="306" y="138.5" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#9a9aa8">5 instructions</text>
+    <path d="M317 131 l6 6 l6 -6" fill="none" stroke="#9a9aa8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <!-- instruction list -->
+    <rect x="16" y="160" width="328" height="85" rx="8" fill="#202027" stroke="#2f2f39"/>
+    <text x="28" y="181" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="12" fill="#7c7c8a">#1</text>
+    <text x="52" y="181" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="12" fill="#9a9aa8">Associated Token Program · <tspan fill="#ffffff" font-weight="600">Create</tspan></text>
+    <text x="52" y="198" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="12" fill="#7c7c8a">Payer</text>
+    <text x="142" y="198" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="12" fill="#e5e5ee">C1mE5gTu…Rj4LmN7</text>
+    <text x="52" y="215" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="12" fill="#7c7c8a">Wallet</text>
+    <text x="142" y="215" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="12" fill="#e5e5ee">7xKpQ2nV…Tq3Vd8w</text>
+    <text x="52" y="232" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="12" fill="#7c7c8a">Mint</text>
+    <text x="142" y="232" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="12" fill="#e5e5ee">KSTRa1rd…Zz8PaM2</text>
+    <rect x="16" y="253" width="328" height="85" rx="8" fill="#202027" stroke="#2f2f39"/>
+    <text x="28" y="274" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="12" fill="#7c7c8a">#2</text>
+    <text x="52" y="274" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="12" fill="#9a9aa8">Token Program · <tspan fill="#ffffff" font-weight="600">Transfer</tspan></text>
+    <text x="52" y="291" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="12" fill="#7c7c8a">Source</text>
+    <text x="142" y="291" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="12" fill="#e5e5ee">Hw2dZ9rM…Ey6FnP8</text>
+    <text x="52" y="308" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="12" fill="#7c7c8a">Destination</text>
+    <text x="142" y="308" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="12" fill="#e5e5ee">3nBvH8cY…Xe5HcJ6</text>
+    <text x="52" y="325" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="12" fill="#7c7c8a">Amount</text>
+    <text x="142" y="325" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="12" fill="#e5e5ee">5000000000</text>
+    <rect x="16" y="346" width="328" height="85" rx="8" fill="#202027" stroke="#2f2f39"/>
+    <text x="28" y="367" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="12" fill="#7c7c8a">#3</text>
+    <text x="52" y="367" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="12" fill="#9a9aa8">Token Program · <tspan fill="#ffffff" font-weight="600">Approve</tspan></text>
+    <text x="52" y="384" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="12" fill="#7c7c8a">Source</text>
+    <text x="142" y="384" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="12" fill="#e5e5ee">Fq7mW3sB…Lw9RtE4</text>
+    <text x="52" y="401" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="12" fill="#7c7c8a">Delegate</text>
+    <text x="142" y="401" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="12" fill="#e5e5ee">9hTzK4vR…p2mWq4e</text>
+    <text x="52" y="418" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="12" fill="#7c7c8a">Amount</text>
+    <text x="142" y="418" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="12" fill="#e5e5ee">18446744073709551615</text>
+    <rect x="16" y="439" width="328" height="85" rx="8" fill="#202027" stroke="#2f2f39"/>
+    <text x="28" y="460" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="12" fill="#7c7c8a">#4</text>
+    <text x="52" y="460" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="12" fill="#9a9aa8">System Program · <tspan fill="#ffffff" font-weight="600">Transfer</tspan></text>
+    <text x="52" y="477" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="12" fill="#7c7c8a">From</text>
+    <text x="142" y="477" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="12" fill="#e5e5ee">7xKpQ2nV…Tq3Vd8w</text>
+    <text x="52" y="494" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="12" fill="#7c7c8a">To</text>
+    <text x="142" y="494" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="12" fill="#e5e5ee">C1mE5gTu…Rj4LmN7</text>
+    <text x="52" y="511" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="12" fill="#7c7c8a">Lamports</text>
+    <text x="142" y="511" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="12" fill="#e5e5ee">100000</text>
+    <rect x="16" y="532" width="328" height="51" rx="8" fill="#202027" stroke="#2f2f39"/>
+    <text x="28" y="553" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="12" fill="#7c7c8a">#5</text>
+    <text x="52" y="553" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="12" fill="#9a9aa8">Memo Program · <tspan fill="#ffffff" font-weight="600">Memo</tspan></text>
+    <text x="52" y="570" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="12" fill="#7c7c8a">Data</text>
+    <text x="142" y="570" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="12" fill="#e5e5ee">kestrel:s1:claim</text>
+
+    <!-- actions -->
+    <line x1="0" y1="591" x2="360" y2="591" stroke="#2b2b34"/>
+    <rect x="16" y="599" width="158" height="48" rx="12" fill="#2e2e38"/>
+    <text x="95" y="628" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="600" fill="#ffffff">Reject</text>
+    <rect x="186" y="599" width="158" height="48" rx="12" fill="#a78bfa"/>
+    <text x="265" y="628" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="700" fill="#1b1b21">Approve</text>
+  </g>
+</svg>

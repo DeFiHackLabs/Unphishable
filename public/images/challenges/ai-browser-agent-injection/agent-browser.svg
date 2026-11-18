@@ -1,0 +1,137 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">
+  <rect width="800" height="600" fill="#f1f3f5"/>
+
+  <!-- tab strip -->
+  <rect width="800" height="38" fill="#dfe3e8"/>
+  <circle cx="20" cy="19" r="6" fill="#ff5f57"/>
+  <circle cx="40" cy="19" r="6" fill="#febc2e"/>
+  <circle cx="60" cy="19" r="6" fill="#28c840"/>
+  <path d="M84 38 V14 a8 8 0 0 1 8 -8 H292 a8 8 0 0 1 8 8 V38 Z" fill="#ffffff"/>
+  <rect x="96" y="14" width="16" height="16" rx="4" fill="#ff6a3d"/>
+  <text x="104" y="26" font-size="11" font-weight="700" fill="#ffffff" text-anchor="middle">B</text>
+  <text x="120" y="26" font-size="12" fill="#1f2937">Which L2 actually has th…</text>
+  <text x="286" y="26" font-size="13" fill="#6b7280" text-anchor="middle">×</text>
+  <circle cx="322" cy="22" r="7" fill="#6366f1"/>
+  <text x="336" y="26" font-size="12" fill="#4b5563">Portfolio · Dashboard</text>
+  <line x1="470" y1="12" x2="470" y2="30" stroke="#c4c9d1"/>
+  <text x="486" y="28" font-size="17" fill="#4b5563" text-anchor="middle">+</text>
+
+  <!-- toolbar -->
+  <rect y="38" width="800" height="38" fill="#ffffff"/>
+  <path d="M29 50 l-7 7 l7 7" stroke="#6b7280" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M47 50 l7 7 l-7 7" stroke="#c4c9d1" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M84 53 a7 7 0 1 0 2 5" stroke="#6b7280" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <path d="M85 48 v5 h-5" stroke="#6b7280" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="100" y="44" width="556" height="26" rx="13" fill="#f1f3f4"/>
+  <rect x="113" y="55" width="10" height="8" rx="2" fill="#5f6368"/>
+  <path d="M115 55 v-3 a3 3 0 0 1 6 0 v3" stroke="#5f6368" stroke-width="1.6" fill="none"/>
+  <text x="132" y="61" font-size="12" font-family="ui-monospace, 'SF Mono', Menlo, monospace" fill="#202124">blockboard.forum<tspan fill="#5f6368">/c/layer2/t/cheapest-l2-fees-right-now</tspan></text>
+  <g transform="translate(668,46) scale(0.8)">
+      <path d="M2 2 L11 9 H17 L26 2 L23 13 L26 20 L18 26 H10 L2 20 L5 13 Z" fill="#f6851b"/>
+      <path d="M2 2 L11 9 L9 14 L5 13 Z" fill="#e2761b"/>
+      <path d="M26 2 L17 9 L19 14 L23 13 Z" fill="#e2761b"/>
+      <path d="M10 26 L12 21 H16 L18 26 Z" fill="#d7c1b3"/>
+      <circle cx="10" cy="16" r="1.4" fill="#233447"/>
+      <circle cx="18" cy="16" r="1.4" fill="#233447"/>
+    </g>
+  <rect x="700" y="44" width="88" height="26" rx="13" fill="#ede9fe"/>
+  <path d="M718 50 Q719.4 55.6 725 57 Q719.4 58.4 718 64 Q716.6 58.4 711 57 Q716.6 55.6 718 50 Z" fill="#7c3aed"/>
+  <text x="731" y="61" font-size="12" font-weight="600" fill="#5b21b6">Agent</text>
+  <line x1="0" y1="76" x2="800" y2="76" stroke="#e5e7eb"/>
+
+  <!-- forum page -->
+  <rect x="0" y="76" width="508" height="36" fill="#ffffff"/>
+  <line x1="0" y1="112" x2="508" y2="112" stroke="#e5e7eb"/>
+  <rect x="16" y="84" width="20" height="20" rx="5" fill="#ff6a3d"/>
+  <text x="26" y="99" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle">B</text>
+  <text x="44" y="99" font-size="14" font-weight="700" fill="#111827">blockboard</text>
+  <text x="130" y="99" font-size="12" fill="#6b7280">c/layer2</text>
+  <rect x="296" y="83" width="150" height="22" rx="11" fill="#f1f3f5"/>
+  <text x="310" y="98" font-size="11" fill="#6b7280">Search blockboard</text>
+  <circle cx="478" cy="94" r="11" fill="#0ea5e9"/>
+  <text x="478" y="98" font-size="10" font-weight="700" fill="#ffffff" text-anchor="middle">ME</text>
+
+  <rect x="12" y="122" width="484" height="82" rx="8" fill="#ffffff" stroke="#e5e7eb"/>
+  <path d="M34 134 l7 9 h-14 z" fill="#ff6a3d"/>
+  <text x="34" y="162" font-size="12" font-weight="700" fill="#111827" text-anchor="middle">1.2k</text>
+  <path d="M34 180 l7 -9 h-14 z" fill="#c4c9d1"/>
+  <text x="62" y="142" font-size="11" fill="#6b7280">Posted by u/layerwise · 6h ago</text>
+  <text x="62" y="164" font-size="15" font-weight="700" fill="#111827">Which L2 actually has the cheapest fees right now?</text>
+  <text x="62" y="186" font-size="12" fill="#4b5563">Moving some funds off mainnet this week. What are you all using?</text>
+  <text x="16" y="226" font-size="12" font-weight="600" fill="#374151">38 comments · sorted by Top</text>
+
+    <rect x="12" y="236" width="484" height="64" rx="8" fill="#ffffff" stroke="#e5e7eb"/>
+    <circle cx="34" cy="258" r="12" fill="#f97316"/>
+    <text x="34" y="262" font-size="10" font-weight="700" fill="#ffffff" text-anchor="middle">GG</text>
+    <text x="54" y="257" font-size="12"><tspan font-weight="600" fill="#111827">gwei_goblin</tspan><tspan fill="#6b7280" font-size="11" dx="8">412 points · 5h</tspan></text>
+    <text x="54" y="276" font-size="12.5" fill="#1f2937">Base has been the cheapest for me all month. Swaps cost me</text>
+    <text x="54" y="292" font-size="12.5" fill="#1f2937">next to nothing since blobs went live.</text>
+    <rect x="12" y="306" width="484" height="64" rx="8" fill="#ffffff" stroke="#e5e7eb"/>
+    <circle cx="34" cy="328" r="12" fill="#8b5cf6"/>
+    <text x="34" y="332" font-size="10" font-weight="700" fill="#ffffff" text-anchor="middle">RR</text>
+    <text x="54" y="327" font-size="12"><tspan font-weight="600" fill="#111827">rollup_rita</tspan><tspan fill="#6b7280" font-size="11" dx="8">287 points · 4h</tspan></text>
+    <text x="54" y="346" font-size="12.5" fill="#1f2937">Arbitrum is a touch pricier, but the liquidity is deeper so you</text>
+    <text x="54" y="362" font-size="12.5" fill="#1f2937">lose less to slippage. Depends what you are doing.</text>
+    <rect x="12" y="376" width="484" height="82" rx="8" fill="#ffffff" stroke="#e5e7eb"/>
+    <circle cx="34" cy="398" r="12" fill="#64748b"/>
+    <text x="34" y="402" font-size="10" font-weight="700" fill="#ffffff" text-anchor="middle">FD</text>
+    <text x="54" y="397" font-size="12"><tspan font-weight="600" fill="#111827">fee_tracker_dan</tspan><tspan fill="#6b7280" font-size="11" dx="8">96 points · 3h</tspan></text>
+    <text x="54" y="416" font-size="12.5" fill="#1f2937">Nice thread! I keep a fee tracker for all of these, happy to</text>
+    <text x="54" y="432" font-size="12.5" fill="#1f2937">share it if anyone wants.</text>
+    <rect x="12" y="466" width="484" height="64" rx="8" fill="#ffffff" stroke="#e5e7eb"/>
+    <circle cx="34" cy="488" r="12" fill="#14b8a6"/>
+    <text x="34" y="492" font-size="10" font-weight="700" fill="#ffffff" text-anchor="middle">0M</text>
+    <text x="54" y="487" font-size="12"><tspan font-weight="600" fill="#111827">0xMarlow</tspan><tspan fill="#6b7280" font-size="11" dx="8">71 points · 3h</tspan></text>
+    <text x="54" y="506" font-size="12.5" fill="#1f2937">Do not forget bridge costs. Getting in and out is where it</text>
+    <text x="54" y="522" font-size="12.5" fill="#1f2937">really adds up.</text>
+    <rect x="12" y="538" width="484" height="64" rx="8" fill="#ffffff" stroke="#e5e7eb"/>
+    <circle cx="34" cy="560" r="12" fill="#ec4899"/>
+    <text x="34" y="564" font-size="10" font-weight="700" fill="#ffffff" text-anchor="middle">ZZ</text>
+    <text x="54" y="559" font-size="12"><tspan font-weight="600" fill="#111827">zk_zara</tspan><tspan fill="#6b7280" font-size="11" dx="8">44 points · 2h</tspan></text>
+    <text x="54" y="578" font-size="12.5" fill="#1f2937">zkSync and Linea are both cheap for me too, worth a look.</text>
+  <rect x="500" y="120" width="4" height="150" rx="2" fill="#c4c9d1"/>
+
+  <!-- agent sidebar -->
+  <rect x="508" y="76" width="292" height="524" fill="#ffffff"/>
+  <line x1="508" y1="76" x2="508" y2="600" stroke="#e5e7eb"/>
+  <path d="M528 87 Q529.6 93.4 536 95 Q529.6 96.6 528 103 Q526.4 96.6 520 95 Q526.4 93.4 528 87 Z" fill="#7c3aed"/>
+  <text x="544" y="100" font-size="14" font-weight="700" fill="#111827">Assistant</text>
+  <rect x="678" y="85" width="110" height="20" rx="10" fill="#ecfdf5"/>
+  <circle cx="691" cy="95" r="3.5" fill="#10b981"/>
+  <text x="700" y="99" font-size="10.5" fill="#047857">Agent mode on</text>
+  <line x1="508" y1="114" x2="800" y2="114" stroke="#eceef1"/>
+
+  <rect x="560" y="126" width="226" height="68" rx="12" fill="#ede9fe"/>
+  <text x="572" y="146" font-size="12" fill="#1f2937">Summarise the top comments on</text>
+  <text x="572" y="162" font-size="12" fill="#1f2937">this thread about which L2 has</text>
+  <text x="572" y="178" font-size="12" fill="#1f2937">the cheapest fees.</text>
+
+  <text x="524" y="222" font-size="10" font-weight="700" fill="#6b7280" letter-spacing="1">ACTION LOG</text>
+  <circle cx="534" cy="247" r="10" fill="#f3f4f6"/><text x="534" y="251" font-size="10.5" font-weight="700" fill="#374151" text-anchor="middle">1</text><text x="554" y="251" font-size="12.5" fill="#111827">Open thread</text><path d="M770 247 l4 4 l8 -9" stroke="#10b981" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="534" cy="277" r="10" fill="#f3f4f6"/><text x="534" y="281" font-size="10.5" font-weight="700" fill="#374151" text-anchor="middle">2</text><text x="554" y="281" font-size="12.5" fill="#111827">Read 38 comments</text><path d="M770 277 l4 4 l8 -9" stroke="#10b981" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="534" cy="307" r="10" fill="#f3f4f6"/><text x="534" y="311" font-size="10.5" font-weight="700" fill="#374151" text-anchor="middle">3</text><text x="554" y="311" font-size="12.5" fill="#111827">Summarise top comments</text><circle cx="776" cy="307" r="6" stroke="#e5e7eb" stroke-width="2" fill="none"/><path d="M776 301 a6 6 0 0 1 6 6" stroke="#7c3aed" stroke-width="2" fill="none" stroke-linecap="round"/>
+
+  <rect x="522" y="336" width="264" height="78" rx="12" fill="#f9fafb" stroke="#e5e7eb"/>
+  <text x="536" y="358" font-size="12" fill="#6b7280">Drafting summary</text>
+  <rect x="536" y="370" width="236" height="8" rx="4" fill="#e5e7eb"/>
+  <rect x="536" y="384" width="208" height="8" rx="4" fill="#e5e7eb"/>
+  <rect x="536" y="398" width="150" height="8" rx="4" fill="#e5e7eb"/>
+
+  <text x="524" y="444" font-size="10" font-weight="700" fill="#6b7280" letter-spacing="1">ACCESS</text>
+  <rect x="522" y="454" width="84" height="22" rx="11" fill="#f3f4f6"/><text x="534" y="469" font-size="11" fill="#374151">Read pages</text>
+  <rect x="612" y="454" width="92" height="22" rx="11" fill="#f3f4f6"/><text x="624" y="469" font-size="11" fill="#374151">Click &amp; type</text>
+  <rect x="710" y="454" width="78" height="22" rx="11" fill="#f3f4f6"/><text x="722" y="469" font-size="11" fill="#374151">Fill forms</text>
+  <rect x="522" y="482" width="144" height="22" rx="11" fill="#f3f4f6"/><g transform="translate(529,485) scale(0.58)">
+      <path d="M2 2 L11 9 H17 L26 2 L23 13 L26 20 L18 26 H10 L2 20 L5 13 Z" fill="#f6851b"/>
+      <path d="M2 2 L11 9 L9 14 L5 13 Z" fill="#e2761b"/>
+      <path d="M26 2 L17 9 L19 14 L23 13 Z" fill="#e2761b"/>
+      <path d="M10 26 L12 21 H16 L18 26 Z" fill="#d7c1b3"/>
+      <circle cx="10" cy="16" r="1.4" fill="#233447"/>
+      <circle cx="18" cy="16" r="1.4" fill="#233447"/>
+    </g><text x="548" y="497" font-size="11" fill="#374151">Extensions: Wallet</text>
+
+  <rect x="522" y="552" width="264" height="34" rx="17" fill="#ffffff" stroke="#d1d5db"/>
+  <text x="538" y="573" font-size="12" fill="#6b7280">Ask or give a task</text>
+  <circle cx="767" cy="569" r="11" fill="#7c3aed"/>
+  <path d="M767 574 v-10 M762.5 568 l4.5 -4.5 l4.5 4.5" stroke="#ffffff" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

@@ -1,0 +1,139 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">
+  <defs>
+    <linearGradient id="avatar" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f59e0b"/>
+      <stop offset="1" stop-color="#db2777"/>
+    </linearGradient>
+  </defs>
+  <rect width="900" height="600" fill="#e9edf3"/>
+
+  <!-- browser window -->
+  <rect x="23" y="20" width="860" height="566" rx="12" fill="#0f172a" opacity="0.08"/>
+  <rect x="20" y="16" width="860" height="566" rx="12" fill="#ffffff" stroke="#c9d1dc"/>
+  <path d="M20 56V28a12 12 0 0 1 12-12h836a12 12 0 0 1 12 12v28z" fill="#dde3eb"/>
+  <circle cx="44" cy="36" r="6" fill="#ff5f57"/>
+  <circle cx="64" cy="36" r="6" fill="#febc2e"/>
+  <circle cx="84" cy="36" r="6" fill="#28c840"/>
+
+  <!-- tab -->
+  <path d="M108 56V32a8 8 0 0 1 8-8h216a8 8 0 0 1 8 8v24z" fill="#ffffff"/>
+  <circle cx="127" cy="40" r="8" fill="#7c3aed"/>
+  <ellipse cx="123.6" cy="39" rx="3.4" ry="2.2" transform="rotate(-28 123.6 39)" fill="#ffffff"/>
+  <ellipse cx="130.4" cy="39" rx="3.4" ry="2.2" transform="rotate(28 130.4 39)" fill="#ffffff"/>
+  <text x="143" y="44.5" font-size="12" fill="#1f2937">Yieldmoth · Enable agent</text>
+  <path d="M318 36l7 7m0-7l-7 7" stroke="#6b7280" stroke-width="1.4" stroke-linecap="round"/>
+
+  <!-- toolbar -->
+  <rect x="21" y="56" width="858" height="40" fill="#ffffff"/>
+  <line x1="21" y1="96" x2="879" y2="96" stroke="#e3e7ee"/>
+  <path d="M48 70l-6 6 6 6" stroke="#6b7280" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M68 70l6 6-6 6" stroke="#b6bdc8" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M103 72.5a6.5 6.5 0 1 0 1.6 5.2" stroke="#6b7280" stroke-width="1.7" fill="none" stroke-linecap="round"/>
+  <path d="M104.5 68v5h-5" stroke="#6b7280" stroke-width="1.7" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="124" y="63" width="676" height="26" rx="13" fill="#f1f4f8"/>
+  <rect x="138" y="74" width="9" height="7.5" rx="1.5" fill="#4b5563"/>
+  <path d="M140 74v-2.6a2.5 2.5 0 0 1 5 0V74" stroke="#4b5563" stroke-width="1.4" fill="none"/>
+  <text x="155" y="80.5" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="13" fill="#111827">app.yieldmoth[.]xyz<tspan fill="#6b7280">/onboarding/enable</tspan></text>
+  <circle cx="826" cy="76" r="10" fill="#d5dae2"/>
+  <circle cx="856" cy="70" r="1.7" fill="#6b7280"/>
+  <circle cx="856" cy="76" r="1.7" fill="#6b7280"/>
+  <circle cx="856" cy="82" r="1.7" fill="#6b7280"/>
+
+  <!-- dApp page behind the sheet -->
+  <rect x="21" y="97" width="858" height="49" fill="#faf9ff"/>
+  <line x1="21" y1="146" x2="879" y2="146" stroke="#ebe7fb"/>
+  <ellipse cx="50" cy="120" rx="9" ry="5.5" transform="rotate(-28 50 120)" fill="#7c3aed"/>
+  <ellipse cx="66" cy="120" rx="9" ry="5.5" transform="rotate(28 66 120)" fill="#7c3aed"/>
+  <rect x="56.5" y="112" width="3" height="18" rx="1.5" fill="#2e1065"/>
+  <text x="84" y="127" font-size="17" font-weight="700" fill="#2e1065">Yieldmoth</text>
+  <text x="196" y="126" font-size="13" fill="#6b7280">Strategies</text>
+  <text x="280" y="126" font-size="13" fill="#6b7280">Portfolio</text>
+  <text x="354" y="126" font-size="13" fill="#6b7280">Docs</text>
+  <rect x="742" y="108" width="118" height="26" rx="13" fill="#ede9fe"/>
+  <text x="801" y="125.5" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="12" fill="#4c1d95" text-anchor="middle">0x7A3f…21C0</text>
+
+  <text x="48" y="186" font-size="11" font-weight="700" fill="#7c3aed" letter-spacing="1.2">STEP 2 OF 2</text>
+  <text x="48" y="220" font-size="24" font-weight="700" fill="#111827">Enable your</text>
+  <text x="48" y="250" font-size="24" font-weight="700" fill="#111827">trading agent</text>
+  <text x="48" y="282" font-size="13" fill="#4b5563">One signature and Yieldmoth</text>
+  <text x="48" y="301" font-size="13" fill="#4b5563">trades for you, day and</text>
+  <text x="48" y="320" font-size="13" fill="#4b5563">night. No gas. No pop-ups.</text>
+  <circle cx="58" cy="360" r="9" fill="#16a34a"/>
+  <path d="M54 360l3 3 5-6" stroke="#ffffff" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="76" y="364.5" font-size="13" fill="#4b5563">Connect wallet</text>
+  <circle cx="58" cy="392" r="9" fill="#7c3aed"/>
+  <text x="58" y="396" font-size="11" font-weight="700" fill="#ffffff" text-anchor="middle">2</text>
+  <text x="76" y="396.5" font-size="13" font-weight="600" fill="#111827">Enable agent</text>
+  <text x="48" y="536" font-size="12" fill="#6b7280">Non-custodial.</text>
+  <text x="48" y="554" font-size="12" fill="#6b7280">You stay in control.</text>
+
+  <rect x="668" y="170" width="188" height="150" rx="12" fill="#ffffff" stroke="#e5e7eb"/>
+  <text x="684" y="196" font-size="11" font-weight="700" fill="#9ca3af" letter-spacing="1">STRATEGY</text>
+  <text x="684" y="219" font-size="13" font-weight="600" fill="#111827">USDC / ETH momentum</text>
+  <polyline points="684,272 704,266 722,270 742,254 760,258 780,244 800,248 820,236 840,240" fill="none" stroke="#7c3aed" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="684" y="304" font-size="12" fill="#6b7280">Budget</text>
+  <text x="840" y="304" font-size="12" font-weight="600" fill="#111827" text-anchor="end">200 USDC</text>
+  <rect x="668" y="334" width="188" height="84" rx="12" fill="#ffffff" stroke="#e5e7eb"/>
+  <text x="684" y="360" font-size="11" font-weight="700" fill="#9ca3af" letter-spacing="1">AGENT STATUS</text>
+  <circle cx="689" cy="386" r="5" fill="#f59e0b"/>
+  <text x="702" y="390.5" font-size="13" fill="#111827">Waiting for signature</text>
+
+  <!-- dim overlay -->
+  <path d="M21 97h858v473a11 11 0 0 1-11 11H32a11 11 0 0 1-11-11z" fill="#0f172a" opacity="0.5"/>
+
+  <!-- wallet signing sheet -->
+  <rect x="253" y="105" width="400" height="472" rx="16" fill="#0f172a" opacity="0.25"/>
+  <rect x="250" y="100" width="400" height="472" rx="16" fill="#ffffff"/>
+
+  <rect x="272" y="114" width="28" height="28" rx="8" fill="#0f766e"/>
+  <circle cx="285" cy="130.5" r="6" fill="#ffffff"/>
+  <circle cx="290.5" cy="124.5" r="3.6" fill="#ffffff"/>
+  <path d="M293.4 123l4 1.4-4 1.6z" fill="#ffffff"/>
+  <path d="M281 128l-5.5-6.5 4 9.5z" fill="#ffffff"/>
+  <text x="310" y="133" font-size="14" font-weight="600" fill="#111827">Wren Wallet</text>
+  <rect x="520" y="117" width="108" height="22" rx="11" fill="#eef2ff"/>
+  <text x="574" y="132" font-size="11" font-weight="600" fill="#4338ca" text-anchor="middle">Signature request</text>
+  <line x1="250" y1="152" x2="650" y2="152" stroke="#eceff3"/>
+
+  <circle cx="282" cy="174" r="10" fill="#7c3aed"/>
+  <ellipse cx="277.8" cy="173" rx="4.2" ry="2.7" transform="rotate(-28 277.8 173)" fill="#ffffff"/>
+  <ellipse cx="286.2" cy="173" rx="4.2" ry="2.7" transform="rotate(28 286.2 173)" fill="#ffffff"/>
+  <text x="301" y="178.5" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="13" fill="#111827">app.yieldmoth[.]xyz</text>
+  <circle cx="558" cy="174" r="4" fill="#22c55e"/>
+  <text x="628" y="178" font-size="11" fill="#6b7280" text-anchor="end">Connected</text>
+
+  <text x="272" y="216" font-size="20" font-weight="700" fill="#111827">Enable automated trading</text>
+  <text x="272" y="238" font-size="13" fill="#6b7280">One-time setup. No gas. No prompts.</text>
+
+  <circle cx="281" cy="263.5" r="8" fill="#16a34a"/>
+  <path d="M277.5 263.5l2.6 2.6 4.4-5" stroke="#ffffff" stroke-width="1.7" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="298" y="268" font-size="13" fill="#1f2937">Gasless — network fees are sponsored</text>
+  <circle cx="281" cy="287.5" r="8" fill="#16a34a"/>
+  <path d="M277.5 287.5l2.6 2.6 4.4-5" stroke="#ffffff" stroke-width="1.7" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="298" y="292" font-size="13" fill="#1f2937">No pop-ups — the agent signs trades for you</text>
+  <circle cx="281" cy="311.5" r="8" fill="#16a34a"/>
+  <path d="M277.5 311.5l2.6 2.6 4.4-5" stroke="#ffffff" stroke-width="1.7" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="298" y="316" font-size="13" fill="#1f2937">Runs around the clock for 30 days</text>
+
+  <rect x="272" y="332" width="356" height="50" rx="10" fill="#f6f7f9" stroke="#e5e7eb"/>
+  <circle cx="298" cy="357" r="14" fill="url(#avatar)"/>
+  <text x="322" y="353" font-size="13" font-weight="600" fill="#111827">Main account</text>
+  <text x="322" y="370" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="12" fill="#6b7280">0x7A3f…21C0</text>
+  <rect x="524" y="346" width="92" height="22" rx="11" fill="#ecfdf5"/>
+  <text x="570" y="361" font-size="11" font-weight="600" fill="#047857" text-anchor="middle">Smart account</text>
+
+  <rect x="272" y="392" width="356" height="36" rx="10" fill="#f0fdf4" stroke="#bbf7d0"/>
+  <text x="286" y="414.5" font-size="12" fill="#374151">Estimated balance changes</text>
+  <text x="614" y="414.5" font-size="12" font-weight="600" fill="#15803d" text-anchor="end">None</text>
+
+  <rect x="272" y="438" width="356" height="36" rx="10" fill="#ffffff" stroke="#e5e7eb"/>
+  <path d="M286 451l5 5-5 5z" fill="#6b7280"/>
+  <text x="300" y="460.5" font-size="13" font-weight="600" fill="#374151">Raw permissions</text>
+  <text x="614" y="460.5" font-size="12" fill="#9ca3af" text-anchor="end">17 lines</text>
+
+  <rect x="272" y="488" width="170" height="44" rx="10" fill="#ffffff" stroke="#d1d5db"/>
+  <text x="357" y="515" font-size="14" font-weight="600" fill="#374151" text-anchor="middle">Reject</text>
+  <rect x="458" y="488" width="170" height="44" rx="10" fill="#4f46e5"/>
+  <text x="543" y="515" font-size="14" font-weight="600" fill="#ffffff" text-anchor="middle">Sign</text>
+  <text x="450" y="556" font-size="11" fill="#9ca3af" text-anchor="middle">Only sign requests from sites you trust.</text>
+</svg>

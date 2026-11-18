@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 560" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">
+  <rect width="360" height="560" fill="#eef0f3"/>
+  <rect x="16" y="20" width="334" height="528" rx="16" fill="#000000" opacity="0.05"/>
+  <rect x="13" y="16" width="336" height="530" rx="16" fill="#000000" opacity="0.05"/>
+  <rect x="12" y="12" width="336" height="530" rx="14" fill="#ffffff" stroke="#d6d9de"/>
+
+  <g transform="translate(26,24) scale(1.0)">
+      <path d="M2 2 L11 9 H17 L26 2 L23 13 L26 20 L18 26 H10 L2 20 L5 13 Z" fill="#f6851b"/>
+      <path d="M2 2 L11 9 L9 14 L5 13 Z" fill="#e2761b"/>
+      <path d="M26 2 L17 9 L19 14 L23 13 Z" fill="#e2761b"/>
+      <path d="M10 26 L12 21 H16 L18 26 Z" fill="#d7c1b3"/>
+      <circle cx="10" cy="16" r="1.4" fill="#233447"/>
+      <circle cx="18" cy="16" r="1.4" fill="#233447"/>
+    </g>
+  <rect x="112" y="26" width="136" height="24" rx="12" fill="#ffffff" stroke="#d6d9de"/>
+  <circle cx="127" cy="38" r="4" fill="#10b981"/>
+  <text x="137" y="42" font-size="11.5" fill="#374151">Ethereum Mainnet</text>
+  <circle cx="322" cy="38" r="12" fill="#0ea5e9"/>
+  <path d="M310 38 a12 12 0 0 1 24 0 z" fill="#f59e0b"/>
+  <line x1="12" y1="64" x2="348" y2="64" stroke="#eceef1"/>
+
+  <rect x="82" y="78" width="196" height="26" rx="13" fill="#f3f4f6"/>
+  <circle cx="100" cy="91" r="6" fill="none" stroke="#6b7280" stroke-width="1.3"/>
+  <path d="M94 91 h12 M100 85 c-3.5 3 -3.5 9 0 12 M100 85 c3.5 3 3.5 9 0 12" stroke="#6b7280" stroke-width="1.1" fill="none"/>
+  <text x="114" y="95" font-size="12.5" font-family="ui-monospace, 'SF Mono', Menlo, monospace" fill="#111827">b1ockboard[.]forum</text>
+
+  <text x="180" y="134" font-size="19" font-weight="700" fill="#111827" text-anchor="middle">Transfer request</text>
+  <rect x="56" y="146" width="248" height="24" rx="12" fill="#f5f3ff"/>
+  <path d="M73 152 Q74.2 156.8 79 158 Q74.2 159.2 73 164 Q71.8 159.2 67 158 Q71.8 156.8 73 152 Z" fill="#7c3aed"/>
+  <text x="85" y="162" font-size="11" fill="#5b21b6">Started by Assistant · agent session</text>
+
+  <rect x="26" y="186" width="308" height="92" rx="10" fill="#ffffff" stroke="#e5e7eb"/>
+  <text x="40" y="216" font-size="11" fill="#6b7280">From</text>
+  <circle cx="92" cy="212" r="10" fill="#0ea5e9"/>
+  <path d="M82 212 a10 10 0 0 1 20 0 z" fill="#f59e0b"/>
+  <text x="110" y="216" font-size="13" font-weight="600" fill="#111827">Account 1</text>
+  <text x="320" y="216" font-size="11.5" font-family="ui-monospace, 'SF Mono', Menlo, monospace" fill="#6b7280" text-anchor="end">0x51A8…3e0F</text>
+  <line x1="26" y1="232" x2="334" y2="232" stroke="#eceef1"/>
+  <circle cx="180" cy="232" r="9" fill="#ffffff" stroke="#e5e7eb"/>
+  <path d="M180 227.5 v8.5 M176.5 233 l3.5 3.5 l3.5 -3.5" stroke="#6b7280" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="40" y="260" font-size="11" fill="#6b7280">To</text>
+  <circle cx="92" cy="256" r="10" fill="#d1d5db"/>
+  <text x="110" y="260" font-size="12.5" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-weight="600" fill="#111827">0x9C4e…D7a1</text>
+  <rect x="244" y="246" width="78" height="20" rx="10" fill="#f3f4f6"/>
+  <text x="283" y="260" font-size="10.5" fill="#4b5563" text-anchor="middle">New address</text>
+
+  <text x="180" y="326" font-size="32" font-weight="700" fill="#111827" text-anchor="middle">1.85 ETH</text>
+
+  <rect x="26" y="350" width="308" height="104" rx="10" fill="#f9fafb" stroke="#e5e7eb"/>
+  <text x="40" y="378" font-size="12.5" fill="#4b5563">Amount</text><text x="320" y="378" font-size="12.5" font-family="ui-monospace, 'SF Mono', Menlo, monospace" fill="#111827" text-anchor="end">1.85 ETH</text>
+  <text x="40" y="404" font-size="12.5" fill="#4b5563">Network fee</text><text x="320" y="404" font-size="12.5" font-family="ui-monospace, 'SF Mono', Menlo, monospace" fill="#111827" text-anchor="end">0.00021 ETH</text>
+  <line x1="40" y1="418" x2="320" y2="418" stroke="#e5e7eb"/>
+  <text x="40" y="440" font-size="12.5" fill="#4b5563" font-weight="700">Total</text><text x="320" y="440" font-size="12.5" font-family="ui-monospace, 'SF Mono', Menlo, monospace" fill="#111827" text-anchor="end" font-weight="700">1.85021 ETH</text>
+
+  <rect x="26" y="478" width="146" height="44" rx="22" fill="#ffffff" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="99" y="505" font-size="14" font-weight="600" fill="#2563eb" text-anchor="middle">Reject</text>
+  <rect x="188" y="478" width="146" height="44" rx="22" fill="#2563eb"/>
+  <text x="261" y="505" font-size="14" font-weight="600" fill="#ffffff" text-anchor="middle">Confirm</text>
+</svg>

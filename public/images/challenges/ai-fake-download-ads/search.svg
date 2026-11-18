@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <!-- Mock search results page. Simulation artwork for a security training challenge. -->
+  <rect width="800" height="500" fill="#ffffff"/>
+
+  <!-- Browser tab strip -->
+  <rect width="800" height="38" fill="#dee1e6"/>
+  <circle cx="18" cy="19" r="6" fill="#ff5f57"/>
+  <circle cx="38" cy="19" r="6" fill="#febc2e"/>
+  <circle cx="58" cy="19" r="6" fill="#28c840"/>
+  <path d="M82 38 V16 a8 8 0 0 1 8 -8 h248 a8 8 0 0 1 8 8 V38 Z" fill="#ffffff"/>
+  <g transform="translate(102 23)" fill="none" stroke-width="2.6">
+    <path d="M-4.76 -2.75 A5.5 5.5 0 0 1 4.76 -2.75" stroke="#EA4335"/>
+    <path d="M-4.76 -2.75 A5.5 5.5 0 0 0 -4.76 2.75" stroke="#FBBC05"/>
+    <path d="M-4.76 2.75 A5.5 5.5 0 0 0 4.76 2.75" stroke="#34A853"/>
+    <path d="M4.76 2.75 A5.5 5.5 0 0 0 5.5 0 H0.5" stroke="#4285F4"/>
+  </g>
+  <text x="116" y="27" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#3c4043">homebrew install - Google Search</text>
+  <path d="M328 19 l6 6 M334 19 l-6 6" stroke="#5f6368" stroke-width="1.4"/>
+  <path d="M364 17 v10 M359 22 h10" stroke="#5f6368" stroke-width="1.6"/>
+
+  <!-- Toolbar -->
+  <rect y="38" width="800" height="36" fill="#ffffff"/>
+  <rect y="73" width="800" height="1" fill="#dadce0"/>
+  <path d="M22 56 h12 M22 56 l5 -5 M22 56 l5 5" stroke="#5f6368" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+  <path d="M58 56 h-12 M58 56 l-5 -5 M58 56 l-5 5" stroke="#bdc1c6" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+  <path d="M84 52 a6 6 0 1 0 1.5 6" stroke="#5f6368" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+  <path d="M85 47 v5.5 h-5.5" stroke="#5f6368" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+  <rect x="104" y="44" width="592" height="24" rx="12" fill="#f1f3f4"/>
+  <rect x="118" y="55" width="9" height="7" rx="1.5" fill="#5f6368"/>
+  <path d="M120 55 v-2.5 a2.5 2.5 0 0 1 5 0 V55" stroke="#5f6368" stroke-width="1.5" fill="none"/>
+  <text x="136" y="61" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" fill="#202124">google.com/search?q=homebrew+install</text>
+  <!-- Wallet extension icon in the toolbar -->
+  <path d="M714 48 l6 4 h6 l6 -4 l-2 8 l1 5 l-5 4 h-6 l-5 -4 l1 -5 Z" fill="#f6851b"/>
+  <path d="M720 52 h6 l-1 6 h-4 Z" fill="#e2761b"/>
+  <circle cx="770" cy="56" r="11" fill="#8ab4f8"/>
+  <text x="770" y="60.5" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600" fill="#ffffff">D</text>
+
+  <!-- Search header -->
+  <text x="28" y="111" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="27" font-weight="500" letter-spacing="-0.5"><tspan fill="#4285F4">G</tspan><tspan fill="#EA4335">o</tspan><tspan fill="#FBBC05">o</tspan><tspan fill="#4285F4">g</tspan><tspan fill="#34A853">l</tspan><tspan fill="#EA4335">e</tspan></text>
+  <rect x="150" y="85" width="490" height="34" rx="17" fill="#000000" opacity="0.05"/>
+  <rect x="150" y="84" width="490" height="34" rx="17" fill="#ffffff" stroke="#dfe1e5"/>
+  <text x="168" y="106" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="15" fill="#202124">homebrew install</text>
+  <path d="M574 96 l10 10 M584 96 l-10 10" stroke="#70757a" stroke-width="1.6"/>
+  <rect x="596" y="92" width="1" height="18" fill="#dfe1e5"/>
+  <circle cx="614" cy="100" r="6" fill="none" stroke="#4285F4" stroke-width="2"/>
+  <path d="M618.5 104.5 l5 5" stroke="#4285F4" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- Result type tabs -->
+  <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" fill="#5f6368">
+    <text x="150" y="141" fill="#1a73e8" font-weight="600">All</text>
+    <text x="190" y="141">Images</text>
+    <text x="252" y="141">Videos</text>
+    <text x="312" y="141">News</text>
+    <text x="364" y="141">Forums</text>
+    <text x="428" y="141">More</text>
+    <text x="700" y="141">Tools</text>
+  </g>
+  <rect x="146" y="147" width="28" height="3" fill="#1a73e8"/>
+  <rect y="150" width="800" height="1" fill="#ebebeb"/>
+
+  <!-- Result 1 (paid slot) -->
+  <text x="150" y="173" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="700" fill="#202124">Sponsored</text>
+  <g transform="translate(163 195)">
+    <circle r="13" fill="#ffffff" stroke="#dadce0"/>
+    <rect x="-6" y="-3" width="10" height="9.5" rx="1.5" fill="#f5a623"/>
+    <path d="M4 -1 h2.2 a2 2 0 0 1 2 2 v1.6 a2 2 0 0 1 -2 2 H4" fill="none" stroke="#c98a1b" stroke-width="1.6"/>
+    <rect x="-7.2" y="-7.2" width="12.4" height="5.2" rx="2.6" fill="#fff7e0" stroke="#c98a1b" stroke-width="0.9"/>
+  </g>
+  <text x="184" y="191" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" fill="#202124">Homebrew</text>
+  <text x="184" y="207" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#4d5156">https://brew.sh</text>
+  <g fill="#70757a"><circle cx="286" cy="198" r="1.4"/><circle cx="286" cy="203" r="1.4"/><circle cx="286" cy="208" r="1.4"/></g>
+  <text x="150" y="233" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="18" fill="#1a0dab">Homebrew — The Missing Package Manager for macOS</text>
+  <text x="150" y="253" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" fill="#4d5156">Install Homebrew with one command. Paste it in a macOS Terminal and you are ready.</text>
+  <text x="150" y="272" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" fill="#1a0dab">Install Homebrew   ·   Documentation   ·   Formulae</text>
+
+  <!-- Result 2 -->
+  <g transform="translate(163 305)">
+    <circle r="13" fill="#ffffff" stroke="#dadce0"/>
+    <rect x="-6" y="-3" width="10" height="9.5" rx="1.5" fill="#f5a623"/>
+    <path d="M4 -1 h2.2 a2 2 0 0 1 2 2 v1.6 a2 2 0 0 1 -2 2 H4" fill="none" stroke="#c98a1b" stroke-width="1.6"/>
+    <rect x="-7.2" y="-7.2" width="12.4" height="5.2" rx="2.6" fill="#fff7e0" stroke="#c98a1b" stroke-width="0.9"/>
+  </g>
+  <text x="184" y="301" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" fill="#202124">Homebrew</text>
+  <text x="184" y="317" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#4d5156">https://brew.sh</text>
+  <g fill="#70757a"><circle cx="286" cy="308" r="1.4"/><circle cx="286" cy="313" r="1.4"/><circle cx="286" cy="318" r="1.4"/></g>
+  <text x="150" y="343" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="18" fill="#1a0dab">Homebrew — The Missing Package Manager for macOS (or Linux)</text>
+  <text x="150" y="363" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" fill="#4d5156">Homebrew installs the stuff you need that Apple (or your Linux system) didn't.</text>
+  <text x="150" y="380" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" fill="#4d5156">Paste the install command in a macOS Terminal or Linux shell prompt.</text>
+
+  <!-- Result 3 -->
+  <g transform="translate(163 413)">
+    <circle r="13" fill="#24292f"/>
+    <circle r="6" cy="-0.5" fill="#ffffff"/>
+    <path d="M-5.6 -2.5 L-5.6 -7.5 L-1.4 -5 Z" fill="#ffffff"/>
+    <path d="M5.6 -2.5 L5.6 -7.5 L1.4 -5 Z" fill="#ffffff"/>
+    <rect x="-2.6" y="4" width="5.2" height="6" fill="#ffffff"/>
+  </g>
+  <text x="184" y="409" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" fill="#202124">GitHub</text>
+  <text x="184" y="425" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#4d5156">https://github.com › Homebrew › brew</text>
+  <g fill="#70757a"><circle cx="424" cy="416" r="1.4"/><circle cx="424" cy="421" r="1.4"/><circle cx="424" cy="426" r="1.4"/></g>
+  <text x="150" y="451" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="18" fill="#1a0dab">Homebrew/brew: The missing package manager for macOS</text>
+  <text x="150" y="471" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" fill="#4d5156">Features, usage and installation instructions are summarised on the homepage.</text>
+</svg>

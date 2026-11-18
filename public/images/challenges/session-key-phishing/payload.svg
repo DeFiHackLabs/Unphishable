@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 560" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">
+  <rect width="760" height="560" fill="#e9edf3"/>
+
+  <!-- wallet panel -->
+  <rect x="13" y="14" width="740" height="536" rx="14" fill="#0f172a" opacity="0.08"/>
+  <rect x="10" y="10" width="740" height="536" rx="14" fill="#ffffff" stroke="#c9d1dc"/>
+
+  <rect x="26" y="21" width="26" height="26" rx="7" fill="#0f766e"/>
+  <circle cx="38" cy="36.5" r="5.6" fill="#ffffff"/>
+  <circle cx="43.2" cy="30.8" r="3.4" fill="#ffffff"/>
+  <path d="M45.9 29.4l3.8 1.3-3.8 1.5z" fill="#ffffff"/>
+  <path d="M34.3 34l-5.2-6 3.8 8.8z" fill="#ffffff"/>
+  <text x="62" y="39" font-size="14" font-weight="600" fill="#111827">Wren Wallet</text>
+  <text x="160" y="39" font-size="12" fill="#6b7280">Enable automated trading</text>
+  <path d="M320 30l4.5 4.5-4.5 4.5" stroke="#9ca3af" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="336" y="39" font-size="12" font-weight="600" fill="#111827">Raw permissions</text>
+  <circle cx="574" cy="34.5" r="8" fill="#7c3aed"/>
+  <ellipse cx="570.6" cy="33.6" rx="3.4" ry="2.2" transform="rotate(-28 570.6 33.6)" fill="#ffffff"/>
+  <ellipse cx="577.4" cy="33.6" rx="3.4" ry="2.2" transform="rotate(28 577.4 33.6)" fill="#ffffff"/>
+  <text x="734" y="39" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="12" fill="#111827" text-anchor="end">app.yieldmoth[.]xyz</text>
+  <line x1="10" y1="58" x2="750" y2="58" stroke="#eceff3"/>
+
+  <path d="M28 71l5 5 5-5z" fill="#6b7280"/>
+  <text x="46" y="80" font-size="13" font-weight="600" fill="#374151">Raw permissions</text>
+  <text x="734" y="80" font-size="12" fill="#9ca3af" text-anchor="end">17 lines · JSON</text>
+
+  <!-- code block -->
+  <rect x="24" y="92" width="712" height="394" rx="8" fill="#f8fafc" stroke="#e2e8f0"/>
+  <path d="M25 100a7 7 0 0 1 7-7h22v392H32a7 7 0 0 1-7-7z" fill="#eef2f7"/>
+  <g font-family="ui-monospace, 'SF Mono', Menlo, monospace">
+  <text x="48" y="114" font-size="11" fill="#94a3b8" text-anchor="end">1</text>
+  <text x="62.0" y="114" font-size="12" textLength="7.2"><tspan fill="#475569">{</tspan></text>
+  <text x="48" y="136" font-size="11" fill="#94a3b8" text-anchor="end">2</text>
+  <text x="76.4" y="136" font-size="12" textLength="403.2"><tspan fill="#1e40af">"account"</tspan><tspan fill="#475569">: </tspan><tspan fill="#0f766e">"0x7A3f224Ef62eEeEbf79633C3a3c014a8747321C0"</tspan><tspan fill="#475569">,</tspan></text>
+  <text x="48" y="158" font-size="11" fill="#94a3b8" text-anchor="end">3</text>
+  <text x="76.4" y="158" font-size="12" textLength="93.6"><tspan fill="#1e40af">"chainId"</tspan><tspan fill="#475569">: </tspan><tspan fill="#b45309">1</tspan><tspan fill="#475569">,</tspan></text>
+  <text x="48" y="180" font-size="11" fill="#94a3b8" text-anchor="end">4</text>
+  <text x="76.4" y="180" font-size="12" textLength="396.0"><tspan fill="#1e40af">"signer"</tspan><tspan fill="#475569">: </tspan><tspan fill="#0f766e">"0x9c4ED3b292f10D737cbb5365A241c5cd498b71bd"</tspan><tspan fill="#475569">,</tspan></text>
+  <text x="48" y="202" font-size="11" fill="#94a3b8" text-anchor="end">5</text>
+  <text x="76.4" y="202" font-size="12" textLength="180.0"><tspan fill="#1e40af">"validAfter"</tspan><tspan fill="#475569">: </tspan><tspan fill="#b45309">1773273600</tspan><tspan fill="#475569">,</tspan></text>
+  <text x="48" y="224" font-size="11" fill="#94a3b8" text-anchor="end">6</text>
+  <text x="76.4" y="224" font-size="12" textLength="180.0"><tspan fill="#1e40af">"validUntil"</tspan><tspan fill="#475569">: </tspan><tspan fill="#b45309">1775865600</tspan><tspan fill="#475569">,</tspan></text>
+  <text x="48" y="246" font-size="11" fill="#94a3b8" text-anchor="end">7</text>
+  <text x="76.4" y="246" font-size="12" textLength="417.6"><tspan fill="#1e40af">"paymaster"</tspan><tspan fill="#475569">: </tspan><tspan fill="#0f766e">"0xE1B5fB1b4E2d304EbDd3026093b944B0a9530a66"</tspan><tspan fill="#475569">,</tspan></text>
+  <text x="48" y="268" font-size="11" fill="#94a3b8" text-anchor="end">8</text>
+  <text x="76.4" y="268" font-size="12" textLength="115.2"><tspan fill="#1e40af">"permissions"</tspan><tspan fill="#475569">: [</tspan></text>
+  <text x="48" y="290" font-size="11" fill="#94a3b8" text-anchor="end">9</text>
+  <text x="90.8" y="290" font-size="12" textLength="612.0"><tspan fill="#475569">{ </tspan><tspan fill="#1e40af">"target"</tspan><tspan fill="#475569">: </tspan><tspan fill="#0f766e">"0x51c7eFC2C33fdBCAC24f64D717d8cd0F911B9aF0"</tspan><tspan fill="#475569">, </tspan><tspan fill="#1e40af">"selector"</tspan><tspan fill="#475569">: </tspan><tspan fill="#0f766e">"0x38ed1739"</tspan><tspan fill="#475569"> },</tspan></text>
+  <text x="48" y="312" font-size="11" fill="#94a3b8" text-anchor="end">10</text>
+  <text x="90.8" y="312" font-size="12" textLength="612.0"><tspan fill="#475569">{ </tspan><tspan fill="#1e40af">"target"</tspan><tspan fill="#475569">: </tspan><tspan fill="#0f766e">"0x0000000000000000000000000000000000000000"</tspan><tspan fill="#475569">, </tspan><tspan fill="#1e40af">"selector"</tspan><tspan fill="#475569">: </tspan><tspan fill="#0f766e">"0x00000000"</tspan><tspan fill="#475569"> },</tspan></text>
+  <text x="48" y="334" font-size="11" fill="#94a3b8" text-anchor="end">11</text>
+  <text x="90.8" y="334" font-size="12" textLength="604.8"><tspan fill="#475569">{ </tspan><tspan fill="#1e40af">"target"</tspan><tspan fill="#475569">: </tspan><tspan fill="#0f766e">"0x7A3f224Ef62eEeEbf79633C3a3c014a8747321C0"</tspan><tspan fill="#475569">, </tspan><tspan fill="#1e40af">"selector"</tspan><tspan fill="#475569">: </tspan><tspan fill="#0f766e">"0x9517e29f"</tspan><tspan fill="#475569"> }</tspan></text>
+  <text x="48" y="356" font-size="11" fill="#94a3b8" text-anchor="end">12</text>
+  <text x="76.4" y="356" font-size="12" textLength="14.4"><tspan fill="#475569">],</tspan></text>
+  <text x="48" y="378" font-size="11" fill="#94a3b8" text-anchor="end">13</text>
+  <text x="76.4" y="378" font-size="12" textLength="136.8"><tspan fill="#1e40af">"spendingLimits"</tspan><tspan fill="#475569">: [</tspan></text>
+  <text x="48" y="400" font-size="11" fill="#94a3b8" text-anchor="end">14</text>
+  <text x="90.8" y="400" font-size="12" textLength="403.2"><tspan fill="#475569">{ </tspan><tspan fill="#1e40af">"token"</tspan><tspan fill="#475569">: </tspan><tspan fill="#0f766e">"0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48"</tspan><tspan fill="#475569">,</tspan></text>
+  <text x="48" y="422" font-size="11" fill="#94a3b8" text-anchor="end">15</text>
+  <text x="105.2" y="422" font-size="12" textLength="568.8"><tspan fill="#1e40af">"limit"</tspan><tspan fill="#475569">: </tspan><tspan fill="#0f766e">"0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"</tspan><tspan fill="#475569"> }</tspan></text>
+  <text x="48" y="444" font-size="11" fill="#94a3b8" text-anchor="end">16</text>
+  <text x="76.4" y="444" font-size="12" textLength="7.2"><tspan fill="#475569">]</tspan></text>
+  <text x="48" y="466" font-size="11" fill="#94a3b8" text-anchor="end">17</text>
+  <text x="62.0" y="466" font-size="12" textLength="7.2"><tspan fill="#475569">}</tspan></text>
+  </g>
+
+  <text x="26" y="521" font-size="12" fill="#6b7280">Signing as <tspan font-family="ui-monospace, 'SF Mono', Menlo, monospace" fill="#374151">0x7A3f…21C0</tspan></text>
+  <text x="734" y="521" font-size="12" fill="#9ca3af" text-anchor="end">Read-only view</text>
+</svg>

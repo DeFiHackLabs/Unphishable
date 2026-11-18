@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">
+  <!-- page background + browser window -->
+  <rect width="800" height="600" fill="#ffffff"/>
+  <rect x="0.5" y="0.5" width="799" height="599" rx="10" fill="#f5f7fa" stroke="#cfd6df"/>
+
+  <!-- tab strip -->
+  <path d="M1 11a10 10 0 0 1 10-10h778a10 10 0 0 1 10 10v27H1z" fill="#dee3ea"/>
+  <circle cx="20" cy="19" r="6" fill="#ff5f57"/>
+  <circle cx="40" cy="19" r="6" fill="#febc2e"/>
+  <circle cx="60" cy="19" r="6" fill="#28c840"/>
+  <path d="M84 38V16a8 8 0 0 1 8-8h214a8 8 0 0 1 8 8v22z" fill="#ffffff"/>
+  <path d="M104 15l6.900 4v8l-6.900 4-6.900-4v-8z" fill="#0f1b33" stroke="#f5a623" stroke-width="1.400" stroke-linejoin="round"/>
+  <text x="120" y="27" font-size="12" fill="#1f2937">Halvard - Firmware Update</text>
+  <path d="M294 19l7 7M301 19l-7 7" stroke="#6b7280" stroke-width="1.400" stroke-linecap="round"/>
+  <path d="M330 17v12M324 23h12" stroke="#4b5563" stroke-width="1.600" stroke-linecap="round"/>
+
+  <!-- address bar -->
+  <rect x="1" y="38" width="798" height="38" fill="#ffffff"/>
+  <path d="M26 57h-12M14 57l5-5M14 57l5 5" fill="none" stroke="#4b5563" stroke-width="1.700" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M40 57h12M52 57l-5-5M52 57l-5 5" fill="none" stroke="#b6bdc7" stroke-width="1.700" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M82 52.500a6.500 6.500 0 1 0 1.800 6" fill="none" stroke="#4b5563" stroke-width="1.700" stroke-linecap="round"/>
+  <path d="M83.500 48v5h-5" fill="none" stroke="#4b5563" stroke-width="1.700" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="104" y="44" width="612" height="26" rx="13" fill="#f1f3f6"/>
+  <rect x="119" y="56" width="10" height="8" rx="1.500" fill="#4b5563"/>
+  <path d="M121 56v-2.500a3 3 0 0 1 6 0V56" fill="none" stroke="#4b5563" stroke-width="1.500"/>
+  <text x="138" y="62" font-size="13"><tspan fill="#111827">halvard-update[.]com</tspan><tspan fill="#6b7280">/firmware/verify?d=H1-7F3A</tspan></text>
+  <circle cx="744" cy="57" r="11" fill="#c7d2e3"/>
+  <circle cx="744" cy="54" r="4" fill="#ffffff"/>
+  <path d="M736.500 64a8 8 0 0 1 15 0" fill="#ffffff"/>
+  <circle cx="776" cy="50" r="1.700" fill="#4b5563"/>
+  <circle cx="776" cy="57" r="1.700" fill="#4b5563"/>
+  <circle cx="776" cy="64" r="1.700" fill="#4b5563"/>
+  <line x1="1" y1="76" x2="799" y2="76" stroke="#cfd6df"/>
+
+  <!-- site header -->
+  <rect x="1" y="76" width="798" height="48" fill="#0f1b33"/>
+  <rect x="1" y="124" width="798" height="3" fill="#f5a623"/>
+  <path d="M38 88l10.400 6v12L38 112l-10.400-6V94z" fill="none" stroke="#f5a623" stroke-width="1.800" stroke-linejoin="round"/>
+  <path d="M34 95v10M42 95v10M34 100h8" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/>
+  <text x="60" y="105" font-size="15" font-weight="700" letter-spacing="3" fill="#ffffff">HALVARD</text>
+  <text x="560" y="105" font-size="12.500" fill="#a9b4c7">Products</text>
+  <text x="634" y="105" font-size="12.500" fill="#a9b4c7">Support</text>
+  <text x="700" y="105" font-size="12.500" font-weight="700" fill="#ffffff">Firmware</text>
+  <rect x="700" y="112" width="56" height="2" fill="#f5a623"/>
+
+  <!-- update card -->
+  <rect x="101" y="142" width="600" height="446" rx="10" fill="#0b1220" opacity="0.060"/>
+  <rect x="100" y="140" width="600" height="446" rx="10" fill="#ffffff" stroke="#e1e5ea"/>
+  <text x="124" y="166" font-size="12" font-weight="700" fill="#6b7280" letter-spacing="1">STEP 2 OF 2</text>
+  <text x="124" y="189" font-size="18" font-weight="700" fill="#111827">Verify your device to finish the update</text>
+  <rect x="520" y="154" width="156" height="26" rx="13" fill="#fff4e0" stroke="#f5c26b"/>
+  <text x="598" y="171" font-size="12" font-weight="700" text-anchor="middle" fill="#9a5b00">Device lock in 23:41:07</text>
+
+  <circle cx="131" cy="211" r="7" fill="#1f9d63"/>
+  <path d="M127.500 211.200l2.500 2.500 4.500-5" fill="none" stroke="#ffffff" stroke-width="1.700" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="146" y="215" font-size="12.500" fill="#1f7a4f">Firmware 2.4.1 downloaded</text>
+  <text x="676" y="215" font-size="12.500" font-weight="700" text-anchor="end" fill="#1f7a4f">100%</text>
+  <rect x="124" y="223" width="552" height="8" rx="4" fill="#1f9d63"/>
+
+  <text x="124" y="254" font-size="13" fill="#374151">To finish and re-sync your accounts, enter your 24-word recovery phrase.</text>
+
+  <!-- 24-word grid: 4 columns x 6 rows, column step 141, row step 38 -->
+  <g fill="#ffffff" stroke="#cdd3dc">
+    <rect x="124" y="268" width="129" height="30" rx="5"/><rect x="265" y="268" width="129" height="30" rx="5"/><rect x="406" y="268" width="129" height="30" rx="5"/><rect x="547" y="268" width="129" height="30" rx="5"/>
+    <rect x="124" y="306" width="129" height="30" rx="5"/><rect x="265" y="306" width="129" height="30" rx="5"/><rect x="406" y="306" width="129" height="30" rx="5"/><rect x="547" y="306" width="129" height="30" rx="5"/>
+    <rect x="124" y="344" width="129" height="30" rx="5"/><rect x="265" y="344" width="129" height="30" rx="5"/><rect x="406" y="344" width="129" height="30" rx="5"/><rect x="547" y="344" width="129" height="30" rx="5"/>
+    <rect x="124" y="382" width="129" height="30" rx="5"/><rect x="265" y="382" width="129" height="30" rx="5"/><rect x="406" y="382" width="129" height="30" rx="5"/><rect x="547" y="382" width="129" height="30" rx="5"/>
+    <rect x="124" y="420" width="129" height="30" rx="5"/><rect x="265" y="420" width="129" height="30" rx="5"/><rect x="406" y="420" width="129" height="30" rx="5"/><rect x="547" y="420" width="129" height="30" rx="5"/>
+    <rect x="124" y="458" width="129" height="30" rx="5"/><rect x="265" y="458" width="129" height="30" rx="5"/><rect x="406" y="458" width="129" height="30" rx="5"/><rect x="547" y="458" width="129" height="30" rx="5"/>
+  </g>
+  <g font-size="12" fill="#9aa3af" text-anchor="end">
+    <text x="146" y="288">1</text><text x="287" y="288">2</text><text x="428" y="288">3</text><text x="569" y="288">4</text>
+    <text x="146" y="326">5</text><text x="287" y="326">6</text><text x="428" y="326">7</text><text x="569" y="326">8</text>
+    <text x="146" y="364">9</text><text x="287" y="364">10</text><text x="428" y="364">11</text><text x="569" y="364">12</text>
+    <text x="146" y="402">13</text><text x="287" y="402">14</text><text x="428" y="402">15</text><text x="569" y="402">16</text>
+    <text x="146" y="440">17</text><text x="287" y="440">18</text><text x="428" y="440">19</text><text x="569" y="440">20</text>
+    <text x="146" y="478">21</text><text x="287" y="478">22</text><text x="428" y="478">23</text><text x="569" y="478">24</text>
+  </g>
+
+  <!-- reassuring microcopy -->
+  <rect x="124" y="503" width="10" height="8" rx="1.500" fill="#1f9d63"/>
+  <path d="M126 503v-2.500a3 3 0 0 1 6 0V503" fill="none" stroke="#1f9d63" stroke-width="1.500"/>
+  <text x="142" y="511" font-size="12" fill="#4b5563">Your phrase is verified locally and never leaves your browser.</text>
+
+  <!-- primary action -->
+  <rect x="124" y="526" width="552" height="42" rx="6" fill="#1d6ef0"/>
+  <text x="400" y="552" font-size="14" font-weight="700" text-anchor="middle" fill="#ffffff">Verify my device</text>
+</svg>

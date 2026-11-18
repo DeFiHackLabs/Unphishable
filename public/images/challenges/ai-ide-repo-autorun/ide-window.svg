@@ -1,0 +1,145 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 550" role="img">
+<defs><clipPath id="win"><rect x="14" y="12" width="852" height="524" rx="10"/></clipPath><clipPath id="code"><rect x="234" y="98" width="412" height="416"/></clipPath></defs>
+<rect width="880" height="550" fill="#eef1f5"/>
+<rect x="9" y="10" width="862" height="532" rx="14" fill="#000" opacity="0.05"/>
+<rect x="12" y="12" width="856" height="528" rx="12" fill="#000" opacity="0.08"/>
+<g clip-path="url(#win)">
+<rect x="14" y="12" width="852" height="524" fill="#1f2228"/>
+<rect x="14" y="12" width="852" height="32" fill="#2b2e35"/>
+<circle cx="34" cy="28" r="6" fill="#ff5f57"/><circle cx="54" cy="28" r="6" fill="#febc2e"/><circle cx="74" cy="28" r="6" fill="#28c840"/>
+<text x="440" y="32" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#aab1bd">Vault.sol — vault-audit-task</text>
+<rect x="14" y="44" width="40" height="470" fill="#25282e"/>
+<rect x="14" y="54" width="2" height="26" fill="#7c9cff"/>
+<path d="M28 58h8l4 4v12h-12z M36 58v4h4" fill="none" stroke="#e6e9ee" stroke-width="1.5" stroke-linejoin="round"/>
+<circle cx="33" cy="100" r="5.5" fill="none" stroke="#8b93a1" stroke-width="1.5"/><path d="M37 104l4 4" stroke="#8b93a1" stroke-width="1.5" stroke-linecap="round"/>
+<circle cx="30" cy="128" r="2.5" fill="none" stroke="#8b93a1" stroke-width="1.4"/><circle cx="30" cy="144" r="2.5" fill="none" stroke="#8b93a1" stroke-width="1.4"/><circle cx="39" cy="133" r="2.5" fill="none" stroke="#8b93a1" stroke-width="1.4"/><path d="M30 130.5v11 M39 135.5c0 4 -9 3 -9 6" fill="none" stroke="#8b93a1" stroke-width="1.4"/>
+<path d="M27 164h6v6h-6z M27 171h6v6h-6z M34 171h6v6h-6z M36 162h6v6h-6z" fill="none" stroke="#8b93a1" stroke-width="1.4" stroke-linejoin="round"/>
+<circle cx="34" cy="492" r="6" fill="none" stroke="#8b93a1" stroke-width="1.5"/><circle cx="34" cy="492" r="2" fill="#8b93a1"/>
+<rect x="54" y="44" width="180" height="470" fill="#23262c"/>
+<text x="68" y="65" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" letter-spacing="1" fill="#8b93a1">EXPLORER</text>
+<path d="M66 85l3.5 3.5l3.5 -3.5" fill="none" stroke="#d6dae0" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="80" y="91" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11.5" font-weight="700" letter-spacing="0.4" fill="#d6dae0">VAULT-AUDIT-TASK</text>
+<path d="M67.5 109l3.5 3.5l-3.5 3.5" fill="none" stroke="#8b93a1" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M78 106h4.5l1.5 2h7v8h-13z" fill="#8fb0e8"/>
+<text x="97" y="115" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12.5" fill="#d6dae0">.github</text>
+<path d="M67.5 131l3.5 3.5l-3.5 3.5" fill="none" stroke="#8b93a1" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M78 128h4.5l1.5 2h7v8h-13z" fill="#8fb0e8"/>
+<text x="97" y="137" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12.5" fill="#d6dae0">.vscode</text>
+<path d="M66 153l3.5 3.5l3.5 -3.5" fill="none" stroke="#8b93a1" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M78 150h4.5l1.5 2h7v8h-13z" fill="#8fb0e8"/>
+<text x="97" y="159" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12.5" fill="#d6dae0">contracts</text>
+<path d="M93 171h6l3 3v9h-9z" fill="none" stroke="#9aa5b8" stroke-width="1.2" stroke-linejoin="round"/>
+<text x="111" y="181" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12.5" fill="#d6dae0">IStrategy.sol</text>
+<rect x="54" y="188" width="180" height="22" fill="#343a46"/>
+<path d="M93 193h6l3 3v9h-9z" fill="none" stroke="#9aa5b8" stroke-width="1.2" stroke-linejoin="round"/>
+<text x="111" y="203" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12.5" fill="#ffffff">Vault.sol</text>
+<path d="M67.5 219l3.5 3.5l-3.5 3.5" fill="none" stroke="#8b93a1" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M78 216h4.5l1.5 2h7v8h-13z" fill="#8fb0e8"/>
+<text x="97" y="225" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12.5" fill="#d6dae0">scripts</text>
+<path d="M67.5 241l3.5 3.5l-3.5 3.5" fill="none" stroke="#8b93a1" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M78 238h4.5l1.5 2h7v8h-13z" fill="#8fb0e8"/>
+<text x="97" y="247" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12.5" fill="#d6dae0">src</text>
+<path d="M67.5 263l3.5 3.5l-3.5 3.5" fill="none" stroke="#8b93a1" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M78 260h4.5l1.5 2h7v8h-13z" fill="#8fb0e8"/>
+<text x="97" y="269" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12.5" fill="#d6dae0">test</text>
+<path d="M79 281h6l3 3v9h-9z" fill="none" stroke="#8b93a1" stroke-width="1.2" stroke-linejoin="round"/>
+<text x="97" y="291" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12.5" fill="#d6dae0">.env</text>
+<path d="M79 303h6l3 3v9h-9z" fill="none" stroke="#8b93a1" stroke-width="1.2" stroke-linejoin="round"/>
+<text x="97" y="313" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12.5" fill="#d6dae0">.env.example</text>
+<path d="M79 325h6l3 3v9h-9z" fill="none" stroke="#8b93a1" stroke-width="1.2" stroke-linejoin="round"/>
+<text x="97" y="335" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12.5" fill="#d6dae0">.gitignore</text>
+<path d="M79 347h6l3 3v9h-9z" fill="none" stroke="#4f9cf0" stroke-width="1.2" stroke-linejoin="round"/>
+<text x="97" y="357" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12.5" fill="#d6dae0">hardhat.config.ts</text>
+<path d="M79 369h6l3 3v9h-9z" fill="none" stroke="#e5c07b" stroke-width="1.2" stroke-linejoin="round"/>
+<text x="97" y="379" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12.5" fill="#d6dae0">package.json</text>
+<path d="M79 391h6l3 3v9h-9z" fill="none" stroke="#6cb6ff" stroke-width="1.2" stroke-linejoin="round"/>
+<text x="97" y="401" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12.5" fill="#d6dae0">README.md</text>
+<rect x="54" y="470" width="180" height="1" fill="#33373f"/>
+<path d="M67.5 479l3.5 3.5l-3.5 3.5" fill="none" stroke="#d6dae0" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="80" y="485" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="700" letter-spacing="0.4" fill="#d6dae0">OUTLINE</text>
+<rect x="54" y="492" width="180" height="1" fill="#33373f"/>
+<path d="M67.5 501l3.5 3.5l-3.5 3.5" fill="none" stroke="#d6dae0" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="80" y="507" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="700" letter-spacing="0.4" fill="#d6dae0">TIMELINE</text>
+<rect x="234" y="44" width="412" height="32" fill="#25282e"/>
+<rect x="234" y="44" width="112" height="32" fill="#1f2228"/><rect x="234" y="44" width="112" height="2" fill="#7c9cff"/>
+<path d="M246 53h6l3 3v9h-9z" fill="none" stroke="#9aa5b8" stroke-width="1.2" stroke-linejoin="round"/>
+<text x="263" y="65" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12.5" fill="#e6e9ee">Vault.sol</text>
+<path d="M326 56l7 7 M333 56l-7 7" stroke="#aab1bd" stroke-width="1.2" stroke-linecap="round"/>
+<path d="M358 53h6l3 3v9h-9z" fill="none" stroke="#6cb6ff" stroke-width="1.2" stroke-linejoin="round"/>
+<text x="375" y="65" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12.5" fill="#8b93a1">README.md</text>
+<rect x="458" y="44" width="1" height="32" fill="#1f2228"/>
+<text x="250" y="92" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11.5" fill="#8b93a1">contracts  ›  Vault.sol  ›  Vault</text>
+<g clip-path="url(#code)">
+<text x="266" y="117" text-anchor="end" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="12" fill="#5c6370">1</text>
+<text x="280.0" y="117" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="12"><tspan fill="#6b7684">// SPDX-License-Identifier: MIT</tspan></text>
+<text x="266" y="135" text-anchor="end" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="12" fill="#5c6370">2</text>
+<text x="280.0" y="135" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="12"><tspan fill="#c792ea">pragma</tspan><tspan fill="#d6dae0"> solidity </tspan><tspan fill="#f78c6c">^0.8.24</tspan><tspan fill="#d6dae0">;</tspan></text>
+<text x="266" y="153" text-anchor="end" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="12" fill="#5c6370">3</text>
+<text x="266" y="171" text-anchor="end" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="12" fill="#5c6370">4</text>
+<text x="280.0" y="171" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="12"><tspan fill="#c792ea">import</tspan><tspan fill="#d6dae0"> {ERC4626} </tspan><tspan fill="#c792ea">from</tspan><tspan fill="#d6dae0"> </tspan><tspan fill="#c3e88d">"@openzeppelin/contracts/token/ERC20/extensions/ERC4626.sol"</tspan><tspan fill="#d6dae0">;</tspan></text>
+<text x="266" y="189" text-anchor="end" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="12" fill="#5c6370">5</text>
+<text x="280.0" y="189" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="12"><tspan fill="#c792ea">import</tspan><tspan fill="#d6dae0"> {ERC20, IERC20} </tspan><tspan fill="#c792ea">from</tspan><tspan fill="#d6dae0"> </tspan><tspan fill="#c3e88d">"@openzeppelin/contracts/token/ERC20/ERC20.sol"</tspan><tspan fill="#d6dae0">;</tspan></text>
+<text x="266" y="207" text-anchor="end" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="12" fill="#5c6370">6</text>
+<text x="266" y="225" text-anchor="end" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="12" fill="#5c6370">7</text>
+<text x="280.0" y="225" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="12"><tspan fill="#c792ea">contract</tspan><tspan fill="#d6dae0"> </tspan><tspan fill="#82aaff">Vault</tspan><tspan fill="#d6dae0"> </tspan><tspan fill="#c792ea">is</tspan><tspan fill="#d6dae0"> </tspan><tspan fill="#82aaff">ERC4626</tspan><tspan fill="#d6dae0"> {</tspan></text>
+<text x="266" y="243" text-anchor="end" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="12" fill="#5c6370">8</text>
+<text x="308.8" y="243" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="12"><tspan fill="#82aaff">address</tspan><tspan fill="#d6dae0"> </tspan><tspan fill="#c792ea">public</tspan><tspan fill="#d6dae0"> strategy;</tspan></text>
+<text x="266" y="261" text-anchor="end" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="12" fill="#5c6370">9</text>
+<text x="308.8" y="261" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="12"><tspan fill="#82aaff">address</tspan><tspan fill="#d6dae0"> </tspan><tspan fill="#c792ea">public immutable</tspan><tspan fill="#d6dae0"> governance;</tspan></text>
+<text x="266" y="279" text-anchor="end" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="12" fill="#5c6370">10</text>
+<text x="266" y="297" text-anchor="end" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="12" fill="#5c6370">11</text>
+<text x="308.8" y="297" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="12"><tspan fill="#c792ea">constructor</tspan><tspan fill="#d6dae0">(</tspan><tspan fill="#82aaff">IERC20</tspan><tspan fill="#d6dae0"> asset_)</tspan></text>
+<text x="266" y="315" text-anchor="end" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="12" fill="#5c6370">12</text>
+<text x="337.6" y="315" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="12"><tspan fill="#ffcb6b">ERC20</tspan><tspan fill="#d6dae0">(</tspan><tspan fill="#c3e88d">"Quillmere Vault"</tspan><tspan fill="#d6dae0">, </tspan><tspan fill="#c3e88d">"qvUSDC"</tspan><tspan fill="#d6dae0">)</tspan></text>
+<text x="266" y="333" text-anchor="end" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="12" fill="#5c6370">13</text>
+<text x="337.6" y="333" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="12"><tspan fill="#ffcb6b">ERC4626</tspan><tspan fill="#d6dae0">(asset_)</tspan></text>
+<text x="266" y="351" text-anchor="end" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="12" fill="#5c6370">14</text>
+<text x="308.8" y="351" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="12"><tspan fill="#d6dae0">{</tspan></text>
+<text x="266" y="369" text-anchor="end" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="12" fill="#5c6370">15</text>
+<text x="337.6" y="369" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="12"><tspan fill="#d6dae0">governance = </tspan><tspan fill="#82aaff">msg</tspan><tspan fill="#d6dae0">.sender;</tspan></text>
+<text x="266" y="387" text-anchor="end" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="12" fill="#5c6370">16</text>
+<text x="308.8" y="387" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="12"><tspan fill="#d6dae0">}</tspan></text>
+<text x="266" y="405" text-anchor="end" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="12" fill="#5c6370">17</text>
+<text x="266" y="423" text-anchor="end" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="12" fill="#5c6370">18</text>
+<text x="308.8" y="423" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="12"><tspan fill="#c792ea">function</tspan><tspan fill="#d6dae0"> </tspan><tspan fill="#ffcb6b">setStrategy</tspan><tspan fill="#d6dae0">(</tspan><tspan fill="#82aaff">address</tspan><tspan fill="#d6dae0"> next) </tspan><tspan fill="#c792ea">external</tspan><tspan fill="#d6dae0"> {</tspan></text>
+<text x="266" y="441" text-anchor="end" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="12" fill="#5c6370">19</text>
+<text x="337.6" y="441" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="12"><tspan fill="#ffcb6b">require</tspan><tspan fill="#d6dae0">(</tspan><tspan fill="#82aaff">msg</tspan><tspan fill="#d6dae0">.sender == governance, </tspan><tspan fill="#c3e88d">"!gov"</tspan><tspan fill="#d6dae0">);</tspan></text>
+<text x="266" y="459" text-anchor="end" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="12" fill="#5c6370">20</text>
+<text x="337.6" y="459" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="12"><tspan fill="#d6dae0">strategy = next;</tspan></text>
+<text x="266" y="477" text-anchor="end" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="12" fill="#5c6370">21</text>
+<text x="308.8" y="477" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="12"><tspan fill="#d6dae0">}</tspan></text>
+<text x="266" y="495" text-anchor="end" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="12" fill="#5c6370">22</text>
+<text x="280.0" y="495" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="12"><tspan fill="#d6dae0">}</tspan></text>
+</g>
+<rect x="646" y="44" width="220" height="470" fill="#23262c"/><rect x="646" y="44" width="1" height="470" fill="#33373f"/>
+<text x="660" y="65" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" letter-spacing="1" fill="#8b93a1">AGENT</text>
+<path d="M838 55v12 M832 61h12" stroke="#8b93a1" stroke-width="1.4" stroke-linecap="round"/>
+<rect x="646" y="76" width="220" height="1" fill="#33373f"/>
+<rect x="660" y="88" width="194" height="46" rx="8" fill="#2f333b"/>
+<text font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#e6e9ee"><tspan x="672" y="107">Summarise contracts/ and</tspan><tspan x="672" y="124">list the risky functions</tspan></text>
+<rect x="660" y="148" width="16" height="16" rx="4" fill="#7c5cff"/><path d="M668 151.5l1.5 3 3 1.5 -3 1.5 -1.5 3 -1.5 -3 -3 -1.5 3 -1.5z" fill="#fff"/>
+<text x="684" y="161" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600" fill="#d6dae0">Agent</text>
+<rect x="660" y="174" width="194" height="22" rx="5" fill="#1f2228" stroke="#33373f"/>
+<path d="M669 185l3 3 5.5 -6" fill="none" stroke="#5fd38d" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="684" y="189" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="11.5" fill="#d6dae0">Read Vault.sol</text>
+<rect x="660" y="202" width="194" height="22" rx="5" fill="#1f2228" stroke="#33373f"/>
+<path d="M669 213l3 3 5.5 -6" fill="none" stroke="#5fd38d" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="684" y="217" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="11.5" fill="#d6dae0">Read IStrategy.sol</text>
+<text font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#c9ced6"><tspan x="660" y="250">The vault is an ERC-4626</tspan><tspan x="660" y="267">wrapper with one privileged</tspan><tspan x="660" y="284">function, setStrategy(),</tspan><tspan x="660" y="301">gated by governance. Checking</tspan><tspan x="660" y="318">the strategy interface next</tspan></text>
+<rect x="660" y="326" width="7" height="14" fill="#7c9cff"/>
+<rect x="658" y="456" width="196" height="48" rx="8" fill="#1f2228" stroke="#3b404a"/>
+<text x="670" y="476" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#6b7684">Ask the agent…</text>
+<rect x="668" y="484" width="46" height="15" rx="7.5" fill="#2f333b"/><text x="691" y="495" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10.5" fill="#d6dae0">Agent</text>
+<text x="722" y="495" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10.5" fill="#8b93a1">auto</text>
+<circle cx="838" cy="491" r="8.5" fill="#7c9cff"/><path d="M838 495v-8 M834.5 490l3.5 -3.5 3.5 3.5" fill="none" stroke="#1f2228" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="14" y="514" width="852" height="22" fill="#3557c7"/>
+<circle cx="27" cy="521" r="2" fill="none" stroke="#fff" stroke-width="1.2"/><circle cx="27" cy="530" r="2" fill="none" stroke="#fff" stroke-width="1.2"/><circle cx="34" cy="523" r="2" fill="none" stroke="#fff" stroke-width="1.2"/><path d="M27 523v5 M34 525c0 3 -7 2 -7 3" fill="none" stroke="#fff" stroke-width="1.2"/>
+<text x="42" y="529" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#fff">main</text>
+<circle cx="88" cy="525" r="5" fill="none" stroke="#fff" stroke-width="1.2"/><path d="M86 523l4 4 M90 523l-4 4" stroke="#fff" stroke-width="1.2" stroke-linecap="round"/>
+<text x="97" y="529" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#fff">0</text>
+<path d="M118 520l5.5 9.5h-11z" fill="none" stroke="#fff" stroke-width="1.2" stroke-linejoin="round"/>
+<text x="128" y="529" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#fff">0</text>
+<path d="M158 520a5 5 0 1 1 -4.7 3.3" fill="none" stroke="#fff" stroke-width="1.4" stroke-linecap="round"/>
+<text x="168" y="529" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#fff">Indexing… 38%</text>
+<text x="856" y="529" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#fff">Ln 1, Col 1<tspan dx="16">Spaces: 4</tspan><tspan dx="16">UTF-8</tspan><tspan dx="16">Solidity</tspan></text>
+</g></svg>

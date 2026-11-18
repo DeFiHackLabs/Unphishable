@@ -1,0 +1,131 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">
+  <defs>
+    <clipPath id="win"><rect width="800" height="600" rx="10"/></clipPath>
+    <linearGradient id="rainbow" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#fb8817"/>
+      <stop offset="0.35" stop-color="#ff4b01"/>
+      <stop offset="0.7" stop-color="#c12127"/>
+      <stop offset="1" stop-color="#e02aff"/>
+    </linearGradient>
+  </defs>
+  <g clip-path="url(#win)">
+    <rect width="800" height="600" fill="#ffffff"/>
+
+    <!-- browser title bar -->
+    <rect width="800" height="38" fill="#dee1e6"/>
+    <circle cx="20" cy="19" r="6" fill="#ff5f57"/>
+    <circle cx="40" cy="19" r="6" fill="#febc2e"/>
+    <circle cx="60" cy="19" r="6" fill="#28c840"/>
+    <path d="M84 38 V14 a8 8 0 0 1 8 -8 H362 a8 8 0 0 1 8 8 V38 Z" fill="#ffffff"/>
+    <rect x="96" y="15" width="14" height="14" rx="2" fill="#cb3837"/>
+    <text x="103" y="26" font-size="11" font-weight="800" fill="#ffffff" text-anchor="middle">n</text>
+    <text x="118" y="26.5" font-size="12" fill="#202124">eslint-plugin-unused-imports - npm</text>
+    <path d="M348 18 l8 8 M356 18 l-8 8" stroke="#5f6368" stroke-width="1.3" stroke-linecap="round"/>
+    <path d="M388 16 v12 M382 22 h12" stroke="#5f6368" stroke-width="1.5" stroke-linecap="round"/>
+
+    <!-- browser toolbar -->
+    <rect y="38" width="800" height="36" fill="#ffffff"/>
+    <path d="M32 56 H20 M25 51 l-5 5 l5 5" stroke="#5f6368" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M48 56 H60 M55 51 l5 5 l-5 5" stroke="#c4c7cc" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M90 52.5 A6 6 0 1 0 91.5 58" stroke="#5f6368" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+    <path d="M91 48.5 v4.5 h-4.5" stroke="#5f6368" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="108" y="43" width="600" height="26" rx="13" fill="#f1f3f4"/>
+    <rect x="121" y="54" width="9" height="7.5" rx="1.5" fill="#5f6368"/>
+    <path d="M123 54 v-2.4 a2.5 2.5 0 0 1 5 0 v2.4" stroke="#5f6368" stroke-width="1.4" fill="none"/>
+    <text x="138" y="60.5" font-size="12" font-family="ui-monospace, 'SF Mono', Menlo, monospace"><tspan fill="#202124">www.npmjs.com</tspan><tspan fill="#5f6368">/package/eslint-plugin-unused-imports</tspan></text>
+    <circle cx="738" cy="56" r="10" fill="#c9d1d9"/>
+    <circle cx="738" cy="53" r="3.6" fill="#ffffff"/>
+    <path d="M731.2 62.6 a7 5.4 0 0 1 13.6 0 a10 10 0 0 1 -13.6 0 z" fill="#ffffff"/>
+    <circle cx="772" cy="49.5" r="1.6" fill="#5f6368"/>
+    <circle cx="772" cy="56" r="1.6" fill="#5f6368"/>
+    <circle cx="772" cy="62.5" r="1.6" fill="#5f6368"/>
+    <rect y="74" width="800" height="1" fill="#e0e0e0"/>
+
+    <!-- npm site header -->
+    <rect y="75" width="800" height="4" fill="url(#rainbow)"/>
+    <path d="M30 100 l-5.6 -5.6 a3.7 3.7 0 0 1 5.6 -4.7 a3.7 3.7 0 0 1 5.6 4.7 z" fill="#cb3837"/>
+    <text y="99" font-size="12.5" font-weight="600" fill="#333333"><tspan x="48">Pro</tspan><tspan x="86">Teams</tspan><tspan x="140">Pricing</tspan><tspan x="198">Documentation</tspan></text>
+    <rect y="110" width="800" height="1" fill="#eaeaea"/>
+    <rect x="24" y="122" width="58" height="22" fill="#cb3837"/>
+    <text x="53" y="139" font-size="17" font-weight="800" fill="#ffffff" text-anchor="middle" letter-spacing="-0.5">npm</text>
+    <rect x="100" y="118" width="520" height="30" fill="#f2f2f2"/>
+    <circle cx="116" cy="132" r="5" stroke="#666666" stroke-width="1.5" fill="none"/>
+    <path d="M119.8 135.8 l4 4" stroke="#666666" stroke-width="1.5" stroke-linecap="round"/>
+    <text x="134" y="137.5" font-size="13" fill="#707070">Search packages</text>
+    <rect x="620" y="118" width="76" height="30" fill="#231f20"/>
+    <text x="658" y="137.5" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle">Search</text>
+    <rect x="708.5" y="118.5" width="67" height="29" fill="#ffffff" stroke="#cccccc"/>
+    <text x="742" y="137.5" font-size="12.5" font-weight="700" fill="#111111" text-anchor="middle">Sign Up</text>
+    <rect y="158" width="800" height="1" fill="#eaeaea"/>
+
+    <!-- package header -->
+    <text x="24" y="196" font-size="24" font-weight="600" fill="#111111">eslint-plugin-unused-imports</text>
+    <text x="24" y="219" font-size="13" fill="#555555">4.4.1 • <tspan fill="#107010">Public</tspan> • Published 9 months ago</text>
+    <rect x="24.0" y="234" width="150.4" height="32" fill="#fff7da"/>
+    <rect x="24.0" y="264" width="150.4" height="2" fill="#ffcd3a"/>
+    <text x="99.2" y="254.5" font-size="13" font-weight="600" fill="#333333" text-anchor="middle">Readme</text>
+    <rect x="174.4" y="264" width="150.4" height="2" fill="#cb3837"/>
+    <text x="235.6" y="254.5" font-size="13" font-weight="600" fill="#333333" text-anchor="middle">Code</text>
+    <rect x="255.6" y="243" width="34" height="16" rx="8" fill="#fbe3e3"/>
+    <text x="272.6" y="254.5" font-size="10.5" font-weight="600" fill="#a32626" text-anchor="middle">Beta</text>
+    <rect x="324.8" y="264" width="150.4" height="2" fill="#c836c3"/>
+    <text x="400.0" y="254.5" font-size="13" font-weight="600" fill="#333333" text-anchor="middle">Dependencies</text>
+    <rect x="475.2" y="264" width="150.4" height="2" fill="#8956ff"/>
+    <text x="550.4" y="254.5" font-size="13" font-weight="600" fill="#333333" text-anchor="middle">Dependents</text>
+    <rect x="625.6" y="264" width="150.4" height="2" fill="#29abe2"/>
+    <text x="700.8" y="254.5" font-size="13" font-weight="600" fill="#333333" text-anchor="middle">30 Versions</text>
+
+    <!-- readme -->
+    <text x="24" y="298" font-size="20" font-weight="700" fill="#111111">eslint-plugin-unused-imports</text>
+    <rect x="24" y="307" width="446" height="1" fill="#eaeaea"/>
+    <text x="24" y="330" font-size="13" fill="#333333">Find and remove unused es6 module imports. It works by splitting</text>
+    <text x="24" y="349" font-size="13" fill="#333333">up the no-unused-vars rule depending on it being an import</text>
+    <text x="24" y="368" font-size="13" fill="#333333">statement in the AST, and providing an autofix rule to remove</text>
+    <text x="24" y="387" font-size="13" fill="#333333">the nodes if they are imports.</text>
+    <text x="24" y="422" font-size="16" font-weight="700" fill="#111111">Installation</text>
+    <rect x="24" y="431" width="446" height="1" fill="#eaeaea"/>
+    <rect x="24" y="442" width="446" height="34" rx="4" fill="#f6f8fa"/>
+    <text x="36" y="463" font-size="12" font-family="ui-monospace, 'SF Mono', Menlo, monospace" fill="#24292f">npm install eslint-plugin-unused-imports --save-dev</text>
+    <text x="24" y="506" font-size="16" font-weight="700" fill="#111111">Usage</text>
+    <rect x="24" y="515" width="446" height="1" fill="#eaeaea"/>
+    <rect x="24" y="526" width="446" height="70" rx="4" fill="#f6f8fa"/>
+    <text x="36" y="547" font-size="12" font-family="ui-monospace, 'SF Mono', Menlo, monospace" fill="#24292f">import unusedImports from "eslint-plugin-unused-imports";</text>
+    <text x="36" y="565" font-size="12" font-family="ui-monospace, 'SF Mono', Menlo, monospace" fill="#24292f">plugins: { "unused-imports": unusedImports },</text>
+    <text x="36" y="583" font-size="12" font-family="ui-monospace, 'SF Mono', Menlo, monospace" fill="#24292f">rules: { "unused-imports/no-unused-imports": "error" }</text>
+
+    <!-- sidebar -->
+    <text x="494" y="297" font-size="13" font-weight="600" fill="#666666">Install</text>
+    <rect x="494.5" y="306.5" width="281" height="35" rx="4" fill="#ffffff" stroke="#cccccc"/>
+    <path d="M506 319 l5 5 l-5 5" stroke="#111111" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="519" y="328" font-size="11" font-family="ui-monospace, 'SF Mono', Menlo, monospace" fill="#111111">npm i eslint-plugin-unused-imports</text>
+    <rect x="756.5" y="316.5" width="9" height="11" rx="1.5" fill="#ffffff" stroke="#666666"/>
+    <rect x="753.5" y="319.5" width="9" height="11" rx="1.5" fill="#ffffff" stroke="#666666"/>
+
+    <text x="494" y="368" font-size="13" font-weight="600" fill="#666666">Repository</text>
+    <rect x="496" y="378" width="9" height="9" fill="#333333" transform="rotate(45 500.5 382.5)"/>
+    <text x="514" y="387" font-size="12.5" font-weight="600" fill="#111111">github.com/sweepline/</text>
+    <text x="514" y="404" font-size="12.5" font-weight="600" fill="#111111">eslint-plugin-unused-imports</text>
+    <rect x="494" y="418" width="282" height="1" fill="#eaeaea"/>
+
+    <text x="494" y="440" font-size="13" font-weight="600" fill="#666666">Weekly Downloads</text>
+    <text x="494" y="466" font-size="20" font-weight="600" fill="#111111">13,227,917</text>
+    <polygon points="640,470 640,461 648,459 656,460 664,457 672,458 680,455 688,456 696,453 704,454 712,451 720,452 728,450 736,451 744,448 752,449 760,447 768,448 776,446 776,470" fill="#8956ff" fill-opacity="0.12"/>
+    <polyline points="640,461 648,459 656,460 664,457 672,458 680,455 688,456 696,453 704,454 712,451 720,452 728,450 736,451 744,448 752,449 760,447 768,448 776,446" fill="none" stroke="#8956ff" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/>
+    <rect x="494" y="478" width="282" height="1" fill="#eaeaea"/>
+
+    <text x="494" y="500" font-size="13" font-weight="600" fill="#666666">Version</text>
+    <text x="494" y="520" font-size="15" font-weight="600" fill="#111111">4.4.1</text>
+    <text x="640" y="500" font-size="13" font-weight="600" fill="#666666">License</text>
+    <text x="640" y="520" font-size="15" font-weight="600" fill="#111111">MIT</text>
+    <rect x="494" y="532" width="282" height="1" fill="#eaeaea"/>
+
+    <text x="494" y="554" font-size="13" font-weight="600" fill="#666666">Last publish</text>
+    <text x="494" y="574" font-size="15" font-weight="600" fill="#111111">9 months ago</text>
+    <text x="640" y="554" font-size="13" font-weight="600" fill="#666666">Collaborators</text>
+    <circle cx="652" cy="576" r="12" fill="#e9a23b"/>
+    <text x="652" y="580.5" font-size="12" font-weight="700" fill="#ffffff" text-anchor="middle">S</text>
+    <circle cx="682" cy="576" r="12" fill="#2a9d8f"/>
+    <text x="682" y="580.5" font-size="12" font-weight="700" fill="#ffffff" text-anchor="middle">A</text>
+  </g>
+  <rect x="0.5" y="0.5" width="799" height="599" rx="10" fill="none" stroke="#c8ccd1"/>
+</svg>

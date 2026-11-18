@@ -671,4 +671,178 @@ export const challenges = [
     },
     link: "/challenges/eip-7702-phishing",
   },
+  {
+    no: "0x0040",
+    name: "ai-fake-download-ads",
+    difficulty: "Beginner",
+    title: {
+      en: "Fake Dev Tool Download Ads",
+      "zh-hant": "假冒開發工具下載廣告",
+      "zh-hans": "假冒开发工具下载广告",
+    },
+    description: {
+      en: "A sponsored search result shows brew.sh but lands on a lookalike that hands you a wallet-stealing install command. Learn to get install commands from the official site and to check the domain before you paste anything into a terminal.",
+      "zh-hant":
+        "贊助廣告上顯示的是 brew.sh，點下去卻是一個仿冒網站，還遞給你一行會偷走錢包的安裝指令。學會從官方網站取得安裝指令，並在把任何東西貼進終端機之前先核對網域。",
+      "zh-hans":
+        "赞助广告上显示的是 brew.sh，点进去却是一个仿冒网站，还递给你一行会偷走钱包的安装命令。学会从官方网站获取安装命令，并在把任何东西粘贴到终端之前先核对域名。",
+    },
+    link: "/challenges/ai-fake-download-ads",
+  },
+  {
+    no: "0x0041",
+    name: "ai-ide-repo-autorun",
+    difficulty: "Advanced",
+    title: {
+      en: "AI IDE Repo Autorun Trap",
+      "zh-hant": "AI IDE 專案自動執行陷阱",
+      "zh-hans": "AI IDE 仓库自动运行陷阱",
+    },
+    description: {
+      en: "Opening a repository in an AI code editor can run an attacker's task before you read a single line. Learn to inspect .vscode/tasks.json and turn on Workspace Trust before you open unknown code.",
+      "zh-hant": "在 AI 程式碼編輯器裡打開一個 repo，可能在你讀到任何一行程式碼之前就執行了攻擊者的 task。學習在開啟陌生專案前先檢查 .vscode/tasks.json，並啟用 Workspace Trust。",
+      "zh-hans": "在 AI 代码编辑器里打开一个仓库，可能在你读到任何一行代码之前就运行了攻击者的 task。学习在打开陌生项目前先检查 .vscode/tasks.json，并开启 Workspace Trust。",
+    },
+    link: "/challenges/ai-ide-repo-autorun",
+  },
+  {
+    no: "0x0042",
+    name: "malicious-mcp-server",
+    difficulty: "Advanced",
+    title: {
+      en: "Malicious MCP Server",
+      "zh-hant": "惡意 MCP 伺服器",
+      "zh-hans": "恶意 MCP 服务器",
+    },
+    description: {
+      en: "A \"seed phrase breach checker\" MCP server turns your own AI assistant into the thing that leaks your wallet. Learn to read a tool manifest, spot poisoned tool descriptions, and never hand a seed phrase to any tool.",
+      "zh-hant":
+        "一個自稱「助記詞外洩檢查器」的 MCP 伺服器，會讓你自己的 AI 助理變成洩漏錢包的幫兇。學習閱讀工具 manifest、識別被下毒的工具描述，並且絕不把助記詞交給任何工具。",
+      "zh-hans":
+        "一个自称“助记词泄露检查器”的 MCP 服务器，会让你自己的 AI 助手变成泄露钱包的帮凶。学习阅读工具 manifest、识别被投毒的工具描述，并且绝不把助记词交给任何工具。",
+    },
+    link: "/challenges/malicious-mcp-server",
+  },
+  {
+    no: "0x0043",
+    name: "ai-browser-agent-injection",
+    difficulty: "Intermediate",
+    title: {
+      en: "AI Browser Agent Prompt Injection",
+      "zh-hant": "AI 瀏覽器代理提示詞注入",
+      "zh-hans": "AI 浏览器智能体提示词注入",
+    },
+    description: {
+      en: "A web page hides instructions that your AI browser agent obeys as if they came from you. Learn to spot an agent acting outside your request before it signs a transfer you never asked for.",
+      "zh-hant":
+        "網頁裡藏著指令，而你的 AI 瀏覽器代理把它當成你下的命令照做。學習在 AI 代理簽署一筆你從未要求的轉帳之前，看出它的動作已經超出你的要求。",
+      "zh-hans":
+        "网页里藏着指令，而你的 AI 浏览器智能体把它当成你下的命令照做。学习在 AI 智能体为一笔你从未要求的转账签名之前，看出它的操作已经超出你的要求。",
+    },
+    link: "/challenges/ai-browser-agent-injection",
+  },
+  {
+    no: "0x0044",
+    name: "slopsquatting-dependency",
+    difficulty: "Intermediate",
+    title: {
+      en: "Slopsquatting: The AI-Hallucinated Package",
+      "zh-hant": "Slopsquatting：AI 幻覺出來的套件",
+      "zh-hans": "Slopsquatting：AI 幻觉出来的包",
+    },
+    description: {
+      en: "Your AI assistant confidently suggests a package that never existed, and someone has already registered the name. Learn to check the registry before you paste the install command.",
+      "zh-hant": "AI 助理信心滿滿地推薦了一個從未存在過的套件，而有人早就把這個名字註冊走了。學會在貼上安裝指令之前，先去 registry 查證。",
+      "zh-hans": "AI 助手信心十足地推荐了一个从未存在过的包，而有人早已把这个名字抢注了。学会在粘贴安装命令之前，先去 registry 核实。",
+    },
+    link: "/challenges/slopsquatting-dependency",
+  },
+  {
+    no: "0x0045",
+    name: "ai-deepfake-call-approval",
+    difficulty: "Intermediate",
+    title: {
+      en: "AI Deepfake Call Approval",
+      "zh-hant": "AI Deepfake 視訊通話騙簽",
+      "zh-hans": "AI Deepfake 视频通话骗签",
+    },
+    description: {
+      en: "Your CTO is on a video call demanding an emergency multisig signature. Learn why a familiar face proves nothing, and how to verify out-of-band before you sign anything.",
+      "zh-hant": "你的 CTO 在視訊通話裡要求你緊急簽署一筆多簽交易。學習為什麼熟悉的臉證明不了任何事，以及如何在簽署之前換管道查證。",
+      "zh-hans": "你的 CTO 在视频通话里要求你紧急签名一笔多签交易。了解为什么熟悉的脸证明不了任何事，以及如何在签名之前换渠道核实。",
+    },
+    link: "/challenges/ai-deepfake-call-approval",
+  },
+  {
+    no: "0x0046",
+    name: "solana-delegate-phishing",
+    difficulty: "Intermediate",
+    title: {
+      en: "Solana Delegate Phishing",
+      "zh-hant": "Solana Delegate 授權釣魚",
+      "zh-hans": "Solana Delegate 授权钓鱼",
+    },
+    description: {
+      en: "Learn how a friendly airdrop claim on Solana can hide an SPL Token Approve that makes a stranger the delegate over tokens you already hold, and practise reading every instruction before you sign.",
+      "zh-hant":
+        "學習辨識 Solana 上看似友善的空投領取交易，如何暗藏 SPL Token 的 Approve 指令，讓陌生地址成為你既有代幣的 delegate，並練習在簽署前讀完每一個指令。",
+      "zh-hans":
+        "学习识别 Solana 上看似友好的空投领取交易如何暗藏 SPL Token 的 Approve 指令，让陌生地址成为你已有代币的 delegate，并练习在签名前读完每一条指令。",
+    },
+    link: "/challenges/solana-delegate-phishing",
+  },
+  {
+    no: "0x0047",
+    name: "hardware-wallet-fake-firmware",
+    difficulty: "Beginner",
+    title: {
+      en: "Hardware Wallet Fake Firmware Update",
+      "zh-hant": "硬體錢包假韌體更新",
+      "zh-hans": "硬件钱包假固件更新",
+    },
+    description: {
+      en: "A “critical firmware update” email is after your hardware wallet's recovery phrase. Inspect the lure, follow it to the fake update page, and learn the one rule that defeats it: the phrase is only ever entered on the device itself.",
+      "zh-hant":
+        "一封「緊急韌體更新」郵件，目標其實是你硬體錢包的助記詞。檢查這封誘餌信、看看它把你帶到哪個假更新頁面，並學會讓這種攻擊徹底失效的唯一規則：助記詞只在裝置本身輸入。",
+      "zh-hans":
+        "一封“紧急固件更新”邮件，目标其实是你硬件钱包的助记词。检查这封诱饵邮件、看看它把你带到哪个假更新页面，并学会让这种攻击彻底失效的唯一规则：助记词只在设备本身上输入。",
+    },
+    link: "/challenges/hardware-wallet-fake-firmware",
+  },
+  {
+    no: "0x0048",
+    name: "walletconnect-session-hijack",
+    difficulty: "Intermediate",
+    title: {
+      en: "WalletConnect Session Hijack",
+      "zh-hant": "WalletConnect 連線劫持",
+      "zh-hans": "WalletConnect 会话劫持",
+    },
+    description: {
+      en: "Audit a wallet's connected apps, then face a signature request pushed through a session you forgot to close. Learn why disconnecting a session and revoking an approval are two different things.",
+      "zh-hant":
+        "盤點錢包裡的已連接應用程式，再面對一筆從你忘了中斷的連線推送過來的簽署請求。了解為什麼「中斷連線」和「撤銷授權」是兩回事。",
+      "zh-hans":
+        "清点钱包里的已连接应用，再面对一笔从你忘了断开的会话推送过来的签名请求。了解为什么“断开会话”和“撤销授权”是两回事。",
+    },
+    link: "/challenges/walletconnect-session-hijack",
+  },
+  {
+    no: "0x0049",
+    name: "session-key-phishing",
+    difficulty: "Advanced",
+    title: {
+      en: "Session Key Phishing",
+      "zh-hant": "Session Key 授權釣魚",
+      "zh-hans": "Session Key 授权钓鱼",
+    },
+    description: {
+      en: "Audit a smart-account session key grant line by line and learn why a broadly scoped key for an AI agent is a far bigger risk than a token approve.",
+      "zh-hant":
+        "逐行審查智慧帳戶的 session key 授權，了解為什麼交給 AI 代理一把範圍過大的金鑰，風險遠高於一筆代幣 approve。",
+      "zh-hans":
+        "逐行审查智能账户的 session key 授权，了解为什么交给 AI 智能体一把范围过大的密钥，风险远高于一笔代币 approve。",
+    },
+    link: "/challenges/session-key-phishing",
+  },
 ];

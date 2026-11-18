@@ -1,0 +1,133 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" width="640" height="400" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">
+  <defs>
+    <clipPath id="tile"><rect x="10" y="10" width="620" height="380" rx="10"/></clipPath>
+    <linearGradient id="wall" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#4b556a"/>
+      <stop offset="1" stop-color="#333a4a"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#fde68a" stop-opacity="0.45"/>
+      <stop offset="1" stop-color="#fde68a" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="640" height="400" fill="#eef0f4"/>
+  <rect x="13" y="15" width="620" height="380" rx="11" fill="#0f172a" opacity="0.10"/>
+
+  <g clip-path="url(#tile)">
+    <rect x="10" y="10" width="620" height="380" fill="url(#wall)"/>
+
+    <!-- bookshelf -->
+    <rect x="30" y="30" width="150" height="360" fill="#2b303c"/>
+    <rect x="30" y="100" width="150" height="5" fill="#1f232c"/>
+    <rect x="30" y="180" width="150" height="5" fill="#1f232c"/>
+    <rect x="30" y="260" width="150" height="5" fill="#1f232c"/>
+    <rect x="30" y="340" width="150" height="5" fill="#1f232c"/>
+    <rect x="40" y="50" width="12" height="50" fill="#8b5e3c"/>
+    <rect x="54" y="56" width="14" height="44" fill="#5b7a8c"/>
+    <rect x="70" y="48" width="10" height="52" fill="#a14a4a"/>
+    <rect x="82" y="58" width="15" height="42" fill="#6b7f5a"/>
+    <rect x="99" y="52" width="12" height="48" fill="#c2a15a"/>
+    <rect x="113" y="60" width="13" height="40" fill="#4f5d7a"/>
+    <rect x="140" y="78" width="24" height="22" rx="2" fill="#7a5a44"/>
+    <ellipse cx="152" cy="66" rx="14" ry="13" fill="#4f7a5a"/>
+    <rect x="40" y="128" width="15" height="52" fill="#4f5d7a"/>
+    <rect x="57" y="134" width="12" height="46" fill="#a14a4a"/>
+    <rect x="71" y="126" width="13" height="54" fill="#c2a15a"/>
+    <rect x="86" y="136" width="11" height="44" fill="#5b7a8c"/>
+    <rect x="116" y="144" width="46" height="36" rx="2" fill="#3d4454"/>
+    <rect x="40" y="208" width="13" height="52" fill="#6b7f5a"/>
+    <rect x="55" y="214" width="15" height="46" fill="#8b5e3c"/>
+    <rect x="72" y="206" width="12" height="54" fill="#4f5d7a"/>
+    <rect x="86" y="216" width="14" height="44" fill="#a14a4a"/>
+    <rect x="102" y="210" width="11" height="50" fill="#c2a15a"/>
+    <rect x="40" y="290" width="15" height="50" fill="#5b7a8c"/>
+    <rect x="57" y="296" width="12" height="44" fill="#c2a15a"/>
+    <rect x="71" y="288" width="14" height="52" fill="#8b5e3c"/>
+
+    <!-- framed print + lamp -->
+    <rect x="476" y="66" width="112" height="80" fill="#1f232c" stroke="#5a637b" stroke-width="2"/>
+    <polygon points="484,138 514,98 534,120 552,90 580,138" fill="#59657f"/>
+    <circle cx="504" cy="88" r="8" fill="#aab3c7"/>
+    <circle cx="560" cy="272" r="94" fill="url(#glow)"/>
+    <line x1="560" y1="390" x2="560" y2="282" stroke="#1a1d25" stroke-width="5"/>
+    <polygon points="530,282 590,282 579,250 541,250" fill="#f1d9a0"/>
+
+    <!-- torso -->
+    <ellipse cx="312" cy="290" rx="76" ry="19" fill="#191c24"/>
+    <path d="M146 390 C152 326 216 298 280 288 L352 288 C416 298 478 326 486 390 Z" fill="#20242e"/>
+    <path d="M290 232 L286 294 C302 305 330 305 344 292 L342 240 Z" fill="#d39f7c"/>
+    <path d="M280 288 C294 316 340 316 352 288" fill="none" stroke="#303644" stroke-width="4"/>
+    <line x1="306" y1="312" x2="300" y2="358" stroke="#c9ced8" stroke-width="2.5"/>
+    <line x1="328" y1="312" x2="334" y2="358" stroke="#c9ced8" stroke-width="2.5"/>
+
+    <!-- head in profile, facing right -->
+    <path d="M300 110 C336 104 368 124 372 160 C373 168 372 172 374 178 L392 206 C394 211 388 214 380 214 L381 222 C384 226 382 230 377 231 C381 234 381 239 376 241 C378 250 374 258 362 260 C346 262 328 256 314 246 C296 240 272 226 264 196 C254 160 268 116 300 110 Z" fill="#e6b592"/>
+    <path d="M300 106 C340 98 372 120 374 158 C362 146 346 142 334 146 C330 158 328 168 322 176 C314 172 304 176 302 188 C298 204 300 216 304 226 C284 222 268 208 262 190 C250 152 266 112 300 106 Z" fill="#2a211b"/>
+    <ellipse cx="314" cy="198" rx="9" ry="14" fill="#dba888"/>
+    <path d="M311 190 q9 7 2 17" fill="none" stroke="#b98363" stroke-width="1.5"/>
+    <path d="M356 172 q9 -5 17 -1" fill="none" stroke="#2a211b" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M360 183 q6 -5 11 0 q-5 3 -11 0 Z" fill="#ffffff"/>
+    <circle cx="367" cy="182.5" r="2" fill="#2b2b2b"/>
+    <path d="M371 233 l7 0" stroke="#7a2e2e" stroke-width="2" stroke-linecap="round"/>
+    <ellipse cx="350" cy="222" rx="14" ry="18" fill="#7a4a30" opacity="0.10"/>
+
+    <!-- glasses: near lens, and an arm that does not reach the ear -->
+    <rect x="361" y="172" width="15" height="20" rx="5" fill="#ffffff" fill-opacity="0.06" stroke="#14161b" stroke-width="2"/>
+    <line x1="361" y1="180" x2="346" y2="182.5" stroke="#14161b" stroke-width="2"/>
+    <line x1="338" y1="190" x2="321" y2="193" stroke="#14161b" stroke-width="2" opacity="0.8"/>
+
+    <!-- the frontal face lingers for a few frames -->
+    <g opacity="0.30">
+      <rect x="326" y="173" width="26" height="20" rx="6" fill="none" stroke="#14161b" stroke-width="2"/>
+      <ellipse cx="339" cy="183" rx="4.5" ry="3" fill="#ffffff"/>
+      <circle cx="339" cy="183" r="2.2" fill="#2b2b2b"/>
+      <path d="M331 172 q8 -4 16 0" fill="none" stroke="#2a211b" stroke-width="2.5"/>
+      <path d="M356 190 q-4 12 -2 16 q3 2 6 0" fill="none" stroke="#c08a68" stroke-width="1.8"/>
+      <path d="M344 222 q11 5 22 0 q-11 12 -22 0 Z" fill="#7a2e2e"/>
+    </g>
+
+    <!-- jaw edge slides off the head -->
+    <path d="M370 268 C354 271 336 265 321 255" fill="none" stroke="#e6b592" stroke-width="7" opacity="0.45" stroke-linecap="round"/>
+    <rect x="268" y="244" width="62" height="4" fill="#e6b592" opacity="0.55"/>
+    <rect x="254" y="250" width="88" height="3" fill="#e6b592" opacity="0.40"/>
+    <rect x="276" y="255" width="72" height="4" fill="#e6b592" opacity="0.50"/>
+    <rect x="260" y="261" width="98" height="3" fill="#e6b592" opacity="0.30"/>
+    <rect x="288" y="266" width="64" height="4" fill="#e6b592" opacity="0.36"/>
+    <rect x="300" y="273" width="44" height="3" fill="#e6b592" opacity="0.26"/>
+    <rect x="312" y="279" width="52" height="3" fill="#e6b592" opacity="0.20"/>
+
+    <!-- ear renders twice -->
+    <ellipse cx="301" cy="205" rx="9" ry="14" fill="#dba888" opacity="0.55"/>
+    <path d="M298 197 q9 7 2 17" fill="none" stroke="#b98363" stroke-width="1.5" opacity="0.55"/>
+    <rect x="294" y="197" width="34" height="5" fill="#dba888" opacity="0.60"/>
+    <rect x="290" y="210" width="26" height="3" fill="#2a211b" opacity="0.50"/>
+
+    <!-- compression blocks along the seam -->
+    <rect x="326" y="236" width="8" height="8" fill="#2a211b" opacity="0.50"/>
+    <rect x="334" y="244" width="8" height="8" fill="#c99774" opacity="0.70"/>
+    <rect x="318" y="228" width="8" height="8" fill="#e6b592" opacity="0.85"/>
+    <rect x="296" y="214" width="8" height="8" fill="#e6b592" opacity="0.60"/>
+    <rect x="304" y="222" width="8" height="8" fill="#2a211b" opacity="0.60"/>
+    <rect x="342" y="252" width="8" height="8" fill="#20242e" opacity="0.50"/>
+    <rect x="310" y="236" width="8" height="8" fill="#b98363" opacity="0.60"/>
+    <rect x="288" y="206" width="8" height="8" fill="#dba888" opacity="0.50"/>
+    <rect x="350" y="260" width="8" height="8" fill="#e6b592" opacity="0.55"/>
+    <rect x="280" y="222" width="8" height="8" fill="#4b556a" opacity="0.55"/>
+    <path d="M300 106 C266 112 250 152 262 190" fill="none" stroke="#ffffff" stroke-width="2" opacity="0.16" stroke-dasharray="3 5"/>
+
+    <!-- tile chrome -->
+    <rect x="22" y="352" width="156" height="26" rx="6" fill="#000000" opacity="0.6"/>
+    <rect x="32" y="362" width="3" height="7" fill="#4ade80"/>
+    <rect x="37" y="359" width="3" height="12" fill="#4ade80"/>
+    <rect x="42" y="361" width="3" height="9" fill="#4ade80"/>
+    <text x="52" y="369.5" font-size="12.5" font-weight="600" fill="#ffffff">Rowan Vale · CTO</text>
+
+    <rect x="452" y="22" width="166" height="26" rx="13" fill="#000000" opacity="0.6"/>
+    <rect x="464" y="36" width="3" height="5" fill="#fbbf24"/>
+    <rect x="469" y="33" width="3" height="8" fill="#6b7280"/>
+    <rect x="474" y="30" width="3" height="11" fill="#6b7280"/>
+    <text x="484" y="39.5" font-size="12" fill="#fbbf24">Unstable connection</text>
+  </g>
+  <rect x="11.5" y="11.5" width="617" height="377" rx="9" fill="none" stroke="#4ade80" stroke-width="3"/>
+</svg>

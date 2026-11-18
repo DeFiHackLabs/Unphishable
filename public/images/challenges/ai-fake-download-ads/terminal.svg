@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <!-- Mock macOS terminal mid-install. Simulation artwork: the command is defanged and truncated on purpose. -->
+  <defs>
+    <linearGradient id="desk" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#c7d5ea"/>
+      <stop offset="1" stop-color="#e6dcef"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#desk)"/>
+
+  <!-- Window shadow -->
+  <rect x="18" y="20" width="764" height="466" rx="14" fill="#000000" opacity="0.06"/>
+  <rect x="21" y="19" width="758" height="462" rx="12" fill="#000000" opacity="0.10"/>
+
+  <!-- Window -->
+  <rect x="24" y="16" width="752" height="458" rx="10" fill="#1e1f22"/>
+  <path d="M24 46 V26 a10 10 0 0 1 10 -10 h732 a10 10 0 0 1 10 10 V46 Z" fill="#3a3a3d"/>
+  <rect x="24" y="45" width="752" height="1" fill="#111113"/>
+  <circle cx="44" cy="31" r="6" fill="#ff5f57"/>
+  <circle cx="64" cy="31" r="6" fill="#febc2e"/>
+  <circle cx="84" cy="31" r="6" fill="#28c840"/>
+  <text x="400" y="35.5" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600" fill="#b9b9bd">dev — -zsh — 92×24</text>
+
+  <!-- Session -->
+  <g font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="13" fill="#e4e4e7">
+    <text x="40" y="70" fill="#a1a1a6">Last login: Tue Nov 17 09:41:22 on ttys000</text>
+    <text x="40" y="89">dev@MacBook-Pro ~ % /bin/bash -c "$(curl -fsSL hxxps://brewe[.]sh/…/install.sh)"</text>
+    <text x="40" y="108" font-weight="700"><tspan fill="#4c9df3">==&gt;</tspan> Checking for `sudo` access (which may request your password)...</text>
+    <text x="40" y="127">Password:</text>
+    <text x="40" y="146" font-weight="700"><tspan fill="#4c9df3">==&gt;</tspan> This script will install:</text>
+    <text x="40" y="165">/opt/homebrew/bin/brew</text>
+    <text x="40" y="184">/opt/homebrew/share/doc/homebrew</text>
+    <text x="40" y="203">/opt/homebrew/share/man/man1/brew.1</text>
+    <text x="40" y="222">/opt/homebrew/share/zsh/site-functions/_brew</text>
+    <text x="40" y="241">/opt/homebrew/etc/bash_completion.d/brew</text>
+    <text x="40" y="260">/opt/homebrew</text>
+    <text x="40" y="298">Press RETURN/ENTER to continue or any other key to abort:</text>
+    <text x="40" y="317" font-weight="700"><tspan fill="#4c9df3">==&gt;</tspan> /usr/bin/sudo /usr/bin/install -d -o root -g wheel -m 0755 /opt/homebrew</text>
+    <text x="40" y="336" font-weight="700"><tspan fill="#4c9df3">==&gt;</tspan> Downloading and installing Homebrew...</text>
+    <text x="40" y="355">remote: Enumerating objects: 291843, done.</text>
+    <text x="40" y="374">remote: Counting objects: 100% (1284/1284), done.</text>
+    <text x="40" y="393">remote: Compressing objects: 100% (612/612), done.</text>
+    <text x="40" y="412">Receiving objects:  63% (183861/291843), 71.20 MiB | 9.84 MiB/s</text>
+  </g>
+  <rect x="40" y="421" width="8" height="15" fill="#9d9da3"/>
+</svg>
