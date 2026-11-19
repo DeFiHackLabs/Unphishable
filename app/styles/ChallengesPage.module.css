@@ -58,10 +58,13 @@
   gap: 1rem;
   margin-bottom: 1.5rem;
   justify-content: flex-start;
+  /* 五個分類在手機寬度下會把彼此擠到斷行，改成整顆換行而不是字斷開 */
+  flex-wrap: wrap;
 }
 
 .difficultyButton {
   padding: 0.5rem 1rem;
+  white-space: nowrap;
   border-radius: 0.5rem;
   position: relative;
   background: transparent;

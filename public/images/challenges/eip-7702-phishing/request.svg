@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <!-- Mock wallet signature request for an EIP-7702 set code authorization. Training artwork. -->
+  <defs>
+    <style>
+      .ui { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
+      .mono { font-family: ui-monospace, 'SF Mono', Menlo, monospace; }
+    </style>
+  </defs>
+  <rect width="800" height="500" fill="#f1f3f4"/>
+
+  <!-- Wallet popup -->
+  <rect x="40" y="14" width="720" height="472" rx="10" fill="#ffffff"/>
+
+  <!-- Popup header -->
+  <rect x="40" y="14" width="720" height="56" rx="10" fill="#ffffff"/>
+  <circle cx="74" cy="42" r="14" fill="#f6851b"/>
+  <text x="74" y="47" text-anchor="middle" class="ui" font-size="13">🦊</text>
+  <text x="100" y="38" class="ui" font-size="13.5" font-weight="700" fill="#202124">Signature request</text>
+  <text x="100" y="56" class="ui" font-size="11.5" fill="#5f6368">gasless-batch[.]app wants you to sign</text>
+  <rect x="640" y="30" width="100" height="24" rx="12" fill="#e6f4ea"/>
+  <text x="690" y="46" text-anchor="middle" class="ui" font-size="11" fill="#137333">Account 1</text>
+  <line x1="40" y1="70" x2="760" y2="70" stroke="#e8eaed" stroke-width="1"/>
+
+  <!-- Upgrade framing used by the site -->
+  <rect x="60" y="86" width="680" height="34" rx="4" fill="#e8f0fe"/>
+  <text x="76" y="108" class="ui" font-size="12.5" fill="#174ea6">⚡  Upgrade this account to a smart account — batch your swaps and stop paying for separate approvals.</text>
+
+  <!-- Row 1: type        (y 130-178) -->
+  <rect x="60" y="130" width="680" height="48" fill="#ffffff"/>
+  <line x1="60" y1="178" x2="740" y2="178" stroke="#f1f3f4" stroke-width="1"/>
+  <text x="76" y="150" class="ui" font-size="11" fill="#80868b">TYPE</text>
+  <text x="76" y="169" class="mono" font-size="13" fill="#202124">0x04  ·  Set Code Authorization</text>
+
+  <!-- Row 2: delegate    (y 178-226) -->
+  <line x1="60" y1="226" x2="740" y2="226" stroke="#f1f3f4" stroke-width="1"/>
+  <text x="76" y="198" class="ui" font-size="11" fill="#80868b">DELEGATE CONTRACT</text>
+  <text x="76" y="217" class="mono" font-size="13" fill="#202124">0x9f2c7A3b88E41d05C6aF1b2D4e7905c3bB9eA41e</text>
+  <rect x="600" y="188" width="86" height="20" rx="10" fill="#fef7e0"/>
+  <text x="643" y="202" text-anchor="middle" class="ui" font-size="10.5" fill="#b06000">unverified</text>
+
+  <!-- Row 3: chain_id    (y 226-274) -->
+  <line x1="60" y1="274" x2="740" y2="274" stroke="#f1f3f4" stroke-width="1"/>
+  <text x="76" y="246" class="ui" font-size="11" fill="#80868b">CHAIN_ID</text>
+  <text x="76" y="265" class="mono" font-size="13" fill="#202124">0</text>
+  <text x="104" y="265" class="ui" font-size="11.5" fill="#80868b">(any chain)</text>
+
+  <!-- Row 4: nonce       (y 274-322) -->
+  <line x1="60" y1="322" x2="740" y2="322" stroke="#f1f3f4" stroke-width="1"/>
+  <text x="76" y="294" class="ui" font-size="11" fill="#80868b">NONCE</text>
+  <text x="76" y="313" class="mono" font-size="13" fill="#202124">42</text>
+
+  <!-- Row 5: fee         (y 322-370) -->
+  <line x1="60" y1="370" x2="740" y2="370" stroke="#f1f3f4" stroke-width="1"/>
+  <text x="76" y="342" class="ui" font-size="11" fill="#80868b">NETWORK FEE</text>
+  <text x="76" y="361" class="ui" font-size="13" fill="#137333">Sponsored by the site</text>
+  <text x="240" y="361" class="ui" font-size="11.5" fill="#80868b">you pay 0 ETH</text>
+
+  <!-- Row 6: amount      (y 370-418) -->
+  <line x1="60" y1="418" x2="740" y2="418" stroke="#f1f3f4" stroke-width="1"/>
+  <text x="76" y="390" class="ui" font-size="11" fill="#80868b">AMOUNT</text>
+  <text x="76" y="409" class="mono" font-size="13" fill="#9aa0a6">—</text>
+  <text x="104" y="409" class="ui" font-size="11.5" fill="#80868b">no value and no token in this request</text>
+
+  <!-- Buttons -->
+  <rect x="60" y="436" width="330" height="36" rx="6" fill="#ffffff" stroke="#dadce0"/>
+  <text x="225" y="459" text-anchor="middle" class="ui" font-size="13" font-weight="600" fill="#3c4043">Reject</text>
+  <rect x="410" y="436" width="330" height="36" rx="6" fill="#1a73e8"/>
+  <text x="575" y="459" text-anchor="middle" class="ui" font-size="13" font-weight="600" fill="#ffffff">Sign</text>
+</svg>

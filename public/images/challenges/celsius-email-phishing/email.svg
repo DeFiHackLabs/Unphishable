@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <!-- Mock phishing email. Simulation artwork for a security training challenge. All domains are defanged. -->
+  <defs>
+    <style>
+      .ui { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
+      .mono { font-family: ui-monospace, 'SF Mono', Menlo, monospace; }
+    </style>
+  </defs>
+  <rect width="800" height="500" fill="#f1f3f4"/>
+
+  <!-- Mail client toolbar -->
+  <rect width="800" height="36" fill="#ffffff"/>
+  <line x1="0" y1="36" x2="800" y2="36" stroke="#dadce0" stroke-width="1"/>
+  <g fill="#5f6368">
+    <rect x="18" y="14" width="14" height="2" rx="1"/><rect x="18" y="19" width="14" height="2" rx="1"/><rect x="18" y="24" width="14" height="2" rx="1"/>
+  </g>
+  <text x="48" y="23" class="ui" font-size="12" fill="#5f6368">Inbox</text>
+  <circle cx="770" cy="18" r="10" fill="#e8eaed"/>
+  <text x="770" y="22.5" text-anchor="middle" class="ui" font-size="11" font-weight="600" fill="#5f6368">Y</text>
+
+  <!-- Message card -->
+  <rect x="40" y="44" width="720" height="440" rx="6" fill="#ffffff"/>
+
+  <!-- From row  (hotspot band: y 44-70) -->
+  <text x="60" y="62" class="ui" font-size="12" fill="#80868b">From</text>
+  <text x="104" y="62" class="ui" font-size="13" font-weight="600" fill="#202124">Celsius Claims</text>
+  <text x="206" y="62" class="mono" font-size="12.5" fill="#5f6368">&lt;noreply@case-stretto[.]com&gt;</text>
+
+  <!-- To row -->
+  <text x="60" y="80" class="ui" font-size="12" fill="#80868b">To</text>
+  <text x="104" y="80" class="mono" font-size="12" fill="#5f6368">you@example.com</text>
+
+  <!-- Auth badge row  (hotspot band: y 86-112) -->
+  <rect x="104" y="90" width="196" height="19" rx="9.5" fill="#e6f4ea"/>
+  <text x="114" y="103.5" class="ui" font-size="11.5" fill="#137333">✅  SPF: pass  ·  DKIM: pass</text>
+  <text x="312" y="103.5" class="ui" font-size="11" fill="#80868b">signed by case-stretto[.]com</text>
+
+  <line x1="60" y1="120" x2="740" y2="120" stroke="#e8eaed" stroke-width="1"/>
+
+  <!-- Subject -->
+  <text x="60" y="146" class="ui" font-size="17" font-weight="700" fill="#202124">ACTION REQUIRED: your Celsius distribution has been approved</text>
+
+  <!-- Urgency banner  (hotspot band: y 158-200) -->
+  <rect x="60" y="162" width="680" height="34" rx="4" fill="#fce8e6"/>
+  <text x="76" y="184" class="ui" font-size="13.5" font-weight="700" fill="#c5221f">⏳  Claim window closes in 7 days — unclaimed distributions are returned to the estate</text>
+
+  <!-- Body copy -->
+  <text x="60" y="226" class="ui" font-size="13" fill="#3c4043">Dear Claimant,</text>
+  <text x="60" y="250" class="ui" font-size="13" fill="#3c4043">The Court has approved the distribution schedule in the Celsius Network LLC bankruptcy. Our records show a</text>
+  <text x="60" y="270" class="ui" font-size="13" fill="#3c4043">confirmed claim in your name with a remaining balance of</text>
+  <text x="414" y="270" class="ui" font-size="13" font-weight="700" fill="#202124">$14,207.63</text>
+  <text x="494" y="270" class="ui" font-size="13" fill="#3c4043">available for release.</text>
+
+  <!-- One-time passcode box  (hotspot band: y 288-332) -->
+  <rect x="60" y="292" width="300" height="36" rx="4" fill="#f8f9fa" stroke="#dadce0"/>
+  <text x="76" y="309" class="ui" font-size="11" fill="#80868b">Your one-time passcode</text>
+  <text x="76" y="324" class="mono" font-size="15" font-weight="700" fill="#202124">419-882</text>
+  <text x="374" y="316" class="ui" font-size="11.5" fill="#5f6368">Enter this code in the portal to verify your identity.</text>
+
+  <!-- CTA button  (hotspot band: y 348-396) -->
+  <rect x="60" y="354" width="208" height="38" rx="4" fill="#1a73e8"/>
+  <text x="164" y="378" text-anchor="middle" class="ui" font-size="14" font-weight="600" fill="#ffffff">Open Claims Portal</text>
+  <text x="284" y="370" class="ui" font-size="11" fill="#80868b">link:</text>
+  <text x="316" y="370" class="mono" font-size="11" fill="#1a73e8">hxxps://case-stretto[.]com/claim?id=CEL-8841</text>
+  <text x="284" y="385" class="ui" font-size="10.5" fill="#bdc1c6">status: 302 → claims-stretto[.]com</text>
+
+  <!-- Wallet line  (hotspot band: y 404-438) -->
+  <rect x="60" y="408" width="680" height="26" rx="4" fill="#fef7e0"/>
+  <text x="76" y="425" class="ui" font-size="12.5" fill="#b06000">👛  Connect the wallet where you want to receive funds — distributions are sent on-chain.</text>
+
+  <!-- Footer -->
+  <line x1="60" y1="450" x2="740" y2="450" stroke="#e8eaed" stroke-width="1"/>
+  <text x="60" y="466" class="ui" font-size="10" fill="#9aa0a6">Celsius Claims Administration · Official notice to creditors · Do not reply to this message</text>
+  <text x="60" y="478" class="ui" font-size="10" fill="#9aa0a6">This email and any attachments are confidential and intended solely for the addressee.</text>
+</svg>

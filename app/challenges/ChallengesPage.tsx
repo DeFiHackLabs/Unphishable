@@ -29,11 +29,17 @@ function ChallengesContent() {
     { label: t.challenges.beginner, key: 'Beginner' },
     { label: t.challenges.intermediate, key: 'Intermediate' },
     { label: t.challenges.advanced, key: 'Advanced' },
+    { label: t.challenges.aiThreats, key: 'AI' },
   ];
 
-  // 每次渲染時重新從 challenges 篩選
+  // 每次渲染時重新從 challenges 篩選。
+  // 'AI' 是主題分類而不是難度，和難度共用同一排按鈕，所以兩者互相取代。
   const filteredChallenges = challenges.filter(challenge =>
-    currentDifficulty === 'All' ? true : challenge.difficulty === currentDifficulty
+    currentDifficulty === 'All'
+      ? true
+      : currentDifficulty === 'AI'
+        ? challenge.tags?.includes('ai') ?? false
+        : challenge.difficulty === currentDifficulty
   );
 
   // 計算總頁數

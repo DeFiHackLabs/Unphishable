@@ -1763,6 +1763,7 @@ export default {
     beginner: "Beginner",
     intermediate: "Intermediate",
     advanced: "Advanced",
+    aiThreats: "AI Threats",
     previous: "Previous",
     next: "Next",
     noChallenges: "No challenges available.",
@@ -3226,14 +3227,89 @@ export default {
     },
   },
   celsiusEmail: {
-    title: "Celsius Recovery Email Phishing",
+    title: "📧 Celsius Recovery Email Phishing",
+    subtitle: "The claim is real. The email is not.",
     educational: "Educational Purpose Only - Phishing Simulation",
+    warning: "⚠️ Warning: This is a simulation for educational purposes ⚠️",
+    steps: ["1 · The email", "2 · The portal"],
     step1: "Step 1: Check Your Email",
     step2: "Step 2: Portal Login",
+    scenario:
+      "You had money on Celsius when it froze withdrawals and filed for bankruptcy. After years of court filings you have stopped expecting news. This morning an email arrives: your distribution has been approved, and you have seven days to claim it.",
+    inspectHint:
+      "Here is the email as your mail client renders it. Hover over (or tap) each highlighted part to see what it actually is.",
+    emailAlt:
+      "A phishing email that appears to come from a bankruptcy claims agent, with a seven-day deadline and a button to a claims portal",
+    inspectAria: "Inspect email part",
+    inspectPlaceholder:
+      "👆 Hover over or tap a highlighted part of the email to inspect it.",
+    inspectShows: "What it shows:",
+    inspectTruth: "What it actually is:",
+    parts: {
+      sender: {
+        shows: "Celsius Claims <noreply@case-stretto[.]com>",
+        truth:
+          "A lookalike domain. The court-appointed claims agent in this case publishes at cases.stretto[.]com. Note the plural \"cases\", and note that the real host is a subdomain of stretto[.]com — not a separate \"case-stretto\" domain that merely contains the word.",
+      },
+      spf: {
+        shows: "✅ SPF: pass · DKIM: pass",
+        truth:
+          "Both can pass while the mail is still hostile. Documented campaigns in this case were relayed through a mainstream bulk-email provider, so the mail was correctly signed — for the attacker's own lookalike domain. SPF tells you the sender controls that domain. It never tells you the domain belongs to who it claims.",
+      },
+      deadline: {
+        shows: "Claim window closes in 7 days",
+        truth:
+          "Manufactured urgency. Real bankruptcy distributions follow court-approved schedules published on a public docket. A countdown that exists only inside the email is there to stop you checking.",
+      },
+      button: {
+        shows: "Button: Open Claims Portal",
+        truth:
+          "The link under that button goes to case-stretto[.]com, which forwards to claims-stretto[.]com. The domain you end up on is not even the one in the email — a redirect chain keeps the first hop looking plausible.",
+      },
+      otp: {
+        shows: "Your one-time passcode: 419-882",
+        truth:
+          "A passcode handed to you inside the same email proves nothing — the sender invented it. The real claims agent's published notice states that it does not send a one-time passcode in an email about your distribution status.",
+      },
+      wallet: {
+        shows: "\"Connect the wallet where you want to receive funds\"",
+        truth:
+          "The real agent's notice states that creditors are not paid by connecting a wallet. A connect prompt is how the site learns every address you hold and what is in them, and it is the step before a signature request.",
+      },
+    },
+    questionTitle: "What do you do?",
+    questionDescription:
+      "The email says seven days. Pick the move you would actually make.",
     instruction: "What would you do when receiving this email?",
+    options: {
+      clickLink:
+        "Open the portal from the email and see what it asks for. I can always close the tab.",
+      suspicious: "Something feels off, so I will ignore it and move on.",
+      reportPhishing:
+        "Report and delete it, then look the case up on the official court docket myself and use only the address published there.",
+    },
     clickLink: "Click the link to access portal",
     suspicious: "This looks suspicious",
     reportPhishing: "Report as phishing",
+    submitButton: "Submit Answer",
+    nudgeTitle: "Good instinct — now finish the thought",
+    nudgeBody:
+      "Ignoring it keeps you safe today and leaves the real question open: you still do not know whether a genuine distribution is waiting. Deleting is half the answer. The other half is finding the official channel yourself, so the next email like this one has nothing left to offer you.",
+    closeButton: "Close",
+    portalTitle: "Round 2 · Inside the portal",
+    portalIntro:
+      "You clicked. The tab opened, and the address bar no longer matches the email — case-stretto[.]com forwarded you to claims-stretto[.]com. The page greets you by name, knows your email address, and shows your claim amount down to the cent.",
+    portalAlt:
+      "A fake bankruptcy claims portal asking for an email address, a one-time passcode and a wallet connection",
+    portalCaption:
+      "The amount being correct is exactly what makes this work. Creditor schedules in a bankruptcy case are public records — anyone can look yours up, including the person who wrote this page.",
+    portalQuestion: "The page wants your wallet connected to release the funds.",
+    portalOptions: {
+      accessPortal:
+        "Connect the wallet. The amount is right, so the portal must be genuine.",
+      waitSomethingWrong:
+        "Stop. The domain changed on the way here, and no real distribution needs my wallet connected.",
+    },
     accessPortal: "Access Portal",
     waitSomethingWrong: "Wait, something seems wrong...",
     result: "Challenge Result",
@@ -3241,13 +3317,150 @@ export default {
       "✅ CHALLENGE SUCCESSFUL! You identified this as a phishing attempt and protected yourself.",
     challengeFailed: "❌ CHALLENGE FAILED! You fell for the phishing attempt.",
     phishingWarningTitle: "Warning: This is a phishing email!",
+    failTitle: "You connected the wallet",
+    failBody:
+      "Nothing dramatic happened on screen — that is the point. Connecting is not signing, so no funds have moved yet. What the site got instead is everything it needs for the step that does move them.",
+    lootTitle: "What the operator now has:",
+    loot: [
+      "Confirmation that your address is live and that you answer Celsius claim mail — on a list of bankruptcy creditors, that is the most valuable thing on this page.",
+      "Every account in the connected wallet, with balances and full history, so the next message can be written around what you actually hold.",
+      "An open session. The site can put a signature request in front of you at any moment, and that one does move funds.",
+    ],
+    recoveredTitle: "You stopped at the right moment",
+    recoveredBody:
+      "You opened the link — which is how almost everyone arrives here — and then you noticed the domain had changed and backed out before connecting anything. Opening a link is recoverable. Connecting and signing is where it stops being recoverable, and you did not cross that line.",
+    successContent: {
+      correctMessage:
+        "You treated a correct claim amount as public information rather than proof of identity, and you went to the official docket instead of the link you were sent.",
+      howToAvoidTitle: "Recovery and claims phishing, and how to stay ahead of it",
+      description:
+        "When a crypto platform collapses, its creditor list becomes a public court record and its customers become the best-qualified target list in the industry: people who are known to have lost money, who are waiting for contact, and who will recognise the company's name. Campaigns documented in the Celsius bankruptcy impersonated the court-appointed claims agent, used lookalike domains such as case-stretto[.]com forwarding to claims-stretto[.]com, imposed a short claim window, and asked claimants to connect a wallet to receive their distribution.",
+      warningSignsTitle: "What gave this one away",
+      warningSigns: [
+        "<strong>A lookalike of the agent, not the company.</strong> The scam impersonated the claims agent rather than Celsius, because recipients check the company name and rarely know what the agent's real domain looks like.",
+        "<strong>A deadline that only exists in the email.</strong> Court-approved distributions run on schedules published on the public docket, not on a seven-day countdown.",
+        "<strong>An authentication code handed to you.</strong> A one-time passcode printed in the same email is theatre. The real agent's notice says it does not send one that way.",
+        "<strong>A wallet connection as the payout mechanism.</strong> The agent's notice states creditors are not paid by connecting a wallet. Any claims process that needs your wallet connected is not a claims process.",
+        "<strong>Clean mail authentication.</strong> SPF and DKIM passed, because the attacker owned the lookalike domain and relayed through a legitimate provider. Passing those checks says nothing about honesty.",
+      ],
+      bestPracticesTitle: "Habits that hold",
+      bestPractices: [
+        "<strong>Navigate, do not click.</strong> For anything about money you are owed, find the official case page yourself — from the court docket or the company's own published notices — and work only from the address you found.",
+        "<strong>Learn the real agent's domain once.</strong> In any bankruptcy there is a single court-appointed claims agent with one published address. Bookmark it the first time; after that every lookalike is obvious.",
+        "<strong>Treat your claim amount as public.</strong> It is in the court filings. Someone knowing it proves nothing about who they are.",
+        "<strong>Separate reading from signing.</strong> Read mail in a browser profile with no wallet extension, so a convincing page cannot escalate to a connect prompt in one click.",
+        "<strong>Distributions do not arrive by wallet connection.</strong> If a page offers to release funds the moment you connect, that is the whole attack.",
+      ],
+      compromisedTitle: "If you already connected or signed",
+      compromisedSteps: [
+        "Disconnect the site in your wallet's connections list, and revoke any approval it obtained.",
+        "Assume the addresses you exposed are now linked to your identity on a creditor list, and expect better-targeted follow-ups by email and phone.",
+        "Move remaining assets to an address that has never touched the site if you signed anything you cannot account for.",
+        "Report the domain to the real claims agent and to your mail provider, so the next creditor sees a warning instead of an inbox.",
+      ],
+    },
   },
   eip7702: {
-    title: "EIP-7702 Batch Transaction Phishing",
+    title: "✍️ EIP-7702 Batch Transaction Phishing",
+    subtitle: "One signature, and your account starts running someone else's code.",
     educational: "Educational Purpose Only - Advanced Phishing Simulation",
+    warning: "⚠️ Warning: This is a simulation for educational purposes ⚠️",
+    steps: ["1 · What 7702 does", "2 · The signature request"],
     step1: "Step 1: Understanding EIP-7702",
     step2: "Step 2: Malicious Batch Transaction",
+    primerIntro:
+      "An ordinary Ethereum account — a plain private-key account, not a contract — can now be told to run a contract's code. You authorise it with one signature. This is genuinely useful: it is how wallets offer batching, gas sponsorship and session keys without moving you to a new address. It is also the most powerful signature you can give away, so it is worth knowing exactly what it does before one is in front of you.",
+    diagramAlt:
+      "Diagram: a signed authorization writes a delegation indicator into an ordinary account, so calls to that account run the delegate contract's code",
+    primerFactsTitle: "Four things to know before you look at the request",
+    primerFacts: [
+      "<strong>It is not a transfer, and it has no amount.</strong> The authorization is a tuple <code>[chain_id, address, nonce, y_parity, r, s]</code> carried by a transaction type of its own, <code>0x04</code>. Signing it writes a delegation indicator — <code>0xef0100</code> followed by the delegate's address — into your account's own code.",
+      "<strong>It persists.</strong> There is no expiry and no spending cap. The delegation stays until you replace it, and the only way to undo it is to sign a new authorization pointing at the zero address, which clears your code again.",
+      "<strong>You do not have to send it.</strong> Your signature is the whole thing; anyone can carry it in their own transaction and pay the gas. \"I never submitted a transaction\" is not a defence.",
+      "<strong>A <code>chain_id</code> of 0 means every chain.</strong> The spec's validation step accepts \"the chain ID is 0 or the ID of the current chain\", so a zero makes one signature replayable on every chain that supports 7702 — where the same address can hold completely different code.",
+    ],
+    specNote:
+      "Those four points come from the EIP-7702 specification itself, not from a vendor summary.",
     connectWallet: "Connect Wallet to Continue",
+    dappTitle: "Round 2 · The offer",
+    dappIntro:
+      "A site you found through a thread about saving gas offers to upgrade your account: batched swaps, no more separate approve transactions, and the site pays the gas. You press the button and your wallet opens this request.",
+    requestAlt:
+      "A wallet signature request for a set code authorization, showing the delegate contract, a chain ID of zero and a sponsored network fee",
+    inspectHint:
+      "Hover over (or tap) each row of the request to read what that row actually means.",
+    inspectAria: "Inspect request row",
+    inspectPlaceholder: "👆 Hover over or tap a row of the request to read it.",
+    inspectField: "Row:",
+    inspectMeaning: "What it means:",
+    rows: {
+      type: {
+        field: "Type · 0x04 Set Code Authorization",
+        meaning:
+          "This is the delegation transaction type, not a transfer and not a token approval. Signing it changes what your own account executes. If your wallet does not name this clearly, that is a reason to stop rather than a reason to continue.",
+      },
+      delegate: {
+        field: "Delegate · 0x9f2c…A41e (unverified)",
+        meaning:
+          "The contract whose code your account will run. Everything rests on this one address. Unverified means nobody can read what it does, and a delegate you cannot read is a delegate you cannot bound.",
+      },
+      chain: {
+        field: "chain_id · 0",
+        meaning:
+          "Zero is not a default — it means \"valid on any chain\". The same signature can be replayed on every chain that supports 7702, and the same address may hold entirely different code on each of them. A legitimate wallet signs for the chain you are actually on.",
+      },
+      nonce: {
+        field: "Nonce · 42",
+        meaning:
+          "Your account's current nonce, which is what binds this authorization to your account. It is the one row here that looks exactly as it should, which is why reading only the familiar rows is a bad habit.",
+      },
+      fee: {
+        field: "Network fee · sponsored by the site",
+        meaning:
+          "Someone else pays, so the usual pause where you weigh a fee against a benefit never happens. Sponsorship is a real 7702 feature and not itself proof of fraud, but here it removes the last point of friction.",
+      },
+      amount: {
+        field: "Amount · —",
+        meaning:
+          "There is no amount, and no token is named. People read that as harmless. It is the opposite: a transfer is limited to its amount, while this is limited to nothing.",
+      },
+    },
+    questionTitle: "If you sign this, what have you agreed to?",
+    questionDescription:
+      "The rows are all readable. The question is what they add up to.",
+    options: {
+      oneSwap:
+        "A single batched swap on this site. The batch runs once and then it is over.",
+      approval:
+        "A token approval like any other — one token, and I can revoke it later from an approval checker.",
+      delegation:
+        "Every call to my account now runs that contract's code. It can move any asset in any combination, it lasts until I explicitly undo the delegation, and with chain_id 0 the same signature works on other chains too.",
+      nothing:
+        "Nothing on its own. It is only a signature, so nothing can happen until I send a transaction myself.",
+    },
+    submitButton: "Submit Answer",
+    wrong: {
+      oneSwap: {
+        title: "Not one swap — and not once",
+        content:
+          "A batch is what the site offered, not what the signature grants. There is no amount, no token and no expiry in this request. You are setting the code your account runs, and it keeps running it after the swap the site described is finished.",
+      },
+      approval: {
+        title: "An approval is bounded. This is not",
+        content:
+          "A token approval names one token and one spender, and you can set it back to zero. A delegation names no token at all: your account runs the delegate's code, so it reaches everything the account can reach. Approval checkers list approvals — they will not show you this.",
+      },
+      nothing: {
+        title: "The signature is the whole thing",
+        content:
+          "You never need to send anything. An authorization is valid once signed, and anyone can include it in their own type 0x04 transaction and pay the gas themselves. By the time you would notice a transaction of your own, the delegation is already in place.",
+      },
+    },
+    decisionTitle: "So — sign it?",
+    decisionBody:
+      "The request is still open and the site is waiting. This is the moment that counts.",
+    signButton: "Sign the authorization",
+    rejectButton: "Reject and close the site",
     result: "Challenge Result",
     challengeSuccess:
       "✅ CHALLENGE SUCCESSFUL! You identified the malicious batch transaction and protected yourself.",
@@ -3255,6 +3468,54 @@ export default {
       "❌ CHALLENGE FAILED! You signed the malicious batch transaction.",
     phishingWarningTitle:
       "Warning: This was a malicious EIP-7702 batch transaction!",
+    failTitle: "Signed. Your account now runs their code",
+    failBody:
+      "Your wallet showed a success toast and the site showed a confirmation, and both are accurate — the delegation went in. Your balances have not changed yet, which is the part that keeps people from reacting in time.",
+    lootTitle: "What the delegate can do from here:",
+    loot: [
+      "Run any sequence it likes as your account — approve and transfer in one batch, so there is no approval sitting around for you to spot.",
+      "Wait. There is no expiry, so nothing has to happen today; many drainers sit until a balance is worth taking.",
+      "Reuse the same signature on other 7702 chains, because chain_id was 0 — and at that address, on that chain, the code can be something else entirely.",
+    ],
+    closeButton: "Close",
+    revokeTitle: "Undoing a delegation",
+    revokeSteps: [
+      "Check what your account is delegated to: read the account's code. A delegated account's code is <code>0xef0100</code> followed by the delegate's address, and an account with no delegation has no code at all.",
+      "Sign a fresh authorization with the delegate set to the zero address. The spec handles this case by not writing a delegation indicator, which clears the account's code.",
+      "Do it on every chain where the authorization could have been replayed, not only the one you were on — that is what chain_id 0 cost you.",
+      "Move anything you cannot afford to lose to an account that has never signed a 7702 authorization, and treat the delegated account as burned until you have confirmed its code is empty again.",
+    ],
+    successContent: {
+      correctMessage:
+        "You read a request with no amount in it and recognised that the absence of a limit was the danger, not a reassurance.",
+      howToAvoidTitle: "Delegation phishing, and how to read a 7702 request",
+      description:
+        "EIP-7702 lets an ordinary account delegate its code to a contract, which is what makes batching, gas sponsorship and session keys possible without a new address. The same mechanism makes one signature enough to hand over an account completely. Phishing kits present it as an upgrade: a smart-account migration, a gas-free mode, a security module, a required re-activation. The request carries no amount and no token name, so the habits people have built around checking amounts give them nothing to check.",
+      warningSignsTitle: "What to look for in the request",
+      warningSigns: [
+        "<strong>Type <code>0x04</code> or the words set code, authorization or delegation.</strong> This is not a transfer or an approval. If the wording is vague about which it is, stop there.",
+        "<strong>No amount and no token.</strong> On any other request that would be reassuring. Here it means there is no limit to read.",
+        "<strong>A delegate address you cannot verify.</strong> The whole account rests on that one address. Unverified source, or a fresh deployment, is the finding.",
+        "<strong><code>chain_id</code> of 0.</strong> One signature, every supporting chain, possibly different code at that address on each one. A legitimate wallet signs for the chain you are on.",
+        "<strong>Someone else paying the gas.</strong> Sponsorship is a real feature, but it also removes the pause where you would normally think.",
+        "<strong>Upgrade framing with urgency.</strong> Migrate your account, enable gasless mode, re-activate to keep access. Real wallet upgrades do not arrive as a deadline from a site you just found.",
+      ],
+      bestPracticesTitle: "Habits that hold",
+      bestPractices: [
+        "<strong>Delegate only to code your wallet vendor ships.</strong> A 7702 delegation should come from your wallet's own upgrade flow, to a contract it names, not from a dapp that wants to improve your account.",
+        "<strong>Refuse <code>chain_id</code> 0.</strong> Sign chain-specific authorizations. If a site insists on zero, that is your answer.",
+        "<strong>Know how to read your own delegation.</strong> Check your account's code for <code>0xef0100</code>; make it part of the same routine as checking approvals, because approval checkers do not cover this.",
+        "<strong>Keep a clean signer.</strong> Hold long-term assets in an account that never signs on sites at all, so an upgrade prompt never reaches the keys that matter.",
+        "<strong>Slow down on requests with nothing to read.</strong> A request where every field looks normal and no field names a limit deserves more time, not less.",
+      ],
+      compromisedTitle: "If you have already signed one",
+      compromisedSteps: [
+        "Delegate to the zero address immediately to clear your account's code, and confirm afterwards that the code is empty.",
+        "Repeat it on every 7702 chain if the authorization you signed had chain_id 0.",
+        "Move remaining assets to an account that has never signed a 7702 authorization — and move them first if the balance is worth more than the gas.",
+        "Revoke token approvals the delegate may have created while it controlled the account, and keep watching the account after it looks clean, because a delegation that sat idle once can sit idle again.",
+      ],
+    },
   },
   aiFakeDownloadAds: {
     title: "🍺 Fake Download Ads 🍺",

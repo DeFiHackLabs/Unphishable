@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420">
+  <!-- Diagram: how an EIP-7702 authorization turns a plain account into a delegated one. Training artwork. -->
+  <defs>
+    <style>
+      .ui { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
+      .mono { font-family: ui-monospace, 'SF Mono', Menlo, monospace; }
+    </style>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#5f6368"/>
+    </marker>
+  </defs>
+  <rect width="800" height="420" fill="#ffffff"/>
+
+  <!-- BEFORE -->
+  <text x="40" y="34" class="ui" font-size="12" font-weight="700" fill="#80868b">BEFORE</text>
+  <rect x="40" y="46" width="250" height="96" rx="8" fill="#f8f9fa" stroke="#dadce0"/>
+  <text x="60" y="72" class="ui" font-size="13" font-weight="600" fill="#202124">Your account</text>
+  <text x="60" y="92" class="mono" font-size="12" fill="#5f6368">0xA1b2…9F3c</text>
+  <rect x="60" y="104" width="210" height="24" rx="4" fill="#e6f4ea"/>
+  <text x="72" y="120" class="mono" font-size="11.5" fill="#137333">code = (empty)</text>
+  <text x="40" y="162" class="ui" font-size="11.5" fill="#5f6368">A plain key-controlled account. Calls to it</text>
+  <text x="40" y="178" class="ui" font-size="11.5" fill="#5f6368">run no code at all.</text>
+
+  <!-- THE SIGNATURE -->
+  <line x1="300" y1="94" x2="376" y2="94" stroke="#5f6368" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="306" y="196" width="470" height="92" rx="8" fill="#fef7e0" stroke="#f9e3a2"/>
+  <text x="326" y="222" class="ui" font-size="12.5" font-weight="700" fill="#b06000">You sign one authorization — transaction type 0x04</text>
+  <text x="326" y="246" class="mono" font-size="12" fill="#5f6368">[ chain_id , address , nonce , y_parity , r , s ]</text>
+  <text x="326" y="270" class="ui" font-size="11.5" fill="#b06000">No amount. No token. No expiry. Anyone may submit it and pay the gas.</text>
+  <line x1="420" y1="196" x2="420" y2="150" stroke="#5f6368" stroke-width="2" stroke-dasharray="4 3" marker-end="url(#arrow)"/>
+
+  <!-- AFTER -->
+  <text x="386" y="34" class="ui" font-size="12" font-weight="700" fill="#80868b">AFTER</text>
+  <rect x="386" y="46" width="250" height="96" rx="8" fill="#f8f9fa" stroke="#dadce0"/>
+  <text x="406" y="72" class="ui" font-size="13" font-weight="600" fill="#202124">The same account</text>
+  <text x="406" y="92" class="mono" font-size="12" fill="#5f6368">0xA1b2…9F3c</text>
+  <rect x="406" y="104" width="210" height="24" rx="4" fill="#fce8e6"/>
+  <text x="418" y="120" class="mono" font-size="11" fill="#c5221f">code = 0xef0100 ‖ 0x9f2c…A41e</text>
+
+  <!-- DELEGATE -->
+  <line x1="646" y1="94" x2="686" y2="94" stroke="#5f6368" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="646" y="140" width="114" height="2" fill="none"/>
+  <rect x="646" y="46" width="114" height="96" rx="8" fill="#0b1f3a"/>
+  <text x="703" y="78" text-anchor="middle" class="ui" font-size="11.5" font-weight="700" fill="#ffffff">Delegate</text>
+  <text x="703" y="96" text-anchor="middle" class="mono" font-size="10" fill="#9fb3cc">0x9f2c…A41e</text>
+  <text x="703" y="118" text-anchor="middle" class="ui" font-size="10" fill="#9fb3cc">its code runs</text>
+  <text x="703" y="131" text-anchor="middle" class="ui" font-size="10" fill="#9fb3cc">as your account</text>
+
+  <text x="442" y="162" class="ui" font-size="11.5" fill="#c5221f">Every call to your address now executes</text>
+  <text x="442" y="178" class="ui" font-size="11.5" fill="#c5221f">the delegate's code, with your authority.</text>
+
+  <!-- REVOKE -->
+  <line x1="40" y1="320" x2="760" y2="320" stroke="#e8eaed" stroke-width="1"/>
+  <text x="40" y="348" class="ui" font-size="12" font-weight="700" fill="#80868b">UNDOING IT</text>
+  <rect x="40" y="360" width="720" height="38" rx="6" fill="#e8f0fe" stroke="#c6dafc"/>
+  <text x="58" y="384" class="ui" font-size="12" fill="#174ea6">Sign a new authorization with address =</text>
+  <text x="306" y="384" class="mono" font-size="12" fill="#174ea6">0x0000…0000</text>
+  <text x="400" y="384" class="ui" font-size="12" fill="#174ea6">· no delegation indicator is written, so the code is cleared.</text>
+</svg>

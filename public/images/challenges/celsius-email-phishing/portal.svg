@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <!-- Mock phishing claims portal. Simulation artwork for a security training challenge. Domains are defanged. -->
+  <defs>
+    <style>
+      .ui { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
+      .mono { font-family: ui-monospace, 'SF Mono', Menlo, monospace; }
+    </style>
+  </defs>
+  <rect width="800" height="500" fill="#ffffff"/>
+
+  <!-- Browser chrome -->
+  <rect width="800" height="40" fill="#dee1e6"/>
+  <circle cx="18" cy="20" r="6" fill="#ff5f57"/>
+  <circle cx="38" cy="20" r="6" fill="#febc2e"/>
+  <circle cx="58" cy="20" r="6" fill="#28c840"/>
+  <rect x="82" y="8" width="300" height="26" rx="8" fill="#ffffff"/>
+  <text x="96" y="25" class="ui" font-size="11.5" fill="#3c4043">Celsius Claim Release</text>
+  <rect x="0" y="40" width="800" height="34" fill="#f1f3f4"/>
+  <rect x="82" y="47" width="636" height="22" rx="11" fill="#ffffff"/>
+  <path d="M96 62 v-5 a4 4 0 0 1 8 0 v5" fill="none" stroke="#5f6368" stroke-width="1.4"/>
+  <rect x="94" y="56" width="12" height="8" rx="1.6" fill="#5f6368"/>
+  <text x="114" y="62" class="mono" font-size="11.5" fill="#202124">hxxps://claims-stretto[.]com/release/CEL-8841</text>
+  <text x="430" y="62" class="ui" font-size="10.5" fill="#9aa0a6">(redirected from case-stretto[.]com)</text>
+
+  <!-- Page header -->
+  <rect x="0" y="74" width="800" height="52" fill="#0b1f3a"/>
+  <circle cx="44" cy="100" r="13" fill="#ffffff"/>
+  <text x="44" y="105" text-anchor="middle" class="ui" font-size="14" font-weight="700" fill="#0b1f3a">C</text>
+  <text x="68" y="97" class="ui" font-size="14" font-weight="700" fill="#ffffff">Celsius Network LLC</text>
+  <text x="68" y="113" class="ui" font-size="10.5" fill="#9fb3cc">Chapter 11 Claim Release · Case No. 22-10964</text>
+  <text x="740" y="104" text-anchor="middle" class="ui" font-size="11" fill="#9fb3cc">Step 2 of 3</text>
+
+  <!-- Claim summary -->
+  <rect x="48" y="150" width="340" height="104" rx="6" fill="#f8f9fa" stroke="#e8eaed"/>
+  <text x="68" y="174" class="ui" font-size="11" fill="#80868b">VERIFIED CLAIM</text>
+  <text x="68" y="198" class="ui" font-size="12.5" fill="#3c4043">Claim ID</text>
+  <text x="200" y="198" class="mono" font-size="12.5" fill="#202124">CEL-8841</text>
+  <text x="68" y="220" class="ui" font-size="12.5" fill="#3c4043">Claimant</text>
+  <text x="200" y="220" class="mono" font-size="12.5" fill="#202124">you@example.com</text>
+  <text x="68" y="242" class="ui" font-size="12.5" fill="#3c4043">Amount due</text>
+  <text x="200" y="242" class="ui" font-size="14" font-weight="700" fill="#137333">$14,207.63</text>
+
+  <!-- Countdown -->
+  <rect x="408" y="150" width="344" height="104" rx="6" fill="#fce8e6" stroke="#f6c7c3"/>
+  <text x="580" y="180" text-anchor="middle" class="ui" font-size="11.5" font-weight="600" fill="#c5221f">RELEASE WINDOW EXPIRES IN</text>
+  <text x="580" y="218" text-anchor="middle" class="mono" font-size="28" font-weight="700" fill="#c5221f">06 : 23 : 41</text>
+  <text x="580" y="238" text-anchor="middle" class="ui" font-size="10.5" fill="#a50e0e">days : hours : minutes</text>
+
+  <!-- Form -->
+  <text x="48" y="292" class="ui" font-size="12" font-weight="600" fill="#3c4043">One-time passcode (from your email)</text>
+  <rect x="48" y="300" width="200" height="32" rx="4" fill="#ffffff" stroke="#dadce0"/>
+  <text x="62" y="321" class="mono" font-size="14" fill="#202124">419-882</text>
+  <text x="258" y="321" class="ui" font-size="12" fill="#137333">✅ verified</text>
+
+  <!-- Wallet connect -->
+  <rect x="48" y="350" width="704" height="92" rx="6" fill="#ffffff" stroke="#dadce0"/>
+  <text x="68" y="378" class="ui" font-size="13" font-weight="600" fill="#202124">Connect the wallet to receive your distribution</text>
+  <text x="68" y="398" class="ui" font-size="11.5" fill="#5f6368">Funds are released on-chain within minutes of connecting. No gas fee is required.</text>
+  <rect x="68" y="408" width="150" height="26" rx="4" fill="#f6851b"/>
+  <text x="143" y="425" text-anchor="middle" class="ui" font-size="11.5" font-weight="600" fill="#ffffff">🦊  MetaMask</text>
+  <rect x="230" y="408" width="170" height="26" rx="4" fill="#3b99fc"/>
+  <text x="315" y="425" text-anchor="middle" class="ui" font-size="11.5" font-weight="600" fill="#ffffff">WalletConnect</text>
+  <rect x="412" y="408" width="140" height="26" rx="4" fill="#ffffff" stroke="#dadce0"/>
+  <text x="482" y="425" text-anchor="middle" class="ui" font-size="11.5" font-weight="600" fill="#3c4043">Coinbase Wallet</text>
+
+  <text x="48" y="468" class="ui" font-size="10" fill="#9aa0a6">Celsius Claims Administration · Stretto is the court-appointed claims agent in this case</text>
+  <text x="48" y="482" class="ui" font-size="10" fill="#9aa0a6">© 2026 All rights reserved · Privacy · Terms</text>
+</svg>

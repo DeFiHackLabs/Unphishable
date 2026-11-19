@@ -1,4 +1,24 @@
-export const challenges = [
+// Declared as type aliases, not interfaces: only aliases get TypeScript's
+// implicit index signature, which ChallengeCompletionModal relies on when it
+// reads title[language].
+type LocalizedText = {
+  en: string;
+  "zh-hant": string;
+  "zh-hans": string;
+};
+
+export type Challenge = {
+  no: string;
+  name: string;
+  difficulty: string;
+  title: LocalizedText;
+  description: LocalizedText;
+  link: string;
+  /** Topic tags for the category filter on /challenges. "ai" powers the AI Threats filter. */
+  tags?: string[];
+};
+
+export const challenges: Challenge[] = [
   {
     no: "0x0001",
     name: "wallet-setup-guide",
@@ -120,7 +140,6 @@ export const challenges = [
       "zh-hans": "学习识别承诺不切实际回报并要求无限代币授权的可疑质押平台。",
     },
     link: "/challenges/fake-staking-contract",
-    "zh-hans": "假冒质押合约",
   },
   {
     no: "0x0008",
@@ -653,7 +672,7 @@ export const challenges = [
       "zh-hans":
         "学习识别冒充加密货币恢复服务的钓鱼邮件，这些邮件试图窃取您的凭证。",
     },
-    link: "/challenges/celsius-email-phishng",
+    link: "/challenges/celsius-email-phishing",
   },
   {
     no: "0x0039",
@@ -675,6 +694,7 @@ export const challenges = [
     no: "0x0040",
     name: "ai-fake-download-ads",
     difficulty: "Beginner",
+    tags: ["ai"],
     title: {
       en: "Fake Dev Tool Download Ads",
       "zh-hant": "假冒開發工具下載廣告",
@@ -693,6 +713,7 @@ export const challenges = [
     no: "0x0041",
     name: "ai-ide-repo-autorun",
     difficulty: "Advanced",
+    tags: ["ai"],
     title: {
       en: "AI IDE Repo Autorun Trap",
       "zh-hant": "AI IDE 專案自動執行陷阱",
@@ -709,6 +730,7 @@ export const challenges = [
     no: "0x0042",
     name: "malicious-mcp-server",
     difficulty: "Advanced",
+    tags: ["ai"],
     title: {
       en: "Malicious MCP Server",
       "zh-hant": "惡意 MCP 伺服器",
@@ -727,6 +749,7 @@ export const challenges = [
     no: "0x0043",
     name: "ai-browser-agent-injection",
     difficulty: "Intermediate",
+    tags: ["ai"],
     title: {
       en: "AI Browser Agent Prompt Injection",
       "zh-hant": "AI 瀏覽器代理提示詞注入",
@@ -745,6 +768,7 @@ export const challenges = [
     no: "0x0044",
     name: "slopsquatting-dependency",
     difficulty: "Intermediate",
+    tags: ["ai"],
     title: {
       en: "Slopsquatting: The AI-Hallucinated Package",
       "zh-hant": "Slopsquatting：AI 幻覺出來的套件",
@@ -761,6 +785,7 @@ export const challenges = [
     no: "0x0045",
     name: "ai-deepfake-call-approval",
     difficulty: "Intermediate",
+    tags: ["ai"],
     title: {
       en: "AI Deepfake Call Approval",
       "zh-hant": "AI Deepfake 視訊通話騙簽",
