@@ -870,4 +870,23 @@ export const challenges: Challenge[] = [
     },
     link: "/challenges/session-key-phishing",
   },
+  {
+    no: "0x0050",
+    name: "mcp-silent-tool-update",
+    difficulty: "Advanced",
+    title: {
+      en: "The MCP Update You Never Approved",
+      "zh-hant": "你從沒核准過的 MCP 更新",
+      "zh-hans": "你从没批准过的 MCP 更新",
+    },
+    description: {
+      en: "You read this MCP server's tool manifest line by line, and it was genuinely clean. Six days later it quietly served a different one. Learn why reading the manifest at install time is necessary but not sufficient, and what pinning actually buys you.",
+      "zh-hant":
+        "你逐行讀過這台 MCP 伺服器的工具 manifest，而它確實是乾淨的。六天後，它悄悄換成了另一份。學習為什麼「安裝時讀 manifest」是必要但不充分的，以及把版本釘住到底能保護你什麼。",
+      "zh-hans":
+        "你逐行读过这台 MCP 服务器的工具 manifest，而它确实是干净的。六天后，它悄悄换成了另一份。学习为什么“安装时读 manifest”是必要但不充分的，以及把版本固定下来到底能保护你什么。",
+    },
+    link: "/challenges/mcp-silent-tool-update",
+    tags: ["ai"],
+  },
 ];

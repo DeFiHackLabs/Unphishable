@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Simulation artwork: a generic MCP client's "connect this server" review dialog,
+     showing the full tool manifest of a fictional server at install time. Nothing
+     here is a real product, a real publisher or a real domain. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <rect x="0" y="0" width="800" height="500" fill="#ffffff"/>
+  <rect x="0.5" y="0.5" width="799" height="499" fill="none" stroke="#dadce0"/>
+
+  <!-- Title bar -->
+  <rect x="0" y="0" width="800" height="40" fill="#f8f9fa"/>
+  <line x1="0" y1="40" x2="800" y2="40" stroke="#dadce0"/>
+  <text x="24" y="26" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="15" font-weight="600" fill="#202124">Connect MCP server</text>
+  <path d="M762 16 L778 32 M778 16 L762 32" stroke="#5f6368" stroke-width="1.6" fill="none"/>
+
+  <!-- Server identity -->
+  <rect x="24" y="56" width="40" height="40" rx="8" fill="#e8f0fe"/>
+  <path d="M36 70 h16 M36 76 h16 M36 82 h10" stroke="#1a73e8" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+  <text x="76" y="76" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="19" font-weight="700" fill="#202124">Threadwise</text>
+  <rect x="192" y="60" width="62" height="21" rx="10" fill="#f1f3f4"/>
+  <text x="201" y="75" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="13" fill="#3c4043">v2.1.0</text>
+  <text x="76" y="95" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12.5" fill="#5f6368">threadwise[.]example · published by @threadwise-dev · 1 tool</text>
+
+  <line x1="24" y1="112" x2="776" y2="112" stroke="#e8eaed"/>
+
+  <text x="56" y="133" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="700" letter-spacing="0.8" fill="#5f6368">TOOLS THIS SERVER PROVIDES</text>
+  <text x="56" y="152" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="14" font-weight="700" fill="#202124">summarize_thread</text>
+
+  <!-- Hotspot "description": x=56 y=158 w=688 h=52 -->
+  <rect x="56" y="158" width="688" height="52" rx="6" fill="#f8f9fa" stroke="#e8eaed"/>
+  <text x="70" y="180" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="13" fill="#5f6368">"description": <tspan fill="#188038">"Summarise a long GitHub issue or pull request</tspan></text>
+  <text x="70" y="199" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="13" fill="#188038">thread into a short digest."</text>
+
+  <!-- Hotspot "schema": x=56 y=218 w=688 h=80 -->
+  <rect x="56" y="218" width="688" height="80" rx="6" fill="#f8f9fa" stroke="#e8eaed"/>
+  <text x="70" y="240" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="13" fill="#5f6368">"inputSchema": {</text>
+  <text x="86" y="259" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="13" fill="#3c4043">"repo":  { "type": "string" },</text>
+  <text x="86" y="278" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="13" fill="#3c4043">"issue": { "type": "number" }</text>
+  <text x="70" y="293" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="13" fill="#5f6368">}</text>
+
+  <!-- Hotspot "capability": x=56 y=306 w=688 h=44 -->
+  <rect x="56" y="306" width="688" height="44" rx="6" fill="#f8f9fa" stroke="#e8eaed"/>
+  <text x="70" y="333" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="13" fill="#5f6368">"capabilities": { "tools": { <tspan fill="#c5221f">"listChanged": true</tspan> } }</text>
+
+  <!-- Hotspot "autoUpdate": x=56 y=358 w=688 h=44 -->
+  <rect x="56" y="358" width="688" height="44" rx="6" fill="#ffffff" stroke="#e8eaed"/>
+  <text x="70" y="378" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13.5" fill="#202124">Keep this server up to date automatically</text>
+  <text x="70" y="393" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11.5" fill="#5f6368">Recommended — you will always have the latest tools</text>
+  <rect x="686" y="368" width="44" height="24" rx="12" fill="#1a73e8"/>
+  <circle cx="718" cy="380" r="9" fill="#ffffff"/>
+
+  <!-- Dialog actions (not inspectable) -->
+  <line x1="24" y1="414" x2="776" y2="414" stroke="#e8eaed"/>
+  <rect x="520" y="430" width="100" height="38" rx="6" fill="#ffffff" stroke="#dadce0"/>
+  <text x="552" y="454" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="600" fill="#3c4043">Cancel</text>
+  <rect x="636" y="430" width="108" height="38" rx="6" fill="#1a73e8"/>
+  <text x="662" y="454" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="600" fill="#ffffff">Connect</text>
+</svg>

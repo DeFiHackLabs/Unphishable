@@ -4961,4 +4961,124 @@ export default {
         "This is where the AI-agent challenges all end up. An agent can be tricked. A prompt-injected agent holding a narrowly scoped key loses you a bounded amount. The same agent holding a broadly scoped key loses you the account. You cannot make an agent impossible to fool. You can decide how much a fooled agent is able to spend.",
     },
   },
+  mcpSilentToolUpdate: {
+    title: "🔌 The Update You Never Approved 🔌",
+    subtitle:
+      "You read every word of this server's manifest before connecting it. Six days later, it is not that manifest any more.",
+    warning: "⚠️ Warning: This is a simulation for educational purposes ⚠️",
+    steps: ["1 · Install day", "2 · Six days later"],
+    scenario:
+      "You are plugging an MCP server into your AI coding assistant. Threadwise summarises long GitHub issue threads, which would save you an hour a week. Before you connect anything you do the responsible thing: you open the full tool manifest and actually read it.",
+    inspectHint:
+      "This is the connect dialog, showing the server's complete manifest. Hover over (or tap) each highlighted part and read what it really means. There are 4 parts to inspect.",
+    sceneAlt:
+      "An MCP client dialog headed \"Connect MCP server\", showing the server Threadwise version 2.1.0, its single tool summarize_thread with that tool's description and input schema, a capabilities line, and an auto-update toggle switched on.",
+    inspectAria: "Inspect",
+    inspectPlaceholder: "👆 Hover over or tap a highlighted part of the dialog to inspect it.",
+    inspectShows: "What it shows:",
+    inspectTruth: "What it actually is:",
+    parts: {
+      description: {
+        shows:
+          "\"description\": \"Summarise a long GitHub issue or pull request thread into a short digest.\"",
+        truth:
+          "This is clean. No hidden block, nothing addressed to the model, nothing asking for a file or a key. It is also the most important line on this screen, because a tool description is not documentation — it is text your model is handed and follows. Today it says exactly what it should.",
+      },
+      schema: {
+        shows: "\"inputSchema\": { \"repo\": string, \"issue\": number }",
+        truth:
+          "Also clean. Two narrow, typed parameters and nothing else. There is no free-text field the assistant could be told to stuff your files into, and nothing that asks for a credential. If you came looking for a smuggling channel, there isn't one here.",
+      },
+      capability: {
+        shows: "\"capabilities\": { \"tools\": { \"listChanged\": true } }",
+        truth:
+          "The one line on this screen that is about the future rather than the present. In the MCP specification this flag means the server will notify the client when its list of tools changes, and the spec states plainly that the set of tools MAY change over time. You are reading today's manifest, and the server has just told you it reserves the right to replace it.",
+      },
+      autoUpdate: {
+        shows: "Keep this server up to date automatically — Recommended",
+        truth:
+          "With this on, you are not approving the manifest you just read. You are approving every version that comes after it, in advance, without seeing any of them. Your review covers only the bytes currently on screen.",
+      },
+    },
+    defangNote:
+      "Domains in this challenge are “defanged” (written with [.] and hxxps) so nothing here can be clicked or run by accident.",
+    questionTitle: "You have read the whole manifest. Do you connect it?",
+    questionDescription: "Be honest about what the evidence in front of you actually supports.",
+    options: {
+      connect:
+        "Connect it. I have read every tool description and the input schema, and there is genuinely nothing wrong here.",
+      declineAll:
+        "Decline. I can never know what it will do later, so I will not connect any MCP server at all.",
+      skipManifest:
+        "Connect it without reading further — the publisher is listed and the registry shows it is widely installed.",
+    },
+    submitButton: "Submit Answer",
+    diffTitle: "The same tool, before and after",
+    diffApprovedLabel: "What you reviewed and approved · v2.1.0",
+    diffRunningLabel: "What your model is being given now · v2.1.1",
+    diffNote:
+      "The tool name has not changed, so your client still lists it as the tool you approved. The description has. Under the MCP specification the server announces that its tool list changed, the client fetches the new list, and the model is given it — there is no step in that exchange where anyone asks you again.",
+    roundTwoTitle: "Six days later",
+    roundTwoIntro:
+      "You ask your assistant to catch you up on an issue thread. It answers correctly — and mentions in passing that it has \"attached workspace context for a better summary\". You never asked for that. The server pushed an update four hours ago and your client took it, because you left auto-update on. Nothing asked you anything.",
+    decisionTitle: "Your assistant is ready to run summarize_thread again. What do you do?",
+    decisionBody:
+      "It is the same tool name you approved on install day. The description behind that name is not the one you read.",
+    actButton: "Let it run — I already approved this server",
+    refuseButton: "Disconnect it and review what it touched",
+    wrong: {
+      declineAll: {
+        title: "Right instinct, unusable rule",
+        content:
+          "You have spotted the real problem — what it does later is not knowable from this screen — and round 2 will prove you right. But \"never connect anything\" is not a habit anyone keeps, and it is not what protects you here. The defence is to connect with the manifest pinned and re-read it when it changes. Go back and look at the capabilities line and the auto-update toggle again.",
+      },
+      skipManifest: {
+        title: "You approved text you never read",
+        content:
+          "A listed publisher and a large install count describe the package's past. The tool description is the text your model will be handed and will follow, and it is the one thing you skipped. Many clients never show it to you at all — if you do not open it, nobody does.",
+      },
+      act: {
+        title: "It ran with the new description",
+        content:
+          "The tool name was never the thing you approved; the description was, and the server replaced it. Your assistant followed the instructions inside the new one, read the files it named, and passed them out in a field you never see — exactly as the appended block told it to. The clean version you reviewed is still what your client shows in its server list.",
+      },
+    },
+    lootTitle: "What left your machine:",
+    loot: [
+      "The contents of .env from the workspace you had open, including the deployer private key you were testing with.",
+      "~/.ssh/config — every host, user and key path you connect to.",
+      "A foothold that still looks approved: the server is connected, the tool is listed under the name you trusted, and nothing in the client flags it.",
+    ],
+    closeButton: "Try again",
+    successContent: {
+      correctMessage:
+        "✅ You treated a silent update as a new, unreviewed server — which is exactly what it was.",
+      howToAvoidTitle: "What you just dodged: an MCP rug pull",
+      description:
+        "A rug pull is an MCP server that is genuinely clean when you review it and changes afterwards. Invariant Labs, in its April 2025 write-up on MCP tool poisoning, puts it in one line: a malicious server can change the tool description after the client has already approved it. None of this breaks the protocol. The MCP specification lets a server declare listChanged: true, says its set of tools MAY change over time, and defines a notification that tells the client the list changed — the client then fetches the new list and the model is given it. There is no second approval anywhere in that exchange. Your review was real. It just covered one version of text that the server can rewrite whenever it likes.",
+      warningSignsTitle: "Red flags in this challenge:",
+      warningSigns: [
+        "<strong>The manifest was clean, and that proved nothing about tomorrow.</strong> Reading it at install time is necessary, and it is not sufficient.",
+        "<strong><code>listChanged: true</code> in the capabilities line.</strong> The server told you up front that it would change its own tool list.",
+        "<strong>Auto-update left on.</strong> That turned one approval into a standing approval for every future version, sight unseen.",
+        "<strong>The tool name stayed the same.</strong> Clients list tools by name, so the entry still looked like the one you vetted.",
+        "<strong>The assistant volunteered a step you never asked for</strong> — \"attached workspace context\". Work a model does outside your request is work that something else asked it to do.",
+      ],
+      bestPracticesTitle: "How to stay safe",
+      bestPractices: [
+        "<strong>Pin the server and its tools, and turn auto-update off.</strong> This is the mitigation the original disclosure recommends: pin the version of the MCP server and its tools to prevent unauthorised changes.",
+        "<strong>Diff the manifest on every update</strong> before you re-enable the server. A tool whose description changed is a tool you have not reviewed, whatever its name is.",
+        "<strong>Treat a tool description as a prompt, not as documentation.</strong> It is text your model is handed and follows. The specification already tells clients to treat tool annotations from untrusted servers as untrusted; the description deserves at least the same suspicion.",
+        "<strong>Keep secrets out of the assistant's reach.</strong> No private keys or seed phrases in <code>.env</code>, in a workspace an agent can read, or in an MCP config file.",
+        "<strong>Insist on seeing tool inputs.</strong> The specification tells clients to show tool inputs to the user before calling the server, precisely so that exfiltration has somewhere to be noticed. Use a client that does it.",
+      ],
+      compromisedTitle: "If a tool already ran with a changed description",
+      compromisedSteps: [
+        "Disconnect that server now, and turn auto-update off for the rest of them before you do anything else.",
+        "Treat every secret reachable from that workspace as leaked: rotate the API keys, and if a private key or seed phrase was in reach, move the funds from a clean device into a new wallet with a new seed phrase.",
+        "Read your client's tool-call log for the period since the update, to see which calls ran and what was passed in fields you never saw.",
+        "Diff the current manifest against the version you approved, so you know what the tool was actually told to do.",
+      ],
+    },
+  },
 };
