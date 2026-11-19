@@ -5,12 +5,14 @@ import ZoomMeetingInterface from "@/app/challenges/zoom-phishing/ZoomMeetingInte
 //import RemoteControlRequest from "@/app/challenges/zoom-phishing/RemoteControlRequest";
 //import PhishingExplanation from "@/app/challenges/zoom-phishing/PhishingExplanation";
 import SocialMediaInterface from "@/app/challenges/zoom-phishing/SocialMediaInterface";
+import DynamicMetadata from "@/app/components/DynamicMetadata";
 import CalendlyInterface from "@/app/challenges/zoom-phishing/CalendlyInterface";
 
 export default function ZoomPhishingSimulation() {
   //const [showRemoteRequest, setShowRemoteRequest] = useState(false);
   //const [showExplanation, setShowExplanation] = useState(false);
-  const [authorized, setAuthorized] = useState(false);
+  // Nothing sets this any more - the flow that did is commented out below.
+  const [authorized] = useState(false);
 
   // 追蹤用戶當前所處的階段
   const [currentStage, setCurrentStage] = useState("social"); // social -> calendly -> zoom
@@ -62,6 +64,7 @@ export default function ZoomPhishingSimulation() {
 
   return (
     <div className="min-h-screen bg-gray-900 flex flex-col">
+      <DynamicMetadata pageKey="zoom-phishing" />
       <div className="container mx-auto px-4 py-8 flex-1">
         {currentStage === "social" && (
           <div className="bg-white rounded-lg overflow-hidden shadow-2xl border border-gray-300 relative">

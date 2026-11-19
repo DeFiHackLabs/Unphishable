@@ -21,6 +21,13 @@ export default function TopBar() {
   const mobileMenuRef = useRef<HTMLDivElement>(null);
 
   const { theme, setTheme } = useTheme();
+  // next-themes resolves `theme` from localStorage on the client's first render
+  // but leaves it undefined on the server. Anything that depends on it has to
+  // wait for mount, or the two passes disagree and hydration fails.
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => {
+    setMounted(true);
+  }, []);
   // 處理主題切換
   const toggleDarkMode = () => {
     setTheme(theme === 'dark' ? 'light' : 'dark');
@@ -100,9 +107,6 @@ export default function TopBar() {
       document.removeEventListener('mousedown', handleClickOutside);
     };
   }, [isMobileMenuOpen]);
-  if (!theme) {
-    return null;
-  }
   return (
     <div className={topbarStyle}>
       <div className="flex items-center">
@@ -180,7 +184,7 @@ export default function TopBar() {
                   className="theme-toggle flex items-center justify-center text-white"
                   onClick={toggleDarkMode}
                 >
-                  {theme === 'dark' ? <FaSun className="text-lg" /> : <FaMoon className="text-lg" />}
+                  {mounted && (theme === 'dark' ? <FaSun className="text-lg" /> : <FaMoon className="text-lg" />)}
                 </button>
               </div>
 
@@ -237,7 +241,7 @@ export default function TopBar() {
           className="theme-toggle hidden md:flex items-center justify-center text-white hover:text-gray-300"
           onClick={toggleDarkMode}
         >
-          {theme === 'dark' ? <FaSun className="text-lg" /> : <FaMoon className="text-lg" />}
+          {mounted && (theme === 'dark' ? <FaSun className="text-lg" /> : <FaMoon className="text-lg" />)}
         </button>
 
         <div className="connect-button hidden md:block">

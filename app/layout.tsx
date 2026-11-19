@@ -26,8 +26,12 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  // next-themes sets data-theme on <html> via an inline script before React
+  // hydrates, so the server markup and the first client render differ by that
+  // attribute. suppressHydrationWarning silences that one element's attribute
+  // diff; it does not hide mismatches anywhere else in the tree.
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <WagmiProvider config={config}>
         <QueryClientProvider client={queryClient}>
           <body>

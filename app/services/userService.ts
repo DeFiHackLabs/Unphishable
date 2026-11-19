@@ -26,11 +26,24 @@ interface LoginResponse {
 
 export class UserService extends BaseApiService {
   private static instance: UserService;
-  private authorizedApi: typeof ky;
+
+  // Created on first use, never during module evaluation. This module sits in the
+  // cycle apiService -> authStore -> userStore -> userService -> apiService, so
+  // calling createAuthorizedRequest() from the constructor ran while apiService
+  // was still initialising and threw "Cannot access 'createAuthorizedRequest'
+  // before initialization".
+  private lazyAuthorizedApi?: typeof ky;
 
   private constructor() {
     super();
-    this.authorizedApi = createAuthorizedRequest();
+  }
+
+  private get authorizedApi(): typeof ky {
+    return (this.lazyAuthorizedApi ??= createAuthorizedRequest());
+  }
+
+  private set authorizedApi(value: typeof ky) {
+    this.lazyAuthorizedApi = value;
   }
 
   public static getInstance(): UserService {
