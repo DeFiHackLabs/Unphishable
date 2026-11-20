@@ -59,6 +59,7 @@ export default {
     challengeCompletion: "Challenge Completion， go to challenge list",
     calculating: "Calculating...",
     backToList: "Back to List",
+    guestNotice: "Guest mode: saved in this browser only, no points. Connect a wallet and replay to get on the leaderboard.",
   },
   googleSpoofedPhishing: {
     title: "Google Spoofed Phishing Challenge",
@@ -1757,6 +1758,16 @@ export default {
       right2: "All Rights Reserved",
       //footer: "",
     },
+  },
+  guestMode: {
+    title: "Guest mode — play now, no wallet needed",
+    description: "Guest progress stays in this browser and earns no points. After connecting MetaMask, replay a challenge to earn points and climb the leaderboard.",
+    cta: "Connect wallet to earn points →",
+    walletRequired: "This challenge needs a connected MetaMask wallet",
+    walletBadge: "Wallet required",
+    progress: "You've completed {count} challenge(s) as a guest",
+    loginNotice: "You played {count} challenge(s) as a guest. Those don't count for points; replay them to get them recorded.",
+    dismiss: "Got it",
   },
   challenges: {
     all: "All",

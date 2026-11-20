@@ -8,6 +8,7 @@ import TopBar from '@/app/components/index/TopBar';
 import Banner from '@/app/components/index/Banner';
 import Footer from '@/app/components/index/Footer';
 import ChallengeCard from '@/app/components/index/ChallengeCard';
+import GuestModeBanner from '@/app/components/GuestModeBanner';
 import styles from '@/app/styles/ChallengesPage.module.css';
 
 // 這是一個搜尋參數加載器組件，將實際邏輯移至此處
@@ -105,6 +106,8 @@ function ChallengesContent() {
             {t.home.contributions}
           </button>
         </div>
+
+        <GuestModeBanner />
 
         <div className="flex justify-between items-center md:flex-row flex-col gap-4">
           <div className={`${styles.filterContainer}`}>

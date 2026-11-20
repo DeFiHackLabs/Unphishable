@@ -5,6 +5,8 @@ import styles from '@/app/styles/ChallengeCard.module.css';
 import { IoShareSocialOutline } from "react-icons/io5";
 import { useState } from 'react';
 import ShareModal from '@/app/components/ShareModal';
+import { useIsGuest } from '@/app/components/GuestModeBanner';
+import { GoLock } from 'react-icons/go';
 
 interface ChallengeProps {
   name?: string;
@@ -21,10 +23,12 @@ interface ChallengeProps {
     'zh-hans': string;
   };
   link: string;
+  requiresWallet?: boolean;
 }
 
-export default function ChallengeCard({ name, difficulty, no, title, description, link }: ChallengeProps) {
+export default function ChallengeCard({ name, difficulty, no, title, description, link, requiresWallet }: ChallengeProps) {
   const router = useRouter();
+  const isGuest = useIsGuest();
   const { t, language } = useLanguage();
   const [isShareModalOpen, setIsShareModalOpen] = useState(false);
   const [, setCloseShareModal] = useState(false);
@@ -35,6 +39,17 @@ export default function ChallengeCard({ name, difficulty, no, title, description
     <>
       <div className={`${styles.challengeCard} flex flex-col`}>
         <span className={styles.tag}>NO.{no}</span>
+        {/* 0x0001 是連錢包的入門教學，訪客本來就能進，不標 */}
+        {isGuest && requiresWallet && name !== 'wallet-setup-guide' && (
+          <span
+            data-testid="wallet-required-badge"
+            className="right-3 top-3 flex items-center gap-1 rounded-full bg-black px-3 py-1 text-xs text-[#c4ff41]"
+            // .challengeCard > * 會強制 position: relative，蓋過 Tailwind 的 absolute
+            style={{ position: 'absolute' }}
+          >
+            <GoLock /> {t.guestMode.walletBadge}
+          </span>
+        )}
 
         <div className='ml-4 mt-5 flex-1 flex flex-col'>
           <div className="flex-1">

@@ -6,6 +6,8 @@ import { useRouter } from 'next/navigation';
 import { useLanguage } from '@/app/contexts/LanguageContext';
 import { useChallengeStore } from '@/app/stores/challengeStore';
 import { useUserStore } from '../stores/userStore';
+import { useGuestProgressStore } from '@/app/stores/guestProgressStore';
+import { useIsGuest } from '@/app/components/GuestModeBanner';
 import { challengeService } from '@/app/services/challengeService';
 import { challenges } from '@/app/data/challenges';
 import { FiCheckCircle } from "react-icons/fi";
@@ -29,6 +31,7 @@ const ChallengeCompletionModal = ({
   const { theme } = useTheme();
   const router = useRouter();
   const { t, language } = useLanguage();
+  const isGuest = useIsGuest();
   const [isMounted, setIsMounted] = useState(false);
   const [isSave, setIsSave] = useState(false);
   const [nextChallenge, setNextChallenge] = useState<{
@@ -54,16 +57,24 @@ const ChallengeCompletionModal = ({
         const currentIndex = challenges.findIndex(c => c.name === challengeKey);
         setChallengeInfo(challenges[currentIndex]);
         setIsSave(true);
+        // 訪客模式：沒登入就不送分，也不推薦需要錢包的下一關。
+        // 判斷要跟 useIsGuest 一致：有 token 但 profile 還沒載入的人仍算登入，照常送分
+        const guest = !useUserStore.getState().profile && !localStorage.getItem('token');
         try {
-          // 提交挑戰
-          await challengeService.submitChallenge(challengeKey);
+          if (guest) {
+            // 訪客只記在這個瀏覽器，不計分
+            useGuestProgressStore.getState().markCompleted(challengeKey);
+          } else {
+            // 提交挑戰
+            await challengeService.submitChallenge(challengeKey);
 
-          // 立即更新挑戰狀態
-          const challengeStore = useChallengeStore.getState();
-          await challengeStore.getUserChallengesStatus();
-          if (challengeKey === 'wallet-setup-guide') {
-            const r = await useUserStore.getState().lastFetchAddress;
-            await useUserStore.getState().fetchProfile(r || '', true);
+            // 立即更新挑戰狀態
+            const challengeStore = useChallengeStore.getState();
+            await challengeStore.getUserChallengesStatus();
+            if (challengeKey === 'wallet-setup-guide') {
+              const r = await useUserStore.getState().lastFetchAddress;
+              await useUserStore.getState().fetchProfile(r || '', true);
+            }
           }
 
           // 啟動氣球動畫
@@ -72,7 +83,9 @@ const ChallengeCompletionModal = ({
           // }
           // 設置下一個挑戰
           if (currentIndex !== -1 && currentIndex < challenges.length - 1) {
-            setNextChallenge(challenges[currentIndex + 1]);
+            setNextChallenge(
+              challenges.slice(currentIndex + 1).find((c) => !guest || !c.requiresWallet) ?? challenges[0]
+            );
           } else {
             setNextChallenge(challenges[0]);
           }
@@ -151,11 +164,29 @@ const ChallengeCompletionModal = ({
                     <span className='mr-2'>{t.challengeCompletionModal?.challenge || '已通过'}</span>
                     <span className="font-semibold mx-2">NO.{challengeInfo.no}</span>
                   </p>
-                  <p className={`text-center ${theme === 'dark' ? `text-gray-300 ` : `text-gray-600`} my-4`}>
-                    {t.challengeCompletionModal?.earned || '获得'}
-                    <span className="font-semibold text-yellow-500 px-2">{currentChallengeInfo?.points}</span>
-                    {t.challengeCompletionModal?.experiencePoints || '经验值'}
-                  </p>
+                  {isGuest ? (
+                    <div className="text-center my-4">
+                      <p className={theme === 'dark' ? 'text-gray-300' : 'text-gray-600'}>
+                        {t.challengeCompletionModal.guestNotice}
+                      </p>
+                      <button
+                        data-testid="guest-connect-cta"
+                        onClick={() => {
+                          router.push('/challenges/wallet-setup-guide');
+                          onClose();
+                        }}
+                        className="mt-3 rounded-full border border-[#c4ff41] px-5 py-2 text-sm font-medium transition-colors hover:bg-[#c4ff41] hover:text-black"
+                      >
+                        {t.guestMode.cta}
+                      </button>
+                    </div>
+                  ) : (
+                    <p className={`text-center ${theme === 'dark' ? `text-gray-300 ` : `text-gray-600`} my-4`}>
+                      {t.challengeCompletionModal?.earned || '获得'}
+                      <span className="font-semibold text-yellow-500 px-2">{currentChallengeInfo?.points}</span>
+                      {t.challengeCompletionModal?.experiencePoints || '经验值'}
+                    </p>
+                  )}
                 </div>
               )}
             </div>

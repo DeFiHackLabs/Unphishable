@@ -59,6 +59,7 @@ export default {
     challengeCompletion: "挑战完成，回到挑战列表",
     calculating: "计算执行中...",
     backToList: "返回列表",
+    guestNotice: "访客模式：已记在这个浏览器，但不计分。连接钱包后重玩即可记入排行榜。",
   },
   googleSpoofedPhishing: {
     title: "谷歌钓鱼邮件挑战",
@@ -1560,6 +1561,16 @@ export default {
       right2: "保留所有权利",
       //footer: "",
     },
+  },
+  guestMode: {
+    title: "访客模式：不用连钱包，直接开玩",
+    description: "访客进度只存在这个浏览器，不会计分。连接 MetaMask 后需重玩，才会累积经验值、登上排行榜。",
+    cta: "连接钱包开始计分 →",
+    walletRequired: "这一关需要连接 MetaMask 钱包实际操作",
+    walletBadge: "需连接钱包",
+    progress: "你已用访客身份完成 {count} 关",
+    loginNotice: "你用访客身份玩过 {count} 关，这些不会计分，再玩一次即可记录。",
+    dismiss: "知道了",
   },
   challenges: {
     all: "全部",

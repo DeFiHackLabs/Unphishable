@@ -16,12 +16,15 @@ export type Challenge = {
   link: string;
   /** Topic tags for the category filter on /challenges. "ai" powers the AI Threats filter. */
   tags?: string[];
+  /** Needs a real connected wallet to play. Everything else is open to guests. */
+  requiresWallet?: boolean;
 };
 
 export const challenges: Challenge[] = [
   {
     no: "0x0001",
     name: "wallet-setup-guide",
+    requiresWallet: true,
     difficulty: "Beginner",
     title: {
       en: "Wallet Setup Guide",
@@ -58,6 +61,7 @@ export const challenges: Challenge[] = [
   {
     no: "0x0003",
     name: "permit-phishing",
+    requiresWallet: true,
     difficulty: "Beginner",
     title: {
       en: "USDC Approval Phishing",
@@ -76,6 +80,7 @@ export const challenges: Challenge[] = [
   {
     no: "0x0004",
     name: "airdrop-scam", // Add the name field for the challenge dat
+    requiresWallet: true,
     difficulty: "Beginner",
     title: {
       en: "Airdrop Scam",
@@ -94,6 +99,7 @@ export const challenges: Challenge[] = [
   {
     no: "0x0005",
     name: "usdt-approval-phishing",
+    requiresWallet: true,
     difficulty: "Beginner",
     title: {
       en: "USDT Approval Phishing",
@@ -128,6 +134,7 @@ export const challenges: Challenge[] = [
   {
     no: "0x0007",
     name: "fake-staking-contract", // Add the name field for the challenge dat
+    requiresWallet: true,
     difficulty: "Beginner",
     title: {
       en: "Fake Staking Contract",
@@ -265,6 +272,7 @@ export const challenges: Challenge[] = [
   {
     no: "0x0015",
     name: "blind-signature-phishing", // Add the name field for the challenge dat
+    requiresWallet: true,
     difficulty: "Intermediate",
     title: {
       en: "Blind Signature Phishing",
@@ -283,6 +291,7 @@ export const challenges: Challenge[] = [
   {
     no: "0x0016",
     name: "address-suffix-phishing", // Add the name field for the challenge dat
+    requiresWallet: true,
     difficulty: "Intermediate",
     title: {
       en: "Address Prefix/Suffix Phishing",
@@ -337,6 +346,7 @@ export const challenges: Challenge[] = [
   {
     no: "0x0019",
     name: "defi-proxy-phishing",
+    requiresWallet: true,
     difficulty: "Intermediate",
     title: {
       en: "DeFi Proxy Security Update",
@@ -353,6 +363,7 @@ export const challenges: Challenge[] = [
   {
     no: "0x0020",
     name: "malicious-rpc-provider",
+    requiresWallet: true,
     difficulty: "Intermediate",
     title: {
       en: "Malicious RPC Provider",
@@ -387,6 +398,7 @@ export const challenges: Challenge[] = [
   {
     no: "0x0022",
     name: "governance-proposal-phishing",
+    requiresWallet: true,
     difficulty: "Intermediate",
     title: {
       en: "Emergency DAO Proposal",
@@ -471,6 +483,7 @@ export const challenges: Challenge[] = [
   {
     no: "0x0027",
     name: "nft-approval-phishing",
+    requiresWallet: true,
     difficulty: "Advanced",
     title: {
       en: "NFT Approval Phishing",
@@ -525,6 +538,7 @@ export const challenges: Challenge[] = [
   {
     no: "0x0030",
     name: "safe-proxy-attack",
+    requiresWallet: true,
     difficulty: "Advanced",
     title: {
       en: "Safe Proxy Contract Attack",

@@ -17,6 +17,8 @@ import { usePathname } from 'next/navigation';
 import { challenges } from '@/app/data/challenges';
 import { useChallengeStore } from '@/app/stores/challengeStore';
 import ShareModal from '@/app/components/ShareModal';
+import GuestModeBanner, { useIsGuest } from '@/app/components/GuestModeBanner';
+import { useGuestProgressStore } from '@/app/stores/guestProgressStore';
 
 interface ChallengeLayoutProps {
   children: React.ReactNode;
@@ -29,6 +31,10 @@ const ChallengeLayout = ({ children }: ChallengeLayoutProps) => {
   const { profile } = useUserStore();
   const pathname = usePathname();
   const [currentChallenge, setCurrentChallenge] = useState<any>(null);
+  // 訪客模式：直接從路徑判斷，避免第一次 render 先閃出鎖頭
+  const guestPlayable = challenges.some(
+    (c) => c.name === pathname?.split('/').pop() && !c.requiresWallet
+  );
   const [isShareModalOpen, setIsShareModalOpen] = useState(false);
   const [, setCloseShareModal] = useState(false);
   // 使用 challengeStore
@@ -63,11 +69,19 @@ const ChallengeLayout = ({ children }: ChallengeLayoutProps) => {
     }
   }, [profile, getUserChallengesStatus]);
 
+  const isGuest = useIsGuest();
+  const { completed: guestCompleted, load: loadGuestProgress } = useGuestProgressStore();
+  useEffect(() => {
+    loadGuestProgress();
+  }, [loadGuestProgress]);
+
   const openShareModal = () => {
     setIsShareModalOpen(true);
   }
   // 檢查挑戰是否已完成
   const isChallengeCompleted = (challengeName: string) => {
+    // 訪客：看這個瀏覽器的訪客紀錄；登入後只看後端紀錄，兩套不混用
+    if (isGuest) return guestCompleted.includes(challengeName);
     if (!userChallengesStatus) return false;
 
     // 使用 some() 方法檢查是否有任何符合條件的項目
@@ -180,7 +194,7 @@ const ChallengeLayout = ({ children }: ChallengeLayoutProps) => {
     ];
 
     setDifficultyLevels(levels);
-  }, [userChallengesStatus, language]);
+  }, [userChallengesStatus, language, guestCompleted, isGuest]);
 
   // 檢查用戶是否已登錄
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -386,10 +400,10 @@ const ChallengeLayout = ({ children }: ChallengeLayoutProps) => {
                                 <FaCircleCheck className='text-gray-300' />
                           )
                         ) : (
-                          challenge.name === "wallet-setup-guide" ?
+                          challenge.name === "wallet-setup-guide" || !challenges.find((c) => c.name === challenge.name)?.requiresWallet ?
                             theme === 'dark' ?
-                              <IoMdCheckmarkCircleOutline className='text-gray-500' /> :
-                              <FaCircleCheck className='text-gray-300' /> :
+                              <IoMdCheckmarkCircleOutline className={challenge.completed ? 'text-[#c4ff41]' : 'text-gray-500'} /> :
+                              <FaCircleCheck className={challenge.completed ? 'text-[#9bc72a]' : 'text-gray-300'} /> :
                             <GoLock className='text-gray-500' />
                         )}
                       </span>
@@ -513,10 +527,10 @@ const ChallengeLayout = ({ children }: ChallengeLayoutProps) => {
                                   <FaCircleCheck className='text-gray-300' />
                             )
                           ) : (
-                            challenge.name === "wallet-setup-guide" ?
+                            challenge.name === "wallet-setup-guide" || !challenges.find((c) => c.name === challenge.name)?.requiresWallet ?
                               theme === 'dark' ?
-                                <IoMdCheckmarkCircleOutline className='text-gray-500' /> :
-                                <FaCircleCheck className='text-gray-300' /> :
+                                <IoMdCheckmarkCircleOutline className={challenge.completed ? 'text-[#c4ff41]' : 'text-gray-500'} /> :
+                                <FaCircleCheck className={challenge.completed ? 'text-[#9bc72a]' : 'text-gray-300'} /> :
                               <GoLock className='text-gray-500' />
                           )}
                         </span>
@@ -601,9 +615,12 @@ const ChallengeLayout = ({ children }: ChallengeLayoutProps) => {
               </div>
             </div>
           </div>
+          {guestPlayable && <GuestModeBanner />}
           <div className="relative">
             {currentChallenge?.name === "wallet-setup-guide" ?
               (children) : (
+                // 訪客模式：不需要錢包的關卡直接開放
+                guestPlayable ||
                 isLoggedIn && (
                   profile?.has_completed_challenge1
                 ) ? (
@@ -635,10 +652,10 @@ const ChallengeLayout = ({ children }: ChallengeLayoutProps) => {
                         <div className="w-16 h-16 bg-black rounded-full flex items-center justify-center mb-4 border-2 border-[#c4ff41]">
                           <GoLock className="text-[#c4ff41] text-3xl" />
                         </div>
-                        <p className="text-white text-lg font-medium">{t.challenges.locked2}</p>
+                        <p className="text-white text-lg font-medium">{isLoggedIn ? t.challenges.locked2 : t.guestMode.walletRequired}</p>
                         <Link href='/challenges/wallet-setup-guide'>
                           <button className="mt-4 bg-[#c4ff41] text-black px-6 py-2 rounded-full font-medium hover:bg-opacity-90 transition-all">
-                            No.0x0001
+                            {isLoggedIn ? 'No.0x0001' : t.guestMode.cta}
                           </button>
                         </Link>
                       </div>

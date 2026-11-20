@@ -59,6 +59,7 @@ export default {
     challengeCompletion: "挑戰完成，回到挑戰列表",
     calculating: "計算執行中...",
     backToList: "返回列表",
+    guestNotice: "訪客模式：已記在這個瀏覽器，但不計分。連結錢包後重玩即可記入排行榜。",
   },
   googleSpoofedPhishing: {
     title: "谷歌釣魚郵件挑戰",
@@ -1655,6 +1656,16 @@ export default {
       right2: "保留所有權利",
       //footer: "",
     },
+  },
+  guestMode: {
+    title: "訪客模式：不用連錢包，直接開玩",
+    description: "訪客進度只存在這個瀏覽器，不會計分。連結 MetaMask 後需重玩，才會累積經驗值、登上排行榜。",
+    cta: "連結錢包開始計分 →",
+    walletRequired: "這一關需要連結 MetaMask 錢包實際操作",
+    walletBadge: "需連結錢包",
+    progress: "你已用訪客身分完成 {count} 關",
+    loginNotice: "你用訪客身分玩過 {count} 關，這些不會計分，再玩一次即可記錄。",
+    dismiss: "知道了",
   },
   challenges: {
     all: "全部",
