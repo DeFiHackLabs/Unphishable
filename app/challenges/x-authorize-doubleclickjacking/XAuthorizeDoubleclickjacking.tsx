@@ -136,21 +136,21 @@ export default function XAuthorizeDoubleclickjacking() {
               <div className={`rounded-full w-10 h-10 flex items-center justify-center ${currentStep >= 1 ? 'bg-green-500 text-white' : 'bg-gray-300'}`}>
                 {currentStep >= 1 ? ' 1✓' : '1'}
               </div>
-              <div className={`text-center mx-2 ${currentStep >= 1 ? 'text-green-500 font-medium' : ''}`}>{t.xAuthorizeDoubleclickjacking.steps.step1}</div>
+              <div className={`text-center mx-2 ${currentStep >= 1 ? 'text-green-500 font-medium' : 'text-gray-500'}`}>{t.xAuthorizeDoubleclickjacking.steps.step1}</div>
             </div>
             <div className={`w-16 h-1 mx-2 ${currentStep >= 2 ? 'bg-green-500' : 'bg-gray-300'}`}></div>
             <div className="flex flex-col items-center">
               <div className={`rounded-full w-10 h-10 flex items-center justify-center ${currentStep >= 2 ? 'bg-green-500 text-white' : 'bg-gray-300'}`}>
                 {currentStep >= 2 ? ' 2✓' : '2'}
               </div>
-              <div className={`text-center mx-2 ${currentStep >= 2 ? 'text-green-500 font-medium' : ''}`}>{t.xAuthorizeDoubleclickjacking.steps.step2}</div>
+              <div className={`text-center mx-2 ${currentStep >= 2 ? 'text-green-500 font-medium' : 'text-gray-500'}`}>{t.xAuthorizeDoubleclickjacking.steps.step2}</div>
             </div>
             <div className={`w-16 h-1 mx-2 ${currentStep >= 3 ? 'bg-green-500' : 'bg-gray-300'}`}></div>
             <div className="flex flex-col items-center">
               <div className={`rounded-full w-10 h-10 flex items-center justify-center ${currentStep >= 3 ? 'bg-green-500 text-white' : 'bg-gray-300'}`}>
                 {currentStep >= 3 ? ' 3✓' : '3'}
               </div>
-              <div className={`text-center mx-2 ${currentStep >= 3 ? 'text-green-500 font-medium' : ''}`}>{t.xAuthorizeDoubleclickjacking.steps.step3}</div>
+              <div className={`text-center mx-2 ${currentStep >= 3 ? 'text-green-500 font-medium' : 'text-gray-500'}`}>{t.xAuthorizeDoubleclickjacking.steps.step3}</div>
             </div>
           </div>
 

@@ -27,7 +27,12 @@ interface ChallengeLayoutProps {
 const ChallengeLayout = ({ children }: ChallengeLayoutProps) => {
   const { t } = useLanguage();
   const [openLevels, setOpenLevels] = useState<{ [key: number]: boolean }>({ 0: true, 1: true, 2: true });
-  const { theme } = useTheme();
+  const { theme: currentTheme } = useTheme();
+  // 伺服器產生頁面時拿不到主題，一律是淺色版。掛載前也當淺色，跟伺服器的 HTML 一致；
+  // 否則 React 只會回報 class 不一致、不會修正，深色模式就一直卡在淺色。
+  const [themeMounted, setThemeMounted] = useState(false);
+  useEffect(() => setThemeMounted(true), []);
+  const theme = themeMounted ? currentTheme : undefined;
   const { profile } = useUserStore();
   const pathname = usePathname();
   const [currentChallenge, setCurrentChallenge] = useState<any>(null);
@@ -322,7 +327,7 @@ const ChallengeLayout = ({ children }: ChallengeLayoutProps) => {
       <Banner />
       {/* 主內容區 */}
       <main
-        className={`mx-auto flex ${theme === 'dark' ? 'bg-[#0b0b0c]' : 'bg-white'} shadow-md relative transition-all duration-300 ${isMobileMenuOpen ? 'md:ml-0 ml-64' : 'ml-0'
+        className={`challenge-main mx-auto flex shadow-md relative transition-all duration-300 ${isMobileMenuOpen ? 'md:ml-0 ml-64' : 'ml-0'
           }`}
         onTouchStart={handleTouchStart}
         onTouchMove={handleTouchMove}

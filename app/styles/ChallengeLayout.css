@@ -63,6 +63,14 @@
   color: #333333;
 }
 
+/* 關卡內容區背景：用 data-theme 決定，next-themes 在畫面出來前就設好，不會先閃白 */
+.challenge-main {
+  background-color: #ffffff;
+}
+[data-theme="dark"] .challenge-main {
+  background-color: #0b0b0c;
+}
+
 [data-theme="dark"] .leftMenu {
   background-color: #161619;
   color: #ffffff;
