@@ -5,6 +5,8 @@ import { create } from "zustand";
 const COMPLETED_KEY = "guestCompleted";
 // 登入後「你用訪客身分玩過 N 關」提醒，使用者按掉時的 N；之後 N 變多才會再提醒
 const NOTICE_KEY = "guestNoticeDismissedCount";
+// 訪客橫幅按「知道了」之後就不再出現；完成彈窗仍會提醒不計分
+const BANNER_KEY = "guestBannerDismissed";
 
 const read = <T,>(key: string, fallback: T): T => {
   try {
@@ -26,21 +28,26 @@ const write = (key: string, value: unknown) => {
 interface GuestProgressState {
   completed: string[];
   noticeDismissedCount: number;
+  // 載入前先當作已關閉，避免按掉過的人每次進頁面都看到橫幅閃一下
+  bannerDismissed: boolean;
   // SSR 與第一次 render 都是空的，載入放在 useEffect 裡呼叫，避免 hydration 不一致
   load: () => void;
   markCompleted: (challengeKey: string) => void;
   dismissNotice: () => void;
+  dismissBanner: () => void;
 }
 
 export const useGuestProgressStore = create<GuestProgressState>((set, get) => ({
   completed: [],
   noticeDismissedCount: 0,
+  bannerDismissed: true,
 
   load: () => {
     const completed = read<unknown>(COMPLETED_KEY, []);
     set({
       completed: Array.isArray(completed) ? completed.filter((c): c is string => typeof c === "string") : [],
       noticeDismissedCount: Number(read<unknown>(NOTICE_KEY, 0)) || 0,
+      bannerDismissed: read<unknown>(BANNER_KEY, false) === true,
     });
   },
 
@@ -56,5 +63,10 @@ export const useGuestProgressStore = create<GuestProgressState>((set, get) => ({
     const count = get().completed.length;
     write(NOTICE_KEY, count);
     set({ noticeDismissedCount: count });
+  },
+
+  dismissBanner: () => {
+    write(BANNER_KEY, true);
+    set({ bannerDismissed: true });
   },
 }));

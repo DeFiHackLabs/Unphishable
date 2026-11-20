@@ -24,9 +24,10 @@ interface ChallengeProps {
   };
   link: string;
   requiresWallet?: boolean;
+  tags?: string[];
 }
 
-export default function ChallengeCard({ name, difficulty, no, title, description, link, requiresWallet }: ChallengeProps) {
+export default function ChallengeCard({ name, difficulty, no, title, description, link, requiresWallet, tags }: ChallengeProps) {
   const router = useRouter();
   const isGuest = useIsGuest();
   const { t, language } = useLanguage();
@@ -55,6 +56,15 @@ export default function ChallengeCard({ name, difficulty, no, title, description
           <div className="flex-1">
             <h3 className="text-lg font-semibold mb-2">
               {title[language]}
+              {/* 放在標題後面而不是上方：同一排卡片的標題才會對齊 */}
+              {tags?.includes('ai') && (
+                <span
+                  data-testid="ai-tag"
+                  className="ml-2 inline-block rounded-full bg-[#c4ff41] px-2 py-0.5 align-middle text-xs font-semibold text-black"
+                >
+                  AI
+                </span>
+              )}
             </h3>
             <p className="text-sm leading-relaxed min-h-[4.5rem] line-clamp-3">
               {description[language]}

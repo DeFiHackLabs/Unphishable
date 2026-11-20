@@ -27,7 +27,7 @@ const GuestModeBanner = () => {
   const { theme } = useTheme();
   const isGuest = useIsGuest();
   const { profile } = useUserStore();
-  const { completed, noticeDismissedCount, load, dismissNotice } = useGuestProgressStore();
+  const { completed, noticeDismissedCount, bannerDismissed, load, dismissNotice, dismissBanner } = useGuestProgressStore();
 
   useEffect(() => {
     load();
@@ -53,7 +53,7 @@ const GuestModeBanner = () => {
     );
   }
 
-  if (!isGuest) return null;
+  if (!isGuest || bannerDismissed) return null;
 
   return (
     <div data-testid="guest-mode-banner" className={boxClass}>
@@ -66,12 +66,21 @@ const GuestModeBanner = () => {
           </p>
         )}
       </div>
-      <Link
-        href="/challenges/wallet-setup-guide"
-        className="shrink-0 rounded-full bg-[#c4ff41] px-5 py-2 text-center text-sm font-medium text-black transition-opacity hover:opacity-90"
-      >
-        {t.guestMode.cta}
-      </Link>
+      <div className="flex shrink-0 items-center gap-3">
+        <button
+          data-testid="guest-banner-dismiss"
+          onClick={dismissBanner}
+          className="rounded-full border border-current px-5 py-2 text-center text-sm font-medium opacity-70 transition-opacity hover:opacity-100"
+        >
+          {t.guestMode.dismiss}
+        </button>
+        <Link
+          href="/challenges/wallet-setup-guide"
+          className="rounded-full bg-[#c4ff41] px-5 py-2 text-center text-sm font-medium text-black transition-opacity hover:opacity-90"
+        >
+          {t.guestMode.cta}
+        </Link>
+      </div>
     </div>
   );
 };
