@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { useLanguage } from '@/app/contexts/LanguageContext';
 import ChallengeCompletionModal from '@/app/components/ChallengeCompletionModal';
 import TelegramTokenPhishingSuccessContent from './TelegramTokenPhishingSuccessContent';
@@ -15,6 +15,12 @@ const TelegramTokenPhishing = () => {
   const [isSubmit, setIsSubmit] = useState(false);
   const [showCompletionModal, setShowCompletionModal] = useState(false);
   const chatEndRef = useRef<HTMLDivElement>(null);
+  // 第一則訊息的時間只在瀏覽器算：頁面是建置時預先產生的，直接 render 會拿到伺服器的時間與格式，
+  // 跟瀏覽器對不上而 hydration 失敗
+  const [firstMessageTime, setFirstMessageTime] = useState('');
+  useEffect(() => {
+    setFirstMessageTime(new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }));
+  }, []);
 
   const handleSubmit = () => {
     setIsSkip(false);
@@ -74,7 +80,7 @@ const TelegramTokenPhishing = () => {
                   <p>{t.telegramTokenPhishing.welcomeMessage}</p>
                   <p className="mt-2">{t.telegramTokenPhishing.claimInstructions}</p>
                   <p className="text-sm text-[#a8b8c7] mt-2">{t.telegramTokenPhishing.tokenDescription}</p>
-                  <span className="text-[10px] text-[#8b9aa7] absolute bottom-1 right-2">{new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}</span>
+                  <span className="text-[10px] text-[#8b9aa7] absolute bottom-1 right-2">{firstMessageTime}</span>
                   {currentStep === 0 && (
                     <button
                       onClick={() => setCurrentStep(1)}

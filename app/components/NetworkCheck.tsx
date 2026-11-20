@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect, cloneElement } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useAccount } from 'wagmi';
 import NetworkSwitchModal from './NetworkSwitchModal';
 
@@ -38,17 +38,10 @@ export const getNetworkName = (chainId: number): string => {
   return networks[chainId] || `Unknown Network`;
 };
 
-// 定義子組件應該接受的屬性
-interface NetworkCheckChildProps {
-  onCheckNetwork?: () => boolean;
-  isOnCorrectNetwork?: boolean;
-  [key: string]: any; // 允許其他屬性
-}
-
 interface NetworkCheckProps {
   requiredChainId: number;
   requiredNetworkName?: string;
-  children?: React.ReactElement<NetworkCheckChildProps>;
+  children?: React.ReactNode;
   onCorrectNetwork?: () => void;
   onCancelNetworkSwitch?: () => void;
 }
@@ -87,20 +80,10 @@ const NetworkCheck: React.FC<NetworkCheckProps> = ({
     }
   };
 
-  const handleCheckNetwork = () => {
-    if (accountChainId !== requiredChainId) {
-      setShowNetworkModal(true);
-      return false;
-    }
-    return true;
-  };
-
   return (
     <>
-      {children && cloneElement(children as React.ReactElement<NetworkCheckChildProps>, {
-        onCheckNetwork: handleCheckNetwork,
-        isOnCorrectNetwork: accountChainId === requiredChainId
-      })}
+      {/* 子元素都是一般的 div，不再用 cloneElement 塞 onCheckNetwork 等屬性（React 會報未知屬性錯誤） */}
+      {children}
 
       <NetworkSwitchModal
         isOpen={showNetworkModal}
